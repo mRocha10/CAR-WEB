@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore the world of cars with MoreThanCars. Learn about car types, brands, and more!">
+    <title>MoreThanCars - All About Cars</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <h1>MoreThanCars</h1>
+            <p>Your ultimate guide to car brands and types</p>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#car-types">Car Types</a></li>
+                <li><a href="#brands">Brands</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Section -->
+    <main>
+        <section id="about" class="section">
+            <h2>About Us</h2>
+            <p>Welcome to MoreThanCars, your ultimate source of information about different types of cars and popular car brands.</p>
+        </section>
+
+        <section id="car-types" class="section">
+            <h2>Car Types</h2>
+            <div class="car-cards">
+                <div class="card">
+                    <h3>SUV</h3>
+                    <img src="images/suv.jpg" alt="SUV Car">
+                    <p>Sport Utility Vehicles (SUVs) are known for their higher ground clearance and off-road capabilities.</p>
+                </div>
+                <div class="card">
+                    <h3>Sedan</h3>
+                    <img src="images/sedan.jpg" alt="Sedan Car">
+                    <p>Sedans are popular for their comfort, sleek design, and excellent fuel efficiency.</p>
+                </div>
+                <div class="card">
+                    <h3>Sports Cars</h3>
+                    <img src="images/sports-car.jpg" alt="Sports Car">
+                    <p>Sports cars are known for their speed, performance, and stylish design.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="brands" class="section">
+            <h2>Popular Car Brands</h2>
+            <div class="brands">
+                <button class="brand-btn" onclick="showBrandInfo('Toyota')">Toyota</button>
+                <button class="brand-btn" onclick="showBrandInfo('BMW')">BMW</button>
+                <button class="brand-btn" onclick="showBrandInfo('Mercedes')">Mercedes</button>
+            </div>
+            <div id="brand-info" class="brand-info">
+                <!-- Information about the selected brand will appear here -->
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <p>&copy; 2025 MoreThanCars | All Rights Reserved</p>
+        <p>Contact us at: info@morethancars.com</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
