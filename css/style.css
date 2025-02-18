@@ -7,7 +7,7 @@
 
 /* Body and Layout */
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: 'Poppins', sans-serif;
     background-color: #f4f4f4;
     color: #333;
 }
@@ -23,6 +23,7 @@ header {
 header .logo h1 {
     font-size: 3rem;
     margin-bottom: 10px;
+    font-family: 'Rufina', serif;
 }
 
 header nav ul {
@@ -119,6 +120,20 @@ header nav ul li a {
     padding: 20px;
     background-color: #e6f7ff;
     border-radius: 8px;
+}
+
+#about p{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding: 20px;
+    text-align: justify;
+}
+
+#about h4{
+    text-align: center;
+}
+
+#about{
+    background-color: white;
 }
 
 /* Footer */
