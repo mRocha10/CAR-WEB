@@ -122,6 +122,12 @@ header nav ul li a {
     border-radius: 8px;
 }
 
+/*  About page  */
+
+#about{
+    background-color: white;
+}
+
 #about p{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     padding: 20px;
@@ -132,9 +138,11 @@ header nav ul li a {
     text-align: center;
 }
 
-#about{
-    background-color: white;
+#about h3{
+    text-align: justify;
 }
+
+
 
 /* Footer */
 footer {
