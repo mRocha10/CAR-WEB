@@ -190,21 +190,26 @@ header nav ul li a:hover {
 }
 
 .car-type-info ul {
-    list-style-type: none;
+    list-style: none;
     padding-left: 0;
+    margin-bottom: 20px;
 }
 
 .car-type-info ul li {
-    margin-bottom: 10px;
-    padding-left: 25px;
     position: relative;
+    padding-left: 25px;
+    margin-bottom: 10px;
 }
 
-.car-type-info ul li:before {
-    content: "✓";
+.car-type-info ul li::before {
+    content: '✓';
     position: absolute;
     left: 0;
+    color: #666666;
+    font-size: 14px;
+    font-weight: normal;
     color: #3498db;
+    font-weight: bold;
 }
 
 @media (max-width: 768px) {
