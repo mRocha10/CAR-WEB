@@ -1,0 +1,108 @@
+/* Responsive styles for Engine Starters website */
+
+/* Large screens (default styles are already in style.css) */
+
+/* Medium screens (tablets and smaller desktops) */
+@media screen and (max-width: 1024px) {
+    .car-cards {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .car-type-content {
+        flex-direction: column;
+    }
+
+    .car-type-image {
+        width: 100%;
+        max-width: 500px;
+        margin: 0 auto 20px;
+    }
+
+    .brands {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Small screens (mobile devices) */
+@media screen and (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+        padding: 15px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    nav ul li {
+        width: 100%;
+    }
+
+    nav ul li a {
+        display: block;
+        padding: 10px;
+        background-color: #f5f5f5;
+        border-radius: 5px;
+    }
+
+    .car-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .section {
+        padding: 20px;
+    }
+
+    .brands {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+
+    .brand-btn {
+        width: 100%;
+    }
+
+    .car-type-detail {
+        margin-bottom: 30px;
+    }
+
+    .car-type-info {
+        padding: 15px;
+    }
+
+    footer {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+}
+
+/* Extra small screens */
+@media screen and (max-width: 480px) {
+    .logo h1 {
+        font-size: 24px;
+    }
+
+    .logo p {
+        font-size: 14px;
+    }
+
+    .brands {
+        grid-template-columns: 1fr;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+
+    h3 {
+        font-size: 20px;
+    }
+
+    .intro-text {
+        font-size: 16px;
+    }
+}
