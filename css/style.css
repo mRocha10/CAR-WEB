@@ -141,6 +141,85 @@ header nav ul li a:hover {
 
 .card img {
     width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+/* Car Types Page Styles */
+.intro-text {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 40px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.car-type-detail {
+    margin-bottom: 50px;
+    padding: 30px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(52, 152, 219, 0.1);
+}
+
+.car-type-content {
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
+}
+
+.car-type-image {
+    width: 40%;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.car-type-info {
+    flex: 1;
+}
+
+.car-type-info h4 {
+    color: #0a2f3d;
+    margin-bottom: 15px;
+    font-size: 1.3rem;
+}
+
+.car-type-info ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.car-type-info ul li {
+    margin-bottom: 10px;
+    padding-left: 25px;
+    position: relative;
+}
+
+.car-type-info ul li:before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: #3498db;
+}
+
+@media (max-width: 768px) {
+    .car-type-content {
+        flex-direction: column;
+    }
+
+    .car-type-image {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
+
+.card img {
+    width: 100%;
     height: auto;
     border-radius: 8px;
     margin: 15px 0;
