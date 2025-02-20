@@ -134,6 +134,74 @@ header nav ul li a:hover {
 .card h3, .card p {
     color: #333;
 }
+
+/* Brand Grid Styles */
+.brand-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.brand-category {
+    background: #f8f9fa;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.brand-category h3 {
+    font-size: 2rem;
+    color: #1e3c72;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.brand-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+}
+
+.brand-card {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.brand-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(30, 60, 114, 0.2);
+}
+
+.brand-card h4 {
+    font-size: 1.5rem;
+    color: #2a5298;
+    margin-bottom: 15px;
+}
+
+.brand-card p {
+    color: #555;
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+.learn-more-btn {
+    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.learn-more-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(30, 60, 114, 0.3);
+}
 .card:hover {
     transform: translateY(-5px);
     box-shadow: 0 8px 16px rgba(26, 35, 126, 0.2);
