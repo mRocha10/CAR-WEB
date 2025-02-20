@@ -103,6 +103,163 @@
     box-shadow: 0 5px 15px rgba(46, 204, 113, 0.2);
 }
 
+/* Brand-specific page styles */
+.brand-hero {
+    height: 60vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    position: relative;
+    margin-bottom: 3rem;
+}
+
+.brand-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.6));
+    z-index: 1;
+}
+
+.brand-hero h1, .brand-hero p {
+    position: relative;
+    z-index: 2;
+    margin: 0;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.brand-hero h1 {
+    font-size: 4rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.brand-hero p {
+    font-size: 1.8rem;
+    font-weight: 300;
+}
+
+.brand-info-section, .brand-focus-section, .model-lineup-section {
+    max-width: 1200px;
+    margin: 0 auto 4rem;
+    padding: 0 2rem;
+}
+
+.brand-info-section h2, .brand-focus-section h2, .model-lineup-section h2 {
+    font-size: 2.5rem;
+    color: #2c3e50;
+    margin-bottom: 2rem;
+    position: relative;
+    padding-bottom: 1rem;
+}
+
+.brand-info-section h2::after, .brand-focus-section h2::after, .model-lineup-section h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(90deg, #3498db, #2ecc71);
+    border-radius: 2px;
+}
+
+.brand-info-section p, .brand-focus-section p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #555;
+    margin-bottom: 1.5rem;
+}
+
+.brand-focus-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 2rem 0;
+}
+
+.brand-focus-section li {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 1rem;
+    padding-left: 2rem;
+    position: relative;
+}
+
+.brand-focus-section li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: #2ecc71;
+    font-weight: bold;
+}
+
+.model-categories {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.model-category {
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+}
+
+.model-category:hover {
+    transform: translateY(-5px);
+}
+
+.model-category h3 {
+    color: #2c3e50;
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    position: relative;
+    padding-bottom: 0.5rem;
+}
+
+.model-category h3::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50px;
+    height: 3px;
+    background: linear-gradient(90deg, #3498db, #2ecc71);
+    border-radius: 2px;
+}
+
+.model-category ul {
+    list-style: none;
+    padding: 0;
+}
+
+.model-category li {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 0.8rem;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.model-category li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: #3498db;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     .brand-grid {
@@ -120,5 +277,29 @@
     
     .brand-card {
         padding: 1.2rem;
+    }
+
+    .brand-hero {
+        height: 40vh;
+    }
+
+    .brand-hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .brand-hero p {
+        font-size: 1.2rem;
+    }
+
+    .brand-info-section, .brand-focus-section, .model-lineup-section {
+        padding: 0 1rem;
+    }
+
+    .model-categories {
+        grid-template-columns: 1fr;
+    }
+
+    .model-category {
+        padding: 1.5rem;
     }
 }
