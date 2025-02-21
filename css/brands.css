@@ -83,6 +83,7 @@
     color: #666;
     line-height: 1.5;
     margin-bottom: 1.5rem;
+    text-align: justify;
 }
 
 .learn-more-btn {
@@ -279,6 +280,14 @@
         padding: 1.2rem;
     }
 
+    .brand-card p {
+        text-align: justify;
+    }
+
+    .category-description {
+        text-align: justify;
+    }
+
     .brand-hero {
         height: 40vh;
     }
@@ -295,11 +304,11 @@
         padding: 0 1rem;
     }
 
-    .model-categories {
-        grid-template-columns: 1fr;
+    .brand-info-section p {
+        text-align: justify;
     }
 
-    .model-category {
-        padding: 1.5rem;
+    .model-categories {
+        grid-template-columns: 1fr;
     }
 }
