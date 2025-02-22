@@ -325,6 +325,7 @@ header nav ul li a:hover {
 
 .card:hover img {
     transform: scale(1.02);
+    transition-duration: 5000;
 }
 
 .card p {
