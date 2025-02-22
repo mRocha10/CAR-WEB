@@ -264,6 +264,7 @@ header nav ul li a:hover {
     background-color: #f8f9fa;
     border-radius: 8px;
     height: 100%;
+    text-align: justify;
 }
 
 .car-type-info h4 {
