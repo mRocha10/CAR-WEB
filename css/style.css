@@ -76,6 +76,38 @@ header nav ul li a:hover {
     color: #e6f7ff;
 }
 
+.arrow-btn {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    background-color: #1e3c72;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.arrow-btn::after {
+    content: '→';
+    color: white;
+    font-size: 20px;
+    transition: transform 0.3s ease;
+}
+
+.arrow-btn:hover {
+    background-color: #2a5298;
+    box-shadow: 0 4px 8px rgba(30, 60, 114, 0.3);
+}
+
+.arrow-btn:hover::after {
+    transform: translateX(3px);
+}
+
 /* Main Sections */
 .main {
     margin: 20px;
@@ -94,6 +126,17 @@ header nav ul li a:hover {
     animation: slideUp 0.8s ease-out forwards;
     border: 1px solid rgba(26, 35, 126, 0.1);
 }
+
+.car-type-detail {
+    position: relative;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
 
 .section h2 {
     font-family: 'Montserrat', 'Helvetica Neue', Arial, sans-serif;
@@ -188,19 +231,34 @@ header nav ul li a:hover {
 }
 
 .learn-more-btn {
-    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
-    color: white;
-    border: none;
+    display: inline-block;
     padding: 10px 20px;
+    background-color: #2a5298;
+    color: white;
+    text-decoration: none;
     border-radius: 5px;
-    cursor: pointer;
-    font-weight: 500;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    transition: all 0.3s ease;
+    margin-top: 15px;
+    position: relative;
+    padding-right: 40px;
+}
+
+.learn-more-btn::after {
+    content: '→';
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.2em;
+    transition: transform 0.3s ease;
 }
 
 .learn-more-btn:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(30, 60, 114, 0.3);
+    background-color: #1e3c72;
+}
+
+.learn-more-btn:hover::after {
+    transform: translate(5px, -50%);
 }
 .card:hover {
     transform: translateY(-5px);

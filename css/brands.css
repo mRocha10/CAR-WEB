@@ -87,7 +87,7 @@
 }
 
 .learn-more-btn {
-    background: linear-gradient(135deg, #3498db, #2ecc71);
+    background: linear-gradient(135deg, #3498db 0%, #2ecc71 100%);
     color: white;
     border: none;
     padding: 0.8rem 1.5rem;

@@ -1,0 +1,170 @@
+/* Car Type Page Styles */
+.car-type-main {
+    padding: 2rem;
+    background: linear-gradient(135deg, #f5f7fa 0%, #e4e9f2 100%);
+}
+
+.car-type-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.car-type-title {
+    font-size: 2.5rem;
+    color: #2c3e50;
+    text-align: center;
+    margin-bottom: 2rem;
+    font-weight: 700;
+    background: linear-gradient(to right, #2c3e50, #3498db);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.car-type-container {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 3rem;
+    align-items: start;
+}
+
+.car-type-image-wrapper {
+    position: sticky;
+    top: 2rem;
+}
+
+.car-type-image {
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease;
+}
+
+.car-type-image:hover {
+    transform: scale(1.02);
+}
+
+.car-type-info-wrapper {
+    display: grid;
+    gap: 2.5rem;
+}
+
+.car-type-info-section {
+    padding: 2rem;
+    background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+}
+
+.car-type-info-section:hover {
+    transform: translateY(-5px);
+}
+
+.info-title {
+    font-size: 1.8rem;
+    color: #2c3e50;
+    margin-bottom: 1.5rem;
+    position: relative;
+    padding-bottom: 0.5rem;
+}
+
+.info-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(to right, #3498db, #2ecc71);
+    border-radius: 3px;
+}
+
+.info-text {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #34495e;
+    margin-bottom: 1.5rem;
+    text-align: justify;
+}
+
+.info-text:last-child {
+    margin-bottom: 0;
+}
+
+@media (max-width: 1024px) {
+    .car-type-container {
+        grid-template-columns: 1fr;
+    }
+
+    .car-type-image-wrapper {
+        position: relative;
+        top: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .car-type-main {
+        padding: 1rem;
+    }
+
+    .car-type-section {
+        padding: 1.5rem;
+    }
+
+    .car-type-title {
+        font-size: 2rem;
+    }
+
+    .info-title {
+        font-size: 1.5rem;
+    }
+
+    .info-text {
+        font-size: 1rem;
+    }
+}
+
+.car-type-footer {
+    text-align: center;
+    padding: 2rem;
+    color: #7f8c8d;
+    background-color: #f8f9fa;
+    margin-top: 3rem;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 992px) {
+    .car-type-container {
+        grid-template-columns: 1fr;
+    }
+
+    .car-type-title {
+        font-size: 2rem;
+    }
+
+    .car-type-main {
+        padding: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .car-type-section {
+        padding: 1.5rem;
+    }
+
+    .info-title {
+        font-size: 1.5rem;
+    }
+
+    .info-subtitle {
+        font-size: 1.2rem;
+    }
+
+    .car-type-title {
+        font-size: 1.8rem;
+    }
+}
