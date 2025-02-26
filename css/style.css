@@ -665,18 +665,22 @@ header nav ul li:active {
     padding: 20px;
     text-align: justify;
     line-height: 1.6;
+    font-weight: 400;
+    font-size: large;
 }
 
 #about h3 {
     font-family: 'Montserrat', 'Helvetica Neue', Arial, sans-serif;
     text-align: justify;
-    font-weight: 600;
+    font-weight: 800;
+    font-size: x-large;
 }
 
 #about h4 {
     font-family: 'Montserrat', 'Helvetica Neue', Arial, sans-serif;
     text-align: center;
     font-weight: 600;
+    font-size: x-large;
 }
 
 footer {
