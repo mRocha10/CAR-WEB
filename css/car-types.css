@@ -326,6 +326,7 @@
   
   .animated-button:hover .text {
     transform: translateX(12px);
+    color: #ffffff;
   }
   
   .animated-button:hover svg {
