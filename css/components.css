@@ -1,0 +1,176 @@
+.component-category {
+    background: #ffffff;
+    border-radius: 15px;
+    padding: 2rem;
+    margin: 2rem 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.component-category:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+}
+
+.component-category h3 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 1rem;
+    border-bottom: 3px solid #007bff;
+    padding-bottom: 0.5rem;
+    display: inline-block;
+}
+
+.category-summary {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #555;
+    margin: 1.5rem 0;
+    text-align: justify;
+}
+
+.category-button {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    background: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    margin-top: 1rem;
+    transition: background 0.3s ease;
+}
+
+.category-button:hover {
+    background: #0056b3;
+}
+
+#components h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    color: #333;
+}
+
+#components h4 {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 2rem;
+}
+
+/* Dedicated Component Pages Styling */
+.component-detail {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.component-header {
+    text-align: center;
+    margin-bottom: 3rem;
+    padding: 2rem;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    border-radius: 15px;
+}
+
+.component-header h1 {
+    font-size: 3rem;
+    color: #1a1a1a;
+    margin-bottom: 1rem;
+}
+
+.component-section {
+    margin-bottom: 3rem;
+    padding: 2rem;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.component-section h2 {
+    color: #007bff;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    border-left: 5px solid #007bff;
+    padding-left: 1rem;
+}
+
+.component-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.component-card {
+    background: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.component-card:hover {
+    transform: translateY(-5px);
+}
+
+.component-card h3 {
+    color: #333;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.component-card p {
+    color: #666;
+    line-height: 1.6;
+}
+
+.component-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.spec-list {
+    list-style: none;
+    padding: 0;
+}
+
+.spec-list li {
+    padding: 0.8rem 0;
+    border-bottom: 1px solid #e9ecef;
+    display: flex;
+    justify-content: space-between;
+}
+
+.spec-list li:last-child {
+    border-bottom: none;
+}
+
+@media (max-width: 768px) {
+    .component-category {
+        padding: 1.5rem;
+        margin: 1.5rem 0;
+    }
+
+    .component-category h3 {
+        font-size: 1.5rem;
+    }
+
+    .category-summary {
+        font-size: 1rem;
+    }
+
+    .component-header h1 {
+        font-size: 2rem;
+    }
+
+    .component-section h2 {
+        font-size: 1.5rem;
+    }
+
+    .component-grid {
+        grid-template-columns: 1fr;
+    }
+}

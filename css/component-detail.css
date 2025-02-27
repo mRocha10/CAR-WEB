@@ -1,0 +1,139 @@
+/* Component Detail Page Styles */
+.component-detail {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 2rem;
+    background: linear-gradient(to bottom, #f8f9fa, #ffffff);
+    border-radius: 15px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.05);
+}
+
+.component-detail h2 {
+    font-size: 3rem;
+    color: #1a237e;
+    margin-bottom: 0.5rem;
+    text-align: center;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+}
+
+.component-detail h3 {
+    font-size: 1.75rem;
+    color: #455a64;
+    text-align: center;
+    margin-bottom: 4rem;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+}
+
+.component-section {
+    background: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+    padding: 2.5rem;
+    margin-bottom: 2.5rem;
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.component-section:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+    border-color: rgba(0, 0, 0, 0.08);
+}
+
+.component-section h4 {
+    font-size: 2rem;
+    color: #2c3e50;
+    margin-bottom: 1.5rem;
+    position: relative;
+    padding-bottom: 1rem;
+    font-weight: 600;
+}
+
+.component-section h4::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(90deg, #1e88e5, #00acc1);
+    border-radius: 4px;
+}
+
+.component-section p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #37474f;
+    margin-bottom: 0;
+    font-weight: 400;
+}
+
+/* Grid Layout for Larger Screens */
+@media (min-width: 1024px) {
+    .component-detail section {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2.5rem;
+    }
+
+    .component-detail h2,
+    .component-detail h3 {
+        grid-column: 1 / -1;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .component-detail {
+        padding: 0 1.5rem;
+        margin: 1.5rem auto;
+    }
+
+    .component-detail h2 {
+        font-size: 2.5rem;
+    }
+
+    .component-detail h3 {
+        font-size: 1.5rem;
+        margin-bottom: 3rem;
+    }
+
+    .component-section {
+        padding: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .component-section h4 {
+        font-size: 1.75rem;
+    }
+
+    .component-section p {
+        font-size: 1.1rem;
+        line-height: 1.7;
+    }
+}
+
+/* Animation */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.component-section {
+    animation: fadeInUp 0.8s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+    opacity: 0;
+}
+
+.component-section:nth-child(1) { animation-delay: 0.2s; }
+.component-section:nth-child(2) { animation-delay: 0.4s; }
+.component-section:nth-child(3) { animation-delay: 0.6s; }
+.component-section:nth-child(4) { animation-delay: 0.8s; }
+.component-section:nth-child(5) { animation-delay: 1s; }
