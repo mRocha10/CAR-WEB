@@ -1,4 +1,4 @@
-/* Car Type Page Styles */
+my /* Car Type Page Styles */
 .car-type-main {
     padding: 2rem;
     background: linear-gradient(135deg, #f5f7fa 0%, #e4e9f2 100%);
@@ -349,4 +349,5 @@
     right: 20px;
     top: 50%;
     transform: translateY(-50%);
+    z-index: 10;
 }
