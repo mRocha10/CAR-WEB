@@ -110,7 +110,8 @@ header nav ul li:hover {
 }
 
 header nav ul li:hover::before {
-    left: 100%;
+    left: 0;
+    left: auto;
 }
 
 header nav ul li:active {
