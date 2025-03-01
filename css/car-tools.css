@@ -3,6 +3,8 @@
 /* Selector Styles */
 .comparison-selector {
     margin: 2rem 0;
+    max-width: 100%;
+    overflow-x: auto;
 }
 
 .selector-container {
@@ -10,6 +12,8 @@
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 2rem;
     margin-bottom: 2rem;
+    width: 100%;
+    overflow-x: visible;
 }
 
 .selector-card {
@@ -18,6 +22,9 @@
     border-radius: 12px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
     transition: transform 0.3s ease;
+    min-width: 280px;
+    max-width: 100%;
+    overflow: hidden;
 }
 
 .selector-card:hover {
@@ -137,10 +144,10 @@
 
 /* Comparison Tool Styles */
 .comparison-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
     margin-top: 2rem;
+    width: 100%;
+    overflow-x: auto;
+    white-space: nowrap;
 }
 
 /* Animation for comparison results */
@@ -155,28 +162,74 @@
     }
 }
 
-.comparison-card {
+.comparison-table {
+    display: table;
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
     background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
     border-radius: 12px;
-    padding: 1.5rem;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
     animation: fadeInUp 0.6s ease-out forwards;
     opacity: 0;
 }
 
-.comparison-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+.comparison-header {
+    display: table-row;
+    background: #f0f2f5;
+}
+
+.comparison-header-cell {
+    display: table-cell;
+    padding: 1.5rem;
+    font-weight: 700;
+    text-align: center;
+    border-bottom: 2px solid #e0e0e0;
+    min-width: 250px;
+}
+
+.comparison-header-cell:first-child {
+    text-align: left;
+    font-weight: 600;
+    background: #f0f2f5;
+    position: sticky;
+    left: 0;
+    z-index: 10;
+    border-top-left-radius: 12px;
+}
+
+.comparison-row {
+    display: table-row;
+}
+
+.comparison-cell {
+    display: table-cell;
+    padding: 0.8rem 1.5rem;
+    border-bottom: 1px solid #eee;
+    vertical-align: middle;
+    white-space: normal;
+}
+
+.comparison-cell:first-child {
+    font-weight: 600;
+    background: #f8f9fa;
+    position: sticky;
+    left: 0;
+    z-index: 5;
 }
 
 .comparison-image {
     width: 100%;
-    height: 200px;
-    object-fit: cover;
+    max-width: 250px;
+    height: auto;
     border-radius: 8px;
-    margin-bottom: 1rem;
+    margin: 0 auto;
+    display: block;
 }
+
+/* Removed hover effect for cards */
+
+/* Image styling moved to table cell */
 
 .comparison-details {
     margin-top: 1.5rem;
@@ -193,11 +246,8 @@
     padding: 0;
 }
 
-.specs-list li {
-    display: flex;
-    justify-content: space-between;
-    padding: 0.5rem 0;
-    border-bottom: 1px solid #eee;
+.specs-value {
+    text-align: center;
 }
 
 /* Configurator Styles */
@@ -312,8 +362,15 @@
     .tools-title {
         font-size: 2rem;
     }
-
-    .comparison-card {
-        padding: 1rem;
+    
+    .comparison-header-cell,
+    .comparison-cell {
+        padding: 0.8rem;
+        min-width: 200px;
+    }
+    
+    .comparison-header-cell:first-child,
+    .comparison-cell:first-child {
+        min-width: 150px;
     }
 }

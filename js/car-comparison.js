@@ -6,7 +6,9 @@ document.addEventListener('DOMContentLoaded', function() {
                 {id: 'golf', name: 'Golf'},
                 {id: 'passat', name: 'Passat'},
                 {id: 'tiguan', name: 'Tiguan'},
-                {id: 'atlas', name: 'Atlas'}
+                {id: 'atlas', name: 'Atlas'},
+                {id: 'jetta', name: 'Jetta'},
+                {id: 'arteon', name: 'Arteon'}
             ],
             specs: {
                 golf: {
@@ -75,6 +77,40 @@ document.addEventListener('DOMContentLoaded', function() {
                     cargoCapacity: '20.6 cu ft (behind 3rd row) / 96.8 cu ft (all seats down)',
                     fuelTank: '18.6 gallons',
                     driverAssist: 'Adaptive Cruise Control, Lane Keeping System, Area View 360° camera',
+                    warranty: '4-year/50,000-mile limited warranty'
+                },
+                jetta: {
+                    image: '../images/types/sedan-silver.jpg',
+                    engine: '1.4L Turbo 4-Cylinder',
+                    horsepower: '147 hp',
+                    torque: '184 lb-ft',
+                    transmission: '8-speed Automatic',
+                    mpg: '30 city / 41 highway',
+                    price: '$19,295',
+                    acceleration: '0-60 mph in 7.9 seconds',
+                    topSpeed: '127 mph',
+                    dimensions: '185.1" L x 70.8" W x 57.7" H',
+                    weight: '2,888 lbs',
+                    cargoCapacity: '14.1 cu ft',
+                    fuelTank: '13.2 gallons',
+                    driverAssist: 'Front Assist, Blind Spot Monitor, Rear Traffic Alert',
+                    warranty: '4-year/50,000-mile limited warranty'
+                },
+                arteon: {
+                    image: '../images/types/sedan-red.jpg',
+                    engine: '2.0L Turbo 4-Cylinder',
+                    horsepower: '268 hp',
+                    torque: '258 lb-ft',
+                    transmission: '8-speed Automatic',
+                    mpg: '22 city / 32 highway',
+                    price: '$36,995',
+                    acceleration: '0-60 mph in 6.0 seconds',
+                    topSpeed: '155 mph',
+                    dimensions: '191.4" L x 73.7" W x 56.5" H',
+                    weight: '3,655 lbs',
+                    cargoCapacity: '27.2 cu ft (seats up) / 55.0 cu ft (seats down)',
+                    fuelTank: '17.4 gallons',
+                    driverAssist: 'Adaptive Cruise Control, Lane Assist, Area View Camera System',
                     warranty: '4-year/50,000-mile limited warranty'
                 }
             }
@@ -552,9 +588,45 @@ document.addEventListener('DOMContentLoaded', function() {
                 {id: 'es', name: 'ES'},
                 {id: 'rx', name: 'RX'},
                 {id: 'nx', name: 'NX'},
-                {id: 'ls', name: 'LS'}
+                {id: 'ls', name: 'LS'},
+                {id: 'is', name: 'IS'},
+                {id: 'ux', name: 'UX'}
             ],
             specs: {
+                is: {
+                    image: '../images/types/sedan-blue.jpg',
+                    engine: '2.0L Turbo Inline-4',
+                    horsepower: '241 hp',
+                    torque: '258 lb-ft',
+                    transmission: '8-speed Automatic',
+                    mpg: '21 city / 31 highway',
+                    price: '$39,850',
+                    acceleration: '0-60 mph in 6.9 seconds',
+                    topSpeed: '143 mph',
+                    dimensions: '185.4" L x 72.4" W x 56.5" H',
+                    weight: '3,748 lbs',
+                    cargoCapacity: '10.8 cu ft',
+                    fuelTank: '17.4 gallons',
+                    driverAssist: 'Lexus Safety System+ 2.5, Blind Spot Monitor, Rear Cross Traffic Alert',
+                    warranty: '4-year/50,000-mile basic + 6-year/70,000-mile powertrain warranty'
+                },
+                ux: {
+                    image: '../images/types/suv-gray.jpg',
+                    engine: '2.0L 4-Cylinder Hybrid',
+                    horsepower: '181 hp (combined)',
+                    torque: '152 lb-ft',
+                    transmission: 'CVT',
+                    mpg: '41 city / 38 highway',
+                    price: '$35,925',
+                    acceleration: '0-60 mph in 8.6 seconds',
+                    topSpeed: '110 mph',
+                    dimensions: '177.0" L x 72.4" W x 60.6" H',
+                    weight: '3,605 lbs',
+                    cargoCapacity: '21.7 cu ft (seats up) / 40.4 cu ft (seats down)',
+                    fuelTank: '12.4 gallons',
+                    driverAssist: 'Lexus Safety System+ 2.0, Parking Support Brake, Blind Spot Monitor',
+                    warranty: '4-year/50,000-mile basic + 6-year/70,000-mile powertrain warranty'
+                },
                 es: {
                     image: '../images/types/sedan-silver.jpg',
                     engine: '2.5L 4-Cylinder Hybrid',
@@ -2094,7 +2166,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const modelSelect = modelSelects[index];
         modelSelect.innerHTML = '<option value="">Select Model</option>';
         
-        if (brand) {
+        if (brand && carData[brand] && carData[brand].models) {
             carData[brand].models.forEach(model => {
                 const option = document.createElement('option');
                 option.value = model.id;
@@ -2105,6 +2177,62 @@ document.addEventListener('DOMContentLoaded', function() {
         } else {
             modelSelect.disabled = true;
         }
+    }
+
+    // Function to highlight better features in the comparison
+    function highlightBetterFeatures(selectedCars) {
+        // Only proceed if we have multiple cars to compare
+        if (selectedCars.length < 2) return;
+        
+        // Define which specs are better when higher
+        const higherIsBetter = ['horsepower', 'torque', 'cargoCapacity'];
+        // Define which specs are better when lower
+        const lowerIsBetter = ['price', 'weight'];
+        
+        // Get all spec keys from the first car
+        const specKeys = Object.keys(selectedCars[0].specs).filter(key => 
+            typeof selectedCars[0].specs[key] === 'string' && 
+            !['image', 'driverAssist', 'warranty', 'dimensions'].includes(key)
+        );
+        
+        // For each spec, find the best value
+        specKeys.forEach(spec => {
+            // Extract numeric values for comparison
+            const values = selectedCars.map(car => {
+                const rawValue = car.specs[spec];
+                // Extract numeric part from string like '295 hp', '$35,405', etc.
+                const numericMatch = rawValue.match(/[$€]?([0-9,.]+)/);
+                if (numericMatch) {
+                    // Remove commas and convert to number
+                    return parseFloat(numericMatch[1].replace(/,/g, ''));
+                }
+                return null;
+            });
+            
+            // Skip if we couldn't extract valid numbers
+            if (values.some(v => v === null)) return;
+            
+            // Determine if higher or lower is better for this spec
+            let bestIndices = [];
+            if (higherIsBetter.includes(spec)) {
+                const maxValue = Math.max(...values);
+                bestIndices = values.map((v, i) => v === maxValue ? i : -1).filter(i => i !== -1);
+            } else if (lowerIsBetter.includes(spec)) {
+                const minValue = Math.min(...values);
+                bestIndices = values.map((v, i) => v === minValue ? i : -1).filter(i => i !== -1);
+            } else {
+                // For specs not in either list, we don't highlight
+                return;
+            }
+            
+            // Store the best indices for later highlighting
+            bestIndices.forEach(index => {
+                if (!selectedCars[index].bestSpecs) {
+                    selectedCars[index].bestSpecs = [];
+                }
+                selectedCars[index].bestSpecs.push(spec);
+            });
+        });
     }
 
     // Function to compare selected cars
@@ -2119,7 +2247,7 @@ document.addEventListener('DOMContentLoaded', function() {
             const brand = brandSelects[i].value;
             const model = modelSelects[i].value;
             
-            if (brand && model) {
+            if (brand && model && carData[brand] && carData[brand].specs && carData[brand].specs[model]) {
                 selectedCars.push({
                     brand: brand,
                     model: model,
@@ -2134,34 +2262,107 @@ document.addEventListener('DOMContentLoaded', function() {
             return;
         }
         
-        // Create comparison cards with staggered animation
+        // Analyze and highlight better features if we have multiple cars
+        if (selectedCars.length > 1) {
+            highlightBetterFeatures(selectedCars);
+        }
+        
+        // Create comparison table
+        const table = document.createElement('div');
+        table.className = 'comparison-table';
+        
+        // Create header row
+        const headerRow = document.createElement('div');
+        headerRow.className = 'comparison-header';
+        
+        // Add specification header cell
+        const specHeaderCell = document.createElement('div');
+        specHeaderCell.className = 'comparison-header-cell';
+        specHeaderCell.textContent = 'Specifications';
+        headerRow.appendChild(specHeaderCell);
+        
+        // Add car model header cells
         selectedCars.forEach((car, index) => {
-            const card = document.createElement('div');
-            card.className = 'comparison-card';
-            
-            // Add style for simpler animation delay
-            card.style.animationDelay = `${index * 0.1}s`;
-            
-            const brandName = car.brand.charAt(0).toUpperCase() + car.brand.slice(1);
+            const headerCell = document.createElement('div');
+            headerCell.className = 'comparison-header-cell';
+            const brandName = car.brand.charAt(0).toUpperCase() + car.brand.slice(1).replace(/-/g, ' ');
             const modelName = carData[car.brand].models.find(m => m.id === car.model).name;
+            headerCell.textContent = `${brandName} ${modelName}`;
+            headerCell.style.animationDelay = `${index * 0.1}s`;
+            headerRow.appendChild(headerCell);
+        });
+        
+        table.appendChild(headerRow);
+        
+        // Add image row
+        const imageRow = document.createElement('div');
+        imageRow.className = 'comparison-row';
+        
+        const imageLabel = document.createElement('div');
+        imageLabel.className = 'comparison-cell';
+        imageLabel.textContent = 'Image';
+        imageRow.appendChild(imageLabel);
+        
+        selectedCars.forEach(car => {
+            const imageCell = document.createElement('div');
+            imageCell.className = 'comparison-cell';
+            const img = document.createElement('img');
+            img.src = car.specs.image;
+            img.className = 'comparison-image';
+            img.alt = `${car.brand} ${car.model}`;
+            imageCell.appendChild(img);
+            imageRow.appendChild(imageCell);
+        });
+        
+        table.appendChild(imageRow);
+        
+        // Get all spec keys except 'image'
+        const specKeys = Object.keys(selectedCars[0].specs).filter(key => key !== 'image');
+        
+        // Create rows for each specification
+        specKeys.forEach(key => {
+            const row = document.createElement('div');
+            row.className = 'comparison-row';
             
-            card.innerHTML = `
-                <img src="${car.specs.image}" alt="${brandName} ${modelName}" class="comparison-image">
-                <h3>${brandName} ${modelName}</h3>
-                <div class="comparison-details">
-                    <h4>Specifications</h4>
-                    <ul class="specs-list">
-                        <li><span>Engine:</span> <span>${car.specs.engine}</span></li>
-                        <li><span>Horsepower:</span> <span>${car.specs.horsepower}</span></li>
-                        <li><span>Torque:</span> <span>${car.specs.torque}</span></li>
-                        <li><span>Transmission:</span> <span>${car.specs.transmission}</span></li>
-                        <li><span>Fuel Economy:</span> <span>${car.specs.mpg}</span></li>
-                        <li><span>Starting Price:</span> <span>${car.specs.price}</span></li>
-                    </ul>
-                </div>
+            // Add spec name cell
+            const specNameCell = document.createElement('div');
+            specNameCell.className = 'comparison-cell';
+            const specName = key.charAt(0).toUpperCase() + key.slice(1)
+                .replace(/([A-Z])/g, ' $1')
+                .trim();
+            specNameCell.textContent = specName;
+            row.appendChild(specNameCell);
+            
+            // Add value cells for each car
+            selectedCars.forEach(car => {
+                const valueCell = document.createElement('div');
+                valueCell.className = 'comparison-cell specs-value';
+                const isBest = car.bestSpecs && car.bestSpecs.includes(key);
+                if (isBest) {
+                    valueCell.classList.add('better-feature');
+                }
+                valueCell.textContent = car.specs[key];
+                row.appendChild(valueCell);
+            });
+            
+            table.appendChild(row);
+        });
+        
+        resultsContainer.appendChild(table);
+
+        
+        // Add CSS for highlighting better features
+        if (!document.getElementById('highlight-styles')) {
+            const styleEl = document.createElement('style');
+            styleEl.id = 'highlight-styles';
+            styleEl.textContent = `
+                .better-feature {
+                    color: #4CAF50;
+                    font-weight: bold;
+                }
             `;
-            
-            resultsContainer.appendChild(card);
-        });}
+            document.head.appendChild(styleEl);
+        }
+    }
     }
 );
