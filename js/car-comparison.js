@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // Car model data - in a real application, this would come from a database
+    // Car model data
     const carData = {
         toyota: {
             models: [
@@ -228,6 +228,98 @@ document.addEventListener('DOMContentLoaded', function() {
                     transmission: '9-speed Automatic',
                     mpg: '19 city / 27 highway',
                     price: '$54,750'
+                }
+            }
+        },
+        audi: {
+            models: [
+                {id: 'a3', name: 'A3'},
+                {id: 'a4', name: 'A4'},
+                {id: 'q5', name: 'Q5'},
+                {id: 'q7', name: 'Q7'}
+            ],
+            specs: {
+                a3: {
+                    image: '../images/types/sedan-black.jpg',
+                    engine: '2.0L TFSI',
+                    horsepower: '201 hp',
+                    torque: '221 lb-ft',
+                    transmission: '7-speed S tronic',
+                    mpg: '29 city / 38 highway',
+                    price: '$34,900'
+                },
+                a4: {
+                    image: '../images/types/sedan-silver.jpg',
+                    engine: '2.0L TFSI',
+                    horsepower: '261 hp',
+                    torque: '273 lb-ft',
+                    transmission: '7-speed S tronic',
+                    mpg: '25 city / 34 highway',
+                    price: '$39,900'
+                },
+                q5: {
+                    image: '../images/types/suv-blue.jpg',
+                    engine: '2.0L TFSI',
+                    horsepower: '261 hp',
+                    torque: '273 lb-ft',
+                    transmission: '7-speed S tronic',
+                    mpg: '23 city / 28 highway',
+                    price: '$43,500'
+                },
+                q7: {
+                    image: '../images/types/suv-black.jpg',
+                    engine: '3.0L TFSI V6',
+                    horsepower: '335 hp',
+                    torque: '369 lb-ft',
+                    transmission: '8-speed Tiptronic',
+                    mpg: '18 city / 23 highway',
+                    price: '$55,800'
+                }
+            }
+        },
+        lexus: {
+            models: [
+                {id: 'is', name: 'IS'},
+                {id: 'es', name: 'ES'},
+                {id: 'nx', name: 'NX'},
+                {id: 'rx', name: 'RX'}
+            ],
+            specs: {
+                is: {
+                    image: '../images/types/sedan-white.jpg',
+                    engine: '2.0L Turbo',
+                    horsepower: '241 hp',
+                    torque: '258 lb-ft',
+                    transmission: '8-speed Automatic',
+                    mpg: '21 city / 31 highway',
+                    price: '$39,850'
+                },
+                es: {
+                    image: '../images/types/sedan-silver.jpg',
+                    engine: '2.5L 4-Cylinder',
+                    horsepower: '203 hp',
+                    torque: '184 lb-ft',
+                    transmission: '8-speed Automatic',
+                    mpg: '25 city / 34 highway',
+                    price: '$40,950'
+                },
+                nx: {
+                    image: '../images/types/suv-red.jpg',
+                    engine: '2.5L 4-Cylinder',
+                    horsepower: '203 hp',
+                    torque: '184 lb-ft',
+                    transmission: '8-speed Automatic',
+                    mpg: '26 city / 33 highway',
+                    price: '$37,950'
+                },
+                rx: {
+                    image: '../images/types/suv-white.jpg',
+                    engine: '3.5L V6',
+                    horsepower: '295 hp',
+                    torque: '268 lb-ft',
+                    transmission: '8-speed Automatic',
+                    mpg: '20 city / 27 highway',
+                    price: '$45,920'
                 }
             }
         }
