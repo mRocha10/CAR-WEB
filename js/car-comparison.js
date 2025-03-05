@@ -163,12 +163,12 @@ document.addEventListener('DOMContentLoaded', function() {
         
         // Helper function to determine if a higher value is better for a spec
         function isHigherBetter(specKey) {
-            return ['horsepower', 'torque', 'mpg', 'cargoCapacity', 'fuelTank'].includes(specKey);
+            return ['horsepower', 'torque', 'cargoCapacity', 'fuelTank', 'topSpeed'].includes(specKey);
         }
 
         // Helper function to determine if a lower value is better for a spec
         function isLowerBetter(specKey) {
-            return ['price', 'acceleration', 'weight'].includes(specKey);
+            return ['price','mpg','acceleration', 'weight'].includes(specKey);
         }
 
         // Helper function to extract numeric value from spec string
