@@ -68,17 +68,41 @@
 .component-header {
     text-align: center;
     margin-bottom: 3rem;
-    padding: 2rem;
-    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-    border-radius: 15px;
+    padding: 2.5rem;
+    background: linear-gradient(135deg, #14284e 0%, #2a5298 100%);
+    border-radius: 16px;
+    box-shadow: 0 6px 20px rgba(30, 60, 114, 0.15);
+    position: relative;
+    overflow: hidden;
 }
 
 .component-header h1 {
-    font-size: 3rem;
-    color: #1a1a1a;
+    font-family: 'Montserrat', 'Helvetica Neue', Arial, sans-serif;
+    font-size: 3.2rem;
+    font-weight: 800;
+    color: #ffffff;
     margin-bottom: 1rem;
+    letter-spacing: -0.5px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    position: relative;
+    z-index: 1;
 }
 
+.component-header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+    animation: shimmer 2s infinite;
+}
+
+@keyframes shimmer {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+}
 .component-section {
     margin-bottom: 3rem;
     padding: 2rem;
@@ -150,27 +174,72 @@
 
 @media (max-width: 768px) {
     .component-category {
-        padding: 1.5rem;
+        padding: 1.25rem;
         margin: 1.5rem 0;
+        display: flex;
+        flex-direction: column;
+        min-height: 250px;
     }
 
     .component-category h3 {
         font-size: 1.5rem;
+        margin-bottom: 0.75rem;
     }
 
     .category-summary {
         font-size: 1rem;
+        margin: 1rem 0;
+        line-height: 1.5;
+        flex-grow: 1;
+    }
+
+    .category-button {
+        width: 100%;
+        text-align: center;
+        padding: 0.7rem 1.2rem;
+        margin-top: 1rem;
+        align-self: stretch;
+    }
+
+    .component-header {
+        padding: 1.5rem;
+        margin-bottom: 2rem;
     }
 
     .component-header h1 {
         font-size: 2rem;
     }
 
+    .component-section {
+        padding: 1.25rem;
+        margin-bottom: 2rem;
+    }
+
     .component-section h2 {
         font-size: 1.5rem;
+        padding-left: 0.75rem;
     }
 
     .component-grid {
         grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .component-card {
+        padding: 1.25rem;
+    }
+
+    .component-image {
+        height: 180px;
+    }
+
+    #components h2 {
+        font-size: 2rem;
+        margin-bottom: 0.5rem;
+    }
+
+    #components h4 {
+        font-size: 1.1rem;
+        margin-bottom: 1.5rem;
     }
 }

@@ -351,3 +351,21 @@ my /* Car Type Page Styles */
     transform: translateY(-50%);
     z-index: 10;
 }
+
+/* Mobile responsive styles for the animated button */
+@media screen and (max-width: 768px) {
+    .animated-button {
+        position: relative;
+        right: auto;
+        top: auto;
+        transform: none;
+        margin-top: 15px;
+        width: 100%;
+        justify-content: center;
+    }
+    
+    .car-type-info {
+        display: flex;
+        flex-direction: column;
+    }
+}

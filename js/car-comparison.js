@@ -168,7 +168,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         // Helper function to determine if a lower value is better for a spec
         function isLowerBetter(specKey) {
-            return ['price','mpg','acceleration', 'weight'].includes(specKey);
+            return ['price','mpg','acceleration','weight'].includes(specKey);
         }
 
         // Helper function to extract numeric value from spec string
@@ -226,6 +226,28 @@ document.addEventListener('DOMContentLoaded', function() {
         // Add CSS styles for comparison highlighting
         const styleElement = document.createElement('style');
         styleElement.textContent = `
+            .comparison-header {
+                background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+                border-bottom: 2px solid #dee2e6;
+                box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            }
+            .header-cell {
+                padding: 1.25rem;
+                font-weight: 700;
+                font-size: 1.2rem;
+                color: #343a40;
+                text-transform: uppercase;
+                letter-spacing: 1px;
+                transition: all 0.3s ease;
+                text-align: center;
+                font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            }
+            .header-cell:not(:first-child) {
+                border-left: 1px solid rgba(222, 226, 230, 0.5);
+            }
+            .header-cell:hover {
+                background-color: rgba(233, 236, 239, 0.5);
+            }
             .better-spec {
                 background-color: #e6ffe6;
                 color: #006600;
@@ -233,6 +255,15 @@ document.addEventListener('DOMContentLoaded', function() {
             .worse-spec {
                 background-color: #ffe6e6;
                 color: #cc0000;
+            }
+            .comparison-table {
+                box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+                border-radius: 8px;
+                overflow: hidden;
+            }
+            .comparison-cell {
+                padding: 0.75rem 1rem;
+                border: 1px solid #dee2e6;
             }
         `;
         document.head.appendChild(styleElement);
