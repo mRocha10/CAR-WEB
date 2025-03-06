@@ -362,6 +362,7 @@ my /* Car Type Page Styles */
         margin-top: 15px;
         width: 100%;
         justify-content: center;
+        text-decoration: none;
     }
     
     .car-type-info {

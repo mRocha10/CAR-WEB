@@ -158,58 +158,32 @@
     font-weight: 300;
 }
 
-.brand-info-section, .brand-focus-section, .model-lineup-section {
+.brand-info-section,
+.brand-focus-section,
+.model-lineup-section {
+    text-align: center;
+    margin: 0 auto;
+    padding: 2rem;
     max-width: 1200px;
-    margin: 0 auto 4rem;
-    padding: 0 2rem;
-}
-
-.brand-info-section h2, .brand-focus-section h2, .model-lineup-section h2 {
-    font-size: 2.5rem;
-    color: #2c3e50;
-    margin-bottom: 2rem;
-    position: relative;
-    padding-bottom: 1rem;
-}
-
-.brand-info-section h2::after, .brand-focus-section h2::after, .model-lineup-section h2::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 80px;
-    height: 4px;
-    background: linear-gradient(90deg, #3498db, #2ecc71);
-    border-radius: 2px;
-}
-
-.brand-info-section p, .brand-focus-section p {
-    font-size: 1.2rem;
-    line-height: 1.8;
-    color: #555;
-    margin-bottom: 1.5rem;
 }
 
 .brand-focus-section ul {
-    list-style: none;
-    padding: 0;
-    margin: 2rem 0;
+    display: inline-block;
+    text-align: left;
+    margin: 0 auto;
 }
 
-.brand-focus-section li {
-    font-size: 1.1rem;
-    color: #555;
-    margin-bottom: 1rem;
-    padding-left: 2rem;
-    position: relative;
+.model-categories {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
 }
 
-.brand-focus-section li::before {
-    content: '✓';
-    position: absolute;
-    left: 0;
-    color: #2ecc71;
-    font-weight: bold;
+.model-category {
+    flex: 1;
+    min-width: 250px;
+    max-width: 400px;
 }
 
 .model-categories {

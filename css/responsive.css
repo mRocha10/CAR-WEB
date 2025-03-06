@@ -193,3 +193,87 @@
         font-size: 16px;
     }
 }
+
+.brand-grid {
+        padding: 1rem;
+        width: 95%;
+        margin: 0 auto;
+    }
+
+    .brand-cards {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        padding: 0.5rem;
+    }
+
+    .brand-category {
+        padding: 1.5rem;
+        margin-bottom: 2rem;
+    }
+
+    .car-type-grid {
+        padding: 1rem;
+        width: 95%;
+        margin: 0 auto;
+    }
+
+    .car-type-cards {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        padding: 0.5rem;
+    }
+
+/* Extra small screens */
+@media screen and (max-width: 480px) {
+    body {
+        font-size: 13px;
+    }
+
+    .section {
+        padding: 1rem;
+        margin: 0.5rem 0;
+    }
+
+    .component-header {
+        padding: 1rem;
+    }
+
+    .component-header h1 {
+        font-size: 1.8rem;
+    }
+
+    .component-section h2 {
+        font-size: 1.5rem;
+    }
+
+    .component-card h3 {
+        font-size: 1.3rem;
+    }
+
+    .component-image {
+        height: 150px;
+    }
+    .logo h1 {
+        font-size: 24px;
+    }
+
+    .logo p {
+        font-size: 14px;
+    }
+
+    .brands {
+        grid-template-columns: 1fr;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+
+    h3 {
+        font-size: 20px;
+    }
+
+    .intro-text {
+        font-size: 16px;
+    }
+}
