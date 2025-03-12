@@ -1,0 +1,28 @@
+name: Update Comments
+
+on:
+  issues:
+    types: [opened]
+
+jobs:
+  update-comments:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+
+      - name: Extraer comentarios desde el issue
+        run: |
+          echo "${{ github.event.issue.body }}" | tail -n +2 | head -n -1 > data/comments.json
+
+      - name: Configurar Git
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git pull origin main
+
+      - name: Actualizar comments.json
+        run: |
+          git add data/comments.json
+          git commit -m "Update comments.json"
+          git push origin main

@@ -2,17 +2,15 @@ document.addEventListener('DOMContentLoaded', function() {
     const commentForm = document.getElementById('comment-form');
     const commentsContainer = document.getElementById('comments-container');
 
-    // Function to generate a unique ID
+    // Genera un ID único para cada comentario
     function generateUniqueId() {
         return Date.now().toString(36) + Math.random().toString(36).substr(2);
     }
 
-    // Load initial comments
-    loadComments();
-
+    // Cargar comentarios desde el JSON de GitHub
     async function loadComments() {
         try {
-            const response = await fetch('/data/comments.json');
+            const response = await fetch('https://raw.githubusercontent.com/TU_USUARIO/TU_REPOSITORIO/main/data/comments.json');
             if (!response.ok) {
                 throw new Error('No comments found');
             }
@@ -24,6 +22,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
+    // Muestra los comentarios en la página
     function displayComments(comments) {
         commentsContainer.innerHTML = '';
         comments.forEach(comment => {
@@ -37,27 +36,35 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
+    // Guardar el comentario enviando una solicitud a GitHub API
     async function saveComment(commentData) {
         try {
-            // Load existing comments
+            // Obtiene los comentarios actuales del archivo en GitHub
+            const response = await fetch('https://raw.githubusercontent.com/TU_USUARIO/TU_REPOSITORIO/main/data/comments.json');
             let comments = [];
-            try {
-                const response = await fetch('/data/comments.json');
-                if (response.ok) {
-                    comments = await response.json();
-                }
-            } catch (error) {
-                // If file doesn't exist or is empty, start with empty array
-                comments = [];
+            if (response.ok) {
+                comments = await response.json();
             }
 
-            // Add new comment
+            // Agrega el nuevo comentario
             comments.push(commentData);
 
-            // Save updated comments to localStorage as temporary storage
-            localStorage.setItem('comments', JSON.stringify(comments));
+            // Envía los comentarios actualizados a GitHub mediante un issue
+            await fetch('https://api.github.com/repos/TU_USUARIO/TU_REPOSITORIO/issues', {
+                method: 'POST',
+                headers: {
+                    'Accept': 'application/vnd.github+json',
+                    'Authorization': `Bearer SECRETO_EN_BACKEND`, // GitHub Actions usará el token
+                    'X-GitHub-Api-Version': '2022-11-28'
+                },
+                body: JSON.stringify({
+                    title: "New Comment",
+                    body: "```json\n" + JSON.stringify(comments, null, 2) + "\n```",
+                    labels: ["comment"]
+                })
+            });
 
-            // Update the display
+            // Muestra los comentarios actualizados
             displayComments(comments);
         } catch (error) {
             console.error('Error saving comment:', error);
@@ -65,7 +72,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
-    // Handle form submission
+    // Maneja el envío del formulario
     commentForm.addEventListener('submit', async function(e) {
         e.preventDefault();
         
@@ -80,8 +87,11 @@ document.addEventListener('DOMContentLoaded', function() {
         
         await saveComment(commentData);
         
-        // Clear form
+        // Limpia el formulario
         nameInput.value = '';
         commentInput.value = '';
     });
+
+    // Cargar comentarios al inicio
+    loadComments();
 });
