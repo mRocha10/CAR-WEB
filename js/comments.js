@@ -2,15 +2,6 @@ document.addEventListener('DOMContentLoaded', function() {
     const commentForm = document.getElementById('comment-form');
     const commentsContainer = document.getElementById('comments-container');
 
-    // Connect to WebSocket server
-    const ws = new WebSocket('ws://localhost:3000');
-
-    // Handle incoming WebSocket messages
-    ws.onmessage = function(event) {
-        const comments = JSON.parse(event.data);
-        displayComments(comments);
-    };
-
     // Function to generate a unique ID
     function generateUniqueId() {
         return Date.now().toString(36) + Math.random().toString(36).substr(2);
@@ -41,7 +32,6 @@ document.addEventListener('DOMContentLoaded', function() {
             commentElement.innerHTML = `
                 <h4>${comment.name}</h4>
                 <p>${comment.comment}</p>
-                <small>Posted on ${new Date(comment.timestamp).toLocaleDateString()}</small>
             `;
             commentsContainer.appendChild(commentElement);
         });
@@ -49,20 +39,26 @@ document.addEventListener('DOMContentLoaded', function() {
 
     async function saveComment(commentData) {
         try {
-            const response = await fetch('/save-comment', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify(commentData)
-            });
-
-            if (!response.ok) {
-                throw new Error('Failed to save comment');
+            // Load existing comments
+            let comments = [];
+            try {
+                const response = await fetch('/data/comments.json');
+                if (response.ok) {
+                    comments = await response.json();
+                }
+            } catch (error) {
+                // If file doesn't exist or is empty, start with empty array
+                comments = [];
             }
 
-            // Clear form after successful save
-            // Comments will be updated via WebSocket
+            // Add new comment
+            comments.push(commentData);
+
+            // Save updated comments to localStorage as temporary storage
+            localStorage.setItem('comments', JSON.stringify(comments));
+
+            // Update the display
+            displayComments(comments);
         } catch (error) {
             console.error('Error saving comment:', error);
             alert('Failed to save your comment. Please try again.');
@@ -79,8 +75,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const commentData = {
             id: generateUniqueId(),
             name: nameInput.value,
-            comment: commentInput.value,
-            timestamp: Date.now()
+            comment: commentInput.value
         };
         
         await saveComment(commentData);
