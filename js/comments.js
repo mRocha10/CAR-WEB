@@ -1,7 +1,25 @@
-import { OFFENSIVE_WORDS, ALL_SPAM_PATTERNS } from './offensive-words.js';
-
 const API_URL = 'https://api.jsonbin.io/v3/b/67d2aaa98960c979a570ade7';
 const API_KEY = '$2a$10$3jXtFCWAVo8McpPR7Ib1ZuTtkYiKoj3H3H0VmRY8SKmd2jI7myboS';
+
+// Load prohibited words from JSON file
+let prohibitedWords = null;
+
+async function loadProhibitedWords() {
+    try {
+        const response = await fetch('../data/prohibited-words.json');
+        if (!response.ok) throw new Error('Failed to load prohibited words');
+        prohibitedWords = await response.json();
+    } catch (error) {
+        console.error('Error loading prohibited words:', error);
+        // Fallback to empty arrays if loading fails
+        prohibitedWords = {
+            profanity: [],
+            hateAndDiscrimination: [],
+            spam: [],
+            spamPatterns: []
+        };
+    }
+}
 
 // Función para sanitizar el input y prevenir XSS
 function sanitizeInput(text) {
@@ -12,8 +30,30 @@ function sanitizeInput(text) {
 
 // Función para verificar contenido ofensivo
 function containsOffensiveContent(text) {
+    if (!prohibitedWords) return false;
+    
     const lowercaseText = text.toLowerCase();
-    return OFFENSIVE_WORDS.some(word => lowercaseText.includes(word));
+    
+    // Check for profanity
+    if (prohibitedWords.profanity.some(word => lowercaseText.includes(word))) {
+        return true;
+    }
+    
+    // Check for hate speech and discrimination
+    if (prohibitedWords.hateAndDiscrimination.some(word => lowercaseText.includes(word))) {
+        return true;
+    }
+    
+    // Check for spam words
+    if (prohibitedWords.spam.some(word => lowercaseText.includes(word))) {
+        return true;
+    }
+    
+    // Check for spam patterns
+    return prohibitedWords.spamPatterns.some(pattern => {
+        const regex = new RegExp(pattern);
+        return regex.test(lowercaseText);
+    });
 }
 
 // Función para validar el input
@@ -37,7 +77,10 @@ function validateInput(text, type) {
     return sanitizeInput(text);
 }
 
-document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener('DOMContentLoaded', async function () {
+    // Load prohibited words when the page loads
+    await loadProhibitedWords();
+    
     const commentForm = document.getElementById('comment-form');
     const commentsContainer = document.getElementById('comments-container');
 
