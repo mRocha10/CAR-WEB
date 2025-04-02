@@ -204,17 +204,28 @@ my /* Car Type Page Styles */
 
 .car-type-info {
     flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
 }
 
 .car-type-info h4 {
+    width: 100%;
     color: #333;
     margin-top: 1.5rem;
     margin-bottom: 0.5rem;
 }
 
 .car-type-info ul {
+    width: 100%;
     list-style-type: none;
     padding-left: 0;
+}
+
+.animated-button {
+    margin-left: 0;
+    margin-top: 3rem;
+    align-self: flex-start;
 }
 
 .car-type-info li {
@@ -272,6 +283,9 @@ my /* Car Type Page Styles */
     cursor: pointer;
     overflow: hidden;
     transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+    margin-left: 0;
+    margin-top: 3rem;
+    align-self: flex-start;
   }
   
   .animated-button svg {
@@ -345,11 +359,22 @@ my /* Car Type Page Styles */
   }
 
   .animated-button {
-    position: absolute;
-    right: 20px;
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 10;
+    margin-left: 0;
+    margin-top: 3rem;
+    align-self: flex-start;
+}
+
+/* Eliminar subrayado de enlaces visitados */
+a, a:link, a:visited, a:hover, a:active {
+    text-decoration: none;
+}
+
+/* Asegurar que los enlaces dentro de los botones animados no tengan subrayado */
+.car-type-info a, 
+.car-type-info a:visited,
+.car-type-info a:hover,
+.car-type-info a:active {
+    text-decoration: none;
 }
 
 /* Mobile responsive styles for the animated button */
@@ -369,4 +394,232 @@ my /* Car Type Page Styles */
         display: flex;
         flex-direction: column;
     }
+}
+
+/* Eliminar subrayado de enlaces visitados */
+a, a:link, a:visited, a:hover, a:active {
+    text-decoration: none;
+}
+
+/* Asegurar que los enlaces dentro de los botones animados no tengan subrayado */
+.car-type-info a, 
+.car-type-info a:visited,
+.car-type-info a:hover,
+.car-type-info a:active {
+    text-decoration: none;
+}
+
+/* Car Cards Grid Layout */
+.car-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    padding: 2rem 0;
+}
+
+@media screen and (max-width: 992px) {
+    .car-cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .car-cards {
+        grid-template-columns: 1fr;
+    }
+}
+.car-type-info {
+    flex: 1;
+}
+
+.car-type-info h4 {
+    color: #333;
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.car-type-info ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.car-type-info li {
+    margin-bottom: 0.5rem;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.car-type-info li:before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: #007bff;
+}
+
+.arrow-btn {
+    display: inline-block;
+    position: relative;
+    width: 30px;
+    height: 30px;
+    float: right;
+    transition: transform 0.3s ease;
+}
+
+.arrow-btn:hover {
+    transform: translateX(5px);
+}
+
+.arrow-btn:before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 12px;
+    height: 12px;
+    border-top: 2px solid #007bff;
+    border-right: 2px solid #007bff;
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+/* From Uiverse.io by gharsh11032000 */ 
+.animated-button {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding: 16px 36px;
+    border: 4px solid;
+    border-color: transparent;
+    font-size: 16px;
+    background-color: inherit;
+    border-radius: 100px;
+    font-weight: 600;
+    color: #2a5298;
+    box-shadow: 0 0 0 2px #2a5298;
+    cursor: pointer;
+    overflow: hidden;
+    transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+    margin-left: 0;
+    margin-top: 3rem;
+    align-self: flex-start;
+  }
+  
+  .animated-button svg {
+    position: absolute;
+    width: 24px;
+    fill: #2a5298;
+    z-index: 9;
+    transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+  }
+  
+  .animated-button .arr-1 {
+    right: 16px;
+  }
+  
+  .animated-button .arr-2 {
+    left: -25%;
+  }
+  
+  .animated-button .circle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 20px;
+    height: 20px;
+    background-color: #376bc5;
+    border-radius: 50%;
+    opacity: 0;
+    transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+  }
+  
+  .animated-button .text {
+    position: relative;
+    z-index: 1;
+    transform: translateX(-12px);
+    transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+  }
+  
+  .animated-button:hover {
+    box-shadow: 0 0 0 12px transparent;
+    color: #ffffff;
+    border-radius: 12px;
+  }
+  
+  .animated-button:hover .arr-1 {
+    right: -25%;
+  }
+  
+  .animated-button:hover .arr-2 {
+    left: 16px;
+  }
+  
+  .animated-button:hover .text {
+    transform: translateX(12px);
+    color: #ffffff;
+  }
+  
+  .animated-button:hover svg {
+    fill: #ffffff;
+  }
+  
+  .animated-button:active {
+    scale: 0.95;
+    box-shadow: 0 0 0 4px #376bc5;
+  }
+  
+  .animated-button:hover .circle {
+    width: 220px;
+    height: 220px;
+    opacity: 1;
+  }
+
+  .animated-button {
+    margin-left: 0;
+    margin-top: 3rem;
+    align-self: flex-start;
+}
+
+/* Eliminar subrayado de enlaces visitados */
+a, a:link, a:visited, a:hover, a:active {
+    text-decoration: none;
+}
+
+/* Asegurar que los enlaces dentro de los botones animados no tengan subrayado */
+.car-type-info a, 
+.car-type-info a:visited,
+.car-type-info a:hover,
+.car-type-info a:active {
+    text-decoration: none;
+}
+
+/* Mobile responsive styles for the animated button */
+@media screen and (max-width: 768px) {
+    .animated-button {
+        position: relative;
+        right: auto;
+        top: auto;
+        transform: none;
+        margin-top: 15px;
+        width: 100%;
+        justify-content: center;
+        text-decoration: none;
+    }
+    
+    .car-type-info {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+/* Eliminar subrayado de enlaces visitados */
+a, a:link, a:visited, a:hover, a:active {
+    text-decoration: none;
+}
+
+/* Asegurar que los enlaces dentro de los botones animados no tengan subrayado */
+.car-type-info a, 
+.car-type-info a:visited,
+.car-type-info a:hover,
+.car-type-info a:active {
+    text-decoration: none;
 }
