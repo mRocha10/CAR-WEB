@@ -3,13 +3,29 @@ const fs = require('fs');
 const path = require('path');
 const app = express();
 const WebSocket = require('ws');
+const helmet = require('helmet');
+const { body, validationResult } = require('express-validator');
+const https = require('https');
+const selfsigned = require('selfsigned');
+
+// Generar certificado self-signed
+const attrs = [{ name: 'commonName', value: 'localhost' }];
+const pems = selfsigned.generate(attrs, { days: 365 });
+const httpsOptions = {
+  key: pems.private,
+  cert: pems.cert
+};
 
 app.use(express.json());
 app.use(express.static(path.join(__dirname)));
+app.use(helmet());
 
 // WebSocket server for real-time updates
-const server = app.listen(3000, () => {
-    console.log('Server running on port 3000');
+// const server = app.listen(3001, () => {
+//     console.log('Server running on port 3000');
+// });
+const server = https.createServer(httpsOptions, app).listen(3001, () => {
+    console.log('HTTPS Server running on port 3000');
 });
 
 const wss = new WebSocket.Server({ server });
@@ -46,9 +62,17 @@ function broadcastUpdate(comments) {
     });
 }
 
-// Endpoint to save comments
-app.post('/save-comment', (req, res) => {
-    const commentData = req.body;
+// Endpoint to save comments con validación
+app.post('/save-comment', [
+  body('name').trim().notEmpty().escape(),
+  body('comment').trim().notEmpty().escape()
+], (req, res) => {
+  const errors = validationResult(req);
+  if (!errors.isEmpty()) {
+    return res.status(400).json({ errors: errors.array() });
+  }
+  
+  const commentData = req.body;
     const commentsPath = path.join(__dirname, 'data', 'comments.json');
 
     fs.readFile(commentsPath, 'utf8', (err, data) => {

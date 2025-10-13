@@ -9,7 +9,7 @@
     ],
     "specs": {
       "giulia": {
-        "image": "../images/types/sedan-red.jpg",
+        "image": "../images/types/sedan.png",
         "engine": "2.0L Turbo 4-Cylinder",
         "horsepower": "280 hp",
         "torque": "306 lb-ft",
@@ -26,7 +26,7 @@
         "warranty": "4-year/50,000-mile limited warranty"
       },
       "stelvio": {
-        "image": "../images/types/suv-red.jpg",
+        "image": "../images/types/suv.png",
         "engine": "2.0L Turbo 4-Cylinder",
         "horsepower": "280 hp",
         "torque": "306 lb-ft",
@@ -43,7 +43,7 @@
         "warranty": "4-year/50,000-mile limited warranty"
       },
       "tonale": {
-        "image": "../images/types/suv-blue.jpg",
+        "image": "../images/types/suv.png",
         "engine": "2.0L Turbo 4-Cylinder PHEV",
         "horsepower": "272 hp",
         "torque": "295 lb-ft",
@@ -60,7 +60,7 @@
         "warranty": "4-year/50,000-mile limited warranty"
       },
       "giulietta": {
-        "image": "../images/types/hatchback-white.jpg",
+        "image": "../images/types/hatchback.png",
         "engine": "1.4L Turbo 4-Cylinder",
         "horsepower": "170 hp",
         "torque": "184 lb-ft",
@@ -77,7 +77,7 @@
         "warranty": "4-year/50,000-mile limited warranty"
       },
       "4c": {
-        "image": "../images/types/sports-red.jpg",
+        "image": "../images/types/sports-car.png",
         "engine": "1.7L Turbo 4-Cylinder",
         "horsepower": "237 hp",
         "torque": "258 lb-ft",
@@ -105,7 +105,7 @@
       ],
       "specs": {
         "db11": {
-          "image": "../images/types/coupe-black.jpg",
+          "image": "../images/types/convertible.png",
           "engine": "4.0L Twin-Turbo V8",
           "horsepower": "503 hp",
           "torque": "513 lb-ft",
@@ -122,7 +122,7 @@
           "warranty": "3-year/unlimited-mileage limited warranty"
         },
         "vantage": {
-          "image": "../images/types/coupe-green.jpg",
+          "image": "../images/types/convertible.png",
           "engine": "4.0L Twin-Turbo V8",
           "horsepower": "503 hp",
           "torque": "505 lb-ft",
@@ -139,7 +139,7 @@
           "warranty": "3-year/unlimited-mileage limited warranty"
         },
         "dbs": {
-          "image": "../images/types/coupe-red.jpg",
+          "image": "../images/types/convertible.png",
           "engine": "5.2L Twin-Turbo V12",
           "horsepower": "715 hp",
           "torque": "663 lb-ft",
@@ -156,7 +156,7 @@
           "warranty": "3-year/unlimited-mileage limited warranty"
         },
         "valhalla": {
-          "image": "../images/types/supercar-gray.jpg",
+          "image": "../images/types/sports-car.png",
           "engine": "3.0L Twin-Turbo Hybrid V6",
           "horsepower": "937 hp",
           "torque": "738 lb-ft",
@@ -173,7 +173,7 @@
           "warranty": "Custom Aston Martin Limited Warranty"
         },
         "vulcan": {
-          "image": "../images/types/supercar-orange.jpg",
+          "image": "../images/types/sports-car.png",
           "engine": "7.0L Naturally Aspirated V12",
           "horsepower": "820 hp",
           "torque": "575 lb-ft",
@@ -201,7 +201,7 @@
       ],
       "specs": {
         "a4": {
-          "image": "../images/types/sedan-gray.jpg",
+          "image": "../images/types/sedan.png",
           "engine": "2.0L Turbo 4-Cylinder",
           "horsepower": "261 hp",
           "torque": "273 lb-ft",
@@ -218,7 +218,7 @@
           "warranty": "4-year/50,000-mile limited warranty"
         },
         "q5": {
-          "image": "../images/types/suv-gray.jpg",
+          "image": "../images/types/suv.png",
           "engine": "2.0L Turbo 4-Cylinder",
           "horsepower": "261 hp",
           "torque": "273 lb-ft",
@@ -235,7 +235,7 @@
           "warranty": "4-year/50,000-mile limited warranty"
         },
         "a6": {
-          "image": "../images/types/sedan-black.jpg",
+          "image": "../images/types/sedan.png",
           "engine": "3.0L Turbo V6",
           "horsepower": "335 hp",
           "torque": "369 lb-ft",
@@ -252,7 +252,7 @@
           "warranty": "4-year/50,000-mile limited warranty"
         },
         "r8": {
-            "image": "../images/types/sports-red.jpg",
+            "image": "../images/types/sports-car.png",
             "engine": "5.2L V10",
             "horsepower": "602 hp",
             "torque": "413 lb-ft",
@@ -269,7 +269,7 @@
             "warranty": "4-year/50,000-mile limited warranty"
           },
           "eTron": {
-            "image": "../images/types/electric-silver.jpg",
+            "image": "../images/types/electric.png",
             "engine": "Dual Motor Electric",
             "horsepower": "402 hp",
             "torque": "490 lb-ft",
@@ -297,7 +297,7 @@
           ],
           "specs": {
             "continentalgt": {
-              "image": "../images/types/coupe-blue.jpg",
+              "image": "../images/types/convertible.png",
               "engine": "6.0L Twin-Turbo W12",
               "horsepower": "650 hp",
               "torque": "664 lb-ft",
@@ -314,7 +314,7 @@
               "warranty": "3-year/unlimited-mileage limited warranty"
             },
             "bentayga": {
-                "image": "../images/types/suv-black.jpg",
+                "image": "../images/types/suv.png",
                 "engine": "4.0L Twin-Turbo V8",
                 "horsepower": "542 hp",
                 "torque": "568 lb-ft",
@@ -331,7 +331,7 @@
                 "warranty": "3-year/unlimited-mileage limited warranty"
               },
               "flyingSpur": {
-                "image": "../images/types/sedan-white.jpg",
+                "image": "../images/types/sedan.png",
                 "engine": "6.0L Twin-Turbo W12",
                 "horsepower": "626 hp",
                 "torque": "664 lb-ft",
@@ -348,7 +348,7 @@
                 "warranty": "3-year/unlimited-mileage limited warranty"
               },
               "mulsanne": {
-                "image": "../images/types/sedan-black.jpg",
+                "image": "../images/types/sedan.png",
                 "engine": "6.75L Twin-Turbo V8",
                 "horsepower": "530 hp",
                 "torque": "811 lb-ft",
@@ -365,7 +365,7 @@
                 "warranty": "3-year/unlimited-mileage limited warranty"
               },
               "azure": {
-                "image": "../images/types/convertible-blue.jpg",
+                "image": "../images/types/convertible.png",
                 "engine": "6.75L Twin-Turbo V8",
                 "horsepower": "500 hp",
                 "torque": "738 lb-ft",
@@ -410,7 +410,7 @@
               "warranty": "4-year/50,000-mile limited warranty"
             },
             "x5": {
-              "image": "../images/types/suv-blue.jpg",
+              "image": "../images/types/suv.png",
               "engine": "3.0L Turbo Inline-6",
               "horsepower": "335 hp",
               "torque": "330 lb-ft",
@@ -427,7 +427,7 @@
               "warranty": "4-year/50,000-mile limited warranty"
             },
             "i4": {
-              "image": "../images/types/sedan-red.jpg",
+              "image": "../images/types/sedan.png",
               "engine": "Electric Motor",
               "horsepower": "536 hp",
               "torque": "586 lb-ft",
@@ -444,7 +444,7 @@
               "warranty": "8-year/100,000-mile limited warranty"
             },
             "z4": {
-              "image": "../images/types/convertible-blue.jpg",
+              "image": "../images/types/convertible.png",
               "engine": "2.0L Turbo Inline-4",
               "horsepower": "255 hp",
               "torque": "295 lb-ft",
@@ -461,7 +461,7 @@
               "warranty": "4-year/50,000-mile limited warranty"
             },
             "7series": {
-              "image": "../images/types/sedan-black.jpg",
+              "image": "../images/types/sedan.png",
               "engine": "3.0L Turbo Inline-6",
               "horsepower": "335 hp",
               "torque": "330 lb-ft",
@@ -489,7 +489,7 @@
           ],
           "specs": {
             "han": {
-              "image": "../images/types/sedan-red.jpg",
+              "image": "../images/types/sedan.png",
               "engine": "Dual-Motor Electric",
               "horsepower": "517 hp",
               "torque": "531 lb-ft",
@@ -506,7 +506,7 @@
               "warranty": "6-year/90,000-mile limited warranty"
             },
             "tang": {
-              "image": "../images/types/suv-red.jpg",
+              "image": "../images/types/suv.png",
               "engine": "Dual-Motor Electric",
               "horsepower": "516 hp",
               "torque": "520 lb-ft",
@@ -523,7 +523,7 @@
               "warranty": "6-year/90,000-mile limited warranty"
             },
             "seal": {
-              "image": "../images/types/sedan-blue.jpg",
+              "image": "../images/types/sedan.png",
               "engine": "Dual-Motor Electric",
               "horsepower": "469 hp",
               "torque": "506 lb-ft",
@@ -540,7 +540,7 @@
               "warranty": "6-year/90,000-mile limited warranty"
             },
             "yuanplus": {
-              "image": "../images/types/suv-white.jpg",
+              "image": "../images/types/suv.png",
               "engine": "Dual-Motor Electric",
               "horsepower": "204 hp",
               "torque": "332 lb-ft",
@@ -557,7 +557,7 @@
               "warranty": "6-year/90,000-mile limited warranty"
             },
             "songplus": {
-              "image": "../images/types/suv-green.jpg",
+              "image": "../images/types/suv.png",
               "engine": "Dual-Motor Electric",
               "horsepower": "362 hp",
               "torque": "395 lb-ft",
@@ -585,7 +585,7 @@
           ],
           "specs": {
             "ct5v": {
-              "image": "../images/types/sedan-black.jpg",
+              "image": "../images/types/sedan.png",
               "engine": "6.2L Supercharged V8",
               "horsepower": "668 hp",
               "torque": "659 lb-ft",
@@ -602,7 +602,7 @@
               "warranty": "4-year/50,000-mile limited warranty"
             },
             "escalade": {
-              "image": "../images/types/suv-black.jpg",
+              "image": "../images/types/suv.png",
               "engine": "6.2L V8",
               "horsepower": "420 hp",
               "torque": "460 lb-ft",
@@ -619,7 +619,7 @@
               "warranty": "4-year/50,000-mile limited warranty"
             },
             "lyriq": {
-              "image": "../images/types/suv-white.jpg",
+              "image": "../images/types/suv.png",
               "engine": "Dual-Motor Electric",
               "horsepower": "340 hp",
               "torque": "325 lb-ft",
@@ -636,7 +636,7 @@
               "warranty": "8-year/100,000-mile limited warranty"
             },
             "xt4": {
-              "image": "../images/types/suv-blue.jpg",
+              "image": "../images/types/suv.png",
               "engine": "2.0L Turbocharged Inline-4",
               "horsepower": "237 hp",
               "torque": "258 lb-ft",
@@ -653,7 +653,7 @@
               "warranty": "4-year/50,000-mile limited warranty"
             },
             "ct4": {
-              "image": "../images/types/sedan-white.jpg",
+              "image": "../images/types/sedan.png",
               "engine": "2.0L Turbocharged Inline-4",
               "horsepower": "237 hp",
               "torque": "258 lb-ft",
@@ -681,7 +681,7 @@
           ],
           "specs": {
             "camaro": {
-              "image": "../images/types/coupe-yellow.jpg",
+              "image": "../images/types/convertible.png",
               "engine": "6.2L Supercharged V8",
               "horsepower": "650 hp",
               "torque": "650 lb-ft",
@@ -698,7 +698,7 @@
               "warranty": "3-year/36,000-mile limited warranty"
             },
             "corvette": {
-              "image": "../images/types/coupe-red.jpg",
+              "image": "../images/types/convertible.png",
               "engine": "6.2L V8",
               "horsepower": "495 hp",
               "torque": "470 lb-ft",
@@ -715,7 +715,7 @@
               "warranty": "3-year/36,000-mile limited warranty"
             },
             "silverado": {
-              "image": "../images/types/pickup-blue.jpg",
+              "image": "../images/types/pickup.png",
               "engine": "5.3L V8",
               "horsepower": "355 hp",
               "torque": "383 lb-ft",
@@ -732,7 +732,7 @@
               "warranty": "3-year/36,000-mile limited warranty"
             },
             "tahoe": {
-              "image": "../images/types/suv-green.jpg",
+              "image": "../images/types/suv.png",
               "engine": "5.3L V8",
               "horsepower": "355 hp",
               "torque": "383 lb-ft",
@@ -749,7 +749,7 @@
               "warranty": "3-year/36,000-mile limited warranty"
             },
             "bolt": {
-              "image": "../images/types/hatchback-blue.jpg",
+              "image": "../images/types/hatchback.png",
               "engine": "Electric Motor",
               "horsepower": "200 hp",
               "torque": "266 lb-ft",
@@ -777,7 +777,7 @@
           ],
           "specs": {
             "challenger": {
-              "image": "../images/types/muscle-red.jpg",
+              "image": "../images/types/muscle.png",
               "engine": "6.2L Supercharged V8",
               "horsepower": "797 hp",
               "torque": "707 lb-ft",
@@ -794,7 +794,7 @@
               "warranty": "3-year/36,000-mile limited warranty"
             },
             "charger": {
-              "image": "../images/types/sedan-orange.jpg",
+              "image": "../images/types/sedan.png",
               "engine": "6.4L V8",
               "horsepower": "485 hp",
               "torque": "475 lb-ft",
@@ -811,7 +811,7 @@
               "warranty": "3-year/36,000-mile limited warranty"
             },
             "durango": {
-              "image": "../images/types/suv-black.jpg",
+              "image": "../images/types/suv.png",
               "engine": "5.7L V8",
               "horsepower": "360 hp",
               "torque": "390 lb-ft",
@@ -828,7 +828,7 @@
               "warranty": "3-year/36,000-mile limited warranty"
             },
             "hornet": {
-              "image": "../images/types/suv-green.jpg",
+              "image": "../images/types/suv.png",
               "engine": "2.0L Turbocharged Inline-4",
               "horsepower": "265 hp",
               "torque": "295 lb-ft",
@@ -890,7 +890,7 @@
               "warranty": "3-year/36,000-mile limited warranty"
             },
             "f150": {
-              "image": "../images/types/pickup-blue.jpg",
+              "image": "../images/types/pickup.png",
               "engine": "3.5L EcoBoost V6",
               "horsepower": "400 hp",
               "torque": "500 lb-ft",
@@ -907,7 +907,7 @@
               "warranty": "3-year/36,000-mile limited warranty"
             },
             "explorer": {
-              "image": "../images/types/suv-red.jpg",
+              "image": "../images/types/suv.png",
               "engine": "2.3L EcoBoost I4",
               "horsepower": "300 hp",
               "torque": "310 lb-ft",
@@ -924,7 +924,7 @@
               "warranty": "3-year/36,000-mile limited warranty"
             },
             "bronco": {
-              "image": "../images/types/suv-orange.jpg",
+              "image": "../images/types/suv.png",
               "engine": "2.7L EcoBoost V6",
               "horsepower": "330 hp",
               "torque": "415 lb-ft",
@@ -941,7 +941,7 @@
               "warranty": "3-year/36,000-mile limited warranty"
             },
             "machE": {
-              "image": "../images/types/suv-blue.jpg",
+              "image": "../images/types/suv.png",
               "engine": "Dual-Motor All-Wheel Drive",
               "horsepower": "346 hp",
               "torque": "428 lb-ft",
@@ -969,7 +969,7 @@
           ],
           "specs": {
             "coolray": {
-              "image": "../images/types/suv-red.jpg",
+              "image": "../images/types/suv.png",
               "engine": "1.5L Turbo 3-Cylinder",
               "horsepower": "177 hp",
               "torque": "255 lb-ft",
@@ -986,7 +986,7 @@
               "warranty": "5-year/60,000-mile limited warranty"
             },
             "tugella": {
-              "image": "../images/types/suv-green.jpg",
+              "image": "../images/types/suv.png",
               "engine": "2.0L Turbo 4-Cylinder",
               "horsepower": "238 hp",
               "torque": "258 lb-ft",
@@ -1003,7 +1003,7 @@
               "warranty": "5-year/60,000-mile limited warranty"
             },
             "emgrand": {
-              "image": "../images/types/sedan-black.jpg",
+              "image": "../images/types/sedan.png",
               "engine": "1.8L 4-Cylinder",
               "horsepower": "139 hp",
               "torque": "130 lb-ft",
@@ -1020,7 +1020,7 @@
               "warranty": "5-year/60,000-mile limited warranty"
             },
             "okavango": {
-              "image": "../images/types/suv-blue.jpg",
+              "image": "../images/types/suv.png",
               "engine": "1.5L Turbo 3-Cylinder",
               "horsepower": "190 hp",
               "torque": "210 lb-ft",
@@ -1037,7 +1037,7 @@
               "warranty": "5-year/60,000-mile limited warranty"
             },
             "monjaro": {
-              "image": "../images/types/suv-black.jpg",
+              "image": "../images/types/suv.png",
               "engine": "2.0L Turbo 4-Cylinder",
               "horsepower": "250 hp",
               "torque": "280 lb-ft",
@@ -1065,7 +1065,7 @@
           ],
           "specs": {
             "havalh6": {
-              "image": "../images/types/suv-white.jpg",
+              "image": "../images/types/suv.png",
               "engine": "1.5L Turbo 4-Cylinder",
               "horsepower": "169 hp",
               "torque": "285 lb-ft",
@@ -1082,7 +1082,7 @@
               "warranty": "5-year/100,000-mile limited warranty"
             },
             "poer": {
-              "image": "../images/types/pickup-blue.jpg",
+              "image": "../images/types/pickup.png",
               "engine": "2.0L Turbo 4-Cylinder",
               "horsepower": "214 hp",
               "torque": "320 lb-ft",
@@ -1099,7 +1099,7 @@
               "warranty": "5-year/100,000-mile limited warranty"
             },
             "tank300": {
-              "image": "../images/types/suv-green.jpg",
+              "image": "../images/types/suv.png",
               "engine": "2.0L Turbo 4-Cylinder",
               "horsepower": "221 hp",
               "torque": "324 lb-ft",
@@ -1116,7 +1116,7 @@
               "warranty": "5-year/100,000-mile limited warranty"
             },
             "weyvv7": {
-              "image": "../images/types/suv-black.jpg",
+              "image": "../images/types/suv.png",
               "engine": "2.0L Turbo 4-Cylinder",
               "horsepower": "227 hp",
               "torque": "324 lb-ft",
@@ -1133,7 +1133,7 @@
               "warranty": "5-year/100,000-mile limited warranty"
             },
             "oraGoodCat": {
-              "image": "../images/types/sedan-yellow.jpg",
+              "image": "../images/types/sedan.png",
               "engine": "Electric Motor",
               "horsepower": "143 hp",
               "torque": "210 lb-ft",
@@ -1161,7 +1161,7 @@
           ],
           "specs": {
             "civic": {
-              "image": "../images/types/sedan-gray.jpg",
+              "image": "../images/types/sedan.png",
               "engine": "2.0L 4-Cylinder",
               "horsepower": "158 hp",
               "torque": "138 lb-ft",
@@ -1178,7 +1178,7 @@
               "warranty": "3-year/36,000-mile limited warranty"
             },
             "accord": {
-              "image": "../images/types/sedan-blue.jpg",
+              "image": "../images/types/sedan.png",
               "engine": "1.5L Turbo 4-Cylinder",
               "horsepower": "192 hp",
               "torque": "192 lb-ft",
@@ -1195,7 +1195,7 @@
               "warranty": "3-year/36,000-mile limited warranty"
             },
             "crv": {
-              "image": "../images/types/suv-green.jpg",
+              "image": "../images/types/suv.png",
               "engine": "1.5L Turbo 4-Cylinder",
               "horsepower": "190 hp",
               "torque": "179 lb-ft",
@@ -1212,7 +1212,7 @@
               "warranty": "3-year/36,000-mile limited warranty"
             },
             "pilot": {
-              "image": "../images/types/suv-blue.jpg",
+              "image": "../images/types/suv.png",
               "engine": "3.5L V6",
               "horsepower": "280 hp",
               "torque": "262 lb-ft",
@@ -1229,7 +1229,7 @@
               "warranty": "3-year/36,000-mile limited warranty"
             },
             "hrv": {
-              "image": "../images/types/suv-red.jpg",
+              "image": "../images/types/suv.png",
               "engine": "1.8L 4-Cylinder",
               "horsepower": "141 hp",
               "torque": "127 lb-ft",
@@ -1257,7 +1257,7 @@
           ],
           "specs": {
             "xf": {
-              "image": "../images/types/sedan-black.jpg",
+              "image": "../images/types/sedan.png",
               "engine": "2.0L Turbo 4-Cylinder",
               "horsepower": "296 hp",
               "torque": "295 lb-ft",
@@ -1274,7 +1274,7 @@
               "warranty": "5-year/60,000-mile limited warranty"
             },
             "fpace": {
-      "image": "../images/types/suv-blue.jpg",
+      "image": "../images/types/suv.png",
       "engine": "2.0L Turbo 4-Cylinder",
       "horsepower": "246 hp",
       "torque": "269 lb-ft",
@@ -1308,7 +1308,7 @@
       "warranty": "2-year/24,000-mile limited warranty"
     },
     "ftype": {
-      "image": "../images/types/coupe-yellow.jpg",
+      "image": "../images/types/convertible.png",
       "engine": "3.0L Supercharged V6",
       "horsepower": "340 hp",
       "torque": "332 lb-ft",
@@ -1325,7 +1325,7 @@
       "warranty": "5-year/60,000-mile limited warranty"
     },
     "ipace": {
-      "image": "../images/types/suv-green.jpg",
+      "image": "../images/types/suv.png",
       "engine": "Dual-Motor Electric",
       "horsepower": "394 hp",
       "torque": "512 lb-ft",
@@ -1353,7 +1353,7 @@
   ],
   "specs": {
     "wrangler": {
-      "image": "../images/types/suv-green.jpg",
+      "image": "../images/types/suv.png",
       "engine": "3.6L V6",
       "horsepower": "285 hp",
       "torque": "260 lb-ft",
@@ -1370,7 +1370,7 @@
       "warranty": "3-year/36,000-mile limited warranty"
     },
     "cherokee": {
-      "image": "../images/types/suv-red.jpg",
+      "image": "../images/types/suv.png",
       "engine": "3.2L V6",
       "horsepower": "271 hp",
       "torque": "239 lb-ft",
@@ -1387,7 +1387,7 @@
       "warranty": "3-year/36,000-mile limited warranty"
     },
     "grandcherokee": {
-      "image": "../images/types/suv-black.jpg",
+      "image": "../images/types/suv.png",
       "engine": "3.6L V6",
       "horsepower": "295 hp",
       "torque": "260 lb-ft",
@@ -1404,7 +1404,7 @@
       "warranty": "3-year/36,000-mile limited warranty"
     },
     "compass": {
-      "image": "../images/types/suv-blue.jpg",
+      "image": "../images/types/suv.png",
       "engine": "2.4L 4-Cylinder",
       "horsepower": "180 hp",
       "torque": "175 lb-ft",
@@ -1421,7 +1421,7 @@
       "warranty": "3-year/36,000-mile limited warranty"
     },
     "gladiator": {
-      "image": "../images/types/truck-orange.jpg",
+      "image": "../images/types/pickup.png",
       "engine": "3.6L V6",
       "horsepower": "285 hp",
       "torque": "260 lb-ft",
@@ -1449,7 +1449,7 @@
   ],
   "specs": {
     "defender": {
-      "image": "../images/types/suv-black.jpg",
+      "image": "../images/types/suv.png",
       "engine": "3.0L Inline-6 Turbo",
       "horsepower": "395 hp",
       "torque": "406 lb-ft",
@@ -1466,7 +1466,7 @@
       "warranty": "4-year/50,000-mile limited warranty"
     },
     "discovery": {
-      "image": "../images/types/suv-white.jpg",
+      "image": "../images/types/suv.png",
       "engine": "3.0L V6 Supercharged",
       "horsepower": "340 hp",
       "torque": "332 lb-ft",
@@ -1483,7 +1483,7 @@
       "warranty": "4-year/50,000-mile limited warranty"
     },
     "rangeRover": {
-      "image": "../images/types/suv-silver.jpg",
+      "image": "../images/types/suv.png",
       "engine": "5.0L V8 Supercharged",
       "horsepower": "518 hp",
       "torque": "461 lb-ft",
@@ -1500,7 +1500,7 @@
       "warranty": "4-year/50,000-mile limited warranty"
     },
     "evoque": {
-      "image": "../images/types/suv-red.jpg",
+      "image": "../images/types/suv.png",
       "engine": "2.0L Inline-4 Turbo",
       "horsepower": "246 hp",
       "torque": "269 lb-ft",
@@ -1517,7 +1517,7 @@
       "warranty": "4-year/50,000-mile limited warranty"
     },
     "velar": {
-      "image": "../images/types/suv-blue.jpg",
+      "image": "../images/types/suv.png",
       "engine": "2.0L Inline-4 Turbo",
       "horsepower": "247 hp",
       "torque": "269 lb-ft",
@@ -1545,7 +1545,7 @@
   ],
   "specs": {
     "is": {
-      "image": "../images/types/sedan-gray.jpg",
+      "image": "../images/types/sedan.png",
       "engine": "2.0L Turbo 4-Cylinder",
       "horsepower": "241 hp",
       "torque": "258 lb-ft",
@@ -1562,7 +1562,7 @@
       "warranty": "4-year/50,000-mile limited warranty"
     },
     "es": {
-      "image": "../images/types/sedan-white.jpg",
+      "image": "../images/types/sedan.png",
       "engine": "3.5L V6",
       "horsepower": "302 hp",
       "torque": "267 lb-ft",
@@ -1579,7 +1579,7 @@
       "warranty": "4-year/50,000-mile limited warranty"
     },
     "rx": {
-      "image": "../images/types/suv-black.jpg",
+      "image": "../images/types/suv.png",
       "engine": "3.5L V6",
       "horsepower": "295 hp",
       "torque": "267 lb-ft",
@@ -1596,7 +1596,7 @@
       "warranty": "4-year/50,000-mile limited warranty"
     },
     "lx": {
-      "image": "../images/types/suv-blue.jpg",
+      "image": "../images/types/suv.png",
       "engine": "5.7L V8",
       "horsepower": "383 hp",
       "torque": "403 lb-ft",
@@ -1613,7 +1613,7 @@
       "warranty": "4-year/50,000-mile limited warranty"
     },
     "ux": {
-      "image": "../images/types/suv-gray.jpg",
+      "image": "../images/types/suv.png",
       "engine": "2.0L Inline-4",
       "horsepower": "169 hp",
       "torque": "151 lb-ft",
@@ -1641,7 +1641,7 @@
   ],
   "specs": {
     "evora": {
-      "image": "../images/types/sports-yellow.jpg",
+      "image": "../images/types/sports-car.png",
       "engine": "3.5L Supercharged V6",
       "horsepower": "416 hp",
       "torque": "317 lb-ft",
@@ -1658,7 +1658,7 @@
       "warranty": "3-year/36,000-mile limited warranty"
     },
     "exige": {
-      "image": "../images/types/sports-red.jpg",
+      "image": "../images/types/sports-car.png",
       "engine": "3.5L Supercharged V6",
       "horsepower": "345 hp",
       "torque": "295 lb-ft",
@@ -1675,7 +1675,7 @@
       "warranty": "3-year/36,000-mile limited warranty"
     },
     "emira": {
-      "image": "../images/types/sports-blue.jpg",
+      "image": "../images/types/sports-car.png",
       "engine": "3.5L Supercharged V6",
       "horsepower": "400 hp",
       "torque": "317 lb-ft",
@@ -1692,7 +1692,7 @@
       "warranty": "3-year/36,000-mile limited warranty"
     },
     "elise": {
-      "image": "../images/types/sports-green.jpg",
+      "image": "../images/types/sports-car.png",
       "engine": "1.8L 4-Cylinder",
       "horsepower": "134 hp",
       "torque": "118 lb-ft",
@@ -1709,7 +1709,7 @@
       "warranty": "3-year/36,000-mile limited warranty"
     },
     "evija": {
-      "image": "../images/types/sports-purple.jpg",
+      "image": "../images/types/sports-car.png",
       "engine": "2.0L Electric",
       "horsepower": "1,973 hp",
       "torque": "1,254 lb-ft",
@@ -1737,7 +1737,7 @@
   ],
   "specs": {
     "mazda3": {
-      "image": "../images/types/hatchback-red.jpg",
+      "image": "../images/types/hatchback.png",
       "engine": "2.5L 4-Cylinder",
       "horsepower": "186 hp",
       "torque": "186 lb-ft",
@@ -1754,7 +1754,7 @@
       "warranty": "3-year/36,000-mile limited warranty"
     },
     "mazda6": {
-      "image": "../images/types/sedan-blue.jpg",
+      "image": "../images/types/sedan.png",
       "engine": "2.5L 4-Cylinder",
       "horsepower": "187 hp",
       "torque": "186 lb-ft",
@@ -1771,7 +1771,7 @@
       "warranty": "3-year/36,000-mile limited warranty"
     },
     "cx5": {
-      "image": "../images/types/suv-gray.jpg",
+      "image": "../images/types/suv.png",
       "engine": "2.5L 4-Cylinder",
       "horsepower": "187 hp",
       "torque": "186 lb-ft",
@@ -1788,7 +1788,7 @@
       "warranty": "3-year/36,000-mile limited warranty"
     },
     "cx9": {
-      "image": "../images/types/suv-brown.jpg",
+      "image": "../images/types/suv.png",
       "engine": "2.5L Turbocharged 4-Cylinder",
       "horsepower": "250 hp",
       "torque": "320 lb-ft",
@@ -1805,7 +1805,7 @@
       "warranty": "3-year/36,000-mile limited warranty"
     },
     "mx5": {
-      "image": "../images/types/convertible-orange.jpg",
+      "image": "../images/types/convertible.png",
       "engine": "2.0L 4-Cylinder",
       "horsepower": "181 hp",
       "torque": "151 lb-ft",
@@ -1834,7 +1834,7 @@
   ],
   "specs": {
     "gt": {
-      "image": "../images/types/sports-orange.jpg",
+      "image": "../images/types/sports-car.png",
       "engine": "4.0L Twin-Turbo V8",
       "horsepower": "612 hp",
       "torque": "465 lb-ft",
@@ -1851,7 +1851,7 @@
       "warranty": "3-year/unlimited-mile warranty"
     },
     "720s": {
-      "image": "../images/types/sports-red.jpg",
+      "image": "../images/types/sports-car.png",
       "engine": "4.0L Twin-Turbo V8",
       "horsepower": "710 hp",
       "torque": "568 lb-ft",
@@ -1868,7 +1868,7 @@
       "warranty": "3-year/unlimited-mile warranty"
     },
     "765lt": {
-      "image": "../images/types/sports-yellow.jpg",
+      "image": "../images/types/sports-car.png",
       "engine": "4.0L Twin-Turbo V8",
       "horsepower": "755 hp",
       "torque": "590 lb-ft",
@@ -1885,7 +1885,7 @@
       "warranty": "3-year/unlimited-mile warranty"
     },
     "artura": {
-      "image": "../images/types/sports-green.jpg",
+      "image": "../images/types/sports-car.png",
       "engine": "3.0L Twin-Turbo V6 + Electric Motor",
       "horsepower": "671 hp",
       "torque": "531 lb-ft",
@@ -1902,7 +1902,7 @@
       "warranty": "3-year/unlimited-mile warranty"
     },
     "senna": {
-      "image": "../images/types/sports-blue.jpg",
+      "image": "../images/types/sports-car.png",
       "engine": "4.0L Twin-Turbo V8",
       "horsepower": "800 hp",
       "torque": "800 lb-ft",
@@ -1930,7 +1930,7 @@
   ],
   "specs": {
     "a_class": {
-      "image": "../images/types/sedan-white.jpg",
+      "image": "../images/types/sedan.png",
       "engine": "2.0L Turbo 4-Cylinder",
       "horsepower": "188 hp",
       "torque": "221 lb-ft",
@@ -1947,7 +1947,7 @@
       "warranty": "4-year/50,000-mile limited warranty"
     },
     "c_class": {
-      "image": "../images/types/sedan-silver.jpg",
+      "image": "../images/types/sedan.png",
       "engine": "2.0L Turbo 4-Cylinder",
       "horsepower": "255 hp",
       "torque": "273 lb-ft",
@@ -1964,7 +1964,7 @@
       "warranty": "4-year/50,000-mile limited warranty"
     },
     "e_class": {
-      "image": "../images/types/sedan-blue.jpg",
+      "image": "../images/types/sedan.png",
       "engine": "3.0L Turbo V6",
       "horsepower": "362 hp",
       "torque": "369 lb-ft",
@@ -1981,7 +1981,7 @@
       "warranty": "4-year/50,000-mile limited warranty"
     },
     "s_class": {
-      "image": "../images/types/sedan-black.jpg",
+      "image": "../images/types/sedan.png",
       "engine": "4.0L Turbo V8",
       "horsepower": "463 hp",
       "torque": "516 lb-ft",
@@ -1998,7 +1998,7 @@
       "warranty": "4-year/50,000-mile limited warranty"
     },
     "gle": {
-      "image": "../images/types/suv-white.jpg",
+      "image": "../images/types/suv.png",
       "engine": "3.0L Turbo V6",
       "horsepower": "362 hp",
       "torque": "369 lb-ft",
@@ -2026,7 +2026,7 @@
   ],
   "specs": {
     "cooper": {
-      "image": "../images/types/hatchback-green.jpg",
+      "image": "../images/types/hatchback.png",
       "engine": "1.5L Turbo 3-Cylinder",
       "horsepower": "134 hp",
       "torque": "162 lb-ft",
@@ -2043,7 +2043,7 @@
       "warranty": "4-year/50,000-mile limited warranty"
     },
     "clubman": {
-      "image": "../images/types/suv-red.jpg",
+      "image": "../images/types/suv.png",
       "engine": "2.0L Turbo 4-Cylinder",
       "horsepower": "189 hp",
       "torque": "207 lb-ft",
@@ -2060,7 +2060,7 @@
       "warranty": "4-year/50,000-mile limited warranty"
     },
     "countryman": {
-      "image": "../images/types/suv-gray.jpg",
+      "image": "../images/types/suv.png",
       "engine": "2.0L Turbo 4-Cylinder",
       "horsepower": "228 hp",
       "torque": "258 lb-ft",
@@ -2077,7 +2077,7 @@
       "warranty": "4-year/50,000-mile limited warranty"
     },
     "john_cooper_works": {
-      "image": "../images/types/sports-red.jpg",
+      "image": "../images/types/sports-car.png",
       "engine": "2.0L Turbo 4-Cylinder",
       "horsepower": "301 hp",
       "torque": "331 lb-ft",
@@ -2094,7 +2094,7 @@
       "warranty": "4-year/50,000-mile limited warranty"
     },
     "electric": {
-      "image": "../images/types/hatchback-blue.jpg",
+      "image": "../images/types/hatchback.png",
       "engine": "Electric Motor",
       "horsepower": "181 hp",
       "torque": "199 lb-ft",
@@ -2123,7 +2123,7 @@
   ],
   "specs": {
     "mirage": {
-      "image": "../images/types/hatchback-blue.jpg",
+      "image": "../images/types/hatchback.png",
       "engine": "1.2L 3-Cylinder",
       "horsepower": "78 hp",
       "torque": "74 lb-ft",
@@ -2140,7 +2140,7 @@
       "warranty": "5-year/60,000-mile limited warranty"
     },
     "outlander": {
-      "image": "../images/types/suv-white.jpg",
+      "image": "../images/types/suv.png",
       "engine": "2.5L 4-Cylinder",
       "horsepower": "181 hp",
       "torque": "181 lb-ft",
@@ -2157,7 +2157,7 @@
       "warranty": "5-year/60,000-mile limited warranty"
     },
     "eclipse_cross": {
-      "image": "../images/types/suv-red.jpg",
+      "image": "../images/types/suv.png",
       "engine": "1.5L Turbo 4-Cylinder",
       "horsepower": "152 hp",
       "torque": "184 lb-ft",
@@ -2174,7 +2174,7 @@
       "warranty": "5-year/60,000-mile limited warranty"
     },
     "pajero": {
-      "image": "../images/types/suv-green.jpg",
+      "image": "../images/types/suv.png",
       "engine": "3.2L Turbo Diesel 4-Cylinder",
       "horsepower": "189 hp",
       "torque": "325 lb-ft",
@@ -2191,7 +2191,7 @@
       "warranty": "5-year/60,000-mile limited warranty"
     },
     "lancer": {
-      "image": "../images/types/sedan-yellow.jpg",
+      "image": "../images/types/sedan.png",
       "engine": "2.0L 4-Cylinder",
       "horsepower": "148 hp",
       "torque": "145 lb-ft",
@@ -2219,7 +2219,7 @@
   ],
   "specs": {
     "es6": {
-      "image": "../images/types/suv-blue.jpg",
+      "image": "../images/types/suv.png",
       "engine": "Dual Motor Electric",
       "horsepower": "536 hp",
       "torque": "629 lb-ft",
@@ -2236,7 +2236,7 @@
       "warranty": "5-year/60,000-mile limited warranty"
     },
     "es8": {
-      "image": "../images/types/suv-red.jpg",
+      "image": "../images/types/suv.png",
       "engine": "Dual Motor Electric",
       "horsepower": "653 hp",
       "torque": "627 lb-ft",
@@ -2253,7 +2253,7 @@
       "warranty": "5-year/60,000-mile limited warranty"
     },
     "et7": {
-      "image": "../images/types/sedan-black.jpg",
+      "image": "../images/types/sedan.png",
       "engine": "Dual Motor Electric",
       "horsepower": "653 hp",
       "torque": "627 lb-ft",
@@ -2270,7 +2270,7 @@
       "warranty": "5-year/60,000-mile limited warranty"
     },
     "ec6": {
-      "image": "../images/types/suv-yellow.jpg",
+      "image": "../images/types/suv.png",
       "engine": "Dual Motor Electric",
       "horsepower": "536 hp",
       "torque": "629 lb-ft",
@@ -2287,7 +2287,7 @@
       "warranty": "5-year/60,000-mile limited warranty"
     },
     "et5": {
-      "image": "../images/types/sedan-blue.jpg",
+      "image": "../images/types/sedan.png",
       "engine": "Dual Motor Electric",
       "horsepower": "490 hp",
       "torque": "472 lb-ft",
@@ -2316,7 +2316,7 @@
   ],
   "specs": {
     "altima": {
-      "image": "../images/types/sedan-gray.jpg",
+      "image": "../images/types/sedan.png",
       "engine": "2.5L 4-Cylinder",
       "horsepower": "188 hp",
       "torque": "180 lb-ft",
@@ -2333,7 +2333,7 @@
       "warranty": "3-year/36,000-mile limited warranty"
     },
     "maxima": {
-      "image": "../images/types/sedan-blue.jpg",
+      "image": "../images/types/sedan.png",
       "engine": "3.5L V6",
       "horsepower": "300 hp",
       "torque": "261 lb-ft",
@@ -2350,7 +2350,7 @@
       "warranty": "3-year/36,000-mile limited warranty"
     },
     "rogue": {
-      "image": "../images/types/suv-silver.jpg",
+      "image": "../images/types/suv.png",
       "engine": "2.5L 4-Cylinder",
       "horsepower": "181 hp",
       "torque": "181 lb-ft",
@@ -2367,7 +2367,7 @@
       "warranty": "3-year/36,000-mile limited warranty"
     },
     "pathfinder": {
-      "image": "../images/types/suv-black.jpg",
+      "image": "../images/types/suv.png",
       "engine": "3.5L V6",
       "horsepower": "284 hp",
       "torque": "259 lb-ft",
@@ -2384,7 +2384,7 @@
       "warranty": "3-year/36,000-mile limited warranty"
     },
     "gt_r": {
-      "image": "../images/types/sports-red.jpg",
+      "image": "../images/types/sports-car.png",
       "engine": "3.8L Twin-Turbo V6",
       "horsepower": "565 hp",
       "torque": "467 lb-ft",
@@ -2413,7 +2413,7 @@
   ],
   "specs": {
     "208": {
-      "image": "../images/types/hatchback-yellow.jpg",
+      "image": "../images/types/hatchback.png",
       "engine": "1.2L Turbo 3-Cylinder",
       "horsepower": "130 hp",
       "torque": "170 lb-ft",
@@ -2430,7 +2430,7 @@
       "warranty": "3-year/36,000-mile limited warranty"
     },
     "308": {
-      "image": "../images/types/sedan-blue.jpg",
+      "image": "../images/types/sedan.png",
       "engine": "1.6L Turbo 4-Cylinder",
       "horsepower": "180 hp",
       "torque": "199 lb-ft",
@@ -2447,7 +2447,7 @@
       "warranty": "3-year/36,000-mile limited warranty"
     },
     "508": {
-      "image": "../images/types/sedan-black.jpg",
+      "image": "../images/types/sedan.png",
       "engine": "2.0L Turbo 4-Cylinder",
       "horsepower": "250 hp",
       "torque": "320 lb-ft",
@@ -2464,7 +2464,7 @@
       "warranty": "3-year/36,000-mile limited warranty"
     },
     "2008": {
-      "image": "../images/types/suv-red.jpg",
+      "image": "../images/types/suv.png",
       "engine": "1.5L Turbo 4-Cylinder",
       "horsepower": "175 hp",
       "torque": "206 lb-ft",
@@ -2481,7 +2481,7 @@
       "warranty": "3-year/36,000-mile limited warranty"
     },
     "3008": {
-      "image": "../images/types/suv-silver.jpg",
+      "image": "../images/types/suv.png",
       "engine": "2.0L Turbo 4-Cylinder",
       "horsepower": "225 hp",
       "torque": "300 lb-ft",
@@ -2510,7 +2510,7 @@
   ],
   "specs": {
     "clio": {
-      "image": "../images/types/hatchback-red.jpg",
+      "image": "../images/types/hatchback.png",
       "engine": "1.0L Turbo 3-Cylinder",
       "horsepower": "90 hp",
       "torque": "118 lb-ft",
@@ -2527,7 +2527,7 @@
       "warranty": "3-year/36,000-mile limited warranty"
     },
     "megane": {
-      "image": "../images/types/sedan-blue.jpg",
+      "image": "../images/types/sedan.png",
       "engine": "1.3L Turbo 4-Cylinder",
       "horsepower": "140 hp",
       "torque": "170 lb-ft",
@@ -2544,7 +2544,7 @@
       "warranty": "3-year/36,000-mile limited warranty"
     },
     "captur": {
-      "image": "../images/types/suv-orange.jpg",
+      "image": "../images/types/suv.png",
       "engine": "1.5L Turbo 4-Cylinder",
       "horsepower": "130 hp",
       "torque": "160 lb-ft",
@@ -2561,7 +2561,7 @@
       "warranty": "3-year/36,000-mile limited warranty"
     },
     "kadjar": {
-      "image": "../images/types/suv-red.jpg",
+      "image": "../images/types/suv.png",
       "engine": "1.6L Turbo 4-Cylinder",
       "horsepower": "160 hp",
       "torque": "200 lb-ft",
@@ -2578,7 +2578,7 @@
       "warranty": "3-year/36,000-mile limited warranty"
     },
     "talisman": {
-      "image": "../images/types/sedan-silver.jpg",
+      "image": "../images/types/sedan.png",
       "engine": "2.0L Turbo 4-Cylinder",
       "horsepower": "200 hp",
       "torque": "280 lb-ft",
@@ -2607,7 +2607,7 @@
   ],
   "specs": {
     "phantom": {
-      "image": "../images/types/luxury-black.jpg",
+      "image": "../images/types/luxury.png",
       "engine": "6.75L V12 Twin-Turbo",
       "horsepower": "563 hp",
       "torque": "664 lb-ft",
@@ -2624,7 +2624,7 @@
       "warranty": "4-year/unlimited-mile limited warranty"
     },
     "ghost": {
-      "image": "../images/types/luxury-white.jpg",
+      "image": "../images/types/luxury.png",
       "engine": "6.75L V12 Twin-Turbo",
       "horsepower": "563 hp",
       "torque": "627 lb-ft",
@@ -2641,7 +2641,7 @@
       "warranty": "4-year/unlimited-mile limited warranty"
     },
     "wraith": {
-      "image": "../images/types/sports-black.jpg",
+      "image": "../images/types/sports-car.png",
       "engine": "6.6L V12 Twin-Turbo",
       "horsepower": "624 hp",
       "torque": "605 lb-ft",
@@ -2658,7 +2658,7 @@
       "warranty": "4-year/unlimited-mile limited warranty"
     },
     "dawn": {
-      "image": "../images/types/luxury-blue.jpg",
+      "image": "../images/types/luxury.png",
       "engine": "6.6L V12 Twin-Turbo",
       "horsepower": "563 hp",
       "torque": "627 lb-ft",
@@ -2675,7 +2675,7 @@
       "warranty": "4-year/unlimited-mile limited warranty"
     },
     "cullinan": {
-      "image": "../images/types/suv-black.jpg",
+      "image": "../images/types/suv.png",
       "engine": "6.75L V12 Twin-Turbo",
       "horsepower": "563 hp",
       "torque": "627 lb-ft",
@@ -2704,7 +2704,7 @@
   ],
   "specs": {
     "mg5": {
-      "image": "../images/types/sedan-white.jpg",
+      "image": "../images/types/sedan.png",
       "engine": "1.5L Turbo 4-Cylinder",
       "horsepower": "173 hp",
       "torque": "177 lb-ft",
@@ -2721,7 +2721,7 @@
       "warranty": "5-year/60,000-mile limited warranty"
     },
     "mgzs": {
-      "image": "../images/types/suv-red.jpg",
+      "image": "../images/types/suv.png",
       "engine": "1.5L 4-Cylinder",
       "horsepower": "162 hp",
       "torque": "184 lb-ft",
@@ -2738,7 +2738,7 @@
       "warranty": "5-year/60,000-mile limited warranty"
     },
     "mg_hs": {
-      "image": "../images/types/suv-blue.jpg",
+      "image": "../images/types/suv.png",
       "engine": "1.5L Turbo 4-Cylinder",
       "horsepower": "162 hp",
       "torque": "184 lb-ft",
@@ -2755,7 +2755,7 @@
       "warranty": "5-year/60,000-mile limited warranty"
     },
     "maxus_d90": {
-      "image": "../images/types/suv-black.jpg",
+      "image": "../images/types/suv.png",
       "engine": "2.0L Turbo 4-Cylinder",
       "horsepower": "221 hp",
       "torque": "258 lb-ft",
@@ -2772,7 +2772,7 @@
       "warranty": "5-year/60,000-mile limited warranty"
     },
     "roewe_rx5": {
-      "image": "../images/types/suv-gray.jpg",
+      "image": "../images/types/suv.png",
       "engine": "2.0L Turbo 4-Cylinder",
       "horsepower": "231 hp",
       "torque": "258 lb-ft",
@@ -2800,7 +2800,7 @@
   ],
   "specs": {
     "ibiza": {
-      "image": "../images/types/hatchback-blue.jpg",
+      "image": "../images/types/hatchback.png",
       "engine": "1.0L Turbo 3-Cylinder",
       "horsepower": "95 hp",
       "torque": "129 lb-ft",
@@ -2817,7 +2817,7 @@
       "warranty": "3-year/36,000-mile limited warranty"
     },
     "leon": {
-      "image": "../images/types/sedan-red.jpg",
+      "image": "../images/types/sedan.png",
       "engine": "1.5L Turbo 4-Cylinder",
       "horsepower": "148 hp",
       "torque": "184 lb-ft",
@@ -2834,7 +2834,7 @@
       "warranty": "3-year/36,000-mile limited warranty"
     },
     "ateca": {
-      "image": "../images/types/suv-green.jpg",
+      "image": "../images/types/suv.png",
       "engine": "2.0L Turbo 4-Cylinder",
       "horsepower": "190 hp",
       "torque": "236 lb-ft",
@@ -2851,7 +2851,7 @@
       "warranty": "3-year/36,000-mile limited warranty"
     },
     "tarraco": {
-      "image": "../images/types/suv-gray.jpg",
+      "image": "../images/types/suv.png",
       "engine": "2.0L Turbo 4-Cylinder",
       "horsepower": "190 hp",
       "torque": "236 lb-ft",
@@ -2868,7 +2868,7 @@
       "warranty": "3-year/36,000-mile limited warranty"
     },
     "arona": {
-      "image": "../images/types/suv-orange.jpg",
+      "image": "../images/types/suv.png",
       "engine": "1.0L Turbo 3-Cylinder",
       "horsepower": "94 hp",
       "torque": "118 lb-ft",
@@ -2897,7 +2897,7 @@
   ],
   "specs": {
     "fabia": {
-      "image": "../images/types/hatchback-yellow.jpg",
+      "image": "../images/types/hatchback.png",
       "engine": "1.0L Turbo 3-Cylinder",
       "horsepower": "110 hp",
       "torque": "148 lb-ft",
@@ -2914,7 +2914,7 @@
       "warranty": "3-year/36,000-mile limited warranty"
     },
     "octavia": {
-      "image": "../images/types/sedan-blue.jpg",
+      "image": "../images/types/sedan.png",
       "engine": "1.5L Turbo 4-Cylinder",
       "horsepower": "150 hp",
       "torque": "184 lb-ft",
@@ -2931,7 +2931,7 @@
       "warranty": "3-year/36,000-mile limited warranty"
     },
     "superb": {
-      "image": "../images/types/sedan-black.jpg",
+      "image": "../images/types/sedan.png",
       "engine": "2.0L Turbo 4-Cylinder",
       "horsepower": "280 hp",
       "torque": "258 lb-ft",
@@ -2948,7 +2948,7 @@
       "warranty": "3-year/36,000-mile limited warranty"
     },
     "kamiq": {
-      "image": "../images/types/suv-red.jpg",
+      "image": "../images/types/suv.png",
       "engine": "1.0L Turbo 3-Cylinder",
       "horsepower": "115 hp",
       "torque": "148 lb-ft",
@@ -2965,7 +2965,7 @@
       "warranty": "3-year/36,000-mile limited warranty"
     },
     "kodiaq": {
-      "image": "../images/types/suv-gray.jpg",
+      "image": "../images/types/suv.png",
       "engine": "2.0L Turbo 4-Cylinder",
       "horsepower": "190 hp",
       "torque": "236 lb-ft",
@@ -2994,7 +2994,7 @@
   ],
   "specs": {
     "outback": {
-      "image": "../images/types/suv-green.jpg",
+      "image": "../images/types/suv.png",
       "engine": "2.5L Boxer 4-Cylinder",
       "horsepower": "182 hp",
       "torque": "176 lb-ft",
@@ -3011,7 +3011,7 @@
       "warranty": "3-year/36,000-mile limited warranty"
     },
     "forester": {
-      "image": "../images/types/suv-gray.jpg",
+      "image": "../images/types/suv.png",
       "engine": "2.5L Boxer 4-Cylinder",
       "horsepower": "182 hp",
       "torque": "176 lb-ft",
@@ -3028,7 +3028,7 @@
       "warranty": "3-year/36,000-mile limited warranty"
     },
     "crosstrek": {
-      "image": "../images/types/suv-orange.jpg",
+      "image": "../images/types/suv.png",
       "engine": "2.0L Boxer 4-Cylinder",
       "horsepower": "152 hp",
       "torque": "145 lb-ft",
@@ -3045,7 +3045,7 @@
       "warranty": "3-year/36,000-mile limited warranty"
     },
     "ascent": {
-      "image": "../images/types/suv-blue.jpg",
+      "image": "../images/types/suv.png",
       "engine": "2.4L Turbo 4-Cylinder",
       "horsepower": "260 hp",
       "torque": "277 lb-ft",
@@ -3062,7 +3062,7 @@
       "warranty": "3-year/36,000-mile limited warranty"
     },
     "wrx": {
-      "image": "../images/types/sedan-red.jpg",
+      "image": "../images/types/sedan.png",
       "engine": "2.0L Turbo 4-Cylinder",
       "horsepower": "268 hp",
       "torque": "258 lb-ft",
@@ -3091,7 +3091,7 @@
   ],
   "specs": {
     "model_s": {
-      "image": "../images/types/electric-black.jpg",
+      "image": "../images/types/electric.png",
       "engine": "Dual Motor Electric",
       "horsepower": "670 hp",
       "torque": "850 lb-ft",
@@ -3108,7 +3108,7 @@
       "warranty": "4-year/50,000-mile limited warranty"
     },
     "model_3": {
-      "image": "../images/types/electric-blue.jpg",
+      "image": "../images/types/electric.png",
       "engine": "Single Motor Electric",
       "horsepower": "283 hp",
       "torque": "306 lb-ft",
@@ -3125,7 +3125,7 @@
       "warranty": "4-year/50,000-mile limited warranty"
     },
     "model_x": {
-      "image": "../images/types/electric-suv-white.jpg",
+      "image": "../images/types/electric.png",
       "engine": "Dual Motor Electric",
       "horsepower": "670 hp",
       "torque": "687 lb-ft",
@@ -3142,7 +3142,7 @@
       "warranty": "4-year/50,000-mile limited warranty"
     },
     "model_y": {
-      "image": "../images/types/electric-suv-gray.jpg",
+      "image": "../images/types/electric.png",
       "engine": "Dual Motor Electric",
       "horsepower": "384 hp",
       "torque": "376 lb-ft",
@@ -3159,7 +3159,7 @@
       "warranty": "4-year/50,000-mile limited warranty"
     },
     "cybertruck": {
-      "image": "../images/types/electric-truck.jpg",
+      "image": "../images/types/electric.png",
       "engine": "Tri Motor Electric",
       "horsepower": "800 hp",
       "torque": "1,000 lb-ft",
@@ -3188,7 +3188,7 @@
   ],
   "specs": {
     "camry": {
-      "image": "../images/types/sedan-white.jpg",
+      "image": "../images/types/sedan.png",
       "engine": "2.5L 4-Cylinder",
       "horsepower": "203 hp",
       "torque": "184 lb-ft",
@@ -3205,7 +3205,7 @@
       "warranty": "3-year/36,000-mile limited warranty"
     },
     "corolla": {
-      "image": "../images/types/sedan-red.jpg",
+      "image": "../images/types/sedan.png",
       "engine": "1.8L 4-Cylinder",
       "horsepower": "139 hp",
       "torque": "126 lb-ft",
@@ -3222,7 +3222,7 @@
       "warranty": "3-year/36,000-mile limited warranty"
     },
     "rav4": {
-      "image": "../images/types/suv-gray.jpg",
+      "image": "../images/types/suv.png",
       "engine": "2.5L 4-Cylinder",
       "horsepower": "203 hp",
       "torque": "184 lb-ft",
@@ -3239,7 +3239,7 @@
       "warranty": "3-year/36,000-mile limited warranty"
     },
     "highlander": {
-      "image": "../images/types/suv-white.jpg",
+      "image": "../images/types/suv.png",
       "engine": "3.5L V6",
       "horsepower": "295 hp",
       "torque": "263 lb-ft",
@@ -3256,7 +3256,7 @@
       "warranty": "3-year/36,000-mile limited warranty"
     },
     "tacoma": {
-      "image": "../images/types/truck-orange.jpg",
+      "image": "../images/types/pickup.png",
       "engine": "3.5L V6",
       "horsepower": "278 hp",
       "torque": "265 lb-ft",
@@ -3302,7 +3302,7 @@
       "warranty": "4-year/50,000-mile limited warranty"
     },
     "passat": {
-      "image": "../images/types/sedan-blue.jpg",
+      "image": "../images/types/sedan.png",
       "engine": "2.0L Turbo 4-Cylinder",
       "horsepower": "174 hp",
       "torque": "206 lb-ft",
@@ -3319,7 +3319,7 @@
       "warranty": "4-year/50,000-mile limited warranty"
     },
     "tiguan": {
-      "image": "../images/types/suv-red.jpg",
+      "image": "../images/types/suv.png",
       "engine": "2.0L Turbo 4-Cylinder",
       "horsepower": "184 hp",
       "torque": "221 lb-ft",
@@ -3336,7 +3336,7 @@
       "warranty": "4-year/50,000-mile limited warranty"
     },
     "atlas": {
-      "image": "../images/types/suv-green.jpg",
+      "image": "../images/types/suv.png",
       "engine": "3.6L V6",
       "horsepower": "276 hp",
       "torque": "266 lb-ft",
@@ -3353,7 +3353,7 @@
       "warranty": "4-year/50,000-mile limited warranty"
     },
     "id4": {
-      "image": "../images/types/electric-blue.jpg",
+      "image": "../images/types/electric.png",
       "engine": "Electric Motor",
       "horsepower": "201 hp",
       "torque": "228 lb-ft",
@@ -3382,7 +3382,7 @@
   ],
   "specs": {
     "p7": {
-      "image": "../images/types/electric-blue.jpg",
+      "image": "../images/types/electric.png",
       "engine": "Dual Motor Electric",
       "horsepower": "430 hp",
       "torque": "482 lb-ft",
@@ -3399,7 +3399,7 @@
       "warranty": "4-year/50,000-mile limited warranty"
     },
     "p5": {
-      "image": "../images/types/electric-gray.jpg",
+      "image": "../images/types/electric.png",
       "engine": "Single Motor Electric",
       "horsepower": "200 hp",
       "torque": "211 lb-ft",
@@ -3416,7 +3416,7 @@
       "warranty": "4-year/50,000-mile limited warranty"
     },
     "g3": {
-      "image": "../images/types/suv-red.jpg",
+      "image": "../images/types/suv.png",
       "engine": "Single Motor Electric",
       "horsepower": "170 hp",
       "torque": "206 lb-ft",
@@ -3433,7 +3433,7 @@
       "warranty": "4-year/50,000-mile limited warranty"
     },
     "g9": {
-      "image": "../images/types/suv-blue.jpg",
+      "image": "../images/types/suv.png",
       "engine": "Dual Motor Electric",
       "horsepower": "530 hp",
       "torque": "528 lb-ft",
@@ -3450,7 +3450,7 @@
       "warranty": "4-year/50,000-mile limited warranty"
     },
     "x9": {
-      "image": "../images/types/suv-black.jpg",
+      "image": "../images/types/suv.png",
       "engine": "Dual Motor Electric",
       "horsepower": "600 hp",
       "torque": "650 lb-ft",

@@ -1,13 +1,13 @@
 /* Global Styles */
 :root {
-    --primary-color: #14284e;
-    --secondary-color: #2c4f8f;
-    --accent-color: #4a90e2;
-    --text-color: #1b1b1b;
-    --light-text: #1d1d1d;
-    --background-color: #81b3ca;
-    --card-background: #e6e5e5;
-    --shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    --primary-color: #0D1B2A;
+    --secondary-color: #415A77;
+    --accent-color: #E07A5F;
+    --text-color: #333333;
+    --light-text: #778DA9;
+    --background-color: #F0F4F8;
+    --card-background: #FFFFFF;
+    --shadow: 0 4px 6px rgba(13, 27, 42, 0.1);
     --transition: all 0.3s ease;
 }
 
@@ -149,9 +149,30 @@ main {
     transition: var(--transition);
 }
 
+/* Enhanced Animations */
+img {
+    transition: transform var(--transition);
+}
+
+img:hover {
+    transform: scale(1.05);
+}
+
 .btn:hover, .learn-more-btn:hover {
     background-color: var(--secondary-color);
-    transform: translateY(-2px);
+    transform: translateY(-2px) scale(1.02);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.card:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+nav a:hover {
+    background-color: var(--primary-color);
+    color: white;
+    transform: scale(1.05);
 }
 
 /* Grid Layout */
