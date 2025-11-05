@@ -1,0 +1,504 @@
+/* Car Type Pages - Enhanced Styling */
+/* Color Scheme: Primary #14284e, Accent #3a7bd5 */
+
+/* Hero Section */
+.car-type-hero {
+    position: relative;
+    height: 450px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0;
+    overflow: hidden;
+}
+
+.car-type-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(20, 40, 78, 0.85) 0%, rgba(58, 123, 213, 0.75) 100%);
+    z-index: 1;
+}
+
+.car-type-hero h1 {
+    position: relative;
+    z-index: 2;
+    color: white;
+    font-size: 3.5rem;
+    font-weight: 700;
+    text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    letter-spacing: 1px;
+    animation: fadeInUp 0.8s ease-out;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Breadcrumb Navigation */
+.breadcrumb {
+    padding: 1rem 2rem;
+    background: linear-gradient(to right, #f8f9fa 0%, #ffffff 100%);
+    border-bottom: 1px solid #e9ecef;
+    font-size: 0.95rem;
+    animation: slideDown 0.5s ease-out;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.breadcrumb a {
+    color: #14284e;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+.breadcrumb a:hover {
+    color: #3a7bd5;
+    text-decoration: underline;
+}
+
+.breadcrumb span {
+    color: #666;
+    font-weight: 600;
+}
+
+/* Tab Navigation */
+.tab-navigation {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 2rem 1rem 1rem;
+    background: linear-gradient(to bottom, #ffffff 0%, #f8f9fa 100%);
+    flex-wrap: wrap;
+    animation: fadeIn 0.6s ease-out 0.2s both;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.tab-button {
+    padding: 0.9rem 2rem;
+    background: white;
+    color: #14284e;
+    border: 2px solid #e9ecef;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.tab-button::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(58, 123, 213, 0.1);
+    transform: translate(-50%, -50%);
+    transition: width 0.6s, height 0.6s;
+}
+
+.tab-button:hover::before {
+    width: 300px;
+    height: 300px;
+}
+
+.tab-button:hover {
+    border-color: #3a7bd5;
+    color: #3a7bd5;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(58, 123, 213, 0.2);
+}
+
+.tab-button.active {
+    background: linear-gradient(135deg, #14284e 0%, #3a7bd5 100%);
+    color: white;
+    border-color: #14284e;
+    box-shadow: 0 4px 15px rgba(20, 40, 78, 0.3);
+    transform: translateY(-2px);
+}
+
+.tab-button.active:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(20, 40, 78, 0.4);
+}
+
+/* Tab Content */
+.tab-content {
+    display: none;
+    padding: 3rem 2rem;
+    animation: fadeInContent 0.5s ease-out;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+@keyframes fadeInContent {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.tab-content.active {
+    display: block;
+}
+
+.car-type-info-section {
+    background: white;
+    border-radius: 15px;
+    padding: 2.5rem;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+}
+
+.car-type-info-section:hover {
+    box-shadow: 0 8px 35px rgba(0, 0, 0, 0.12);
+    transform: translateY(-3px);
+}
+
+.info-title {
+    color: #14284e;
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    position: relative;
+    padding-bottom: 1rem;
+}
+
+.info-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 60px;
+    height: 4px;
+    background: linear-gradient(90deg, #3a7bd5 0%, #14284e 100%);
+    border-radius: 2px;
+}
+
+.info-content {
+    line-height: 1.8;
+}
+
+.info-text {
+    color: #444;
+    font-size: 1.05rem;
+    margin-bottom: 1.2rem;
+    text-align: justify;
+}
+
+.info-text strong {
+    color: #14284e;
+    font-weight: 600;
+}
+
+.tab-content h4 {
+    color: #14284e;
+    margin-top: 1.5rem;
+    font-size: 1.3rem;
+    font-weight: 600;
+    position: relative;
+    padding-left: 1rem;
+}
+
+.tab-content h4::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 4px;
+    height: 80%;
+    background: #3a7bd5;
+    border-radius: 2px;
+}
+
+/* Gallery Section */
+.car-gallery {
+    padding: 4rem 2rem;
+    background: linear-gradient(to bottom, #f8f9fa 0%, #ffffff 100%);
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.car-gallery h3 {
+    text-align: center;
+    padding: 2rem 0;
+    color: #14284e;
+    font-size: 2.2rem;
+    font-weight: 700;
+    position: relative;
+    margin-bottom: 2rem;
+}
+
+.car-gallery h3::after {
+    content: '';
+    position: absolute;
+    bottom: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(90deg, #3a7bd5 0%, #14284e 100%);
+    border-radius: 2px;
+}
+
+.gallery-item {
+    position: relative;
+    margin-bottom: 2rem;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.gallery-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(20, 40, 78, 0.2);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.05);
+}
+
+.gallery-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(20, 40, 78, 0.95) 0%, rgba(20, 40, 78, 0.7) 70%, transparent 100%);
+    color: white;
+    padding: 1.5rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-align: center;
+    transform: translateY(100%);
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.gallery-item:hover .gallery-caption {
+    transform: translateY(0);
+}
+
+/* Related Car Types Section */
+section[style*="background: #f8f9fa"] {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%) !important;
+    border-top: 3px solid #e9ecef;
+    border-bottom: 3px solid #e9ecef;
+}
+
+section[style*="background: #f8f9fa"] h3 {
+    position: relative;
+    display: inline-block;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+section[style*="background: #f8f9fa"] h3::after {
+    content: '';
+    position: absolute;
+    bottom: -0.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 4px;
+    background: linear-gradient(90deg, #3a7bd5 0%, #14284e 100%);
+    border-radius: 2px;
+}
+
+section[style*="background: #f8f9fa"] a {
+    position: relative;
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+section[style*="background: #f8f9fa"] a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(58, 123, 213, 0.1) 0%, rgba(20, 40, 78, 0.1) 100%);
+    transition: left 0.5s ease;
+}
+
+section[style*="background: #f8f9fa"] a:hover::before {
+    left: 0;
+}
+
+section[style*="background: #f8f9fa"] a:hover {
+    transform: translateY(-5px) !important;
+    box-shadow: 0 8px 25px rgba(20, 40, 78, 0.15) !important;
+    border: 2px solid #3a7bd5 !important;
+}
+
+section[style*="background: #f8f9fa"] a strong {
+    display: block;
+    color: #14284e;
+    font-size: 1.1rem;
+    margin-bottom: 0.3rem;
+    transition: color 0.3s ease;
+}
+
+section[style*="background: #f8f9fa"] a:hover strong {
+    color: #3a7bd5;
+}
+
+/* Footer */
+.car-type-footer {
+    background: linear-gradient(135deg, #14284e 0%, #1e3a5f 100%);
+    color: white;
+    text-align: center;
+    padding: 2rem;
+    font-size: 0.95rem;
+    border-top: 3px solid #3a7bd5;
+}
+
+.car-type-footer p {
+    margin: 0;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .car-type-hero {
+        height: 300px;
+    }
+
+    .car-type-hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .tab-navigation {
+        padding: 1.5rem 0.5rem 0.5rem;
+    }
+
+    .tab-button {
+        padding: 0.7rem 1.3rem;
+        font-size: 0.9rem;
+    }
+
+    .tab-content {
+        padding: 2rem 1rem;
+    }
+
+    .car-type-info-section {
+        padding: 1.5rem;
+    }
+
+    .info-title {
+        font-size: 1.6rem;
+    }
+
+    .info-text {
+        font-size: 1rem;
+    }
+
+    .car-gallery h3 {
+        font-size: 1.8rem;
+    }
+
+    section[style*="background: #f8f9fa"] a {
+        margin-bottom: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .car-type-hero h1 {
+        font-size: 2rem;
+    }
+
+    .tab-button {
+        padding: 0.6rem 1rem;
+        font-size: 0.85rem;
+    }
+
+    .breadcrumb {
+        font-size: 0.85rem;
+        padding: 0.8rem 1rem;
+    }
+}
+
+/* Smooth Scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Loading Animation */
+@keyframes shimmer {
+    0% {
+        background-position: -1000px 0;
+    }
+    100% {
+        background-position: 1000px 0;
+    }
+}
+
+/* Accessibility */
+.tab-button:focus,
+section[style*="background: #f8f9fa"] a:focus {
+    outline: 3px solid #3a7bd5;
+    outline-offset: 3px;
+}
+
+/* Print Styles */
+@media print {
+    .car-type-hero,
+    .tab-navigation,
+    .car-type-footer {
+        display: none;
+    }
+
+    .tab-content {
+        display: block !important;
+        page-break-inside: avoid;
+    }
+}

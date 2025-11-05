@@ -14,24 +14,26 @@
 <meta property="og:image" content="/images/brands/default.webp">
 <meta property="og:url" content="http://localhost:3000/subPages/types/compact.html">
 <meta property="og:type" content="website">
-        <link rel="icon" type="image/jpeg" href="../images/logo/web_logo.jpeg">`r`n    
+        <link rel="icon" type="image/jpeg" href="../images/logo/web_logo.jpeg">    
     
     
     
-    <link rel="stylesheet" href="../../css/global.min.css">`r`n    </head>
+    <link rel="stylesheet" href="../../css/global.min   .css">
+    <link rel="stylesheet" href="../../css/car-types-enhanced.css">
+</head>
 <body>
     <!-- Header -->
     <header>
         <a href="../../index.html" style="text-decoration: none; color: inherit;">
             <div class="logo">
-                <h1>Compact Cars - Engine Starters</h1>
+                <h1>Engine Starters</h1>
                 <h2>Your ultimate guide to car brands and types</h2>
             </div>
         </a>
         <nav>
             <ul>
                 <li><a href="../about.html">About</a></li>
-                <li><a href="../car-types.html">Car Types</a></li>
+                <li><a href="../index.html">Car Types</a></li>
                 <li><a href="../brands.html">Brands</a></li>
                 <li><a href="../components.html">Components</a></li>
                 <li><a href="../car-comparison.html">Compare Cars</a></li>
@@ -40,46 +42,160 @@
         </nav>
     </header>
 
-    <!-- Main Content -->
-    <main class="car-type-main">
-        <section class="car-type-section">
-            <h2 class="car-type-title">Compact Cars</h2>
-            <div class="car-type-container">
-                <div class="car-type-image-wrapper">
-                    <img src="../../images/types/compact.png" alt="Compact Car" class="car-type-image" loading="lazy">
-                </div>
-                <div class="car-type-info-wrapper">
-                    <article class="car-type-info-section">
-                        <h3 class="info-title">Overview</h3>
-                        <p class="info-text">Compact cars represent the pinnacle of urban mobility engineering, combining exceptional efficiency with smart practicality. These nimble vehicles excel in city environments, consistently achieving fuel economy ratings of 30-40 MPG in city driving and often exceeding 40 MPG on highways. With typical dimensions spanning 150-175 inches in length and wheelbases ranging from 98-105 inches, these vehicles master urban maneuverability while maintaining interior volumes of 100-110 cubic feet. Modern compact cars incorporate sophisticated design features like active aerodynamics, regenerative braking systems, and advanced driver assistance technologies, all while maintaining their core benefits of affordability and practicality. The latest models feature innovative space optimization, achieving passenger volumes comparable to midsize cars of previous generations despite their compact exterior dimensions.</p>
-                    </article>
-                    
-                    <article class="car-type-info-section feature-grid">
-                        <h3 class="info-title">Distinctive Features</h3>
-                        <p class="info-text">Compact cars are engineered with sophisticated space optimization, featuring modular platforms that maximize interior volume through strategic component placement. Advanced high-strength steel construction and aluminum components typically reduce curb weights to 2,800-3,200 pounds, enhancing both efficiency and handling dynamics. Their compact footprint, usually featuring turning circles under 35 feet, makes them ideal for urban navigation, while smart parking assistance systems with 360-degree cameras facilitate effortless parking in spaces as small as 15 feet in length.</p>
-                        <p class="info-text">Modern compact cars integrate comprehensive safety suites including forward collision warning with pedestrian detection, lane departure prevention with lane centering, and blind spot monitoring with rear cross-traffic alert. Connectivity features encompass wireless Apple CarPlay and Android Auto integration, over-the-air software updates, and advanced telematics with remote vehicle monitoring. Interior innovations include configurable cargo areas expanding from 12 to over 20 cubic feet, 60/40 split-folding rear seats with pass-through functionality, and climate control systems with cabin air filtration.</p>
-                    </article>
+    <!-- Hero Section -->
+    <div class="car-type-hero" style="background-image: url('../../images/types/compact.png');">
+        <h1>Compact Cars</h1>
+    </div>
 
-                    <article class="car-type-info-section category-showcase">
-                        <h3 class="info-title">Compact Categories</h3>
-                        <p class="info-text">The compact car segment encompasses diverse specialized categories. Economy-focused models feature efficient powertrains producing 120-150 horsepower while achieving combined fuel economy ratings of 35-40 MPG, enhanced by continuously variable transmissions and active grille shutters. Premium compact cars incorporate luxury amenities like leather upholstery, dual-zone climate control, premium audio systems with active noise cancellation, and advanced driver assistance features while maintaining sub-175-inch length dimensions.</p>
-                        <p class="info-text">Sport-oriented compact cars deliver impressive performance metrics with turbocharged engines producing 220-300 horsepower, sport-tuned suspensions with adaptive damping, and performance-oriented stability control systems. Electric compact models offer ranges exceeding 250 miles, DC fast-charging capabilities supporting 10-80% charging in under 30 minutes, and instant torque delivery of 200-300 lb-ft. Innovative design solutions include variable-compression engines, mild-hybrid powertrains with 48-volt systems, and aerodynamic features achieving drag coefficients below 0.30.</p>
-                    </article>
+    <!-- Breadcrumb Navigation -->
+    <nav class="breadcrumb" style="padding: 1rem 2rem; background: #f8f9fa;">
+        <a href="../../index.html" style="color: #14284e; text-decoration: none;">Home</a> &raquo;
+        <a href="../car-types.html" style="color: #14284e; text-decoration: none;">Car Types</a> &raquo;
+        <span style="color: #666;">Compact Cars</span>
+    </nav>
 
-                    <article class="car-type-info-section lifestyle-fit">
-                        <h3 class="info-title">Lifestyle Integration</h3>
-                        <p class="info-text">Compact cars seamlessly integrate into modern urban lifestyles, offering sophisticated solutions for diverse mobility needs. Their efficient packaging accommodates up to five passengers while maintaining a footprint compatible with 15-foot parking spaces. Advanced driver assistance features like automated parallel parking, traffic jam assist, and predictive efficiency routing optimize the urban driving experience. The latest models feature customizable drive modes, adjusting throttle response, steering effort, and transmission mapping to suit varying driving conditions.</p>
-                        <p class="info-text">These vehicles excel in sustainable mobility with many models offering hybrid powertrains that reduce urban emissions by up to 90% compared to conventional vehicles. Smart storage solutions include underfloor compartments, adjustable cargo floors, and innovative seat-folding mechanisms that create flat load surfaces. Connected car features support modern lifestyles with digital key sharing, geofencing capabilities, and integration with smart home systems, while advanced climate control systems with air quality monitoring ensure comfortable daily commuting in any environment.</p>
-                    </article>
-                </div>
+    <!-- Tab Navigation -->
+    <div class="tab-navigation">
+        <button class="tab-button active" onclick="openTab('overview')">Overview</button>
+        <button class="tab-button" onclick="openTab('features')">Features</button>
+        <button class="tab-button" onclick="openTab('categories')">Categories</button>
+        <button class="tab-button" onclick="openTab('lifestyle')">Lifestyle</button>
+        <button class="tab-button" onclick="openTab('models')">Popular Models</button>
+    </div>
+
+    <!-- Tab Contents -->
+    <div id="overview" class="tab-content active">
+        <section class="car-type-info-section">
+            <header>
+                <h3 class="info-title">Overview</h3>
+            </header>
+            <div class="info-content">
+                <p class="info-text">Compact cars represent automotive efficiency perfected, balancing practicality, economy, and modern features in packages sized for urban reality. Measuring 175-185 inches in length (versus 190-195 for mid-size sedans), these vehicles deliver surprising interior space through clever packaging while maintaining nimble dimensions perfect for crowded cities. Fuel economy defines the segment: 30-40 MPG combined for gasoline engines (Honda Civic, Mazda3, Toyota Corolla), improving to 45-58 MPG for hybrids (Corolla Hybrid, Honda Insight), and exceeding 100 MPGe for electric variants (Chevy Bolt EV, Nissan Leaf). This efficiency translates to tangible savings: 12,000 annual miles at 35 MPG costs $1,235 fuel annually (at $3.50/gallon) versus $1,750 for 25 MPG mid-size sedans—$515 annual savings compounding over ownership.</p>
+                
+                <p class="info-text">The segment evolved from basic economy transportation to sophisticated vehicles rivaling larger sedans in technology and refinement. Modern compacts feature turbocharged engines delivering spirited performance (Honda Civic Si, Mazda3 Turbo, Volkswagen Jetta GLI), premium interiors with available leather and wood trim, advanced driver assistance (adaptive cruise, lane keeping, automatic emergency braking), and comprehensive infotainment with large touchscreens and smartphone integration. This evolution repositioned compacts from starter cars for young buyers to primary vehicles for diverse demographics: young professionals, retirees downsizing, environmentally conscious individuals, and anyone valuing efficiency over size.</p>
+                
+                <p class="info-text">Global compact car market remains enormous despite SUV proliferation: annual worldwide sales exceed 20 million units, with models like Toyota Corolla and Honda Civic consistently ranking among best-selling vehicles globally. North American market shifted toward crossovers (compact car sales declining 40% since 2015 peak), yet enthusiasts and practical buyers recognize enduring advantages: lower purchase prices ($22,000-$30,000 versus $28,000-$35,000 compact crossovers), superior fuel economy (5-8 MPG better than crossover equivalents), engaging driving dynamics through lower centers of gravity, and reduced operating costs (insurance, tires, maintenance all lower for sedans versus crossovers).</p>
+                
+                <p class="info-text">Compact cars suit specific use cases perfectly: urban commuters benefit from parking ease and maneuverability; highway commuters appreciate fuel economy and comfortable long-distance capability; budget-conscious buyers value affordability and low operating costs; driving enthusiasts enjoy lightweight, responsive dynamics; and environmentally conscious individuals reduce carbon footprints through efficiency or hybrid/electric powertrains. For these buyers, compact cars deliver optimal transportation solutions prioritizing efficiency, economy, and driving pleasure over cargo volume and elevated seating positions. Despite market trends favoring SUVs, compact cars remain relevant offering tangible advantages for those valuing substance over trends, efficiency over image, and driving engagement over commanding visibility.</p>
             </div>
         </section>
-    </main>
+    </div>
+    <div id="features" class="tab-content">
+        <section class="car-type-info-section feature-grid">
+            <header>
+                <h3 class="info-title">Distinctive Features</h3>
+            </header>
+            <div class="info-content">
+                <p class="info-text"><strong>Space Efficiency & Packaging:</strong> Compact cars maximize interior volume through intelligent engineering. Transverse engine mounting (sideways orientation) minimizes hood length, devoting more space to passenger compartments. Thin seats with high-density foam provide comfort while reducing thickness, maximizing rear legroom (often 35-37 inches—adequate for adults despite compact exterior dimensions). Strategic component placement eliminates intrusions: fuel tanks under rear seats, exhaust systems routed tightly, and electrical components miniaturized freeing interior space. The result: cabins feeling larger than exterior dimensions suggest, comfortably seating four adults with 12-15 cubic feet trunk space—adequate for daily needs and weekend trips. Advanced high-strength steel construction maintains safety while reducing weight to 2,800-3,200 lbs (versus 3,200-3,600 lbs mid-size sedans), improving efficiency and dynamics.</p>
+                
+                <p class="info-text"><strong>Fuel Efficiency & Powertrains:</strong> Compact car engines prioritize efficiency. Naturally aspirated 4-cylinders (1.8L-2.5L, 139-200 hp) utilize variable valve timing, direct injection, and sophisticated engine management achieving 30-38 MPG combined. Turbocharged variants (1.5L-2.0L, 174-250 hp) deliver mid-size sedan power with compact car efficiency through smaller displacement and forced induction. CVT transmissions optimize efficiency by maintaining ideal engine RPMs, achieving 32-40 MPG combined. Hybrid powertrains (Toyota Corolla Hybrid, Honda Insight) combine 1.5L-2.0L engines with electric motors achieving 50-55 MPG combined—exceptional fuel economy without range anxiety or charging infrastructure dependency. These efficiencies save substantially: 12,000 annual miles at 35 MPG costs $1,235 fuel (at $3.50/gallon) versus $2,100 for 20 MPG vehicles—$865 annual savings justifying compact car ownership solely through fuel costs.</p>
+                
+                <p class="info-text"><strong>Handling & Driving Dynamics:</strong> Compact cars deliver engaging driving experiences through lightweight construction and low centers of gravity. MacPherson strut front suspensions and torsion beam or multi-link rear designs provide responsive handling with predictable characteristics. Electric power steering offers light effort for parking ease while maintaining feedback during spirited driving. Sporty variants (Honda Civic Si, Mazda3 Turbo, VW Jetta GLI) feature sport suspensions, limited-slip differentials, and performance tires delivering handling rivaling sports sedans. Lower seating positions (versus tall crossovers) provide better road feel and connection. Shorter wheelbases (103-107 inches) enable nimble direction changes and tight turning circles (33-37 feet) simplifying urban navigation and parking lot maneuvering. For driving enthusiasts, compacts offer pure fun: lightweight responsiveness, precise steering, and engaging dynamics unavailable in taller, heavier crossovers.</p>
+                
+                <p class="info-text"><strong>Technology & Safety:</strong> Modern compacts incorporate technology rivaling premium vehicles. Touchscreen infotainment (7-10 inches) features wireless Apple CarPlay/Android Auto, voice commands, and available navigation. Digital instrument clusters (available on premium trims) provide configurable displays showing efficiency data, navigation, and vehicle information. Advanced driver assistance systems increasingly standard include: adaptive cruise control maintaining preset following distances, lane keeping assistance preventing drift, automatic emergency braking with pedestrian detection, blind spot monitoring, and rear cross traffic alert. These features previously exclusive to luxury vehicles now democratize safety technology, protecting compact car occupants as effectively as premium sedans. Safety ratings approach or match larger vehicles through sophisticated crash structures, comprehensive airbag systems (8-10 airbags), and high-strength steel usage.</p>
+                
+                <p class="info-text"><strong>Urban Maneuverability & Practicality:</strong> Compact dimensions provide tangible urban advantages. Parallel parking becomes manageable—shorter lengths fit spaces rejecting mid-size sedans, while backup cameras and parking sensors (increasingly standard) simplify tight maneuvering. Narrow widths (69-72 inches) navigate city streets comfortably without encroaching adjacent lanes. Underground parking garages with height restrictions easily accommodate compacts. Despite compact exteriors, interiors provide genuine four-adult seating and trunk space handling grocery runs, airport trips, and weekend getaways. Fuel efficiency reduces urban commuting costs dramatically. Insurance costs remain affordable reflecting lower replacement values and repair costs versus larger vehicles. Maintenance parallels or undercuts larger sedans through smaller, simpler components and widespread parts availability. These practical advantages make compacts ideal urban transportation: efficient, affordable, easy to live with daily.</p>
+            </div>
+        </section>
+    </div>
+    <div id="categories" class="tab-content">
+        <section class="car-type-info-section category-showcase">
+            <header>
+                <h3 class="info-title">Compact Categories</h3>
+            </header>
+            <div class="info-content">
+                <p class="info-text"><strong>Economy/Value Compacts:</strong> Budget-focused variants emphasizing affordability and efficiency. Chevrolet Malibu, Hyundai Elantra, Kia Forte, Nissan Sentra offer practical transportation at $22,000-$26,000 starting prices. Naturally aspirated 4-cylinders (1.8L-2.5L, 139-170 hp) provide adequate performance with 0-60 mph times of 8-10 seconds while achieving 32-38 MPG combined. Cloth interiors, steel wheels, and basic infotainment keep costs down while providing essential features: air conditioning, power windows/locks, and modern safety systems increasingly mandated or standard. These compacts suit budget-conscious buyers, first-time car purchasers, students, and anyone prioritizing transportation over luxury. Operating costs remain minimal: affordable insurance, inexpensive maintenance, and excellent fuel economy create low total cost of ownership. Used examples provide even better value—3-5 year old models sell $12,000-$18,000, delivering reliable transportation at fraction of new vehicle costs.</p>
+                
+                <p class="info-text"><strong>Mainstream/Upscale Compacts:</strong> Well-rounded offerings balancing features with value ($25,000-$32,000). Honda Civic, Mazda3, Toyota Corolla, Volkswagen Jetta represent segment benchmarks. Efficient engines (1.5L-2.5L, 150-200 hp naturally aspirated or turbocharged) deliver spirited performance with 0-60 mph times of 7-8.5 seconds while maintaining 30-36 MPG combined. Interiors rival mid-size sedans with available leather, dual-zone climate control, premium audio (9-12 speakers), and comprehensive infotainment with large touchscreens (8-10 inches). Advanced safety technology standard or available includes full driver assistance suites. These compacts serve as primary vehicles for diverse buyers: young professionals, empty nesters, commuters, and anyone valuing quality, efficiency, and features without excessive size or cost. The Honda Civic exemplifies this category with refined dynamics, spacious interior, and legendary reliability. Mazda3 emphasizes premium materials and engaging driving dynamics. Corolla delivers bulletproof reliability and exceptional resale values.</p>
+                
+                <p class="info-text"><strong>Sport/Performance Compacts:</strong> Enthusiast-focused variants delivering sports sedan dynamics in compact packages. Honda Civic Si (200 hp turbo, 6-speed manual, limited-slip differential, $28,000) offers accessible performance with 6.3-second 0-60 mph and engaging handling. Mazda3 Turbo (250 hp turbocharged inline-4, AWD, $33,000) combines power with premium refinement. Volkswagen Jetta GLI (228 hp turbo, sport suspension, $31,000) delivers German engineering at attainable prices. These variants feature turbocharged engines, sport suspensions with tighter damping and firmer springs, performance brakes, summer tires (or all-season performance rubber), and visual enhancements (spoilers, unique wheels, sport seats). They deliver 0-60 mph times of 5.5-7.0 seconds—brisk by any standard—while maintaining compact car practicality and efficiency (26-32 MPG combined). Perfect for enthusiasts requiring daily practicality without sacrificing driving engagement, these compacts prove fun and functionality coexist.</p>
+                
+                <p class="info-text"><strong>Hybrid Compacts:</strong> Maximum efficiency variants combining gasoline engines with electric motors. Toyota Corolla Hybrid (1.8L + electric motor, 139 hp combined, 52 MPG combined, $25,000) delivers exceptional fuel economy without plug-in requirements. Honda Insight (1.5L + electric motor, 151 hp, 52 MPG, discontinued 2022 but available used) offered similar capability. Hyundai Elantra Hybrid (1.6L + electric motor, 139 hp, 54 MPG, $26,000) represents newer entrant. These vehicles utilize sophisticated hybrid systems: regenerative braking captures energy during deceleration, electric motors assist acceleration and enable electric-only operation at low speeds, and seamless transitions between power sources optimize efficiency. Savings substantial: 52 MPG combined costs $808 annual fuel (12,000 miles, $3.50/gallon) versus $1,235 for 35 MPG conventional compact—$427 annual savings. Battery warranties (8-10 years/100,000 miles) provide peace of mind. Perfect for high-mileage commuters maximizing efficiency.</p>
+                
+                <p class="info-text"><strong>Premium/Luxury Compacts:</strong> Upscale variants blurring lines between mainstream and luxury. Audi A3, Mercedes A-Class (hatchback/sedan), BMW 2-Series Gran Coupe deliver premium badges in compact packages ($36,000-$45,000). Turbocharged 4-cylinders (188-250 hp) provide adequate performance. Interiors feature genuine leather, ambient lighting, premium audio, and advanced technology rivaling larger luxury sedans. These vehicles appeal to urban professionals desiring premium badges without excessive size or flagship prices. However, maintenance costs reflect luxury brand positioning: expect higher insurance, expensive repairs, and premium fuel requirements. Acura Integra (returning nameplate, $32,000-$37,000) offers near-luxury experience at lower cost with Honda reliability. These compacts suit badge-conscious buyers in dense cities where compact dimensions provide advantages while premium interiors satisfy luxury desires.</p>
+            </div>
+        </section>
+    </div>
+    <div id="lifestyle" class="tab-content">
+        <section class="car-type-info-section lifestyle-fit">
+            <header>
+                <h3 class="info-title">Lifestyle Integration</h3>
+            </header>
+            <div class="info-content">
+                <p class="info-text"><strong>Urban Commuting & City Life:</strong> Compact cars excel as urban transportation. Shorter lengths and tight turning circles simplify parking—fitting spaces mid-size sedans reject while parallel parking requires fewer attempts. Fuel efficiency reduces commuting costs dramatically: 35 MPG compact costs $100-$150 monthly fuel versus $200-$250 for 20 MPG SUVs (assuming $3.50/gallon, 60 miles daily). Lower insurance costs reflect smaller replacement values and repair expenses. Maintenance remains straightforward and affordable through widespread parts availability and simpler mechanicals. For apartment dwellers, compact dimensions fit single parking spaces comfortably. Young urban professionals appreciate efficient transportation enabling budgets for experiences over vehicle expenses. Retired individuals downsizing from larger vehicles find compacts provide adequate space without excessive bulk. The efficiency, maneuverability, and affordability make compacts ideal urban vehicles for those prioritizing practicality over prestige.</p>
+                
+                <p class="info-text"><strong>Long Commutes & Highway Travel:</strong> Despite compact dimensions, these vehicles excel at highway commuting. Comfortable seats support 1-2 hour daily commutes without fatigue. Quiet cabins (improving yearly through sound insulation advances) enable phone calls and audio system enjoyment. Fuel economy of 35-42 MPG highway (up to 50+ MPG hybrids) dramatically reduces fuel costs for high-mileage drivers. Adaptive cruise control (available on most models) reduces driver fatigue on long commutes by maintaining following distances and even handling stop-and-go traffic. For drivers covering 20,000-30,000 annual miles, compact car efficiency saves $1,000-$2,000 annually versus less-efficient alternatives—substantial savings compounding over years. Trunk space accommodates daily needs while rear seats fold expanding cargo for occasional large items. These capabilities make compacts excellent choices for long-distance commuters valuing efficiency and comfort.</p>
+                
+                <p class="info-text"><strong>Budget-Conscious & First-Time Buyers:</strong> Compact cars serve as excellent first vehicles and budget-conscious choices. Affordable purchase prices ($22,000-$30,000 new, $12,000-$22,000 for 3-5 year used examples) fit modest budgets without requiring extensive financing. Lower insurance costs (especially liability-only on older models) reduce monthly expenses. Fuel efficiency minimizes operating costs—critical for young buyers with limited incomes. Maintenance simplicity and reliability (particularly Japanese brands: Honda, Toyota, Mazda) build confidence for inexperienced owners. Resale values remain strong for popular models, preserving investment when upgrading. As first cars, compacts teach essential driving skills: parking in tight spaces builds confidence, lower power levels prevent dangerous overconfidence, and manageable dimensions ease navigation learning. For budget-conscious families, compacts provide adequate transportation without excessive monthly payments, enabling financial resources for other priorities.</p>
+                
+                <p class="info-text"><strong>Environmental Consciousness & Efficiency:</strong> Environmentally conscious individuals gravitate toward compact cars reducing carbon footprints through efficiency. Gasoline compacts achieving 35-40 MPG emit substantially less CO2 than SUVs (25-30% reduction typical). Hybrid compacts achieving 50+ MPG reduce emissions further 40-50% versus average vehicles. For those unable or unwilling to adopt full electric vehicles (due to charging infrastructure, range concerns, or budgets), efficient compact cars represent practical environmental improvements over larger, thirstier alternatives. The reduced resource consumption extends beyond fuel: smaller vehicles require less raw materials for production, lighter weights reduce tire and brake wear, and compact dimensions consume less parking space. For buyers balancing environmental consciousness with practical constraints, efficient compact cars deliver meaningful carbon footprint reductions without compromising daily transportation needs.</p>
+                
+                <p class="info-text"><strong>Driving Enthusiasm & Engagement:</strong> Compact cars appeal to driving enthusiasts valuing engagement over straight-line performance. Lightweight construction and responsive handling deliver fun impossible in heavier crossovers or sedans. Even modestly powered compacts feel quick through corners due to low curb weights (2,800-3,100 lbs) and balanced chassis. Sport variants amplify engagement: 200-250 hp feels exhilarating in 3,000 lb packages, manual transmissions (increasingly rare but available on some models) connect drivers to vehicles, and tight steering ratios provide immediate response. For enthusiasts unable to justify impractical sports cars, performance compacts deliver 80% of thrills with 100% daily usability: rear seats, adequate trunks, reasonable fuel economy, and affordable operating costs. Canyon roads, autocross events, and spirited backroad drives reveal compact car capabilities, proving fun derives from momentum, chassis balance, and driver involvement rather than solely horsepower numbers. These attributes make compacts enduringly appealing to enthusiasts valuing driving pleasure integrated into practical daily transportation.</p>
+            </div>
+        </section>
+    </div>
+    <div id="models" class="tab-content">
+        <section class="car-type-info-section">
+            <header>
+                <h3 class="info-title">Popular Compact Models</h3>
+            </header>
+            <div class="info-content">
+                <h4 style="color: #14284e; margin-top: 1.5rem;">Economy Compacts</h4>
+                <p class="info-text"><strong>Toyota Corolla, Honda Civic, Mazda3:</strong> Exceptional reliability, 35-40 MPG combined, affordable pricing, and low ownership costs.</p>
+                
+                <h4 style="color: #14284e; margin-top: 1.5rem;">Premium Compacts</h4>
+                <p class="info-text"><strong>Audi A3, Mercedes-Benz A-Class, BMW 2 Series:</strong> Luxury features, advanced technology, and upscale materials in a compact package.</p>
+                
+                <h4 style="color: #14284e; margin-top: 1.5rem;">Sport Compacts</h4>
+                <p class="info-text"><strong>Volkswagen Golf GTI, Honda Civic Si, Mazda3 Turbo:</strong> Engaging driving dynamics with 220-300 hp and everyday practicality.</p>
+                
+                <h4 style="color: #14284e; margin-top: 1.5rem;">Electric Compacts</h4>
+                <p class="info-text"><strong>Chevrolet Bolt, Nissan Leaf, MINI Electric:</strong> Zero emissions, instant torque, and modern technology with compact efficiency.</p>
+            </div>
+        </section>
+    </div>
+
+    <!-- Gallery Section -->
+    <section class="car-gallery">
+        <h3 style="text-align: center; padding: 2rem 0; color: #14284e;">Compact Car Gallery</h3>
+        <div class="gallery-item">
+            <img src="../../images/examples/compact1.jpg" alt="Economy Compact Car" loading="lazy">
+            <div class="gallery-caption">Economy Compact - Urban Efficiency</div>
+        </div>
+        <div class="gallery-item">
+            <img src="../../images/examples/compact2.jpg" alt="Premium Compact Car" loading="lazy">
+            <div class="gallery-caption">Premium Compact - Luxury In Small Package</div>
+        </div>
+        <div class="gallery-item">
+            <img src="../../images/examples/compact3.jpg" alt="Sport Compact Car" loading="lazy">
+            <div class="gallery-caption">Sport Compact - Fun And Practical</div>
+        </div>
+    </section>
+
+    <!-- Related Car Types -->
+    <section style="background: #f8f9fa; padding: 3rem 2rem; margin-top: 2rem;">
+        <h3 style="text-align: center; color: #14284e; margin-bottom: 2rem;">Compare Similar Vehicle Types</h3>
+        <div style="display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap; max-width: 1200px; margin: 0 auto;">
+            <a href="sedan.html" style="text-decoration: none; color: #14284e; padding: 1rem 2rem; background: white; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+                <strong>Sedans</strong><br>
+                <span style="font-size: 0.9rem; color: #666;">More interior space</span>
+            </a>
+            <a href="hatchback.html" style="text-decoration: none; color: #14284e; padding: 1rem 2rem; background: white; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+                <strong>Hatchbacks</strong><br>
+                <span style="font-size: 0.9rem; color: #666;">Greater cargo flexibility</span>
+            </a>
+            <a href="electric.html" style="text-decoration: none; color: #14284e; padding: 1rem 2rem; background: white; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+                <strong>Electric Vehicles</strong><br>
+                <span style="font-size: 0.9rem; color: #666;">Zero emissions</span>
+            </a>
+        </div>
+    </section>
 
     <!-- Footer -->
     <footer class="car-type-footer">
-        <p>&copy; 2024 Engine Starters. All rights reserved.</p>
+        <p>&copy; 2025 Engine Starters. All rights reserved.</p>
     </footer>
+
     <script>
     function openTab(tabName) {
         var i;
@@ -95,69 +211,13 @@
         event.currentTarget.classList.add("active");
     }
     </script>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Engine Starters | All Rights Reserved</p>
+    </footer>
 </body>
 </html>
-
-
-
-
-    <!-- Hero Section -->
-    <div class="car-type-hero" style="background-image: url('../../images/types/compact.png');">
-        <h1>Compact Cars</h1>
-    </div>
-
-    <!-- Tab Navigation -->
-    <div class="tab-navigation">
-        <button class="tab-button active" onclick="openTab('overview')">Overview</button>
-        <button class="tab-button" onclick="openTab('features')">Features</button>
-        <button class="tab-button" onclick="openTab('categories')">Categories</button>
-        <button class="tab-button" onclick="openTab('lifestyle')">Lifestyle</button>
-    </div>
-
-    <!-- Tab Contents -->
-    <div id="overview" class="tab-content active">
-        <article class="car-type-info-section">
-            <h3 class="info-title">Overview</h3>
-            <p class="info-text">Compact cars represent the pinnacle of urban mobility engineering, combining exceptional efficiency with smart practicality. These nimble vehicles excel in city environments, consistently achieving fuel economy ratings of 30-40 MPG in city driving and often exceeding 40 MPG on highways. With typical dimensions spanning 150-175 inches in length and wheelbases ranging from 98-105 inches, these vehicles master urban maneuverability while maintaining interior volumes of 100-110 cubic feet. Modern compact cars incorporate sophisticated design features like active aerodynamics, regenerative braking systems, and advanced driver assistance technologies, all while maintaining their core benefits of affordability and practicality. The latest models feature innovative space optimization, achieving passenger volumes comparable to midsize cars of previous generations despite their compact exterior dimensions.</p>
-        </article>
-    </div>
-    <div id="features" class="tab-content">
-        <article class="car-type-info-section feature-grid">
-            <h3 class="info-title">Distinctive Features</h3>
-            <p class="info-text">Compact cars are engineered with sophisticated space optimization, featuring modular platforms that maximize interior volume through strategic component placement. Advanced high-strength steel construction and aluminum components typically reduce curb weights to 2,800-3,200 pounds, enhancing both efficiency and handling dynamics. Their compact footprint, usually featuring turning circles under 35 feet, makes them ideal for urban navigation, while smart parking assistance systems with 360-degree cameras facilitate effortless parking in spaces as small as 15 feet in length.</p>
-            <p class="info-text">Modern compact cars integrate comprehensive safety suites including forward collision warning with pedestrian detection, lane departure prevention with lane centering, and blind spot monitoring with rear cross-traffic alert. Connectivity features encompass wireless Apple CarPlay and Android Auto integration, over-the-air software updates, and advanced telematics with remote vehicle monitoring. Interior innovations include configurable cargo areas expanding from 12 to over 20 cubic feet, 60/40 split-folding rear seats with pass-through functionality, and climate control systems with cabin air filtration.</p>
-        </article>
-    </div>
-    <div id="categories" class="tab-content">
-        <article class="car-type-info-section category-showcase">
-            <h3 class="info-title">Compact Categories</h3>
-            <p class="info-text">The compact car segment encompasses diverse specialized categories. Economy-focused models feature efficient powertrains producing 120-150 horsepower while achieving combined fuel economy ratings of 35-40 MPG, enhanced by continuously variable transmissions and active grille shutters. Premium compact cars incorporate luxury amenities like leather upholstery, dual-zone climate control, premium audio systems with active noise cancellation, and advanced driver assistance features while maintaining sub-175-inch length dimensions.</p>
-            <p class="info-text">Sport-oriented compact cars deliver impressive performance metrics with turbocharged engines producing 220-300 horsepower, sport-tuned suspensions with adaptive damping, and performance-oriented stability control systems. Electric compact models offer ranges exceeding 250 miles, DC fast-charging capabilities supporting 10-80% charging in under 30 minutes, and instant torque delivery of 200-300 lb-ft. Innovative design solutions include variable-compression engines, mild-hybrid powertrains with 48-volt systems, and aerodynamic features achieving drag coefficients below 0.30.</p>
-        </article>
-    </div>
-    <div id="lifestyle" class="tab-content">
-        <article class="car-type-info-section lifestyle-fit">
-            <h3 class="info-title">Lifestyle Integration</h3>
-            <p class="info-text">Compact cars seamlessly integrate into modern urban lifestyles, offering sophisticated solutions for diverse mobility needs. Their efficient packaging accommodates up to five passengers while maintaining a footprint compatible with 15-foot parking spaces. Advanced driver assistance features like automated parallel parking, traffic jam assist, and predictive efficiency routing optimize the urban driving experience. The latest models feature customizable drive modes, adjusting throttle response, steering effort, and transmission mapping to suit varying driving conditions.</p>
-            <p class="info-text">These vehicles excel in sustainable mobility with many models offering hybrid powertrains that reduce urban emissions by up to 90% compared to conventional vehicles. Smart storage solutions include underfloor compartments, adjustable cargo floors, and innovative seat-folding mechanisms that create flat load surfaces. Connected car features support modern lifestyles with digital key sharing, geofencing capabilities, and integration with smart home systems, while advanced climate control systems with air quality monitoring ensure comfortable daily commuting in any environment.</p>
-        </article>
-    </div>
-
-    <!-- Gallery Section -->
-    <section class="car-gallery">
-        <div class="gallery-item">
-            <img src="../../images/examples/compact1.jpg" alt="Example Compact 1" loading="lazy">
-            <div class="gallery-caption">Model 1</div>
-        </div>
-        <div class="gallery-item">
-            <img src="../../images/examples/compact2.jpg" alt="Example Compact 2" loading="lazy">
-            <div class="gallery-caption">Model 2</div>
-        </div>
-        <div class="gallery-item">
-            <img src="../../images/examples/compact3.jpg" alt="Example Compact 3" loading="lazy">
-            <div class="gallery-caption">Model 3</div>
-        </div>
-    </section>
 
 
 

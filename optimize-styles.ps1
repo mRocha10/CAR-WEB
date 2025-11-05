@@ -11,7 +11,7 @@ foreach ($file in $files) {
     $content = $content -replace '<link\s*rel="stylesheet"\s*href="[^"]*"\s*>', ''
     $content = $content -replace '<link\s*rel="stylesheet"\s*href="[^"]*"\s*>', ''
     # Add global.css link
-    $content = $content -replace '</head>', '<link rel="stylesheet" href="css/global.css">`r`n</head>'
+    $content = $content -replace '</head>', '<link rel="stylesheet" href="css/global.css"></head>'
     Set-Content $file.FullName $content
 }
 
@@ -24,7 +24,7 @@ foreach ($file in $files) {
     $content = $content -replace '<link\s*rel="stylesheet"\s*href="[^"]*"\s*>', ''
     $content = $content -replace '<link\s*rel="stylesheet"\s*href="[^"]*"\s*>', ''
     $content = $content -replace '<link\s*rel="stylesheet"\s*href="[^"]*"\s*>', ''
-    $content = $content -replace '</head>', '<link rel="stylesheet" href="../css/global.css">`r`n</head>'
+    $content = $content -replace '</head>', '<link rel="stylesheet" href="../css/global.css"></head>'
     Set-Content $file.FullName $content
 }
 
@@ -35,7 +35,7 @@ foreach ($dir in $dirs) {
     foreach ($file in $files) {
         $content = Get-Content $file.FullName -Raw
         # Fix concatenated tags
-        $content = $content -replace '(<link rel="icon" type="image/jpeg" href="[^"]*">)<link', '$1`r`n    <link'
+        $content = $content -replace '(<link rel="icon" type="image/jpeg" href="[^"]*">)<link', '$1    <link'
         # Remove all stylesheet links
         $content = $content -replace '<link\s*rel="stylesheet"\s*href="[^"]*"\s*>', ''
         $content = $content -replace '<link\s*rel="stylesheet"\s*href="[^"]*"\s*>', ''
@@ -43,7 +43,7 @@ foreach ($dir in $dirs) {
         $content = $content -replace '<link\s*rel="stylesheet"\s*href="[^"]*"\s*>', ''
         $content = $content -replace '<link\s*rel="stylesheet"\s*href="[^"]*"\s*>', ''
         # Add global.css link with indentation
-        $content = $content -replace '</head>', '    <link rel="stylesheet" href="../../css/global.css">`r`n    </head>'
+        $content = $content -replace '</head>', '    <link rel="stylesheet" href="../../css/global.css">    </head>'
         Set-Content $file.FullName $content
     }
 }

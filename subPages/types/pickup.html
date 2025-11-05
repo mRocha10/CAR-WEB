@@ -14,24 +14,26 @@
 <meta property="og:image" content="/images/brands/default.webp">
 <meta property="og:url" content="http://localhost:3000/subPages/types/pickup.html">
 <meta property="og:type" content="website">
-        <link rel="icon" type="image/jpeg" href="../images/logo/web_logo.jpeg">`r`n    
+        <link rel="icon" type="image/jpeg" href="../images/logo/web_logo.jpeg">    
     
     
     
-    <link rel="stylesheet" href="../../css/global.min.css">`r`n    </head>
+    <link rel="stylesheet" href="../../css/global.min.css">
+    <link rel="stylesheet" href="../../css/car-types-enhanced.css">
+</head>
 <body>
     <!-- Header -->
     <header>
         <a href="../../index.html" style="text-decoration: none; color: inherit;">
             <div class="logo">
-                <h1>Pickup Cars - Engine Starters</h1>
+                <h1>Engine Starters</h1>
                 <h2>Your ultimate guide to car brands and types</h2>
             </div>
         </a>
         <nav>
             <ul>
                 <li><a href="../about.html">About</a></li>
-                <li><a href="../car-types.html">Car Types</a></li>
+                <li><a href="../index.html">Car Types</a></li>
                 <li><a href="../brands.html">Brands</a></li>
                 <li><a href="../components.html">Components</a></li>
                 <li><a href="../car-comparison.html">Compare Cars</a></li>
@@ -40,64 +42,160 @@
         </nav>
     </header>
 
-    <!-- Main Content -->
-    <main class="car-type-main">
-        <article class="car-type-section">
+    <!-- Hero Section -->
+    <div class="car-type-hero" style="background-image: url('../../images/types/pickup.png');">
+        <h1>Pickup Trucks</h1>
+    </div>
+
+    <!-- Breadcrumb Navigation -->
+    <nav class="breadcrumb" style="padding: 1rem 2rem; background: #f8f9fa;">
+        <a href="../../index.html" style="color: #14284e; text-decoration: none;">Home</a> &raquo;
+        <a href="../car-types.html" style="color: #14284e; text-decoration: none;">Car Types</a> &raquo;
+        <span style="color: #666;">Pickup Trucks</span>
+    </nav>
+
+    <!-- Tab Navigation -->
+    <div class="tab-navigation">
+        <button class="tab-button active" onclick="openTab('overview')">Overview</button>
+        <button class="tab-button" onclick="openTab('features')">Features</button>
+        <button class="tab-button" onclick="openTab('categories')">Categories</button>
+        <button class="tab-button" onclick="openTab('lifestyle')">Lifestyle</button>
+        <button class="tab-button" onclick="openTab('models')">Popular Models</button>
+    </div>
+
+    <!-- Tab Contents -->
+    <div id="overview" class="tab-content active">
+        <section class="car-type-info-section">
             <header>
-                <h2 class="car-type-title">Pickup Trucks</h2>
+                <h3 class="info-title">Overview</h3>
             </header>
-            <div class="car-type-container">
-                <figure class="car-type-image-wrapper">
-                    <img src="../../images/types/pickup.png" alt="Pickup Truck" class="car-type-image" loading="lazy">
-                </figure>
-                <div class="car-type-info-wrapper">
-                    <section class="car-type-info-section">
-                        <header>
-                            <h3 class="info-title">Overview</h3>
-                        </header>
-                        <div class="info-content">
-                            <p class="info-text">Pickup trucks represent the pinnacle of automotive utility and capability, engineered to handle demanding tasks while offering increasing levels of comfort and technology. These robust vehicles feature body-on-frame construction, providing exceptional strength for towing and hauling heavy loads. Modern pickup trucks combine rugged durability with sophisticated engineering, incorporating advanced powertrains, high-strength steel frames, and innovative cargo management solutions. With payload capacities often exceeding 2,000 pounds and towing capabilities surpassing 10,000 pounds (and reaching over 30,000 pounds in heavy-duty models), pickup trucks are designed for work and recreation. Contemporary designs blend functionality with refined interiors, advanced driver-assistance systems, and efficient engine options, including powerful V6, V8, diesel, and even hybrid powertrains.</p>
-                        </div>
-                    </section>
-                    
-                    <section class="car-type-info-section feature-grid">
-                        <header>
-                            <h3 class="info-title">Distinctive Features</h3>
-                        </header>
-                        <div class="info-content">
-                        <p class="info-text">Pickup trucks are defined by their body-on-frame construction, where the body is mounted separately onto a rigid ladder frame, providing superior load-bearing capacity and durability. High-strength steel frames contribute to impressive payload ratings (typically 1,500-3,500 lbs for light-duty, up to 7,500+ lbs for heavy-duty) and towing capacities (ranging from 5,000 lbs to over 37,000 lbs for heavy-duty models with gooseneck hitches). Advanced suspension systems, often featuring independent front suspension and solid rear axles with leaf springs (or multi-link coil springs in some modern light-duty trucks), are designed to handle heavy loads while providing acceptable ride comfort. Four-wheel drive (4WD) systems with low-range gearing are common, offering exceptional off-road capability and traction in adverse conditions.</p>
-                        <p class="info-text">Cargo beds are a key feature, available in various lengths (typically 5.5 to 8 feet) and featuring durable liners, integrated tie-down points, and available features like built-in lighting, power outlets (e.g., Ford's Pro Power Onboard), and innovative tailgate designs (e.g., GMC's MultiPro Tailgate, Ram's Multifunction Tailgate) that offer multiple configurations for easier loading and access. Cab configurations range from regular cabs (two doors, single row of seating) to extended cabs (small rear doors, limited rear seating) and crew cabs (four full doors, spacious rear seating rivaling SUVs). Modern trucks feature advanced towing technology, including integrated trailer brake controllers, trailer sway control, blind-spot monitoring that covers the trailer length, and sophisticated camera systems providing multiple views for easier hitching and maneuvering.</p>
-                        </div>
-                    </section>
-
-                    <section class="car-type-info-section category-showcase">
-                        <header>
-                            <h3 class="info-title">Pickup Categories</h3>
-                        </header>
-                        <div class="info-content">
-                        <p class="info-text">The pickup truck market is segmented primarily by size and capability. Compact/Mid-size trucks (e.g., Ford Ranger, Toyota Tacoma) offer a balance of utility and maneuverability, suitable for lighter duties and easier urban driving, with payload capacities around 1,000-1,600 lbs and towing up to 7,500 lbs. Full-size light-duty trucks (e.g., Ford F-150, Ram 1500, Chevrolet Silverado 1500) are the most popular segment, offering a wide range of configurations, powerful engine options (including V6, V8, diesel, hybrid), significant payload (1,800-3,300 lbs), and towing capabilities (up to 14,000 lbs).</p>
-                        <p class="info-text">Heavy-duty (HD) trucks (e.g., Ford Super Duty F-250/F-350, Ram 2500/3500, Chevy Silverado 2500HD/3500HD) are designed for serious work, featuring reinforced frames, heavy-duty suspension and axles, and powerful diesel engines (often producing over 1,000 lb-ft of torque) enabling massive payload (up to 7,800 lbs) and towing capacities (up to 37,000+ lbs with fifth-wheel/gooseneck hitches). Electric pickup trucks (e.g., Ford F-150 Lightning, Rivian R1T) are an emerging category, offering instant torque, significant onboard power export capabilities, and impressive performance, though towing significantly impacts range.</p>
-                        </div>
-                    </section>
-
-                    <section class="car-type-info-section lifestyle-fit">
-                        <header>
-                            <h3 class="info-title">Lifestyle Integration</h3>
-                        </header>
-                        <div class="info-content">
-                        <p class="info-text">Pickup trucks cater to a wide range of lifestyles, from contractors and tradespeople relying on their hauling and towing capabilities for work, to outdoor enthusiasts needing off-road prowess and space for recreational gear (boats, trailers, ATVs). Modern trucks, especially crew cab models, increasingly serve as family vehicles, offering spacious and luxurious interiors equipped with advanced infotainment systems, premium materials, and comprehensive safety features rivaling luxury SUVs. Features like multi-zone climate control, heated/ventilated seats, large touchscreens, and premium audio systems enhance comfort for daily driving and long trips.</p>
-                        <p class="info-text">The versatility of the cargo bed allows for diverse uses, from hauling building materials and furniture to carrying camping equipment and bicycles. Available accessories like tonneau covers, bed extenders, and cargo management systems further enhance utility. Advanced towing assistance features make hitching and maneuvering trailers less daunting for less experienced drivers. While fuel economy can be a consideration, modern engine technologies, including hybridization and efficient diesel options, have improved efficiency compared to older models. Pickup trucks embody a spirit of capability, freedom, and rugged individualism, appealing to those who need or desire a vehicle that can handle almost any task or adventure.</p>
-                        </div>
-                    </section>
-                </div>
+            <div class="info-content">
+                <p class="info-text">Pickup trucks represent America's best-selling vehicle segment, dominating sales charts for over four decades with the Ford F-Series, Chevrolet Silverado, and Ram trucks consistently topping monthly sales figures. These versatile vehicles combine exceptional utility—payload capacities from 1,400 to 7,850 lbs and towing capabilities from 6,000 to 37,100 lbs—with increasingly refined interiors rivaling luxury SUVs. Body-on-frame construction mounts separate cab and bed structures onto robust ladder frames constructed from high-strength steel, providing the structural integrity necessary for serious work. Modern pickups measure 210-260 inches in length, 80-97 inches in width, and stand 75-80 inches tall, with ground clearance typically 8-11 inches enabling off-road capability and confident navigation of construction sites, farms, and challenging terrain.</p>
+                
+                <p class="info-text">Powertrain diversity characterizes the segment: turbocharged 4-cylinder engines (270-310 hp, 20-23 MPG combined) serve base models emphasizing efficiency; naturally aspirated V6 engines (285-305 hp) provide adequate performance for light duty; powerful V8 gasoline engines (5.0L-6.2L, 355-450 hp, 380-510 lb-ft) deliver traditional truck capability with authoritative torque; diesel engines (3.0L-6.7L, 260-475 hp, 440-1,075 lb-ft) maximize towing and fuel economy (18-25 MPG highway when unladen); and hybrid powertrains (combining V6/V8 engines with electric motors) offer 430+ hp with improved city efficiency. Transmission technology has evolved to 10-speed automatics precisely optimizing gear ratios for efficiency, performance, and towing—older 6-speed autos are being phased out. Four-wheel drive systems with electronic shift-on-the-fly, low-range gearing (2.72:1 typical), and available locking differentials provide exceptional off-road traction.</p>
+                
+                <p class="info-text">The pickup truck market segments into compact/mid-size (Toyota Tacoma, Chevrolet Colorado, Ford Ranger), full-size half-ton/light-duty (F-150, Silverado 1500, Ram 1500, Tundra), and heavy-duty three-quarter-ton/one-ton (F-250/350, Silverado/Sierra 2500HD/3500HD, Ram 2500/3500) categories. Full-size trucks dominate with approximately 70% market share, serving both commercial and personal use. Cab configurations accommodate varying passenger needs: regular cabs (2-3 passengers, maximizing bed length), extended/super cabs (small rear seats/storage, rear-hinged doors), and crew cabs (full-size rear seats with four conventional doors)—crew cabs now represent 80%+ of sales as trucks increasingly serve family vehicle roles. Bed lengths range from compact 5.5-foot (suitable for most recreational needs) to standard 6.5-foot (ideal compromise) to long 8-foot beds (commercial/serious towing applications).</p>
+                
+                <p class="info-text">Modern pickup trucks incorporate sophisticated technology previously exclusive to luxury vehicles: massaging leather seats with heating/cooling, panoramic sunroofs, 12-15 inch touchscreen infotainment systems with wireless Apple CarPlay/Android Auto, premium audio systems (18+ speakers in high-end trims), adaptive cruise control with stop-and-go capability, 360-degree camera systems simplifying parking and trailer maneuvering, and even self-leveling air suspensions adjusting ride height electronically. Pricing spans enormous ranges: base regular-cab work trucks start around $30,000, mid-level crew cabs with popular options cost $45,000-$65,000, and fully-loaded luxury variants exceed $80,000-$100,000—rivaling German luxury SUVs. Despite premium pricing, pickup trucks maintain strong resale values (typically 60-65% after 3 years) due to enduring demand and proven durability, making total cost of ownership competitive.</p>
             </div>
-        </article>
-    </main>
+        </section>
+    </div>
+    <div id="features" class="tab-content">
+        <section class="car-type-info-section feature-grid">
+            <header>
+                <h3 class="info-title">Distinctive Features</h3>
+            </header>
+            <div class="info-content">
+                <p class="info-text"><strong>Frame & Construction:</strong> Body-on-frame construction separates the cab/bed from the frame, unlike unibody vehicles where structure and body integrate. Fully-boxed frames (enclosed channels) provide maximum rigidity and strength, while C-channel frames offer some flexibility absorbing impacts. High-strength steel alloys (sometimes with aluminum components reducing weight) create frames capable of handling extreme stresses. Frame rails in heavy-duty trucks measure 3+ inches in height and extend vehicle length, with multiple crossmembers tying rails together. This construction enables trucks to handle payload in beds and tongue weight from trailers without structural damage. When properly equipped, frames distribute loads through their entire structure rather than concentrating stress. The separate frame also facilitates body repairs—damaged beds can be replaced without affecting structural integrity. This proven architecture has been refined over decades and remains superior for towing/hauling applications despite being heavier and costlier than unibody construction.</p>
+                
+                <p class="info-text"><strong>Suspension Systems:</strong> Front suspensions typically employ independent designs (short-long arm or multi-link) providing better ride quality and handling than solid axles while maintaining strength. Rear suspensions use solid axles with leaf springs in most trucks—leaf springs' progressive rate naturally stiffens as loads increase, making them ideal for varying cargo weights. Coil-spring rear suspensions (Ram trucks) offer improved unladen ride quality. Heavy-duty trucks feature reinforced suspensions with higher-capacity springs and shock absorbers handling thousands of pounds. Air suspension systems (available on some models) allow electronically adjustable ride height—raising for off-road clearance, lowering for easier bed access or improved aerodynamics at highway speeds. When properly configured for loads, modern truck suspensions provide surprisingly comfortable rides, though unladen trucks with HD suspensions ride firmly due to suspension tuning for heavy loads.</p>
+                
+                <p class="info-text"><strong>Cargo Bed Features:</strong> Truck beds measure 5.5 feet (compact/short), 6.5 feet (standard), or 8 feet (long) in length, with widths between wheel wells around 50-52 inches and bed floors approximately 20-22 inches off ground. Bed depths typically measure 20-22 inches. Most beds feature spray-in or drop-in liners protecting against scratches, dents, and corrosion from cargo. Integrated tie-down cleats (typically 4-6) and adjustable cargo tie-down systems secure loads. LED bed lighting illuminates cargo areas. Available features include power outlets (110V/400W in bed), bedside storage compartments, tailgate steps (integrated steps/handles making bed access easier), multi-function tailgates (opening conventionally or splitting side-to-side), and bed dividers/extenders maximizing versatility. Tonneau covers (soft-roll, hard-fold, retractable) protect cargo and improve aerodynamics, with some electronically operated. Bed capacity ratings must be respected—overloading damages suspensions, frames, and creates dangerous handling.</p>
+                
+                <p class="info-text"><strong>Towing Technology:</strong> Modern trucks feature comprehensive towing systems: integrated trailer brake controllers modulate trailer brakes independently; trailer sway control detects oscillation and applies individual wheel brakes with throttle reduction stabilizing combinations; backup cameras with trajectory lines (and available bed-mounted cameras) simplify maneuvering; and blind spot monitoring extends to cover trailers. Pro Trailer Backup Assist (Ford) or similar systems allow drivers to control trailer direction via knob—computer calculates steering inputs backing trailers intuitively. Weight-distribution hitches transfer tongue weight to front axles improving balance. Fifth-wheel and gooseneck hitches mount in beds for maximum towing capacity with large trailers—bed-mounted systems can be removed when not needed. Tow/haul transmission modes adjust shift points and increase engine braking descending grades. Proper towing requires matching trailer weight to truck capacity, using correct hitches, maintaining tire pressures, and understanding GVWR (gross vehicle weight rating), GCWR (gross combined weight rating), and payload calculations.</p>
+                
+                <p class="info-text"><strong>Four-Wheel Drive & Off-Road Systems:</strong> 4WD systems transfer power to front axles when engaged, doubling driven wheels for traction on slippery surfaces or off-road. Part-time 4WD (typically found in work trucks) requires manual engagement and should only be used on loose surfaces—operating on pavement causes binding. Full-time 4WD/AWD (increasingly common) can remain engaged always, using center differentials allowing front/rear speed differences. Electronic shift-on-the-fly allows engaging 4WD at speeds up to 55 mph without stopping. Low-range gearing (engaged when stopped) multiplies torque 2.5-3 times, enabling slow, controlled crawling over obstacles or through deep mud/sand. Locking differentials (rear or front/rear) force both wheels on an axle to turn at equal speeds, maximizing traction when one wheel loses grip. Off-road packages include skid plates protecting undercarriage components, specialized off-road shocks, aggressive all-terrain tires, and sometimes disconnecting sway bars increasing suspension articulation. Hill descent control maintains slow speeds descending steep grades automatically applying brakes.</p>
+            </div>
+        </section>
+    </div>
+    <div id="categories" class="tab-content">
+        <section class="car-type-info-section category-showcase">
+            <header>
+                <h3 class="info-title">Pickup Categories</h3>
+            </header>
+            <div class="info-content">
+                <p class="info-text"><strong>Compact & Mid-Size Trucks:</strong> Measuring 210-225 inches long (versus 230-250 for full-size), these trucks suit buyers prioritizing maneuverability, parking ease, and fuel efficiency while retaining utility. Engines typically include turbocharged 4-cylinders (270-310 hp), V6s (278-310 hp), or small diesels (181 hp, 369 lb-ft). Payload capacities range 1,400-1,700 lbs with towing from 6,000-7,700 lbs—adequate for most recreational trailers, utility trailers, and occasional hauling. Toyota Tacoma, Chevrolet Colorado, GMC Canyon, Ford Ranger, Jeep Gladiator, and Nissan Frontier populate this segment. Pricing spans $28,000-$50,000 depending on trim and capability. Fuel economy averages 18-22 MPG combined. These trucks appeal to urban/suburban buyers needing occasional truck capability without full-size compromises, outdoor enthusiasts with smaller trailers, and those desiring off-road prowess (Tacoma TRD Pro, Colorado ZR2 offer serious capability).</p>
+                
+                <p class="info-text"><strong>Full-Size Half-Ton (Light-Duty):</strong> America's most popular vehicle segment, half-ton trucks balance capability with daily drivability. Ford F-150, Chevrolet Silverado 1500, GMC Sierra 1500, Ram 1500, Toyota Tundra, and Nissan Titan measure 230-250 inches long with payload capacities of 1,800-3,300 lbs and maximum towing 11,000-14,000 lbs (depending on configuration). Engine choices span turbocharged 4-cylinders (F-150: 2.7L, 325 hp, 400 lb-ft), naturally aspirated or turbocharged V6s (285-400 hp), V8 gasoline engines (5.0L-6.2L, 355-450 hp), diesels (3.0L, 250-260 hp, 440-480 lb-ft), and hybrids (430 hp). Pricing ranges $35,000-$80,000. These trucks serve construction workers, landscapers, recreational towers (boats, travel trailers under 10,000 lbs), and families needing spacious interiors with occasional utility. Fuel economy spans 15-24 MPG combined depending on engine and use.</p>
+                
+                <p class="info-text"><strong>Heavy-Duty Three-Quarter & One-Ton Trucks:</strong> Designed for serious commercial use and heavy towing, HD trucks (F-250/F-350, Silverado/Sierra 2500HD/3500HD, Ram 2500/3500) feature reinforced frames, heavy-duty suspensions, larger brakes, and available dual rear wheels (duallys) on one-ton models. Diesel engines dominate: Ford 6.7L Power Stroke (475 hp, 1,050 lb-ft), GM 6.6L Duramax (445 hp, 910 lb-ft), Ram 6.7L Cummins (370-420 hp, 850-1,075 lb-ft). Gasoline V8s (6.6L-7.3L, 401-430 hp) serve buyers preferring simplicity and lower acquisition costs. Payload capacities reach 4,200-7,850 lbs (dually configs) with maximum towing 20,000-37,100 lbs—sufficient for large fifth-wheel trailers, equipment trailers, and commercial applications. Pricing spans $45,000-$100,000+. Operating costs increase significantly: diesel fuel, DEF fluid, higher insurance, specialized maintenance. These trucks ride firmly when empty due to suspensions tuned for heavy loads. Primary buyers include contractors, farmers, RV enthusiasts with large trailers, and commercial operators requiring maximum capability.</p>
+                
+                <p class="info-text"><strong>Performance & Off-Road Trucks:</strong> Specialty variants emphasize performance or off-road capability over utility. Ford F-150 Raptor (450 hp twin-turbo V6, later 700 hp supercharged V8 Raptor R) features long-travel Fox shocks, widened body, and desert racing capability. Ram 1500 TRX (702 hp supercharged V8) delivers muscle-car performance in truck form with 0-60 in 4.5 seconds. Chevrolet Silverado ZR2 and GMC Sierra AT4X focus on rock-crawling with locking differentials and specialized suspensions. Toyota Tacoma/Tundra TRD Pro variants offer similar capability. These trucks sacrifice payload/towing (typically 1,200-1,500 lbs payload, 8,000-10,000 lbs towing) for performance hardware. Pricing exceeds $70,000-$110,000. Buyers prioritize performance, off-road adventure, and statement-making capability over maximum work utility. Fuel economy suffers (12-16 MPG combined).</p>
+                
+                <p class="info-text"><strong>Electric Pickup Trucks:</strong> Emerging segment combining truck utility with EV advantages. Ford F-150 Lightning (426-580 hp, 775-1,050 lb-ft, 240-320 mile range) maintains F-150 familiarity with instant torque, large frunk (14.1 cubic feet), and Pro Power Onboard (9.6 kW powering homes or job sites). Rivian R1T (835 hp quad-motor, 314-410 miles) offers adventure-focused features, impressive off-road capability, and innovative gear tunnel storage. GMC Hummer EV (830-1,000 hp, 329 miles) emphasizes extreme performance and off-road prowess. Chevrolet Silverado EV promises 400-mile range with 10,000+ lbs towing. Tesla Cybertruck offers polarizing styling with claimed capabilities. EVs deliver instant torque ideal for towing, though range decreases 40-50% when towing heavy loads. Home/work charging enables daily "fueling" while road trips require planning. Pricing ranges $50,000-$110,000. These trucks suit buyers with charging access, towing needs under 300 miles, and desire for latest technology.</p>
+            </div>
+        </section>
+    </div>
+    <div id="lifestyle" class="tab-content">
+        <section class="car-type-info-section lifestyle-fit">
+            <header>
+                <h3 class="info-title">Lifestyle Integration</h3>
+            </header>
+            <div class="info-content">
+                <p class="info-text"><strong>Work & Commercial Applications:</strong> Pickup trucks serve as indispensable tools for contractors, landscapers, electricians, plumbers, and countless trades requiring cargo hauling and towing. Beds transport materials, tools, and equipment while protecting valuable items under tonneau covers or in toolboxes. Payload capacities enable bulk material transport—dirt, mulch, gravel, lumber. Towing capabilities move equipment trailers, machinery, and materials between job sites. 110V power outlets (up to 7.2 kW on some models) power tools eliminating generator needs. Durability and reliability matter critically—breakdowns cost income. Fleet buyers maintain trucks for 200,000+ miles with proper maintenance. Tax advantages (Section 179 deductions) reduce business vehicle costs significantly. Mobile office features (WiFi, multiple USB ports, laptop-sized console spaces) enable paperwork between jobs. The truck bed effectively extends workshop capacity, with aftermarket accessories (ladder racks, toolboxes, cargo management) optimizing organization.</p>
+                
+                <p class="info-text"><strong>Recreational Towing & Outdoor Adventure:</strong> Pickup trucks excel towing recreational trailers: travel trailers (4,000-10,000 lbs), fifth-wheel RVs (12,000-20,000+ lbs), boat trailers (3,000-8,000 lbs), toy haulers carrying ATVs/motorcycles, and utility trailers for camping gear. Integrated trailer brake controllers, sway control, and backup cameras simplify towing. Off-road capability accesses remote camping, hunting, and fishing locations via forest roads and trails. Bed space carries camping equipment, kayaks, bikes, and outdoor gear. Some enthusiasts build elaborate camping setups with rooftop tents, kitchen systems, and storage solutions. Off-road variants (Raptor, TRX, ZR2) tackle challenging terrain with long-travel suspensions and aggressive tires. Weekend adventures transform trucks into base camps, with awnings, portable power stations, and outdoor cooking equipment. The freedom to explore remote locations without infrastructure dependencies appeals to outdoor enthusiasts.</p>
+                
+                <p class="info-text"><strong>Family Vehicle & Daily Driving:</strong> Modern crew-cab trucks rival SUVs as family transportation. Spacious rear seats accommodate three adults or multiple child safety seats comfortably. Storage includes large center consoles, door pockets, under-seat compartments, and expandable bed space for luggage, sports equipment, or strollers. Safety technology (automatic emergency braking, blind spot monitoring, lane keeping) matches passenger vehicles. Comfortable rides (especially half-ton trucks with available air suspension) suit daily commutes. Versatility shines hauling home improvement materials, moving college students, transporting furniture, or carrying youth sports equipment. Higher seating positions provide commanding views. Four-wheel drive capabilities provide confidence in adverse weather. School pick-up lines increasingly feature trucks alongside SUVs. Insurance costs remain reasonable (less than muscle cars, comparable to SUVs). However, fuel economy (15-20 MPG combined for V8 trucks) and larger dimensions challenge urban parking.</p>
+                
+                <p class="info-text"><strong>Lifestyle Statement & Personalization:</strong> Pickup trucks make statements about owners' identities—capability, self-reliance, outdoor orientation, or rural/working-class pride. Brand loyalty runs deep, with families maintaining Ford, Chevy, or Ram preferences across generations. Debates about "best truck" fuel countless discussions and social media arguments. Extensive aftermarket support enables personalization: lift kits ($1,500-$5,000) increase ground clearance and accommodate larger tires (33-37 inches); leveling kits ($200-$800) eliminate factory rake improving appearance; exhaust systems ($500-$2,000) enhance sound; lighting upgrades (LED bars, rock lights) improve visibility; and aesthetic modifications (grilles, wheels, wraps) express individuality. Some owners pursue show-truck builds with elaborate paint, custom interiors, and audio systems ($20,000-$50,000+ investments). Others maintain bone-stock configurations for reliability and resale value. Truck culture encompasses events (truck shows, off-road gatherings), online communities (forums, YouTube channels), and camaraderie among owners who appreciate capability and versatility.</p>
+                
+                <p class="info-text"><strong>Economic & Practical Considerations:</strong> Pickup truck ownership involves higher costs than sedans: purchase prices ($40,000-$70,000 typical), fuel ($200-$400 monthly for regular drivers), insurance (15-25% higher than similar SUVs for high-performance variants), and maintenance (larger oil capacities, more expensive tires). However, trucks offer advantages: strong resale values (60-65% after 3 years), versatility eliminating rental truck needs for moves/projects (saving $100-$300 per rental), towing capability avoiding trailer rental fees, and potential business tax deductions. Heavy-duty diesel trucks incur additional costs: diesel fuel premiums ($0.30-0.60/gallon over gasoline), DEF fluid ($10-$15 per 2.5-gallon jug every 5,000-7,000 miles), and more expensive oil changes ($120-$180 versus $60-$80 for gas engines). Despite costs, millions of Americans consider trucks essential tools, purchasing power and capability they use regularly for work, recreation, or peace-of-mind readiness. For many, trucks represent freedom—to travel, explore, work independently, and handle life's challenges without depending on others.</p>
+            </div>
+        </section>
+    </div>
+    <div id="models" class="tab-content">
+        <section class="car-type-info-section">
+            <header>
+                <h3 class="info-title">Popular Pickup Models</h3>
+            </header>
+            <div class="info-content">
+                <h4 style="color: #14284e; margin-top: 1.5rem;">Mid-Size Trucks</h4>
+                <p class="info-text"><strong>Ford Ranger, Toyota Tacoma, Chevrolet Colorado:</strong> Balance of utility and maneuverability, towing up to 7,500 lbs, ideal for daily driving and weekend adventures.</p>
+                
+                <h4 style="color: #14284e; margin-top: 1.5rem;">Full-Size Light-Duty</h4>
+                <p class="info-text"><strong>Ford F-150, Ram 1500, Chevrolet Silverado 1500:</strong> Versatile workhorses with strong towing (up to 14,000 lbs), efficient engines, and comfortable cabins.</p>
+                
+                <h4 style="color: #14284e; margin-top: 1.5rem;">Heavy-Duty Trucks</h4>
+                <p class="info-text"><strong>Ford Super Duty, Ram 2500/3500, Silverado 2500HD/3500HD:</strong> Maximum capability with towing up to 37,000+ lbs and payload exceeding 7,000 lbs.</p>
+                
+                <h4 style="color: #14284e; margin-top: 1.5rem;">Electric Trucks</h4>
+                <p class="info-text"><strong>Ford F-150 Lightning, Rivian R1T, Chevrolet Silverado EV:</strong> Instant torque, innovative features, and impressive capability with zero emissions.</p>
+            </div>
+        </section>
+    </div>
+
+    <!-- Gallery Section -->
+    <section class="car-gallery">
+        <h3 style="text-align: center; padding: 2rem 0; color: #14284e;">Pickup Truck Gallery</h3>
+        <div class="gallery-item">
+            <img src="../../images/examples/pickup1.jpg" alt="Mid-Size Pickup" loading="lazy">
+            <div class="gallery-caption">Mid-Size Truck - Versatile Capability</div>
+        </div>
+        <div class="gallery-item">
+            <img src="../../images/examples/pickup2.jpg" alt="Full-Size Pickup" loading="lazy">
+            <div class="gallery-caption">Full-Size Truck - Workhorse Power</div>
+        </div>
+        <div class="gallery-item">
+            <img src="../../images/examples/pickup3.jpg" alt="Heavy-Duty Pickup" loading="lazy">
+            <div class="gallery-caption">Heavy-Duty - Maximum Towing</div>
+        </div>
+    </section>
+
+    <!-- Related Car Types -->
+    <section style="background: #f8f9fa; padding: 3rem 2rem; margin-top: 2rem;">
+        <h3 style="text-align: center; color: #14284e; margin-bottom: 2rem;">Compare Similar Vehicle Types</h3>
+        <div style="display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap; max-width: 1200px; margin: 0 auto;">
+            <a href="suv.html" style="text-decoration: none; color: #14284e; padding: 1rem 2rem; background: white; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+                <strong>SUVs</strong><br>
+                <span style="font-size: 0.9rem; color: #666;">Enclosed cargo space</span>
+            </a>
+            <a href="crossover.html" style="text-decoration: none; color: #14284e; padding: 1rem 2rem; background: white; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+                <strong>Crossovers</strong><br>
+                <span style="font-size: 0.9rem; color: #666;">Car-based utility</span>
+            </a>
+            <a href="minivan.html" style="text-decoration: none; color: #14284e; padding: 1rem 2rem; background: white; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+                <strong>Minivans</strong><br>
+                <span style="font-size: 0.9rem; color: #666;">Family-focused space</span>
+            </a>
+        </div>
+    </section>
 
     <!-- Footer -->
     <footer class="car-type-footer">
-        <p>&copy; 2024 Engine Starters. All rights reserved.</p>
+        <p>&copy; 2025 Engine Starters. All rights reserved.</p>
     </footer>
+
     <script>
     function openTab(tabName) {
         var i;
@@ -113,87 +211,10 @@
         event.currentTarget.classList.add("active");
     }
     </script>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Engine Starters | All Rights Reserved</p>
+    </footer>
 </body>
 </html>
-
-
-
-
-    <!-- Hero Section -->
-    <div class="car-type-hero" style="background-image: url('../../images/types/pickup.png');">
-        <h1>Pickup Trucks</h1>
-    </div>
-
-    <!-- Tab Navigation -->
-    <div class="tab-navigation">
-        <button class="tab-button active" onclick="openTab('overview')">Overview</button>
-        <button class="tab-button" onclick="openTab('features')">Features</button>
-        <button class="tab-button" onclick="openTab('categories')">Categories</button>
-        <button class="tab-button" onclick="openTab('lifestyle')">Lifestyle</button>
-    </div>
-
-    <!-- Tab Contents -->
-    <div id="overview" class="tab-content active">
-        <section class="car-type-info-section">
-            <header>
-                <h3 class="info-title">Overview</h3>
-            </header>
-            <div class="info-content">
-                <p class="info-text">Pickup trucks represent the pinnacle of automotive utility and capability, engineered to handle demanding tasks while offering increasing levels of comfort and technology. These robust vehicles feature body-on-frame construction, providing exceptional strength for towing and hauling heavy loads. Modern pickup trucks combine rugged durability with sophisticated engineering, incorporating advanced powertrains, high-strength steel frames, and innovative cargo management solutions. With payload capacities often exceeding 2,000 pounds and towing capabilities surpassing 10,000 pounds (and reaching over 30,000 pounds in heavy-duty models), pickup trucks are designed for work and recreation. Contemporary designs blend functionality with refined interiors, advanced driver-assistance systems, and efficient engine options, including powerful V6, V8, diesel, and even hybrid powertrains.</p>
-            </div>
-        </section>
-    </div>
-    <div id="features" class="tab-content">
-        <section class="car-type-info-section feature-grid">
-            <header>
-                <h3 class="info-title">Distinctive Features</h3>
-            </header>
-            <div class="info-content">
-            <p class="info-text">Pickup trucks are defined by their body-on-frame construction, where the body is mounted separately onto a rigid ladder frame, providing superior load-bearing capacity and durability. High-strength steel frames contribute to impressive payload ratings (typically 1,500-3,500 lbs for light-duty, up to 7,500+ lbs for heavy-duty) and towing capacities (ranging from 5,000 lbs to over 37,000 lbs for heavy-duty models with gooseneck hitches). Advanced suspension systems, often featuring independent front suspension and solid rear axles with leaf springs (or multi-link coil springs in some modern light-duty trucks), are designed to handle heavy loads while providing acceptable ride comfort. Four-wheel drive (4WD) systems with low-range gearing are common, offering exceptional off-road capability and traction in adverse conditions.</p>
-            <p class="info-text">Cargo beds are a key feature, available in various lengths (typically 5.5 to 8 feet) and featuring durable liners, integrated tie-down points, and available features like built-in lighting, power outlets (e.g., Ford's Pro Power Onboard), and innovative tailgate designs (e.g., GMC's MultiPro Tailgate, Ram's Multifunction Tailgate) that offer multiple configurations for easier loading and access. Cab configurations range from regular cabs (two doors, single row of seating) to extended cabs (small rear doors, limited rear seating) and crew cabs (four full doors, spacious rear seating rivaling SUVs). Modern trucks feature advanced towing technology, including integrated trailer brake controllers, trailer sway control, blind-spot monitoring that covers the trailer length, and sophisticated camera systems providing multiple views for easier hitching and maneuvering.</p>
-            </div>
-        </section>
-    </div>
-    <div id="categories" class="tab-content">
-        <section class="car-type-info-section category-showcase">
-            <header>
-                <h3 class="info-title">Pickup Categories</h3>
-            </header>
-            <div class="info-content">
-            <p class="info-text">The pickup truck market is segmented primarily by size and capability. Compact/Mid-size trucks (e.g., Ford Ranger, Toyota Tacoma) offer a balance of utility and maneuverability, suitable for lighter duties and easier urban driving, with payload capacities around 1,000-1,600 lbs and towing up to 7,500 lbs. Full-size light-duty trucks (e.g., Ford F-150, Ram 1500, Chevrolet Silverado 1500) are the most popular segment, offering a wide range of configurations, powerful engine options (including V6, V8, diesel, hybrid), significant payload (1,800-3,300 lbs), and towing capabilities (up to 14,000 lbs).</p>
-            <p class="info-text">Heavy-duty (HD) trucks (e.g., Ford Super Duty F-250/F-350, Ram 2500/3500, Chevy Silverado 2500HD/3500HD) are designed for serious work, featuring reinforced frames, heavy-duty suspension and axles, and powerful diesel engines (often producing over 1,000 lb-ft of torque) enabling massive payload (up to 7,800 lbs) and towing capacities (up to 37,000+ lbs with fifth-wheel/gooseneck hitches). Electric pickup trucks (e.g., Ford F-150 Lightning, Rivian R1T) are an emerging category, offering instant torque, significant onboard power export capabilities, and impressive performance, though towing significantly impacts range.</p>
-            </div>
-        </section>
-    </div>
-    <div id="lifestyle" class="tab-content">
-        <section class="car-type-info-section lifestyle-fit">
-            <header>
-                <h3 class="info-title">Lifestyle Integration</h3>
-            </header>
-            <div class="info-content">
-            <p class="info-text">Pickup trucks cater to a wide range of lifestyles, from contractors and tradespeople relying on their hauling and towing capabilities for work, to outdoor enthusiasts needing off-road prowess and space for recreational gear (boats, trailers, ATVs). Modern trucks, especially crew cab models, increasingly serve as family vehicles, offering spacious and luxurious interiors equipped with advanced infotainment systems, premium materials, and comprehensive safety features rivaling luxury SUVs. Features like multi-zone climate control, heated/ventilated seats, large touchscreens, and premium audio systems enhance comfort for daily driving and long trips.</p>
-            <p class="info-text">The versatility of the cargo bed allows for diverse uses, from hauling building materials and furniture to carrying camping equipment and bicycles. Available accessories like tonneau covers, bed extenders, and cargo management systems further enhance utility. Advanced towing assistance features make hitching and maneuvering trailers less daunting for less experienced drivers. While fuel economy can be a consideration, modern engine technologies, including hybridization and efficient diesel options, have improved efficiency compared to older models. Pickup trucks embody a spirit of capability, freedom, and rugged individualism, appealing to those who need or desire a vehicle that can handle almost any task or adventure.</p>
-            </div>
-        </section>
-    </div>
-
-    <!-- Gallery Section -->
-    <section class="car-gallery">
-        <div class="gallery-item">
-            <img src="../../images/examples/pickup1.jpg" alt="Example Pickup 1" loading="lazy">
-            <div class="gallery-caption">Model 1</div>
-        </div>
-        <div class="gallery-item">
-            <img src="../../images/examples/pickup2.jpg" alt="Example Pickup 2" loading="lazy">
-            <div class="gallery-caption">Model 2</div>
-        </div>
-        <div class="gallery-item">
-            <img src="../../images/examples/pickup3.jpg" alt="Example Pickup 3" loading="lazy">
-            <div class="gallery-caption">Model 3</div>
-        </div>
-    </section>
-</body>
-</html>
-
-
-
