@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
     <meta name="description" content="Explore hatchback cars, their versatility, and practical features at Engine Starters.">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1971438271362376"
      crossorigin="anonymous"></script>
@@ -19,6 +19,7 @@
     
     
     <link rel="stylesheet" href="../../css/global.min.css">
+    <link rel="stylesheet" href="../../css/mobile-optimized.css">
     <link rel="stylesheet" href="../../css/car-types-enhanced.css">
 </head>
 <body>
@@ -66,9 +67,9 @@
     <!-- Tab Contents -->
     <div id="overview" class="tab-content active">
         <section class="car-type-info-section">
-            <header>
+            <div class="section-header">
                 <h3 class="info-title">Overview</h3>
-            </header>
+            </div>
             <div class="info-content">
                 <p class="info-text">Hatchback cars represent automotive versatility at its finest, combining compact exterior dimensions with surprisingly spacious interiors through ingenious rear-opening cargo doors that eliminate traditional trunks. This fifth-door design\u2014extending from roofline to rear bumper\u2014creates wide-mouth access to cargo areas, enabling easier loading of bulky items impossible in sedans with fixed trunk openings. Modern hatchbacks measure 150-180 inches in length (versus 180-195 for sedans), yet often provide similar or greater cargo capacity through vertical storage space and fold-flat rear seats creating continuous load floors. This space efficiency makes hatchbacks ideal for urban environments where parking spaces are limited but cargo versatility remains essential.</p>
                 
@@ -82,9 +83,9 @@
     </div>
     <div id="features" class="tab-content">
         <section class="car-type-info-section feature-grid">
-            <header>
+            <div class="section-header">
                 <h3 class="info-title">Distinctive Features</h3>
-            </header>
+            </div>
             <div class="info-content">
                 <p class="info-text"><strong>Cargo Door & Access:</strong> The signature hatchback feature—a large rear-opening door spanning from roofline to bumper—provides cargo access superior to sedan trunks with their fixed openings 12-15 inches high. Hatchback openings measure 24-32 inches in height and full vehicle width, enabling loading of items impossible in sedan trunks: bicycles, furniture, appliances, and bulky sports equipment. Power liftgates (available on many models) open/close via button presses, key fobs, or kick sensors, operating in 3-5 seconds. Adjustable opening heights prevent garage contact, and slow-close features prevent slamming. Lift-over heights (cargo floor to bumper) measure 24-28 inches—lower than SUVs (30-34 inches), easing heavy item loading. Wide openings and lower heights make hatchbacks particularly accessible for shorter individuals and elderly users struggling with high SUV cargo areas. This design philosophy prioritizes usability over styling, though modern hatchbacks incorporate sloped rear glass and spoilers maintaining attractive profiles.</p>
                 
@@ -100,9 +101,9 @@
     </div>
     <div id="categories" class="tab-content">
         <section class="car-type-info-section category-showcase">
-            <header>
+            <div class="section-header">
                 <h3 class="info-title">Hatchback Categories</h3>
-            </header>
+            </div>
             <div class="info-content">
                 <p class="info-text"><strong>Subcompact Hatchbacks:</strong> Ultra-efficient city cars measuring 150-165 inches long, perfect for dense urban environments. Examples include Honda Fit, Chevy Spark, Mazda2, and Toyota Yaris (discontinued U.S.). Engines typically include 1.0L-1.6L 4-cylinders producing 98-130 hp—adequate for city driving though modest for highway merging. CVT or 5-6 speed manual transmissions optimize efficiency, achieving 33-40 MPG combined. Despite tiny footprints, clever packaging provides seating for four adults and 15-23 cubic feet cargo space (45-50 with seats folded). Pricing starts $16,000-$22,000 new, with excellent used values ($8,000-$15,000 for 3-5 year examples). Perfect for budget-conscious buyers, students, and urban commuters prioritizing parking ease and fuel economy. Insurance costs remain minimal, and maintenance is straightforward with simple mechanicals. The Honda Fit exemplifies this category with legendary space efficiency and Magic Seats enabling furniture transport impossible in larger vehicles.</p>
                 
@@ -118,9 +119,9 @@
     </div>
     <div id="lifestyle" class="tab-content">
         <section class="car-type-info-section lifestyle-fit">
-            <header>
+            <div class="section-header">
                 <h3 class="info-title">Lifestyle Integration</h3>
-            </header>
+            </div>
             <div class="info-content">
                 <p class="info-text"><strong>Urban Living & City Commuting:</strong> Hatchbacks thrive in urban environments where compact dimensions provide tangible advantages. Parallel parking becomes manageable—shorter lengths fit spaces rejecting sedans, while backup cameras and parking sensors simplify tight maneuvering. Narrow city streets accommodate hatchback widths (68-72 inches) comfortably. Underground parking garages with height restrictions (often 80 inches) accept hatchbacks (56-60 inches tall) while excluding taller SUVs. Fuel economy of 30-38 MPG combined reduces commuting costs in expensive urban markets. Stop-and-go traffic benefits from responsive handling and easy clutch operation (manuals) or smooth CVT/automatic transitions. Quick acceleration from traffic lights—even modest 130 hp feels adequate with 2,800-3,100 lb curb weights. Apartment dwellers appreciate single parking space requirements and easy garage fit. Young urban professionals value hatchback practicality for grocery runs, IKEA trips, and weekend getaways, all while projecting modern, efficient images aligned with urban sustainability values.</p>
                 
@@ -136,9 +137,9 @@
     </div>
     <div id="models" class="tab-content">
         <section class="car-type-info-section">
-            <header>
+            <div class="section-header">
                 <h3 class="info-title">Popular Hatchback Models</h3>
-            </header>
+            </div>
             <div class="info-content">
                 <h4 style="color: #14284e; margin-top: 1.5rem;">Subcompact Hatchbacks</h4>
                 <p class="info-text"><strong>Honda Fit, Toyota Yaris, Mazda2:</strong> Exceptional fuel economy (36-40 MPG), versatile interiors, and affordable pricing perfect for city driving.</p>
@@ -193,5 +194,25 @@
     <footer class="car-type-footer">
         <p>&copy; 2025 Engine Starters. All rights reserved.</p>
     </footer>
+    <script>
+    function openTab(tabName) {
+        // Hide all tab contents
+        var tabContents = document.getElementsByClassName("tab-content");
+        for (var i = 0; i < tabContents.length; i++) {
+            tabContents[i].classList.remove("active");
+        }
+        
+        // Remove active class from all buttons
+        var tabButtons = document.getElementsByClassName("tab-button");
+        for (var i = 0; i < tabButtons.length; i++) {
+            tabButtons[i].classList.remove("active");
+        }
+        
+        // Show selected tab and activate button
+        document.getElementById(tabName).classList.add("active");
+        event.currentTarget.classList.add("active");
+    }
+    </script>
+    <script src="../../js/mobile-menu.js"></script>
 </body>
 </html>

@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
     <meta name="description" content="Learn about crossover vehicles, their versatility, and modern features at Engine Starters.">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1971438271362376"
      crossorigin="anonymous"></script>
@@ -19,6 +19,7 @@
     
     
     <link rel="stylesheet" href="../../css/global.min.css">
+    <link rel="stylesheet" href="../../css/mobile-optimized.css">
     <link rel="stylesheet" href="../../css/car-types-enhanced.css">
 </head>
 <body>
@@ -66,9 +67,9 @@
     <!-- Tab Contents -->
     <div id="overview" class="tab-content active">
         <section class="car-type-info-section">
-            <header>
+            <div class="section-header">
                 <h3 class="info-title">Overview</h3>
-            </header>
+            </div>
             <div class="info-content">
                 <p class="info-text">Crossover vehicles represent the automotive industry's most successful innovation of the past two decades, dominating sales charts by brilliantly merging SUV practicality with car-like refinement. Built on unibody car platforms rather than truck-based body-on-frame construction, crossovers deliver superior ride quality, handling dynamics, and fuel economy while maintaining commanding seating positions and versatile cargo spaces consumers desire. The segment has grown from niche offerings to market dominance—crossovers now represent 40%+ of U.S. vehicle sales, displacing sedans as America's preferred transportation. This success stems from pragmatic versatility: families gain spacious interiors and ample cargo capacity; individuals enjoy elevated visibility and perceived safety; active lifestyles benefit from all-wheel drive capability and roof rack options.</p>
                 
@@ -82,9 +83,9 @@
     </div>
     <div id="features" class="tab-content">
         <section class="car-type-info-section feature-grid">
-            <header>
+            <div class="section-header">
                 <h3 class="info-title">Distinctive Features</h3>
-            </header>
+            </div>
             <div class="info-content">
                 <p class="info-text"><strong>Unibody Construction & Dynamics:</strong> Crossovers utilize car-based unibody platforms where body panels and structural elements form integrated units, contrasting with truck-based body-on-frame construction separating bodies from ladder frames. This architecture reduces weight 200-400 lbs versus equivalent SUVs, improving fuel economy 2-4 MPG and enhancing handling through lower centers of gravity and increased rigidity. MacPherson strut front suspensions and multi-link rear designs provide compliant rides absorbing bumps while maintaining body control during cornering. Electric power steering offers variable assistance—light at parking speeds, weighted during highway driving. The result: handling approaching sedans while maintaining crossover practicality. Performance-oriented variants (Mazda CX-5 Turbo, Audi SQ5) exploit unibody advantages delivering sports sedan dynamics in elevated packages with 0-60 mph times of 5-6 seconds.</p>
                 
@@ -100,9 +101,9 @@
     </div>
     <div id="categories" class="tab-content">
         <section class="car-type-info-section category-showcase">
-            <header>
+            <div class="section-header">
                 <h3 class="info-title">Crossover Categories</h3>
-            </header>
+            </div>
             <div class="info-content">
                 <p class="info-text"><strong>Subcompact Crossovers:</strong> Entry-level offerings measuring 165-175 inches, bridging hatchbacks and compact crossovers. Examples include Mazda CX-30, Subaru Crosstrek, and Kia Seltos. Engines include 2.0L-2.5L 4-cylinders (150-200 hp) with available AWD. Ground clearances of 8-9 inches exceed sedans while maintaining car-like dynamics. Cargo space reaches 20-25 cubic feet (45-50 folded). Pricing starts $23,000-$30,000. These crossovers suit younger buyers and couples desiring elevated seating without excessive size. Fuel economy averages 27-32 MPG combined. Perfect for urban environments requiring compact dimensions but occasional light off-road capability (dirt roads, trailheads) and weather confidence AWD provides. The Subaru Crosstrek exemplifies this category with standard AWD, rugged styling, and 8.7-inch ground clearance enabling adventures impossible in sedans.</p>
                 
@@ -118,9 +119,9 @@
     </div>
     <div id="lifestyle" class="tab-content">
         <section class="car-type-info-section lifestyle-fit">
-            <header>
+            <div class="section-header">
                 <h3 class="info-title">Lifestyle Integration</h3>
-            </header>
+            </div>
             <div class="info-content">
                 <p class="info-text"><strong>Family Transportation & Daily Use:</strong> Crossovers excel as family vehicles combining spaciousness, safety, and versatility. Elevated seating positions (2-4 inches higher than sedans) provide commanding visibility improving safety awareness and confidence. Child safety seats install easily through wide-opening rear doors and ample rear legroom (38-40 inches compact, 40-42 inches mid-size). Cargo areas swallow strollers, diaper bags, groceries, and sports equipment—daily family logistics become manageable. Rear climate controls, USB charging ports (6-8 throughout cabin), and available rear-seat entertainment keep children comfortable and occupied during drives. School drop-offs, soccer practice shuttles, grocery runs, and weekend adventures all suit crossover capabilities. Parents appreciate safety technology: automatic emergency braking prevents distracted-driving accidents, blind spot monitoring covers difficult-to-see areas, and excellent crash ratings (most achieve IIHS Top Safety Pick) provide peace of mind. The combination of utility, safety, and comfort makes crossovers default family vehicle choices.</p>
                 
@@ -136,9 +137,9 @@
     </div>
     <div id="models" class="tab-content">
         <section class="car-type-info-section">
-            <header>
+            <div class="section-header">
                 <h3 class="info-title">Popular Crossover Models</h3>
-            </header>
+            </div>
             <div class="info-content">
                 <h4 style="color: #14284e; margin-top: 1.5rem;">Compact Crossovers</h4>
                 <p class="info-text"><strong>Honda CR-V, Toyota RAV4, Mazda CX-5:</strong> Excellent fuel economy, spacious interiors, and advanced safety features make these top sellers.</p>
@@ -193,5 +194,25 @@
     <footer class="car-type-footer">
         <p>&copy; 2025 Engine Starters. All rights reserved.</p>
     </footer>
+    <script>
+    function openTab(tabName) {
+        // Hide all tab contents
+        var tabContents = document.getElementsByClassName("tab-content");
+        for (var i = 0; i < tabContents.length; i++) {
+            tabContents[i].classList.remove("active");
+        }
+        
+        // Remove active class from all buttons
+        var tabButtons = document.getElementsByClassName("tab-button");
+        for (var i = 0; i < tabButtons.length; i++) {
+            tabButtons[i].classList.remove("active");
+        }
+        
+        // Show selected tab and activate button
+        document.getElementById(tabName).classList.add("active");
+        event.currentTarget.classList.add("active");
+    }
+    </script>
+    <script src="../../js/mobile-menu.js"></script>
 </body>
 </html>

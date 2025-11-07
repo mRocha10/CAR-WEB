@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
     <meta name="description" content="Explore muscle cars, their power features, and characteristics at Engine Starters.">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1971438271362376"
      crossorigin="anonymous"></script>
@@ -19,6 +19,7 @@
     
     
     <link rel="stylesheet" href="../../css/global.min.css">
+    <link rel="stylesheet" href="../../css/mobile-optimized.css">
     <link rel="stylesheet" href="../../css/car-types-enhanced.css">
 </head>
 <body>
@@ -66,9 +67,9 @@
     <!-- Tab Contents -->
     <div id="overview" class="tab-content active">
         <section class="car-type-info-section">
-            <header>
+            <div class="section-header">
                 <h3 class="info-title">Overview</h3>
-            </header>
+            </div>
             <div class="info-content">
                 <p class="info-text">Muscle cars represent the zenith of American automotive power and performance heritage, embodying the philosophy that "there's no replacement for displacement." These iconic vehicles feature large-displacement V8 engines ranging from 5.0L to 7.0L+, producing 400-800+ horsepower and equally impressive torque figures of 400-700+ lb-ft. Born in the 1960s golden era with legendary models like the Pontiac GTO, Chevrolet Chevelle SS, and Plymouth Road Runner, muscle cars prioritize straight-line acceleration and raw power over sophisticated handling dynamics. Modern interpretations like the Dodge Challenger Hellcat, Chevrolet Camaro ZL1, and Ford Mustang GT500 continue this tradition while incorporating contemporary technology, achieving 0-60 mph times of 3.3-4.5 seconds and quarter-mile runs in 10.5-12 seconds.</p>
                 
@@ -82,9 +83,9 @@
     </div>
     <div id="features" class="tab-content">
         <section class="car-type-info-section feature-grid">
-            <header>
+            <div class="section-header">
                 <h3 class="info-title">Distinctive Features</h3>
-            </header>
+            </div>
             <div class="info-content">
                 <p class="info-text"><strong>V8 Engine Technology:</strong> Modern muscle car engines represent the pinnacle of internal combustion development. Naturally aspirated variants (Ford Mustang GT 5.0L Coyote, Chevrolet Camaro LT1 6.2L) utilize dual overhead cams with variable valve timing, direct fuel injection at 2,900 PSI, and sophisticated engine management producing 450-480 hp at 6,500-7,000 RPM. Pushrod V8s (Chevrolet LT4/LT5) achieve similar outputs through simpler, more compact designs with lower centers of gravity. Supercharged variants (Dodge Challenger/Charger Hellcat, Shelby GT500) add 2.7L-2.9L superchargers producing 11-14 PSI boost, resulting in 650-807 hp and similar torque figures. These forced-induction engines feature reinforced blocks, forged internals (pistons, connecting rods, crankshafts), and upgraded cooling systems handling extreme thermal loads. Fuel systems deliver massive flow rates (850+ cc injectors, high-volume pumps) supporting power outputs unimaginable decades ago.</p>
                 
@@ -100,9 +101,9 @@
     </div>
     <div id="categories" class="tab-content">
         <section class="car-type-info-section category-showcase">
-            <header>
+            <div class="section-header">
                 <h3 class="info-title">Muscle Car Categories</h3>
-            </header>
+            </div>
             <div class="info-content">
                 <p class="info-text"><strong>Base/GT Muscle Cars:</strong> Entry-level muscle cars delivering V8 performance at accessible prices ($35,000-$50,000). Ford Mustang GT (5.0L V8, 450 hp, 410 lb-ft) achieves 0-60 mph in 4.3 seconds with 13-second quarter-miles. Chevrolet Camaro SS (6.2L V8, 455 hp, 455 lb-ft) matches performance with slightly sharper handling. Dodge Challenger R/T (5.7L Hemi V8, 375 hp, 410 lb-ft) emphasizes classic muscle car character over ultimate performance. These models include performance features like Brembo brakes, limited-slip differentials, performance tires (Michelin Pilot Sport 4S or similar), and sport-tuned suspensions. Available manual transmissions satisfy purists while 10-speed automatics deliver quicker acceleration. Despite impressive performance, these variants remain daily-drivable with reasonable fuel economy (16-18 MPG city, 24-28 highway) and comfortable interiors featuring modern conveniences.</p>
                 
@@ -118,9 +119,9 @@
     </div>
     <div id="lifestyle" class="tab-content">
         <section class="car-type-info-section lifestyle-fit">
-            <header>
+            <div class="section-header">
                 <h3 class="info-title">Lifestyle Integration</h3>
-            </header>
+            </div>
             <div class="info-content">
                 <p class="info-text"><strong>Drag Racing & Performance Events:</strong> Muscle car culture centers on quarter-mile performance, with enthusiasts regularly attending test-and-tune nights at local dragstrips. Modern muscle cars come equipped with features specifically designed for drag racing: launch control systems optimize launches with preset RPM and clutch slip parameters, line lock systems (front brake hold) enable burnouts warming rear tires for maximum grip, and drag mode suspensions soften front suspension while stiffening rear for optimal weight transfer. Timeslip collections document performance improvements from modifications or driving technique refinement. National events like NMCA (National Muscle Car Association) and NHRA provide competitive venues. Many owners pursue modifications—cold air intakes, exhaust systems, supercharger pulleys, tuning—chasing tenths of seconds. The addictive pursuit of faster elapsed times and higher trap speeds creates passionate communities sharing knowledge and celebrating achievements.</p>
                 
@@ -136,9 +137,9 @@
     </div>
     <div id="models" class="tab-content">
         <section class="car-type-info-section">
-            <header>
+            <div class="section-header">
                 <h3 class="info-title">Iconic Muscle Car Models</h3>
-            </header>
+            </div>
             <div class="info-content">
                 <h4 style="color: #14284e; margin-top: 1.5rem;">Classic Muscle</h4>
                 <p class="info-text"><strong>Ford Mustang GT, Dodge Challenger R/T, Chevrolet Camaro SS:</strong> V8 power (400-480 hp), classic styling, and accessible pricing.</p>
@@ -190,5 +191,25 @@
     <footer class="car-type-footer">
         <p>&copy; 2025 Engine Starters. All rights reserved.</p>
     </footer>
+    <script>
+    function openTab(tabName) {
+        // Hide all tab contents
+        var tabContents = document.getElementsByClassName("tab-content");
+        for (var i = 0; i < tabContents.length; i++) {
+            tabContents[i].classList.remove("active");
+        }
+        
+        // Remove active class from all buttons
+        var tabButtons = document.getElementsByClassName("tab-button");
+        for (var i = 0; i < tabButtons.length; i++) {
+            tabButtons[i].classList.remove("active");
+        }
+        
+        // Show selected tab and activate button
+        document.getElementById(tabName).classList.add("active");
+        event.currentTarget.classList.add("active");
+    }
+    </script>
+    <script src="../../js/mobile-menu.js"></script>
 </body>
 </html>

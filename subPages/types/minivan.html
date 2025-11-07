@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
     <meta name="description" content="Learn about minivans, their family-friendly features, and versatility at Engine Starters.">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1971438271362376"
      crossorigin="anonymous"></script>
@@ -19,6 +19,7 @@
     
     
     <link rel="stylesheet" href="../../css/global.min.css">
+    <link rel="stylesheet" href="../../css/mobile-optimized.css">
     <link rel="stylesheet" href="../../css/car-types-enhanced.css">
 </head>
 <body>
@@ -67,9 +68,9 @@
     <!-- Tab Contents -->
     <div id="overview" class="tab-content active">
         <section class="car-type-info-section">
-            <header>
+            <div class="section-header">
                 <h3 class="info-title">Overview</h3>
-            </header>
+            </div>
             <div class="info-content">
                 <p class="info-text">Minivans represent the ultimate expression of family-focused automotive engineering, prioritizing interior space, accessibility, and versatility above styling or performance considerations. These purpose-built people movers offer unmatched practicality with seating for 7-8 passengers across three rows, total interior volumes reaching 165-175 cubic feet (versus 120-140 in three-row SUVs), and cargo capacities up to 140+ cubic feet with seats folded. The defining characteristic—dual power sliding doors on both sides—provides unparalleled access in tight parking spaces, invaluable when managing multiple children, car seats, groceries, and sports equipment. Low floor heights (typically 15-18 inches versus 20-25 for SUVs) enable easy entry/exit for elderly passengers and young children without requiring climbing steps.</p>
                 
@@ -83,9 +84,9 @@
     </div>
     <div id="features" class="tab-content">
         <section class="car-type-info-section feature-grid">
-            <header>
+            <div class="section-header">
                 <h3 class="info-title">Distinctive Features</h3>
-            </header>
+            </div>
             <div class="info-content">
                 <p class="info-text"><strong>Sliding Doors & Access:</strong> Power sliding doors represent minivans' signature feature, operating via multiple methods: key fob buttons (opening/closing from 15+ feet away), interior buttons, exterior door handles, and hands-free kick sensors detecting foot motion beneath doors. Opening widths exceed 25 inches—substantially wider than SUV swing doors—enabling easy car seat installation/removal, child entry/exit assistance, and grocery loading without door swing concerns in tight parking spaces. Doors include safety sensors stopping closure if obstructed, protecting fingers and preventing damage. Some models feature one-touch open/close sequencing opening doors and lowering windows simultaneously for maximum ventilation. Power liftgates provide similar convenience for cargo area access, with hands-free operation and programmable height settings preventing garage contact. The convenience of sliding doors becomes apparent within weeks of ownership, especially in crowded parking lots where adjacent vehicles park inches away.</p>
                 
@@ -101,9 +102,9 @@
     </div>
     <div id="categories" class="tab-content">
         <section class="car-type-info-section category-showcase">
-            <header>
+            <div class="section-header">
                 <h3 class="info-title">Minivan Categories</h3>
-            </header>
+            </div>
             <div class="info-content">
                 <p class="info-text"><strong>Value-Oriented Base Models:</strong> Entry-level minivans ($35,000-$40,000) focus on core functionality: seating for 7-8, dual power sliding doors (sometimes only power on one side in base trims), power liftgate, V6 engine with adequate performance, and modern safety features including automatic emergency braking and blind spot monitoring. Interiors feature durable cloth upholstery, manual seat adjustments, and basic infotainment (7-8 inch touchscreens with Apple CarPlay/Android Auto). Single-zone climate control, steel wheels with covers, and halogen lighting keep costs down. These variants suit budget-conscious families prioritizing transportation over luxury, offering excellent value with all essential minivan features. Reliability and low operating costs make them smart long-term investments. Used examples provide even better value—3-5 year old minivans with under 50,000 miles sell for $20,000-$28,000, delivering years of service.</p>
                 
@@ -119,9 +120,9 @@
     </div>
     <div id="lifestyle" class="tab-content">
         <section class="car-type-info-section lifestyle-fit">
-            <header>
+            <div class="section-header">
                 <h3 class="info-title">Lifestyle Integration</h3>
-            </header>
+            </div>
             <div class="info-content">
                 <p class="info-text"><strong>Daily Family Logistics:</strong> Minivans excel at the relentless logistics of family life: school drop-offs/pick-ups, extracurricular activities (sports, music lessons, scouts), grocery runs, and pediatrician appointments. Power sliding doors enable safe child exit in busy school parking lots without worrying about doors swinging into adjacent vehicles. Car seat installation becomes straightforward with wide door openings and ample interior space—three car seats fit across second-row benches, while captain's chair configurations allow easy access to rear-facing infant seats. The low floor height means elderly grandparents and small children enter/exit without struggling with high SUV climb heights. Abundant storage includes cup holders for everyone (12+ throughout cabin), door pockets for tablets/books, and center console storage for family necessities. The versatility shines hauling soccer gear, musical instruments, school projects, and weekend supplies simultaneously. Parents appreciate ride quality isolating passengers from bumps, quiet cabins enabling conversation, and climate controls keeping all zones comfortable.</p>
                 
@@ -137,9 +138,9 @@
     </div>
     <div id="models" class="tab-content">
         <section class="car-type-info-section">
-            <header>
+            <div class="section-header">
                 <h3 class="info-title">Popular Minivan Models</h3>
-            </header>
+            </div>
             <div class="info-content">
                 <h4 style="color: #14284e; margin-top: 1.5rem;">Top Minivans</h4>
                 <p class="info-text"><strong>Honda Odyssey:</strong> Award-winning design, innovative features like CabinWatch and CabinTalk, powerful V6, excellent safety ratings.</p>
@@ -194,5 +195,25 @@
     <footer class="car-type-footer">
         <p>&copy; 2025 Engine Starters. All rights reserved.</p>
     </footer>
+    <script>
+    function openTab(tabName) {
+        // Hide all tab contents
+        var tabContents = document.getElementsByClassName("tab-content");
+        for (var i = 0; i < tabContents.length; i++) {
+            tabContents[i].classList.remove("active");
+        }
+        
+        // Remove active class from all buttons
+        var tabButtons = document.getElementsByClassName("tab-button");
+        for (var i = 0; i < tabButtons.length; i++) {
+            tabButtons[i].classList.remove("active");
+        }
+        
+        // Show selected tab and activate button
+        document.getElementById(tabName).classList.add("active");
+        event.currentTarget.classList.add("active");
+    }
+    </script>
+    <script src="../../js/mobile-menu.js"></script>
 </body>
 </html>

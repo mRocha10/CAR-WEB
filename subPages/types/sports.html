@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
     <meta name="description" content="Explore sports cars, their performance features, and characteristics at Engine Starters.">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1971438271362376"
      crossorigin="anonymous"></script>
@@ -19,6 +19,7 @@
     
     
     <link rel="stylesheet" href="../../css/global.min.css">
+    <link rel="stylesheet" href="../../css/mobile-optimized.css">
     <link rel="stylesheet" href="../../css/car-types-enhanced.css">
 </head>
 <body>
@@ -66,9 +67,9 @@
     <!-- Tab Contents -->
     <div id="overview" class="tab-content active">
         <section class="car-type-info-section">
-            <header>
+            <div class="section-header">
                 <h3 class="info-title">Overview</h3>
-            </header>
+            </div>
             <div class="info-content">
                 <p class="info-text">Sports cars represent the pinnacle of driving engagement, prioritizing performance, handling precision, and driver connection over practicality or comfort. These purpose-built machines emphasize lightweight construction (2,800-3,400 lbs), powerful engines (300-600+ hp), low centers of gravity, and aerodynamic profiles optimized for high-speed stability. Two-seat configurations dominate—Mazda MX-5 Miata, Porsche 718 Cayman/Boxster, Chevrolet Corvette—though 2+2 layouts (Porsche 911, BMW M2) add vestigial rear seats suitable for children or cargo. Sports cars achieve remarkable performance: 0-60 mph in 3.5-5.5 seconds, quarter-mile times of 11-13 seconds, and top speeds exceeding 150-200 mph. Cornering capabilities define the segment—lateral acceleration reaching 1.0-1.2g through wide performance tires (245-295mm fronts, 285-345mm rears), sophisticated suspension geometries, and near-perfect weight distribution (often 48-52% front/rear). Steering provides direct communication of road surface conditions through precise rack ratios and minimal power assistance.</p>
                 
@@ -83,9 +84,9 @@
 
     <div id="features" class="tab-content">
         <section class="car-type-info-section feature-grid">
-            <header>
+            <div class="section-header">
                 <h3 class="info-title">Distinctive Features</h3>
-            </header>
+            </div>
             <div class="info-content">
                 <p class="info-text"><strong>Advanced Powertrains:</strong> Modern engines and transmissions deliver optimal power, efficiency, and refinement. Technology includes turbocharging, hybrid systems, direct injection, and sophisticated transmission control for seamless power delivery across all driving conditions.</p>
                 
@@ -102,9 +103,9 @@
 
     <div id="categories" class="tab-content">
         <section class="car-type-info-section category-showcase">
-            <header>
+            <div class="section-header">
                 <h3 class="info-title">Vehicle Categories</h3>
-            </header>
+            </div>
             <div class="info-content">
                 <p class="info-text"><strong>Entry-Level Models:</strong> Affordable options delivering core capabilities with modern features. These vehicles provide excellent value, combining essential amenities with reliable performance suitable for budget-conscious buyers seeking quality transportation.</p>
                 
@@ -121,9 +122,9 @@
 
     <div id="lifestyle" class="tab-content">
         <section class="car-type-info-section lifestyle-fit">
-            <header>
+            <div class="section-header">
                 <h3 class="info-title">Lifestyle Integration</h3>
-            </header>
+            </div>
             <div class="info-content">
                 <p class="info-text"><strong>Daily Commuting:</strong> Excellent daily drivers through comfortable seating, user-friendly controls, and efficient powertrains. Advanced safety features and driver assistance technologies reduce stress during rush hour traffic, while connectivity features keep occupants entertained and productive.</p>
                 
@@ -140,9 +141,9 @@
 
     <div id="models" class="tab-content">
         <section class="car-type-info-section">
-            <header>
+            <div class="section-header">
                 <h3 class="info-title">Popular Models</h3>
-            </header>
+            </div>
             <div class="info-content">
                 <h4 style="color: #14284e; margin-top: 1.5rem;">Best-Selling Models</h4>
                 <p class="info-text"><strong>Market Leaders:</strong> Top-selling vehicles offering proven reliability, strong value, and comprehensive feature sets appealing to mainstream buyers seeking dependable transportation.</p>
@@ -195,5 +196,25 @@
     <footer class="car-type-footer">
         <p>&copy; 2025 Engine Starters. All rights reserved.</p>
     </footer>
+    <script>
+    function openTab(tabName) {
+        // Hide all tab contents
+        var tabContents = document.getElementsByClassName("tab-content");
+        for (var i = 0; i < tabContents.length; i++) {
+            tabContents[i].classList.remove("active");
+        }
+        
+        // Remove active class from all buttons
+        var tabButtons = document.getElementsByClassName("tab-button");
+        for (var i = 0; i < tabButtons.length; i++) {
+            tabButtons[i].classList.remove("active");
+        }
+        
+        // Show selected tab and activate button
+        document.getElementById(tabName).classList.add("active");
+        event.currentTarget.classList.add("active");
+    }
+    </script>
+    <script src="../../js/mobile-menu.js"></script>
 </body>
 </html>

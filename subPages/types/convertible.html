@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
     <meta name="description" content="Discover convertible cars, their features, and open-air driving experience at Engine Starters.">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1971438271362376"
      crossorigin="anonymous"></script>
@@ -19,6 +19,7 @@
     
     
     <link rel="stylesheet" href="../../css/global.min.css">
+    <link rel="stylesheet" href="../../css/mobile-optimized.css">
     <link rel="stylesheet" href="../../css/car-types-enhanced.css">
 </head>
 <body>
@@ -66,9 +67,9 @@
     <!-- Tab Contents -->
     <div id="overview" class="tab-content active">
         <section class="car-type-info-section">
-            <header>
+            <div class="section-header">
                 <h3 class="info-title">Overview</h3>
-            </header>
+            </div>
             <div class="info-content">
                 <p class="info-text">Convertible cars epitomize automotive freedom, combining sophisticated engineering with the exhilarating sensory experience of open-air motoring. These vehicles transform routine driving into engaging adventures through retractable roof systems exposing occupants to sunlight, fresh air, and unobstructed sky views. Whether cruising coastal highways with ocean breezes, navigating mountain passes surrounded by scenery, or simply enjoying pleasant weather during daily commutes, convertibles amplify driving pleasure. Modern examples feature power-operated roofs deploying or retracting in 10-20 seconds at speeds up to 30-40 mph (some models), enabling quick transitions responding to changing weather. Despite lacking fixed roofs, contemporary convertibles achieve structural rigidity within 5-10% of coupe counterparts through extensive chassis reinforcements, delivering handling dynamics approaching closed-roof vehicles.</p>
                 
@@ -82,9 +83,9 @@
     </div>
     <div id="features" class="tab-content">
         <section class="car-type-info-section feature-grid">
-            <header>
+            <div class="section-header">
                 <h3 class="info-title">Distinctive Features</h3>
-            </header>
+            </div>
             <div class="info-content">
                 <p class="info-text"><strong>Roof Systems & Mechanisms:</strong> Soft-top mechanisms utilize electric motors folding fabric roofs into compartments behind rear seats or trunk areas within 10-18 seconds. Multi-layer construction includes weather-resistant outer fabric (canvas or vinyl), middle insulation layer reducing noise and heat transfer, and interior headliner providing finished appearance. Glass rear windows with defrosters match coupe visibility and durability. Acoustic packages add sound-deadening materials achieving interior noise levels within 2-3 dB of hardtops at highway speeds. Weatherstripping around windshield frame, door tops, and trunk seal prevents water intrusion during car washes and heavy rain. Retractable hardtops employ complex mechanisms with 8-12 electric motors, sensors, and articulating panels folding roofs through carefully choreographed sequences taking 15-25 seconds. Weight penalties of 150-250 lbs and complexity led many manufacturers returning to advanced soft-tops. Convertible tops require periodic maintenance: lubricating hinges/mechanisms annually, treating fabric with waterproofing agents every 2-3 years, and replacing tops every 8-12 years ($1,500-$3,500 depending on complexity).</p>
                 
@@ -100,9 +101,9 @@
     </div>
     <div id="categories" class="tab-content">
         <section class="car-type-info-section category-showcase">
-            <header>
+            <div class="section-header">
                 <h3 class="info-title">Convertible Categories</h3>
-            </header>
+            </div>
             <div class="info-content">
                 <p class="info-text"><strong>Lightweight Roadsters:</strong> Pure driver-focused two-seaters emphasizing handling and engagement over power. Mazda MX-5 Miata exemplifies this category: 2,341 lbs, 181 hp, 50/50 weight distribution, double-wishbone front suspension, multi-link rear, manual transmission (automatics available), and sub-$30,000 pricing. Despite modest power, the 0-60 mph time of 5.7 seconds satisfies through momentum-based driving exploiting chassis balance. Minimal equipment maximizes connection: manual soft-top (power optional), simple interiors, small displacement engines (2.0L I4). These cars excel on twisty roads where agility outweighs straight-line speed. Track-day capable with proper tires. Similar vehicles include Toyota GR86 (if it had convertible option), Fiat 124 Spider (Miata platform, turbocharged). Benefits include low operating costs ($300-500 annual maintenance), excellent fuel economy (26-30 MPG combined), affordable insurance, and pure driving joy uncomplicated by electronic interventions. Ideal for enthusiasts valuing driving purity over straight-line performance, these roadsters deliver smiles per mile maximizing engagement.</p>
                 
@@ -118,9 +119,9 @@
     </div>
     <div id="lifestyle" class="tab-content">
         <section class="car-type-info-section lifestyle-fit">
-            <header>
+            <div class="section-header">
                 <h3 class="info-title">Lifestyle Integration</h3>
-            </header>
+            </div>
             <div class="info-content">
                 <p class="info-text"><strong>Scenic Driving & Weekend Escapes:</strong> Convertibles transform ordinary drives into extraordinary experiences. Coastal highways (Pacific Coast Highway, Florida A1A, Lake Michigan routes) become immersive journeys with ocean air, sunlight, and unobstructed views. Mountain passes (Blue Ridge Parkway, Colorado mountain roads) surround drivers with scenery impossible to appreciate from enclosed vehicles. Weekend getaways gain new dimensions—convertible road trips emphasize journeys as much as destinations. Drivers intentionally seek scenic routes, adding hours to trips for visual rewards. The multisensory experience includes temperature changes through elevation, scents (ocean, pine forests, autumn leaves), and sounds (nature, exhaust notes, wind). Photography opportunities abound with dramatic backdrop. Car enthusiasm communities organize group drives—seeing dozens of convertibles caravanning through beautiful landscapes creates camaraderie and shared memories. Unlike enclosed vehicles where scenery passes as visual data, convertibles immerse occupants in environments, creating emotional connections with places and experiences.</p>
                 
@@ -136,9 +137,9 @@
     </div>
     <div id="models" class="tab-content">
         <section class="car-type-info-section">
-            <header>
+            <div class="section-header">
                 <h3 class="info-title">Popular Convertible Models</h3>
-            </header>
+            </div>
             <div class="info-content">
                 <h4 style="color: #14284e; margin-top: 1.5rem;">Affordable Roadsters</h4>
                 <p class="info-text"><strong>Mazda MX-5 Miata:</strong> Legendary lightweight roadster, perfect 50/50 weight distribution, pure driving joy at an accessible price.</p>
@@ -193,5 +194,25 @@
     <footer class="car-type-footer">
         <p>&copy; 2025 Engine Starters. All rights reserved.</p>
     </footer>
+    <script>
+    function openTab(tabName) {
+        // Hide all tab contents
+        var tabContents = document.getElementsByClassName("tab-content");
+        for (var i = 0; i < tabContents.length; i++) {
+            tabContents[i].classList.remove("active");
+        }
+        
+        // Remove active class from all buttons
+        var tabButtons = document.getElementsByClassName("tab-button");
+        for (var i = 0; i < tabButtons.length; i++) {
+            tabButtons[i].classList.remove("active");
+        }
+        
+        // Show selected tab and activate button
+        document.getElementById(tabName).classList.add("active");
+        event.currentTarget.classList.add("active");
+    }
+    </script>
+    <script src="../../js/mobile-menu.js"></script>
 </body>
 </html>

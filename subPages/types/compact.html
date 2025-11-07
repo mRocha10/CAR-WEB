@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
     <meta name="description" content="Discover compact cars, their efficiency, and urban-friendly features at Engine Starters.">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1971438271362376"
      crossorigin="anonymous"></script>
@@ -19,6 +19,7 @@
     
     
     <link rel="stylesheet" href="../../css/global.min.css">
+    <link rel="stylesheet" href="../../css/mobile-optimized.css">
     <link rel="stylesheet" href="../../css/car-types-enhanced.css">
 </head>
 <body>
@@ -66,9 +67,9 @@
     <!-- Tab Contents -->
     <div id="overview" class="tab-content active">
         <section class="car-type-info-section">
-            <header>
+            <div class="section-header">
                 <h3 class="info-title">Overview</h3>
-            </header>
+            </div>
             <div class="info-content">
                 <p class="info-text">Compact cars represent automotive efficiency perfected, balancing practicality, economy, and modern features in packages sized for urban reality. Measuring 175-185 inches in length (versus 190-195 for mid-size sedans), these vehicles deliver surprising interior space through clever packaging while maintaining nimble dimensions perfect for crowded cities. Fuel economy defines the segment: 30-40 MPG combined for gasoline engines (Honda Civic, Mazda3, Toyota Corolla), improving to 45-58 MPG for hybrids (Corolla Hybrid, Honda Insight), and exceeding 100 MPGe for electric variants (Chevy Bolt EV, Nissan Leaf). This efficiency translates to tangible savings: 12,000 annual miles at 35 MPG costs $1,235 fuel annually (at $3.50/gallon) versus $1,750 for 25 MPG mid-size sedans—$515 annual savings compounding over ownership.</p>
                 
@@ -82,9 +83,9 @@
     </div>
     <div id="features" class="tab-content">
         <section class="car-type-info-section feature-grid">
-            <header>
+            <div class="section-header">
                 <h3 class="info-title">Distinctive Features</h3>
-            </header>
+            </div>
             <div class="info-content">
                 <p class="info-text"><strong>Space Efficiency & Packaging:</strong> Compact cars maximize interior volume through intelligent engineering. Transverse engine mounting (sideways orientation) minimizes hood length, devoting more space to passenger compartments. Thin seats with high-density foam provide comfort while reducing thickness, maximizing rear legroom (often 35-37 inches—adequate for adults despite compact exterior dimensions). Strategic component placement eliminates intrusions: fuel tanks under rear seats, exhaust systems routed tightly, and electrical components miniaturized freeing interior space. The result: cabins feeling larger than exterior dimensions suggest, comfortably seating four adults with 12-15 cubic feet trunk space—adequate for daily needs and weekend trips. Advanced high-strength steel construction maintains safety while reducing weight to 2,800-3,200 lbs (versus 3,200-3,600 lbs mid-size sedans), improving efficiency and dynamics.</p>
                 
@@ -100,9 +101,9 @@
     </div>
     <div id="categories" class="tab-content">
         <section class="car-type-info-section category-showcase">
-            <header>
+            <div class="section-header">
                 <h3 class="info-title">Compact Categories</h3>
-            </header>
+            </div>
             <div class="info-content">
                 <p class="info-text"><strong>Economy/Value Compacts:</strong> Budget-focused variants emphasizing affordability and efficiency. Chevrolet Malibu, Hyundai Elantra, Kia Forte, Nissan Sentra offer practical transportation at $22,000-$26,000 starting prices. Naturally aspirated 4-cylinders (1.8L-2.5L, 139-170 hp) provide adequate performance with 0-60 mph times of 8-10 seconds while achieving 32-38 MPG combined. Cloth interiors, steel wheels, and basic infotainment keep costs down while providing essential features: air conditioning, power windows/locks, and modern safety systems increasingly mandated or standard. These compacts suit budget-conscious buyers, first-time car purchasers, students, and anyone prioritizing transportation over luxury. Operating costs remain minimal: affordable insurance, inexpensive maintenance, and excellent fuel economy create low total cost of ownership. Used examples provide even better value—3-5 year old models sell $12,000-$18,000, delivering reliable transportation at fraction of new vehicle costs.</p>
                 
@@ -118,9 +119,9 @@
     </div>
     <div id="lifestyle" class="tab-content">
         <section class="car-type-info-section lifestyle-fit">
-            <header>
+            <div class="section-header">
                 <h3 class="info-title">Lifestyle Integration</h3>
-            </header>
+            </div>
             <div class="info-content">
                 <p class="info-text"><strong>Urban Commuting & City Life:</strong> Compact cars excel as urban transportation. Shorter lengths and tight turning circles simplify parking—fitting spaces mid-size sedans reject while parallel parking requires fewer attempts. Fuel efficiency reduces commuting costs dramatically: 35 MPG compact costs $100-$150 monthly fuel versus $200-$250 for 20 MPG SUVs (assuming $3.50/gallon, 60 miles daily). Lower insurance costs reflect smaller replacement values and repair expenses. Maintenance remains straightforward and affordable through widespread parts availability and simpler mechanicals. For apartment dwellers, compact dimensions fit single parking spaces comfortably. Young urban professionals appreciate efficient transportation enabling budgets for experiences over vehicle expenses. Retired individuals downsizing from larger vehicles find compacts provide adequate space without excessive bulk. The efficiency, maneuverability, and affordability make compacts ideal urban vehicles for those prioritizing practicality over prestige.</p>
                 
@@ -136,9 +137,9 @@
     </div>
     <div id="models" class="tab-content">
         <section class="car-type-info-section">
-            <header>
+            <div class="section-header">
                 <h3 class="info-title">Popular Compact Models</h3>
-            </header>
+            </div>
             <div class="info-content">
                 <h4 style="color: #14284e; margin-top: 1.5rem;">Economy Compacts</h4>
                 <p class="info-text"><strong>Toyota Corolla, Honda Civic, Mazda3:</strong> Exceptional reliability, 35-40 MPG combined, affordable pricing, and low ownership costs.</p>
@@ -193,6 +194,26 @@
     <footer class="car-type-footer">
         <p>&copy; 2025 Engine Starters. All rights reserved.</p>
     </footer>
+    <script>
+    function openTab(tabName) {
+        // Hide all tab contents
+        var tabContents = document.getElementsByClassName("tab-content");
+        for (var i = 0; i < tabContents.length; i++) {
+            tabContents[i].classList.remove("active");
+        }
+        
+        // Remove active class from all buttons
+        var tabButtons = document.getElementsByClassName("tab-button");
+        for (var i = 0; i < tabButtons.length; i++) {
+            tabButtons[i].classList.remove("active");
+        }
+        
+        // Show selected tab and activate button
+        document.getElementById(tabName).classList.add("active");
+        event.currentTarget.classList.add("active");
+    }
+    </script>
+    <script src="../../js/mobile-menu.js"></script>
 </body>
 </html>
 

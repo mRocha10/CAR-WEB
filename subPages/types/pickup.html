@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
     <meta name="description" content="Explore pickup trucks, their capabilities, and features at Engine Starters.">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1971438271362376"
      crossorigin="anonymous"></script>
@@ -19,6 +19,7 @@
     
     
     <link rel="stylesheet" href="../../css/global.min.css">
+    <link rel="stylesheet" href="../../css/mobile-optimized.css">
     <link rel="stylesheet" href="../../css/car-types-enhanced.css">
 </head>
 <body>
@@ -66,9 +67,9 @@
     <!-- Tab Contents -->
     <div id="overview" class="tab-content active">
         <section class="car-type-info-section">
-            <header>
+            <div class="section-header">
                 <h3 class="info-title">Overview</h3>
-            </header>
+            </div>
             <div class="info-content">
                 <p class="info-text">Pickup trucks represent America's best-selling vehicle segment, dominating sales charts for over four decades with the Ford F-Series, Chevrolet Silverado, and Ram trucks consistently topping monthly sales figures. These versatile vehicles combine exceptional utility—payload capacities from 1,400 to 7,850 lbs and towing capabilities from 6,000 to 37,100 lbs—with increasingly refined interiors rivaling luxury SUVs. Body-on-frame construction mounts separate cab and bed structures onto robust ladder frames constructed from high-strength steel, providing the structural integrity necessary for serious work. Modern pickups measure 210-260 inches in length, 80-97 inches in width, and stand 75-80 inches tall, with ground clearance typically 8-11 inches enabling off-road capability and confident navigation of construction sites, farms, and challenging terrain.</p>
                 
@@ -82,9 +83,9 @@
     </div>
     <div id="features" class="tab-content">
         <section class="car-type-info-section feature-grid">
-            <header>
+            <div class="section-header">
                 <h3 class="info-title">Distinctive Features</h3>
-            </header>
+            </div>
             <div class="info-content">
                 <p class="info-text"><strong>Frame & Construction:</strong> Body-on-frame construction separates the cab/bed from the frame, unlike unibody vehicles where structure and body integrate. Fully-boxed frames (enclosed channels) provide maximum rigidity and strength, while C-channel frames offer some flexibility absorbing impacts. High-strength steel alloys (sometimes with aluminum components reducing weight) create frames capable of handling extreme stresses. Frame rails in heavy-duty trucks measure 3+ inches in height and extend vehicle length, with multiple crossmembers tying rails together. This construction enables trucks to handle payload in beds and tongue weight from trailers without structural damage. When properly equipped, frames distribute loads through their entire structure rather than concentrating stress. The separate frame also facilitates body repairs—damaged beds can be replaced without affecting structural integrity. This proven architecture has been refined over decades and remains superior for towing/hauling applications despite being heavier and costlier than unibody construction.</p>
                 
@@ -100,9 +101,9 @@
     </div>
     <div id="categories" class="tab-content">
         <section class="car-type-info-section category-showcase">
-            <header>
+            <div class="section-header">
                 <h3 class="info-title">Pickup Categories</h3>
-            </header>
+            </div>
             <div class="info-content">
                 <p class="info-text"><strong>Compact & Mid-Size Trucks:</strong> Measuring 210-225 inches long (versus 230-250 for full-size), these trucks suit buyers prioritizing maneuverability, parking ease, and fuel efficiency while retaining utility. Engines typically include turbocharged 4-cylinders (270-310 hp), V6s (278-310 hp), or small diesels (181 hp, 369 lb-ft). Payload capacities range 1,400-1,700 lbs with towing from 6,000-7,700 lbs—adequate for most recreational trailers, utility trailers, and occasional hauling. Toyota Tacoma, Chevrolet Colorado, GMC Canyon, Ford Ranger, Jeep Gladiator, and Nissan Frontier populate this segment. Pricing spans $28,000-$50,000 depending on trim and capability. Fuel economy averages 18-22 MPG combined. These trucks appeal to urban/suburban buyers needing occasional truck capability without full-size compromises, outdoor enthusiasts with smaller trailers, and those desiring off-road prowess (Tacoma TRD Pro, Colorado ZR2 offer serious capability).</p>
                 
@@ -118,9 +119,9 @@
     </div>
     <div id="lifestyle" class="tab-content">
         <section class="car-type-info-section lifestyle-fit">
-            <header>
+            <div class="section-header">
                 <h3 class="info-title">Lifestyle Integration</h3>
-            </header>
+            </div>
             <div class="info-content">
                 <p class="info-text"><strong>Work & Commercial Applications:</strong> Pickup trucks serve as indispensable tools for contractors, landscapers, electricians, plumbers, and countless trades requiring cargo hauling and towing. Beds transport materials, tools, and equipment while protecting valuable items under tonneau covers or in toolboxes. Payload capacities enable bulk material transport—dirt, mulch, gravel, lumber. Towing capabilities move equipment trailers, machinery, and materials between job sites. 110V power outlets (up to 7.2 kW on some models) power tools eliminating generator needs. Durability and reliability matter critically—breakdowns cost income. Fleet buyers maintain trucks for 200,000+ miles with proper maintenance. Tax advantages (Section 179 deductions) reduce business vehicle costs significantly. Mobile office features (WiFi, multiple USB ports, laptop-sized console spaces) enable paperwork between jobs. The truck bed effectively extends workshop capacity, with aftermarket accessories (ladder racks, toolboxes, cargo management) optimizing organization.</p>
                 
@@ -136,9 +137,9 @@
     </div>
     <div id="models" class="tab-content">
         <section class="car-type-info-section">
-            <header>
+            <div class="section-header">
                 <h3 class="info-title">Popular Pickup Models</h3>
-            </header>
+            </div>
             <div class="info-content">
                 <h4 style="color: #14284e; margin-top: 1.5rem;">Mid-Size Trucks</h4>
                 <p class="info-text"><strong>Ford Ranger, Toyota Tacoma, Chevrolet Colorado:</strong> Balance of utility and maneuverability, towing up to 7,500 lbs, ideal for daily driving and weekend adventures.</p>
@@ -193,5 +194,25 @@
     <footer class="car-type-footer">
         <p>&copy; 2025 Engine Starters. All rights reserved.</p>
     </footer>
+    <script>
+    function openTab(tabName) {
+        // Hide all tab contents
+        var tabContents = document.getElementsByClassName("tab-content");
+        for (var i = 0; i < tabContents.length; i++) {
+            tabContents[i].classList.remove("active");
+        }
+        
+        // Remove active class from all buttons
+        var tabButtons = document.getElementsByClassName("tab-button");
+        for (var i = 0; i < tabButtons.length; i++) {
+            tabButtons[i].classList.remove("active");
+        }
+        
+        // Show selected tab and activate button
+        document.getElementById(tabName).classList.add("active");
+        event.currentTarget.classList.add("active");
+    }
+    </script>
+    <script src="../../js/mobile-menu.js"></script>
 </body>
 </html>

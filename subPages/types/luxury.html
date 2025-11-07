@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
     <meta name="description" content="Explore luxury cars, their premium features, and sophisticated design at Engine Starters.">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1971438271362376"
      crossorigin="anonymous"></script>
@@ -19,6 +19,7 @@
     
     
     <link rel="stylesheet" href="../../css/global.min.css">
+    <link rel="stylesheet" href="../../css/mobile-optimized.css">
     <link rel="stylesheet" href="../../css/car-types-enhanced.css">
 </head>
 <body>
@@ -66,9 +67,9 @@
     <!-- Tab Contents -->
     <div id="overview" class="tab-content active">
         <section class="car-type-info-section">
-            <header>
+            <div class="section-header">
                 <h3 class="info-title">Overview</h3>
-            </header>
+            </div>
             <div class="info-content">
                 <p class="info-text">Luxury cars represent the automotive apex where engineering excellence, craftsmanship mastery, and technological innovation converge creating vehicles transcending mere transportation. These automobiles embody manufacturers' capabilities through meticulous attention to detail: hand-stitched leather requiring 20+ hours per interior, wood veneers selected from single trees ensuring grain consistency, and paint processes involving 15-20 layers achieving mirror-like finishes. Luxury vehicles deliver serene sanctuaries isolating occupants from external chaos through acoustic laminated glass, active noise cancellation, and sound-deadening materials achieving highway noise levels of 55-60 dB (libraries measure 40 dB, normal conversation 60 dB). Powerful yet refined engines—4-cylinder turbochargers (248-300 hp), inline-6 turbochargers (335-400 hp), V8s (500-600+ hp), and V12s (600-700+ hp)—deliver effortless acceleration while maintaining whisper-quiet operation.</p>
                 
@@ -82,9 +83,9 @@
     </div>
     <div id="features" class="tab-content">
         <section class="car-type-info-section feature-grid">
-            <header>
+            <div class="section-header">
                 <h3 class="info-title">Distinctive Features</h3>
-            </header>
+            </div>
             <div class="info-content">
                 <p class="info-text"><strong>Materials & Craftsmanship:</strong> Luxury interiors showcase automotive artistry through premium materials and exceptional execution. Nappa leather (top 5% of hides) covers seats, dashboards, and door panels with butter-soft texture requiring specialized tanning processes. Stitching—often contrasting colors—is hand-executed with precision spacing and tension impossible for machines to replicate. Open-pore wood veneers from sustainably harvested forests (burr walnut, ash, eucalyptus) retain natural texture and grain patterns, treated with multiple finishing coats achieving glass-smooth surfaces. Genuine aluminum, carbon fiber, or even stone inlays accentuate surfaces. Alcantara suede headliners add luxury touch overhead. Lambswool floor mats, leather-wrapped pillars, and soft-touch surfaces throughout create tactile luxury. Attention extends to hidden areas: trunk linings, door jambs, and engine bays receive finishing absent in mainstream vehicles. This craftsmanship requires hundreds of hours per vehicle—Rolls-Royce Phantom interiors take 450+ hours, Bentley Flying Spur requires 130+ hours leather work alone.</p>
                 
@@ -100,9 +101,9 @@
     </div>
     <div id="categories" class="tab-content">
         <section class="car-type-info-section category-showcase">
-            <header>
+            <div class="section-header">
                 <h3 class="info-title">Luxury Categories</h3>
-            </header>
+            </div>
             <div class="info-content">
                 <p class="info-text"><strong>Entry-Level Luxury Sedans:</strong> Gateway vehicles introducing premium brand experiences at accessible prices ($40,000-$55,000). BMW 3-Series, Mercedes C-Class, Audi A4, Lexus ES, Genesis G70 balance luxury with attainability. Turbocharged 4-cylinders (248-300 hp) or available inline-6 engines (335-380 hp) deliver spirited performance with 0-60 mph times of 5-7 seconds. Interiors feature genuine leather, wood trim, and technology matching or exceeding mainstream luxury expectations. These vehicles suit young professionals establishing careers, empty nesters downsizing, or anyone desiring premium badges without flagship prices. Maintenance costs remain reasonable (for luxury vehicles), and depreciation parallels mainstream vehicles percentage-wise though absolute dollar amounts higher due to starting prices. The BMW 3-Series defines this segment with engaging driving dynamics, premium interiors, and comprehensive technology, while Lexus ES emphasizes reliability and refinement.</p>
                 
@@ -118,9 +119,9 @@
     </div>
     <div id="lifestyle" class="tab-content">
         <section class="car-type-info-section lifestyle-fit">
-            <header>
+            <div class="section-header">
                 <h3 class="info-title">Lifestyle Integration</h3>
-            </header>
+            </div>
             <div class="info-content">
                 <p class="info-text"><strong>Status & Achievement Symbols:</strong> Luxury vehicles communicate success, achievement, and social standing. Premium badges—three-pointed star, roundel, four rings—convey messages instantly recognized globally. For entrepreneurs, executives, and successful professionals, luxury vehicles represent tangible rewards for hard work and milestones reached. Parking luxury vehicles at offices, client meetings, or social events projects competence, success, and attention to quality. This psychological aspect—how vehicles make owners feel and how others perceive them—significantly influences purchase decisions beyond rational transportation needs. Some buyers specifically choose vehicles signaling understated wealth (Lexus, Audi) versus overt luxury (Mercedes, BMW). Ultra-luxury vehicles (Bentley, Rolls-Royce) occupy rarefied territory where exclusivity and customization trump mass-market considerations entirely. These vehicles represent ultimate expressions of automotive desire and financial capability.</p>
                 
@@ -136,9 +137,9 @@
     </div>
     <div id="models" class="tab-content">
         <section class="car-type-info-section">
-            <header>
+            <div class="section-header">
                 <h3 class="info-title">Popular Luxury Models</h3>
-            </header>
+            </div>
             <div class="info-content">
                 <h4 style="color: #14284e; margin-top: 1.5rem;">Executive Sedans</h4>
                 <p class="info-text"><strong>Mercedes-Benz S-Class, BMW 7 Series, Audi A8:</strong> Flagship luxury sedans with cutting-edge technology, supreme comfort, and powerful engines.</p>
@@ -193,5 +194,25 @@
     <footer class="car-type-footer">
         <p>&copy; 2025 Engine Starters. All rights reserved.</p>
     </footer>
+    <script>
+    function openTab(tabName) {
+        // Hide all tab contents
+        var tabContents = document.getElementsByClassName("tab-content");
+        for (var i = 0; i < tabContents.length; i++) {
+            tabContents[i].classList.remove("active");
+        }
+        
+        // Remove active class from all buttons
+        var tabButtons = document.getElementsByClassName("tab-button");
+        for (var i = 0; i < tabButtons.length; i++) {
+            tabButtons[i].classList.remove("active");
+        }
+        
+        // Show selected tab and activate button
+        document.getElementById(tabName).classList.add("active");
+        event.currentTarget.classList.add("active");
+    }
+    </script>
+    <script src="../../js/mobile-menu.js"></script>
 </body>
 </html>
