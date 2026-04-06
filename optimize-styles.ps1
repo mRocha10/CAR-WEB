@@ -1,49 +1,15 @@
-$root = "c:\Users\marcr\Desktop\AdSense\WEB (CARS)\CAR-WEB"
+$root = Split-Path -Parent $MyInvocation.MyCommand.Path
+$htmlFiles = Get-ChildItem -Path $root -Recurse -Filter *.html
 
-# For root level HTML files
-$files = Get-ChildItem $root -Filter *.html
-foreach ($file in $files) {
-    $content = Get-Content $file.FullName -Raw
-    # Remove all stylesheet links (repeat to ensure all are removed)
-    $content = $content -replace '<link\s*rel="stylesheet"\s*href="[^"]*"\s*>', ''
-    $content = $content -replace '<link\s*rel="stylesheet"\s*href="[^"]*"\s*>', ''
-    $content = $content -replace '<link\s*rel="stylesheet"\s*href="[^"]*"\s*>', ''
-    $content = $content -replace '<link\s*rel="stylesheet"\s*href="[^"]*"\s*>', ''
-    $content = $content -replace '<link\s*rel="stylesheet"\s*href="[^"]*"\s*>', ''
-    # Add global.css link
-    $content = $content -replace '</head>', '<link rel="stylesheet" href="css/global.css"></head>'
-    Set-Content $file.FullName $content
+foreach ($file in $htmlFiles) {
+    $content = Get-Content -Path $file.FullName -Raw
+    $relative = $file.FullName.Substring($root.Length).TrimStart('\')
+    $depth = ($relative -split '\\').Length - 1
+    $prefix = ('../' * $depth)
+
+    $content = [regex]::Replace($content, '<link\s+rel="stylesheet"\s+href="[^"]*"\s*>', '')
+    $content = $content -replace '</head>', "    <link rel=`"stylesheet`" href=`"$prefix" + "css/site-unified.css`">`n</head>"
+    Set-Content -Path $file.FullName -Value $content -Encoding UTF8
 }
 
-# For subPages direct HTML files
-$files = Get-ChildItem "$root\subPages" -Filter *.html
-foreach ($file in $files) {
-    $content = Get-Content $file.FullName -Raw
-    $content = $content -replace '<link\s*rel="stylesheet"\s*href="[^"]*"\s*>', ''
-    $content = $content -replace '<link\s*rel="stylesheet"\s*href="[^"]*"\s*>', ''
-    $content = $content -replace '<link\s*rel="stylesheet"\s*href="[^"]*"\s*>', ''
-    $content = $content -replace '<link\s*rel="stylesheet"\s*href="[^"]*"\s*>', ''
-    $content = $content -replace '<link\s*rel="stylesheet"\s*href="[^"]*"\s*>', ''
-    $content = $content -replace '</head>', '<link rel="stylesheet" href="../css/global.css"></head>'
-    Set-Content $file.FullName $content
-}
-
-# For deeper directories
-$dirs = @("subPages\brands", "subPages\types", "subPages\components")
-foreach ($dir in $dirs) {
-    $files = Get-ChildItem "$root\$dir" -Filter *.html
-    foreach ($file in $files) {
-        $content = Get-Content $file.FullName -Raw
-        # Fix concatenated tags
-        $content = $content -replace '(<link rel="icon" type="image/jpeg" href="[^"]*">)<link', '$1    <link'
-        # Remove all stylesheet links
-        $content = $content -replace '<link\s*rel="stylesheet"\s*href="[^"]*"\s*>', ''
-        $content = $content -replace '<link\s*rel="stylesheet"\s*href="[^"]*"\s*>', ''
-        $content = $content -replace '<link\s*rel="stylesheet"\s*href="[^"]*"\s*>', ''
-        $content = $content -replace '<link\s*rel="stylesheet"\s*href="[^"]*"\s*>', ''
-        $content = $content -replace '<link\s*rel="stylesheet"\s*href="[^"]*"\s*>', ''
-        # Add global.css link with indentation
-        $content = $content -replace '</head>', '    <link rel="stylesheet" href="../../css/global.css">    </head>'
-        Set-Content $file.FullName $content
-    }
-}
+Write-Output "Styles unificados a site-unified.css en todos los HTML."

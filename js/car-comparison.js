@@ -33,6 +33,8 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     
     function initializeEventListeners() {
+        populateBrandSelectors();
+
         // Brand selection event listeners
         car1Brand.addEventListener('change', () => populateModels(car1Brand, car1Model));
         car2Brand.addEventListener('change', () => populateModels(car2Brand, car2Model));
@@ -40,6 +42,26 @@ document.addEventListener('DOMContentLoaded', function() {
         
         // Compare button event listener
         compareBtn.addEventListener('click', compareCars);
+    }
+
+    function populateBrandSelectors() {
+        const selectors = [car1Brand, car2Brand, car3Brand];
+        const entries = Object.entries(carData || {});
+
+        selectors.forEach(select => {
+            select.innerHTML = '<option value="">Select Brand</option>';
+        });
+
+        entries.forEach(([brandKey, brandValue]) => {
+            const label = (brandValue && brandValue.name) ? brandValue.name : brandKey;
+
+            selectors.forEach(select => {
+                const option = document.createElement('option');
+                option.value = brandKey;
+                option.textContent = label;
+                select.appendChild(option);
+            });
+        });
     }
     
     function populateModels(brandSelect, modelSelect) {
@@ -139,7 +161,7 @@ document.addEventListener('DOMContentLoaded', function() {
         html += `<div class="comparison-row">
             <div class="comparison-cell">Image</div>`;
         cars.forEach(car => {
-            html += `<div class="comparison-cell"><img src="${car.specs.image}" alt="${car.brandName} ${car.modelName}" class="comparison-image"></div>`;
+            html += `<div class="comparison-cell"><img src="${car.specs.image}" alt="${car.brandName} ${car.modelName}" class="comparison-image" loading="lazy" decoding="async"></div>`;
         });
         html += `</div>`;
         
@@ -224,8 +246,11 @@ document.addEventListener('DOMContentLoaded', function() {
         });
 
         // Add CSS styles for comparison highlighting
-        const styleElement = document.createElement('style');
-        styleElement.textContent = `
+        let styleElement = document.getElementById('comparison-dynamic-styles');
+        if (!styleElement) {
+            styleElement = document.createElement('style');
+            styleElement.id = 'comparison-dynamic-styles';
+            styleElement.textContent = `
             .comparison-header {
                 background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
                 border-bottom: 2px solid #dee2e6;
@@ -266,7 +291,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 border: 1px solid #dee2e6;
             }
         `;
-        document.head.appendChild(styleElement);
+            document.head.appendChild(styleElement);
+        }
         
         html += `</div>`;
         

@@ -1,4 +1,4 @@
-$root = "c:\Users\marcr\Desktop\AdSense\WEB (CARS)\CAR-WEB"
+$root = Split-Path -Parent $MyInvocation.MyCommand.Path
 
 # Obtener todos los archivos HTML
 $htmlFiles = Get-ChildItem -Path $root -Recurse -Filter *.html
@@ -6,8 +6,12 @@ $htmlFiles = Get-ChildItem -Path $root -Recurse -Filter *.html
 foreach ($file in $htmlFiles) {
     $content = Get-Content -Path $file.FullName -Raw
 
-    # Reemplazar global.css por global.min.css en links de stylesheet
-    $content = $content -replace '(<link[^>]*rel="stylesheet"[^>]*href="[^"]*)global\.css(")', '$1global.min.css$2'
+    # Unificar stylesheet al archivo actual consolidado
+    $content = [regex]::Replace($content, '<link\s+rel="stylesheet"\s+href="[^"]*"\s*>', '')
+    $relative = $file.FullName.Substring($root.Length).TrimStart('\')
+    $depth = ($relative -split '\\').Length - 1
+    $prefix = ('../' * $depth)
+    $content = $content -replace '</head>', "    <link rel=`"stylesheet`" href=`"$prefix" + "css/site-unified.css`">`n</head>"
 
     # Reemplazar .js por .min.js en scripts específicos
     $jsFiles = @('script.js', 'car-comparison.js', 'comments.js')
@@ -22,4 +26,4 @@ foreach ($file in $htmlFiles) {
     Set-Content -Path $file.FullName -Value $content
 }
 
-Write-Output "Assets optimizados en todos los HTML."
+Write-Output "Assets optimizados y CSS unificado en todos los HTML."

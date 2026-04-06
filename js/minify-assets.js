@@ -7,34 +7,17 @@ const Terser = require('terser');
 const cssDir = path.join(__dirname, '../css');
 const jsDir = path.join(__dirname, '.');
 
-// Lista de CSS en orden de importación desde global.css
-const cssFiles = [
-  'about.css',
-  'brands.css',
-  'car-tools.css',
-  'car-types.css',
-  'comments.css',
-  'comparison.css',
-  'component-detail.css',
-  'components.css',
-  'enhanced-comparison.css',
-  'enhanced-ui.css',
-  'responsive.css',
-  'style.css'
-];
-
-// Concatenar y minificar CSS
-let concatenatedCSS = '';
-cssFiles.forEach(file => {
-  const filePath = path.join(cssDir, file);
-  if (fs.existsSync(filePath)) {
-    concatenatedCSS += fs.readFileSync(filePath, 'utf8') + '\n';
-  }
-});
-const output = new CleanCSS({ level: 2 }).minify(concatenatedCSS); // level 2 for aggressive optimization
-const minCssFile = path.join(cssDir, 'global.min.css');
-fs.writeFileSync(minCssFile, output.styles);
-console.log(`Created minified global CSS: ${minCssFile}`);
+// Minificar la hoja de estilo unificada actual
+const unifiedCssFile = path.join(cssDir, 'site-unified.css');
+if (fs.existsSync(unifiedCssFile)) {
+  const cssContent = fs.readFileSync(unifiedCssFile, 'utf8');
+  const output = new CleanCSS({ level: 2 }).minify(cssContent);
+  const minCssFile = path.join(cssDir, 'site-unified.min.css');
+  fs.writeFileSync(minCssFile, output.styles);
+  console.log(`Created minified unified CSS: ${minCssFile}`);
+} else {
+  console.warn('site-unified.css not found. CSS minification skipped.');
+}
 
 // Minificar JS
 const jsToMinify = ['car-comparison.js', 'comments.js', 'script.js'];
