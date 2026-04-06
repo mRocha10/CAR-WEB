@@ -50,6 +50,18 @@
             </ul>
         </nav>
     </header>
+
+    <!-- Hero Section -->
+    <div class="brand-hero-wrapper">
+        <section class="brand-hero" style="background-image: url('../../images/brands/mini-hero.jpg');">
+                <div class="brand-hero-content">
+                    <h1>Mini</h1>
+                    <p class="brand-tagline">Not Normal</p>
+                    <p class="brand-founded">Founded 1959 | Headquarters: Oxford, England</p>
+                </div>
+            </section>
+    </div>
+
     <nav class="breadcrumb-nav">
         <a href="../../index.html">Home</a>
         <span>»</span>
@@ -57,17 +69,20 @@
         <span>»</span>
         <span>Mini</span>
     </nav>
-    <main>
-        <div class="brand-hero-wrapper">
-            <section class="brand-hero" style="background-image: url('../../images/brands/mini-hero.jpg');">
-                <div class="brand-hero-content">
-                    <h1>Mini</h1>
-                    <p class="brand-tagline">Not Normal</p>
-                    <p class="brand-founded">Founded 1959 | Headquarters: Oxford, England</p>
-                </div>
-            </section>
-        </div>
-        <section class="brand-quick-stats">
+
+    <!-- Tab Navigation -->
+    <div class="tab-navigation">
+        <button class="tab-button active" onclick="openTab('overview')">Overview</button>
+        <button class="tab-button" onclick="openTab('history')">History</button>
+        <button class="tab-button" onclick="openTab('models')">Models</button>
+        <button class="tab-button" onclick="openTab('technology')">Innovation</button>
+        <button class="tab-button" onclick="openTab('awards')">Awards</button>
+    </div>
+
+    <!-- Tab Contents -->
+    <div id="overview" class="tab-content active">
+        <div class="brand-content-wrapper">
+            <section class="brand-quick-stats">
             <div class="stats-container">
                 <div class="stat-box">
                     <span class="stat-number">Iconic</span>
@@ -84,9 +99,10 @@
                 <div class="stat-box">
                     <span class="stat-number">Go-Kart</span>
                     <span class="stat-label">Feel</span>
-                </div>
-            </div>
-        </section>
+        </div>
+    </div>
+
+    <div id="history" class="tab-content">
         <div class="brand-content-wrapper">
             <section class="brand-section">
                 <h2>🏛️ Brand History & Legacy</h2>
@@ -96,64 +112,40 @@
                 <p>Mini continues to push boundaries in automotive technology and design, developing vehicles that meet the highest standards of quality, safety, and performance. The brand's dedication to innovation ensures it remains competitive in an ever-evolving automotive landscape.</p>
                 <p>Today, Mini stands as a testament to automotive craftsmanship, offering a diverse lineup of vehicles that cater to various customer preferences while maintaining the brand's core values and commitment to excellence.</p>
             </section>
-            <section class="brand-section">
-                <h2>💎 Core Values & Philosophy</h2>
-                <p>Mini's success is built on fundamental principles:</p>
-                <div class="brand-values-grid">
-                    <div class="value-card">
-                        <span class="value-icon">🎯</span>
-                        <h4>Quality Excellence</h4>
-                        <p>Commitment to building vehicles that exceed customer expectations in quality and reliability.</p>
-                    </div>
-                    <div class="value-card">
-                        <span class="value-icon">🔬</span>
-                        <h4>Innovation</h4>
-                        <p>Continuously developing new technologies and solutions for better vehicles.</p>
-                    </div>
-                    <div class="value-card">
-                        <span class="value-icon">🌍</span>
-                        <h4>Global Presence</h4>
-                        <p>Serving customers worldwide with dedication and excellence.</p>
-                    </div>
-                    <div class="value-card">
-                        <span class="value-icon">💪</span>
-                        <h4>Performance</h4>
-                        <p>Delivering vehicles with outstanding performance and driving dynamics.</p>
-                    </div>
-                    <div class="value-card">
-                        <span class="value-icon">🛡️</span>
-                        <h4>Safety</h4>
-                        <p>Prioritizing safety in every aspect of vehicle design and engineering.</p>
-                    </div>
-                    <div class="value-card">
-                        <span class="value-icon">♻️</span>
-                        <h4>Sustainability</h4>
-                        <p>Committed to environmental responsibility and sustainable practices.</p>
-                    </div>
-                </div>
-            </section>
-            <section class="brand-section">
-                <h2>🚗 Vehicle Lineup</h2>
-                <p>Mini offers a comprehensive range of vehicles designed to meet diverse customer needs, from efficient sedans to capable SUVs and innovative electric vehicles.</p>
-                <div class="models-grid">
-                    <div class="model-category-card">
-                        <h3>Passenger Vehicles</h3>
-                        <ul>
-                            <li>Sedan models - Comfortable and efficient</li>
-                            <li>Hatchback options - Versatile and practical</li>
-                            <li>Coupe variants - Stylish and sporty</li>
-                        </ul>
-                    </div>
-                    <div class="model-category-card">
-                        <h3>SUVs & Crossovers</h3>
-                        <ul>
-                            <li>Compact SUVs - Urban versatility</li>
-                            <li>Mid-size SUVs - Family-friendly</li>
-                            <li>Full-size SUVs - Maximum space</li>
-                        </ul>
-                    </div>
-                </div>
-            </section>
+        </div>
+    </div>
+
+    <div id="models" class="tab-content">
+        <div class="brand-content-wrapper">
+            
+    <section class="brand-section">
+        <h2>🚗 Complete Model Lineup 2024-2025</h2>
+        <p>MINI delivers go-kart feeling and iconic design.</p>
+        <div class="models-grid">
+            <div class="model-category-card">
+                <h3>The Icons</h3>
+                <ul>
+                    <li>Cooper - The original hatch (3-door/5-door)</li>
+                    <li>Cooper Electric - Pure electric fun</li>
+                    <li>Cooper Convertible - Open-air excitement</li>
+                </ul>
+            </div>
+            <div class="model-category-card">
+                <h3>Utility</h3>
+                <ul>
+                    <li>Countryman - The biggest adventurer</li>
+                    <li>Aceman - All-new electric crossover</li>
+                    <li>Clubman - Sophisticated 6-door</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    
+        </div>
+    </div>
+
+    <div id="technology" class="tab-content">
+        <div class="brand-content-wrapper">
             <section class="brand-section">
                 <h2>🔬 Technology & Innovation</h2>
                 <p>Mini incorporates advanced technology:</p>
@@ -173,39 +165,48 @@
                     <div class="tech-item">
                         <h4>🎮 Driver Assistance</h4>
                         <p>Advanced systems that assist drivers and enhance safety.</p>
-                    </div>
-                </div>
-            </section>
-            <section class="brand-section">
-                <h2>🏆 Awards & Recognition</h2>
-                <div class="awards-grid">
-                    <div class="award-badge">
-                        <div class="award-icon">🥇</div>
-                        <div class="award-title">Industry Recognition</div>
-                        <div class="award-year">2024</div>
-                    </div>
-                    <div class="award-badge">
-                        <div class="award-icon">🌟</div>
-                        <div class="award-title">Quality Awards</div>
-                        <div class="award-year">Multiple Years</div>
-                    </div>
-                    <div class="award-badge">
-                        <div class="award-icon">🛡️</div>
-                        <div class="award-title">Safety Excellence</div>
-                        <div class="award-year">2024</div>
-                    </div>
-                    <div class="award-badge">
-                        <div class="award-icon">💎</div>
-                        <div class="award-title">Customer Satisfaction</div>
-                        <div class="award-year">High Ratings</div>
-                    </div>
-                </div>
-            </section>
         </div>
-    </main>    <!-- Footer -->
+    </div>
+
+    <div id="awards" class="tab-content">
+        <div class="brand-content-wrapper">
+            
+        </div>
+    </div>
+
+    <!-- Footer -->
     <footer class="car-type-footer">
         <p>&copy; 2025 Engine Starters. All rights reserved.</p>
     </footer>
+
+    
+    <script>
+    function openTab(tabName) {
+        // Hide all tab contents
+        var tabContents = document.getElementsByClassName("tab-content");
+        for (var i = 0; i < tabContents.length; i++) {
+            tabContents[i].classList.remove("active");
+        }
+        
+        // Remove active class from all buttons
+        var tabButtons = document.getElementsByClassName("tab-button");
+        for (var i = 0; i < tabButtons.length; i++) {
+            tabButtons[i].classList.remove("active");
+        }
+        
+        // Show selected tab and activate button
+        document.getElementById(tabName).classList.add("active");
+        
+        // Find the button that called this function and add active class
+        var buttons = document.getElementsByTagName("button");
+        for (var i = 0; i < buttons.length; i++) {
+            if (buttons[i].getAttribute("onclick").includes("'" + tabName + "'")) {
+                buttons[i].classList.add("active");
+            }
+        }
+    }
+    </script>
+
     <script src="../../js/mobile-menu.js"></script>
 </body>
 </html>

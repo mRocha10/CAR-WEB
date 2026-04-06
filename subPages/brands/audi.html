@@ -51,6 +51,18 @@
             </ul>
         </nav>
     </header>
+
+    <!-- Hero Section -->
+    <div class="brand-hero-wrapper">
+        <section class="brand-hero" style="background-image: url('../../images/brands/audi-hero.jpg');">
+                <div class="brand-hero-content">
+                    <h1>Audi</h1>
+                    <p class="brand-tagline">Vorsprung durch Technik</p>
+                    <p class="brand-founded">Founded 1909 | Headquarters: Ingolstadt, Germany</p>
+                </div>
+            </section>
+    </div>
+
     <nav class="breadcrumb-nav">
         <a href="../../index.html">Home</a>
         <span>»</span>
@@ -58,17 +70,20 @@
         <span>»</span>
         <span>Audi</span>
     </nav>
-    <main>
-        <div class="brand-hero-wrapper">
-            <section class="brand-hero" style="background-image: url('../../images/brands/audi-hero.jpg');">
-                <div class="brand-hero-content">
-                    <h1>Audi</h1>
-                    <p class="brand-tagline">Vorsprung durch Technik</p>
-                    <p class="brand-founded">Founded 1909 | Headquarters: Ingolstadt, Germany</p>
-                </div>
-            </section>
-        </div>
-        <section class="brand-quick-stats">
+
+    <!-- Tab Navigation -->
+    <div class="tab-navigation">
+        <button class="tab-button active" onclick="openTab('overview')">Overview</button>
+        <button class="tab-button" onclick="openTab('history')">History</button>
+        <button class="tab-button" onclick="openTab('models')">Models</button>
+        <button class="tab-button" onclick="openTab('technology')">Innovation</button>
+        <button class="tab-button" onclick="openTab('awards')">Awards</button>
+    </div>
+
+    <!-- Tab Contents -->
+    <div id="overview" class="tab-content active">
+        <div class="brand-content-wrapper">
+            <section class="brand-quick-stats">
             <div class="stats-container">
                 <div class="stat-box">
                     <span class="stat-number">#1</span>
@@ -85,9 +100,10 @@
                 <div class="stat-box">
                     <span class="stat-number">Quattro</span>
                     <span class="stat-label">AWD Leader</span>
-                </div>
-            </div>
-        </section>
+        </div>
+    </div>
+
+    <div id="history" class="tab-content">
         <div class="brand-content-wrapper">
             <section class="brand-section">
                 <h2>🏛️ Brand History & Legacy</h2>
@@ -97,87 +113,53 @@
                 <p>The <strong>Audi A4</strong>, <strong>A6</strong>, and <strong>Q5</strong> represent decades of refinement in luxury, technology, and performance. Audi's commitment to "Vorsprung durch Technik" (Advancement through Technology) is evident in innovations like Virtual Cockpit, Matrix LED headlights, and advanced driver assistance systems.</p>
                 <p>Today, Audi leads the premium electric vehicle segment with the <strong>e-tron</strong> lineup, combining zero-emissions driving with the brand's signature luxury and performance.</p>
             </section>
-            <section class="brand-section">
-                <h2>💎 Core Values & Philosophy</h2>
-                <p>Audi's success is built on fundamental principles:</p>
-                <div class="brand-values-grid">
-                    <div class="value-card">
-                        <span class="value-icon">🎯</span>
-                        <h4>Premium Quality</h4>
-                        <p>Commitment to building vehicles that exceed expectations in quality, craftsmanship, and attention to detail.</p>
-                    </div>
-                    <div class="value-card">
-                        <span class="value-icon">🔬</span>
-                        <h4>Technological Innovation</h4>
-                        <p>Leading the industry with groundbreaking technologies from Quattro AWD to electric powertrains.</p>
-                    </div>
-                    <div class="value-card">
-                        <span class="value-icon">🏁</span>
-                        <h4>Performance Heritage</h4>
-                        <p>Motorsport success in rally, endurance racing, and Formula E drives road car development.</p>
-                    </div>
-                    <div class="value-card">
-                        <span class="value-icon">💪</span>
-                        <h4>Quattro AWD</h4>
-                        <p>Legendary all-wheel drive system providing unmatched grip, stability, and confidence.</p>
-                    </div>
-                    <div class="value-card">
-                        <span class="value-icon">⚡</span>
-                        <h4>Electric Future</h4>
-                        <p>Leading premium electrification with e-tron models and advanced charging infrastructure.</p>
-                    </div>
-                    <div class="value-card">
-                        <span class="value-icon">🎨</span>
-                        <h4>Design Excellence</h4>
-                        <p>Bold, progressive design language that balances elegance with sporting character.</p>
-                    </div>
-                </div>
-            </section>
-            <section class="brand-section">
-                <h2>🚗 Complete Model Lineup 2024-2025</h2>
-                <p>Audi offers a comprehensive range of premium vehicles.</p>
-                <div class="models-grid">
-                    <div class="model-category-card">
-                        <h3>Sedans & Sportbacks</h3>
-                        <ul>
-                            <li>A3 - Compact luxury sedan</li>
-                            <li>A4 - Executive sedan</li>
-                            <li>A5 Sportback - 5-door coupe</li>
-                            <li>A6 - Business class sedan</li>
-                            <li>A7 - Luxury sportback</li>
-                            <li>A8 - Flagship sedan</li>
-                        </ul>
-                    </div>
-                    <div class="model-category-card">
-                        <h3>SUVs</h3>
-                        <ul>
-                            <li>Q3 - Compact premium SUV</li>
-                            <li>Q5 - Best-selling mid-size SUV</li>
-                            <li>Q7 - Full-size 7-seater</li>
-                            <li>Q8 - Flagship SUV coupe</li>
-                        </ul>
-                    </div>
-                    <div class="model-category-card">
-                        <h3>Electric (e-tron)</h3>
-                        <ul>
-                            <li>Q4 e-tron - Compact electric SUV</li>
-                            <li>Q8 e-tron - Premium electric SUV</li>
-                            <li>e-tron GT - Electric gran turismo</li>
-                        </ul>
-                    </div>
-                    <div class="model-category-card">
-                        <h3>Performance (RS/S)</h3>
-                        <ul>
-                            <li>S3/RS 3 - Hot hatch/sedan</li>
-                            <li>S4/RS 4 - Performance sedans</li>
-                            <li>S5/RS 5 - Sport coupes</li>
-                            <li>RS 6 Avant - Super wagon</li>
-                            <li>RS Q8 - Performance SUV</li>
-                            <li>RS e-tron GT - Electric supercar</li>
-                        </ul>
-                    </div>
-                </div>
-            </section>
+        </div>
+    </div>
+
+    <div id="models" class="tab-content">
+        <div class="brand-content-wrapper">
+            
+    <section class="brand-section">
+        <h2>🚗 Complete Model Lineup 2024-2025</h2>
+        <p>Audi offers a comprehensive range of luxury vehicles with Quattro technology.</p>
+        <div class="models-grid">
+            <div class="model-category-card">
+                <h3>Sedans & Coupes</h3>
+                <ul>
+                    <li>A3 / S3 / RS3 - Compact luxury</li>
+                    <li>A4 / S4 / RS4 - Compact executive</li>
+                    <li>A5 / S5 / RS5 - Sportback & Coupe</li>
+                    <li>A6 / S6 / RS6 - Mid-size luxury</li>
+                    <li>A7 / S7 / RS7 - Sportback executive</li>
+                    <li>A8 / S8 - Flagship luxury sedan</li>
+                </ul>
+            </div>
+            <div class="model-category-card">
+                <h3>SUVs (Q Series)</h3>
+                <ul>
+                    <li>Q3 - Compact crossover</li>
+                    <li>Q5 / SQ5 - Best-selling luxury SUV</li>
+                    <li>Q7 / SQ7 - 7-seater luxury SUV</li>
+                    <li>Q8 / SQ8 / RSQ8 - Flagship SUV coupe</li>
+                </ul>
+            </div>
+            <div class="model-category-card">
+                <h3>e-tron (Electric)</h3>
+                <ul>
+                    <li>Q4 e-tron - Compact electric SUV</li>
+                    <li>Q8 e-tron - Flagship electric SUV</li>
+                    <li>e-tron GT / RS e-tron GT - Electric grand tourer</li>
+                    <li>Q6 e-tron - New generation electric SUV</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    
+        </div>
+    </div>
+
+    <div id="technology" class="tab-content">
+        <div class="brand-content-wrapper">
             <section class="brand-section">
                 <h2>🔬 Technology & Innovation</h2>
                 <p>Audi leads with cutting-edge technology:</p>
@@ -205,49 +187,54 @@
                     <div class="tech-item">
                         <h4>📱 MMI Touch Response</h4>
                         <p>Dual touchscreen infotainment with haptic feedback and natural voice control.</p>
-                    </div>
-                </div>
-            </section>
+        </div>
+    </div>
+
+    <div id="awards" class="tab-content">
+        <div class="brand-content-wrapper">
             <section class="brand-section">
                 <h2>🏆 Awards & Recognition</h2>
                 <div class="awards-grid">
                     <div class="award-badge">
                         <div class="award-icon">🥇</div>
                         <div class="award-title">World Car Awards</div>
-                        <div class="award-year">e-tron Winner 2024</div>
-                    </div>
-                    <div class="award-badge">
-                        <div class="award-icon">🌟</div>
-                        <div class="award-title">Premium Brand Leader</div>
-                        <div class="award-year">J.D. Power 2024</div>
-                    </div>
-                    <div class="award-badge">
-                        <div class="award-icon">🛡️</div>
-                        <div class="award-title">Top Safety Pick+</div>
-                        <div class="award-year">IIHS Multiple Models</div>
-                    </div>
-                    <div class="award-badge">
-                        <div class="award-icon">🏁</div>
-                        <div class="award-title">Formula E Champion</div>
-                        <div class="award-year">2024</div>
-                    </div>
-                    <div class="award-badge">
-                        <div class="award-icon">💎</div>
-                        <div class="award-title">Best Interior Design</div>
-                        <div class="award-year">Ward's Auto</div>
-                    </div>
-                    <div class="award-badge">
-                        <div class="award-icon">⚡</div>
-                        <div class="award-title">Best Electric Luxury</div>
-                        <div class="award-year">e-tron Excellence</div>
-                    </div>
-                </div>
-            </section>
+                        <div class="award-year">e-tron Winner 2024
         </div>
-    </main>    <!-- Footer -->
+    </div>
+
+    <!-- Footer -->
     <footer class="car-type-footer">
         <p>&copy; 2025 Engine Starters. All rights reserved.</p>
     </footer>
+
+    
+    <script>
+    function openTab(tabName) {
+        // Hide all tab contents
+        var tabContents = document.getElementsByClassName("tab-content");
+        for (var i = 0; i < tabContents.length; i++) {
+            tabContents[i].classList.remove("active");
+        }
+        
+        // Remove active class from all buttons
+        var tabButtons = document.getElementsByClassName("tab-button");
+        for (var i = 0; i < tabButtons.length; i++) {
+            tabButtons[i].classList.remove("active");
+        }
+        
+        // Show selected tab and activate button
+        document.getElementById(tabName).classList.add("active");
+        
+        // Find the button that called this function and add active class
+        var buttons = document.getElementsByTagName("button");
+        for (var i = 0; i < buttons.length; i++) {
+            if (buttons[i].getAttribute("onclick").includes("'" + tabName + "'")) {
+                buttons[i].classList.add("active");
+            }
+        }
+    }
+    </script>
+
     <script src="../../js/mobile-menu.js"></script>
 </body>
 </html>

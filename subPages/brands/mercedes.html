@@ -53,6 +53,18 @@
             </ul>
         </nav>
     </header>
+
+    <!-- Hero Section -->
+    <div class="brand-hero-wrapper">
+        <section class="brand-hero" style="background-image: url('../../images/brands/mercedes-hero.jpg');">
+                <div class="brand-hero-content">
+                    <h1>Mercedes-Benz</h1>
+                    <p class="brand-tagline">The Best or Nothing</p>
+                    <p class="brand-founded">Founded 1926 | Headquarters: Stuttgart, Germany</p>
+                </div>
+            </section>
+    </div>
+
     <nav class="breadcrumb-nav">
         <a href="../../index.html">Home</a>
         <span>»</span>
@@ -60,17 +72,20 @@
         <span>»</span>
         <span>Mercedes-Benz</span>
     </nav>
-    <main>
-        <div class="brand-hero-wrapper">
-            <section class="brand-hero" style="background-image: url('../../images/brands/mercedes-hero.jpg');">
-                <div class="brand-hero-content">
-                    <h1>Mercedes-Benz</h1>
-                    <p class="brand-tagline">The Best or Nothing</p>
-                    <p class="brand-founded">Founded 1926 | Headquarters: Stuttgart, Germany</p>
-                </div>
-            </section>
-        </div>
-        <section class="brand-quick-stats">
+
+    <!-- Tab Navigation -->
+    <div class="tab-navigation">
+        <button class="tab-button active" onclick="openTab('overview')">Overview</button>
+        <button class="tab-button" onclick="openTab('history')">History</button>
+        <button class="tab-button" onclick="openTab('models')">Models</button>
+        <button class="tab-button" onclick="openTab('technology')">Innovation</button>
+        <button class="tab-button" onclick="openTab('awards')">Awards</button>
+    </div>
+
+    <!-- Tab Contents -->
+    <div id="overview" class="tab-content active">
+        <div class="brand-content-wrapper">
+            <section class="brand-quick-stats">
             <div class="stats-container">
                 <div class="stat-box">
                     <span class="stat-number">#1</span>
@@ -87,9 +102,10 @@
                 <div class="stat-box">
                     <span class="stat-number">200+</span>
                     <span class="stat-label">Safety Innovations</span>
-                </div>
-            </div>
-        </section>
+        </div>
+    </div>
+
+    <div id="history" class="tab-content">
         <div class="brand-content-wrapper">
             <section class="brand-section">
                 <h2>🏛️ Brand History & Legacy</h2>
@@ -99,91 +115,59 @@
                 <p>The <strong>S-Class</strong> has been the flagship of luxury for decades, introducing technologies that eventually trickle down to all vehicles. <strong>AMG</strong>, Mercedes' performance division, creates some of the world's most powerful and desirable performance cars, from the GT to the Project ONE hypercar.</p>
                 <p>Today, Mercedes leads luxury electrification with the <strong>EQ</strong> line, including the revolutionary <strong>EQS</strong> electric sedan offering over 350 miles of range with uncompromised luxury.</p>
             </section>
-            <section class="brand-section">
-                <h2>💎 Core Values & Philosophy</h2>
-                <div class="brand-values-grid">
-                    <div class="value-card">
-                        <span class="value-icon">🌟</span>
-                        <h4>Uncompromising Luxury</h4>
-                        <p>Setting the global standard for automotive luxury with meticulous craftsmanship and premium materials.</p>
-                    </div>
-                    <div class="value-card">
-                        <span class="value-icon">🛡️</span>
-                        <h4>Safety Pioneer</h4>
-                        <p>Inventing safety technologies that protect occupants and save lives worldwide.</p>
-                    </div>
-                    <div class="value-card">
-                        <span class="value-icon">🔬</span>
-                        <h4>Engineering Excellence</h4>
-                        <p>German precision engineering delivering unmatched quality and performance.</p>
-                    </div>
-                    <div class="value-card">
-                        <span class="value-icon">⚡</span>
-                        <h4>Innovation Leadership</h4>
-                        <p>Pioneering technologies from autonomous driving to electric luxury vehicles.</p>
-                    </div>
-                    <div class="value-card">
-                        <span class="value-icon">🏁</span>
-                        <h4>Motorsport Heritage</h4>
-                        <p>Dominating Formula 1 and bringing racing technology to road cars through AMG.</p>
-                    </div>
-                    <div class="value-card">
-                        <span class="value-icon">💼</span>
-                        <h4>Prestige & Status</h4>
-                        <p>Representing success, achievement, and refined taste for over a century.</p>
-                    </div>
-                </div>
-            </section>
-            <section class="brand-section">
-                <h2>🚗 Complete Model Lineup 2024-2025</h2>
-                <div class="models-grid">
-                    <div class="model-category-card">
-                        <h3>Sedans & Coupes</h3>
-                        <ul>
-                            <li>A-Class - Compact luxury sedan</li>
-                            <li>C-Class - Executive sedan</li>
-                            <li>E-Class - Business class excellence</li>
-                            <li>S-Class - Flagship luxury</li>
-                            <li>CLS - 4-door coupe</li>
-                            <li>CLE - New coupe line</li>
-                            <li>AMG GT - Performance coupe</li>
-                        </ul>
-                    </div>
-                    <div class="model-category-card">
-                        <h3>SUVs</h3>
-                        <ul>
-                            <li>GLA - Compact SUV</li>
-                            <li>GLB - 7-seater compact</li>
-                            <li>GLC - Mid-size luxury SUV</li>
-                            <li>GLE - Full-size SUV</li>
-                            <li>GLS - Flagship SUV</li>
-                            <li>G-Class - Legendary off-roader</li>
-                        </ul>
-                    </div>
-                    <div class="model-category-card">
-                        <h3>Electric (EQ)</h3>
-                        <ul>
-                            <li>EQA - Compact electric SUV</li>
-                            <li>EQB - 7-seater electric</li>
-                            <li>EQE - Executive electric sedan</li>
-                            <li>EQS - Luxury electric flagship</li>
-                            <li>EQE SUV - Electric mid-size</li>
-                            <li>EQS SUV - Electric luxury SUV</li>
-                        </ul>
-                    </div>
-                    <div class="model-category-card">
-                        <h3>AMG Performance</h3>
-                        <ul>
-                            <li>AMG C 63 - Performance sedan</li>
-                            <li>AMG E 63 - Super sedan</li>
-                            <li>AMG GT - Sports car</li>
-                            <li>AMG SL - Roadster</li>
-                            <li>AMG GLE 63 - Performance SUV</li>
-                            <li>AMG G 63 - Ultimate off-road</li>
-                        </ul>
-                    </div>
-                </div>
-            </section>
+        </div>
+    </div>
+
+    <div id="models" class="tab-content">
+        <div class="brand-content-wrapper">
+            
+    <section class="brand-section">
+        <h2>🚗 Complete Model Lineup 2024-2025</h2>
+        <p>Mercedes-Benz offers the world's most diverse luxury portfolio.</p>
+        <div class="models-grid">
+            <div class="model-category-card">
+                <h3>Sedans & Wagons</h3>
+                <ul>
+                    <li>C-Class - Compact luxury</li>
+                    <li>E-Class - The heart of the brand</li>
+                    <li>S-Class - The luxury benchmark</li>
+                    <li>CLA / CLS - 4-door coupes</li>
+                </ul>
+            </div>
+            <div class="model-category-card">
+                <h3>SUVs</h3>
+                <ul>
+                    <li>GLA / GLB - Compact SUVs</li>
+                    <li>GLC / GLE - Mid-size luxury SUVs</li>
+                    <li>GLS - The S-Class of SUVs</li>
+                    <li>G-Class - The off-road icon</li>
+                </ul>
+            </div>
+            <div class="model-category-card">
+                <h3>Mercedes-EQ (Electric)</h3>
+                <ul>
+                    <li>EQA / EQB - Compact electric SUVs</li>
+                    <li>EQE - Electric executive sedan/SUV</li>
+                    <li>EQS - Electric luxury flagship sedan/SUV</li>
+                    <li>G 580 with EQ Technology - Electric G-Wagon</li>
+                </ul>
+            </div>
+            <div class="model-category-card">
+                <h3>Mercedes-AMG</h3>
+                <ul>
+                    <li>AMG GT - Sports car</li>
+                    <li>SL Roadster - Iconic convertible</li>
+                    <li>One - F1-engine hypercar</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    
+        </div>
+    </div>
+
+    <div id="technology" class="tab-content">
+        <div class="brand-content-wrapper">
             <section class="brand-section">
                 <h2>🔬 Technology & Innovation</h2>
                 <div class="tech-grid">
@@ -210,49 +194,54 @@
                     <div class="tech-item">
                         <h4>✨ Digital Light</h4>
                         <p>Intelligent headlights with 2.6 million pixels projecting symbols and warnings on road.</p>
-                    </div>
-                </div>
-            </section>
+        </div>
+    </div>
+
+    <div id="awards" class="tab-content">
+        <div class="brand-content-wrapper">
             <section class="brand-section">
                 <h2>🏆 Awards & Recognition</h2>
                 <div class="awards-grid">
                     <div class="award-badge">
                         <div class="award-icon">🥇</div>
                         <div class="award-title">World Luxury Car</div>
-                        <div class="award-year">EQS 2022</div>
-                    </div>
-                    <div class="award-badge">
-                        <div class="award-icon">🌟</div>
-                        <div class="award-title">Best Luxury Brand</div>
-                        <div class="award-year">Multiple Awards 2024</div>
-                    </div>
-                    <div class="award-badge">
-                        <div class="award-icon">🛡️</div>
-                        <div class="award-title">Top Safety Pick+</div>
-                        <div class="award-year">IIHS Multiple Models</div>
-                    </div>
-                    <div class="award-badge">
-                        <div class="award-icon">🏁</div>
-                        <div class="award-title">F1 Constructor Champion</div>
-                        <div class="award-year">2023</div>
-                    </div>
-                    <div class="award-badge">
-                        <div class="award-icon">💎</div>
-                        <div class="award-title">Best Interior</div>
-                        <div class="award-year">Ward's Auto 2024</div>
-                    </div>
-                    <div class="award-badge">
-                        <div class="award-icon">⚡</div>
-                        <div class="award-title">Best Electric Luxury</div>
-                        <div class="award-year">EQS Excellence</div>
-                    </div>
-                </div>
-            </section>
+                        <div class="award-year">EQS 2022
         </div>
-    </main>    <!-- Footer -->
+    </div>
+
+    <!-- Footer -->
     <footer class="car-type-footer">
         <p>&copy; 2025 Engine Starters. All rights reserved.</p>
     </footer>
+
+    
+    <script>
+    function openTab(tabName) {
+        // Hide all tab contents
+        var tabContents = document.getElementsByClassName("tab-content");
+        for (var i = 0; i < tabContents.length; i++) {
+            tabContents[i].classList.remove("active");
+        }
+        
+        // Remove active class from all buttons
+        var tabButtons = document.getElementsByClassName("tab-button");
+        for (var i = 0; i < tabButtons.length; i++) {
+            tabButtons[i].classList.remove("active");
+        }
+        
+        // Show selected tab and activate button
+        document.getElementById(tabName).classList.add("active");
+        
+        // Find the button that called this function and add active class
+        var buttons = document.getElementsByTagName("button");
+        for (var i = 0; i < buttons.length; i++) {
+            if (buttons[i].getAttribute("onclick").includes("'" + tabName + "'")) {
+                buttons[i].classList.add("active");
+            }
+        }
+    }
+    </script>
+
     <script src="../../js/mobile-menu.js"></script>
 </body>
 </html>

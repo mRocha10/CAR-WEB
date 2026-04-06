@@ -41,7 +41,6 @@
     </script>
 </head>
 <body>
-    <!-- Header -->
     <header>
         <a href="../../index.html" style="text-decoration: none; color: inherit;">
             <div class="logo">
@@ -61,7 +60,17 @@
         </nav>
     </header>
 
-    <!-- Breadcrumb Navigation -->
+    <!-- Hero Section -->
+    <div class="brand-hero-wrapper">
+        <section class="brand-hero" style="background-image: url('../../images/brands/tesla-hero.jpg');">
+                <div class="brand-hero-content">
+                    <h1>Tesla</h1>
+                    <p class="brand-tagline">Accelerating the World's Transition to Sustainable Energy</p>
+                    <p class="brand-founded">Founded 2003 | Headquarters: Austin, Texas, USA</p>
+                </div>
+            </section>
+    </div>
+
     <nav class="breadcrumb-nav">
         <a href="../../index.html">Home</a>
         <span>»</span>
@@ -70,21 +79,19 @@
         <span>Tesla</span>
     </nav>
 
-    <!-- Main Content -->
-    <main>
-        <!-- Hero Section -->
-        <div class="brand-hero-wrapper">
-            <section class="brand-hero" style="background-image: url('../../images/brands/tesla-hero.jpg');">
-                <div class="brand-hero-content">
-                    <h1>Tesla</h1>
-                    <p class="brand-tagline">Accelerating the World's Transition to Sustainable Energy</p>
-                    <p class="brand-founded">Founded 2003 | Headquarters: Austin, Texas, USA</p>
-                </div>
-            </section>
-        </div>
+    <!-- Tab Navigation -->
+    <div class="tab-navigation">
+        <button class="tab-button active" onclick="openTab('overview')">Overview</button>
+        <button class="tab-button" onclick="openTab('history')">History</button>
+        <button class="tab-button" onclick="openTab('models')">Models</button>
+        <button class="tab-button" onclick="openTab('technology')">Innovation</button>
+        <button class="tab-button" onclick="openTab('awards')">Awards</button>
+    </div>
 
-        <!-- Quick Stats -->
-        <section class="brand-quick-stats">
+    <!-- Tab Contents -->
+    <div id="overview" class="tab-content active">
+        <div class="brand-content-wrapper">
+            <section class="brand-quick-stats">
             <div class="stats-container">
                 <div class="stat-box">
                     <span class="stat-number">#1</span>
@@ -101,14 +108,11 @@
                 <div class="stat-box">
                     <span class="stat-number">50K+</span>
                     <span class="stat-label">Superchargers Globally</span>
-                </div>
-            </div>
-        </section>
+        </div>
+    </div>
 
-        <!-- Main Content Wrapper -->
+    <div id="history" class="tab-content">
         <div class="brand-content-wrapper">
-
-            <!-- Brand History Section -->
             <section class="brand-section">
                 <h2>🏛️ Brand History & Legacy</h2>
                 <p>Founded in <strong>2003</strong> by Martin Eberhard and Marc Tarpenning, Tesla Motors (now Tesla, Inc.) was named after inventor Nikola Tesla. <strong>Elon Musk</strong> joined as chairman and lead investor in 2004, becoming CEO in 2008. Tesla has fundamentally changed the automotive industry by proving that electric vehicles can outperform traditional gasoline cars in every meaningful way.</p>
@@ -120,79 +124,46 @@
 
                 <p>Tesla's impact extends beyond vehicles. The company's <strong>Gigafactories</strong> represent the future of automotive manufacturing, integrating battery production with vehicle assembly for unprecedented efficiency. Tesla's mission encompasses sustainable energy through solar panels, Solar Roof, and Powerwall home batteries.</p>
             </section>
+        </div>
+    </div>
 
-            <!-- Brand Values & Philosophy -->
-            <section class="brand-section">
-                <h2>💎 Core Values & Philosophy</h2>
-                <p>Tesla's revolutionary approach is built on key principles:</p>
-                
-                <div class="brand-values-grid">
-                    <div class="value-card">
-                        <span class="value-icon">⚡</span>
-                        <h4>Sustainable Energy</h4>
-                        <p>Accelerating the world's transition to sustainable energy through electric vehicles and renewable energy products.</p>
-                    </div>
-                    <div class="value-card">
-                        <span class="value-icon">🚀</span>
-                        <h4>Innovation First</h4>
-                        <p>Pioneering breakthrough technologies from battery systems to autonomous driving and manufacturing processes.</p>
-                    </div>
-                    <div class="value-card">
-                        <span class="value-icon">🎯</span>
-                        <h4>Vertical Integration</h4>
-                        <p>Controlling the entire supply chain from battery cells to software, ensuring quality and innovation.</p>
-                    </div>
-                    <div class="value-card">
-                        <span class="value-icon">🌍</span>
-                        <h4>Environmental Impact</h4>
-                        <p>Reducing global carbon emissions through widespread adoption of electric vehicles and solar energy.</p>
-                    </div>
-                    <div class="value-card">
-                        <span class="value-icon">💻</span>
-                        <h4>Software Excellence</h4>
-                        <p>Treating cars as computers on wheels with over-the-air updates and continuous improvements.</p>
-                    </div>
-                    <div class="value-card">
-                        <span class="value-icon">🔬</span>
-                        <h4>First Principles</h4>
-                        <p>Questioning every assumption and building solutions from fundamental truths rather than convention.</p>
-                    </div>
-                </div>
-            </section>
+    <div id="models" class="tab-content">
+        <div class="brand-content-wrapper">
+            
+    <section class="brand-section">
+        <h2>🚗 Complete Model Lineup 2024-2025</h2>
+        <p>Tesla accelerates the world's transition to sustainable energy.</p>
+        <div class="models-grid">
+            <div class="model-category-card">
+                <h3>Core Models</h3>
+                <ul>
+                    <li>Model 3 - The world's best-selling electric sedan</li>
+                    <li>Model Y - The world's best-selling car</li>
+                </ul>
+            </div>
+            <div class="model-category-card">
+                <h3>Flagship</h3>
+                <ul>
+                    <li>Model S - The ultimate electric sedan (Plaid available)</li>
+                    <li>Model X - The ultimate electric SUV (Plaid available)</li>
+                </ul>
+            </div>
+            <div class="model-category-card">
+                <h3>Future</h3>
+                <ul>
+                    <li>Cybertruck - Built for any planet</li>
+                    <li>Semi - The future of trucking</li>
+                    <li>Roadster - The quickest car in the world (Upcoming)</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    
+        </div>
+    </div>
 
-            <!-- Current Model Lineup -->
-            <section class="brand-section">
-                <h2>🚗 Complete Model Lineup 2024-2025</h2>
-                <p>Tesla offers a comprehensive range of electric vehicles for every need and budget.</p>
-                
-                <div class="models-grid">
-                    <div class="model-category-card">
-                        <h3>Passenger Vehicles</h3>
-                        <ul>
-                            <li>Model 3 - Best-selling EV worldwide</li>
-                            <li>Model 3 Performance - 0-60 in 3.1s</li>
-                            <li>Model S - Flagship luxury sedan</li>
-                            <li>Model S Plaid - 1,020 HP, 200 mph top speed</li>
-                            <li>Model X - Premium electric SUV</li>
-                            <li>Model X Plaid - Fastest SUV ever</li>
-                            <li>Model Y - Compact electric SUV</li>
-                            <li>Model Y Performance - All-wheel drive performance</li>
-                        </ul>
-                    </div>
-
-                    <div class="model-category-card">
-                        <h3>Future & Specialized</h3>
-                        <ul>
-                            <li>Cybertruck - Revolutionary electric pickup</li>
-                            <li>Tesla Semi - Electric commercial truck</li>
-                            <li>Roadster (Next Gen) - 0-60 in 1.9s</li>
-                            <li>Optimus - Humanoid robot (in development)</li>
-                        </ul>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Technology & Innovation -->
+    <div id="technology" class="tab-content">
+        <div class="brand-content-wrapper">
             <section class="brand-section">
                 <h2>🔬 Technology & Innovation</h2>
                 <p>Tesla leads automotive technology with revolutionary innovations:</p>
@@ -221,52 +192,54 @@
                     <div class="tech-item">
                         <h4>🏭 Gigacasting</h4>
                         <p>Revolutionary manufacturing using massive casting machines to create single-piece body components.</p>
-                    </div>
-                </div>
-            </section>
+        </div>
+    </div>
 
-            <!-- Awards & Recognition -->
+    <div id="awards" class="tab-content">
+        <div class="brand-content-wrapper">
             <section class="brand-section">
                 <h2>🏆 Awards & Recognition</h2>
                 <div class="awards-grid">
                     <div class="award-badge">
                         <div class="award-icon">🥇</div>
                         <div class="award-title">World's Most Valuable Automaker</div>
-                        <div class="award-year">2024</div>
-                    </div>
-                    <div class="award-badge">
-                        <div class="award-icon">⭐</div>
-                        <div class="award-title">5-Star Safety Rating</div>
-                        <div class="award-year">All Models - NHTSA</div>
-                    </div>
-                    <div class="award-badge">
-                        <div class="award-icon">🌟</div>
-                        <div class="award-title">Best Electric Vehicle</div>
-                        <div class="award-year">Multiple Awards 2024</div>
-                    </div>
-                    <div class="award-badge">
-                        <div class="award-icon">♻️</div>
-                        <div class="award-title">Sustainability Leader</div>
-                        <div class="award-year">Carbon Impact 2024</div>
-                    </div>
-                    <div class="award-badge">
-                        <div class="award-icon">💎</div>
-                        <div class="award-title">Highest Customer Satisfaction</div>
-                        <div class="award-year">Consumer Reports</div>
-                    </div>
-                    <div class="award-badge">
-                        <div class="award-icon">🚀</div>
-                        <div class="award-title">Innovation Excellence</div>
-                        <div class="award-year">Technology Pioneer</div>
-                    </div>
-                </div>
-            </section>
-
+                        <div class="award-year">2024
         </div>
-    </main>    <!-- Footer -->
+    </div>
+
+    <!-- Footer -->
     <footer class="car-type-footer">
         <p>&copy; 2025 Engine Starters. All rights reserved.</p>
     </footer>
+
+    
+    <script>
+    function openTab(tabName) {
+        // Hide all tab contents
+        var tabContents = document.getElementsByClassName("tab-content");
+        for (var i = 0; i < tabContents.length; i++) {
+            tabContents[i].classList.remove("active");
+        }
+        
+        // Remove active class from all buttons
+        var tabButtons = document.getElementsByClassName("tab-button");
+        for (var i = 0; i < tabButtons.length; i++) {
+            tabButtons[i].classList.remove("active");
+        }
+        
+        // Show selected tab and activate button
+        document.getElementById(tabName).classList.add("active");
+        
+        // Find the button that called this function and add active class
+        var buttons = document.getElementsByTagName("button");
+        for (var i = 0; i < buttons.length; i++) {
+            if (buttons[i].getAttribute("onclick").includes("'" + tabName + "'")) {
+                buttons[i].classList.add("active");
+            }
+        }
+    }
+    </script>
+
     <script src="../../js/mobile-menu.js"></script>
 </body>
 </html>

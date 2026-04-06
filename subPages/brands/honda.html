@@ -56,6 +56,17 @@
         </nav>
     </header>
 
+    <!-- Hero Section -->
+    <div class="brand-hero-wrapper">
+        <section class="brand-hero" style="background-image: url('../../images/brands/honda-hero.jpg');">
+                <div class="brand-hero-content">
+                    <h1>Honda</h1>
+                    <p class="brand-tagline">The Power of Dreams</p>
+                    <p class="brand-founded">Founded 1948 | Headquarters: Tokyo, Japan</p>
+                </div>
+            </section>
+    </div>
+
     <nav class="breadcrumb-nav">
         <a href="../../index.html">Home</a>
         <span>»</span>
@@ -64,18 +75,19 @@
         <span>Honda</span>
     </nav>
 
-    <main>
-        <div class="brand-hero-wrapper">
-            <section class="brand-hero" style="background-image: url('../../images/brands/honda-hero.jpg');">
-                <div class="brand-hero-content">
-                    <h1>Honda</h1>
-                    <p class="brand-tagline">The Power of Dreams</p>
-                    <p class="brand-founded">Founded 1948 | Headquarters: Tokyo, Japan</p>
-                </div>
-            </section>
-        </div>
+    <!-- Tab Navigation -->
+    <div class="tab-navigation">
+        <button class="tab-button active" onclick="openTab('overview')">Overview</button>
+        <button class="tab-button" onclick="openTab('history')">History</button>
+        <button class="tab-button" onclick="openTab('models')">Models</button>
+        <button class="tab-button" onclick="openTab('technology')">Innovation</button>
+        <button class="tab-button" onclick="openTab('awards')">Awards</button>
+    </div>
 
-        <section class="brand-quick-stats">
+    <!-- Tab Contents -->
+    <div id="overview" class="tab-content active">
+        <div class="brand-content-wrapper">
+            <section class="brand-quick-stats">
             <div class="stats-container">
                 <div class="stat-box">
                     <span class="stat-number">#1</span>
@@ -92,10 +104,10 @@
                 <div class="stat-box">
                     <span class="stat-number">Top 5</span>
                     <span class="stat-label">Reliability Rankings</span>
-                </div>
-            </div>
-        </section>
+        </div>
+    </div>
 
+    <div id="history" class="tab-content">
         <div class="brand-content-wrapper">
             <section class="brand-section">
                 <h2>🏛️ Brand History & Legacy</h2>
@@ -108,83 +120,52 @@
 
                 <p>Today, Honda leads in hybrid technology with models like the <strong>Accord Hybrid</strong> and <strong>CR-V Hybrid</strong>, while developing advanced safety systems through Honda Sensing technology.</p>
             </section>
+        </div>
+    </div>
 
-            <section class="brand-section">
-                <h2>💎 Core Values & Philosophy</h2>
-                <p>Honda's success is built on fundamental principles:</p>
-                
-                <div class="brand-values-grid">
-                    <div class="value-card">
-                        <span class="value-icon">🔧</span>
-                        <h4>Engineering Innovation</h4>
-                        <p>Pioneering technologies like VTEC, i-VTEC, and Earth Dreams powertrains for optimal performance and efficiency.</p>
-                    </div>
-                    <div class="value-card">
-                        <span class="value-icon">💎</span>
-                        <h4>Legendary Reliability</h4>
-                        <p>Building vehicles that consistently exceed 200,000 miles with proper maintenance and minimal repairs.</p>
-                    </div>
-                    <div class="value-card">
-                        <span class="value-icon">🎯</span>
-                        <h4>Customer Satisfaction</h4>
-                        <p>Consistently ranking at the top of customer satisfaction and reliability surveys year after year.</p>
-                    </div>
-                    <div class="value-card">
-                        <span class="value-icon">🌍</span>
-                        <h4>Environmental Responsibility</h4>
-                        <p>Leading in fuel efficiency and developing advanced hybrid and electric vehicle technologies.</p>
-                    </div>
-                    <div class="value-card">
-                        <span class="value-icon">🏁</span>
-                        <h4>Racing Heritage</h4>
-                        <p>From Formula 1 to IndyCar, applying racing technology to create better road cars.</p>
-                    </div>
-                    <div class="value-card">
-                        <span class="value-icon">💪</span>
-                        <h4>Value & Affordability</h4>
-                        <p>Delivering exceptional value with low ownership costs and strong resale values.</p>
-                    </div>
-                </div>
-            </section>
+    <div id="models" class="tab-content">
+        <div class="brand-content-wrapper">
+            
+    <section class="brand-section">
+        <h2>🚗 Complete Model Lineup 2024-2025</h2>
+        <p>Honda delivers reliability, efficiency, and driving joy.</p>
+        <div class="models-grid">
+            <div class="model-category-card">
+                <h3>Cars</h3>
+                <ul>
+                    <li>Civic - Compact benchmark</li>
+                    <li>Civic Type R - High-performance hatch</li>
+                    <li>Accord - Mid-size sedan</li>
+                    <li>Accord Hybrid - Efficient comfort</li>
+                </ul>
+            </div>
+            <div class="model-category-card">
+                <h3>SUVs & Trucks</h3>
+                <ul>
+                    <li>CR-V - Best-selling SUV</li>
+                    <li>CR-V Hybrid - Sporty hybrid</li>
+                    <li>Pilot - Family 3-row SUV</li>
+                    <li>Passport - Adventure SUV</li>
+                    <li>HR-V - Compact crossover</li>
+                    <li>Ridgeline - Innovative pickup</li>
+                    <li>Odyssey - Premium minivan</li>
+                </ul>
+            </div>
+            <div class="model-category-card">
+                <h3>Electrified</h3>
+                <ul>
+                    <li>Prologue - All-electric SUV</li>
+                    <li>CR-V FCEV - Hydrogen fuel cell</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    
+        </div>
+    </div>
 
-            <section class="brand-section">
-                <h2>🚗 Complete Model Lineup 2024-2025</h2>
-                <p>Honda offers vehicles renowned for reliability, efficiency, and practicality.</p>
-                
-                <div class="models-grid">
-                    <div class="model-category-card">
-                        <h3>Sedans & Hatchbacks</h3>
-                        <ul>
-                            <li>Civic - Legendary compact car</li>
-                            <li>Civic Si - Sport performance</li>
-                            <li>Civic Type R - Hot hatch champion</li>
-                            <li>Accord - Mid-size excellence</li>
-                            <li>Accord Hybrid - 50+ MPG efficiency</li>
-                            <li>Insight - Dedicated hybrid sedan</li>
-                        </ul>
-                    </div>
-
-                    <div class="model-category-card">
-                        <h3>SUVs & Crossovers</h3>
-                        <ul>
-                            <li>HR-V - Subcompact SUV</li>
-                            <li>CR-V - Best-selling compact SUV</li>
-                            <li>CR-V Hybrid - Fuel-efficient SUV</li>
-                            <li>Passport - Mid-size adventure SUV</li>
-                            <li>Pilot - 3-row family SUV</li>
-                        </ul>
-                    </div>
-
-                    <div class="model-category-card">
-                        <h3>Trucks & Vans</h3>
-                        <ul>
-                            <li>Ridgeline - Innovative mid-size truck</li>
-                            <li>Odyssey - Premium minivan</li>
-                        </ul>
-                    </div>
-                </div>
-            </section>
-
+    <div id="technology" class="tab-content">
+        <div class="brand-content-wrapper">
             <section class="brand-section">
                 <h2>🔬 Technology & Innovation</h2>
                 <p>Honda continues to pioneer automotive technology:</p>
@@ -213,51 +194,54 @@
                     <div class="tech-item">
                         <h4>⚡ Earth Dreams Technology</h4>
                         <p>Next-generation powertrains delivering class-leading fuel economy and emissions reduction.</p>
-                    </div>
-                </div>
-            </section>
+        </div>
+    </div>
 
+    <div id="awards" class="tab-content">
+        <div class="brand-content-wrapper">
             <section class="brand-section">
                 <h2>🏆 Awards & Recognition</h2>
                 <div class="awards-grid">
                     <div class="award-badge">
                         <div class="award-icon">🥇</div>
                         <div class="award-title">Most Reliable Brand</div>
-                        <div class="award-year">Consumer Reports 2024</div>
-                    </div>
-                    <div class="award-badge">
-                        <div class="award-icon">🌟</div>
-                        <div class="award-title">Best Value Brand</div>
-                        <div class="award-year">Kelley Blue Book</div>
-                    </div>
-                    <div class="award-badge">
-                        <div class="award-icon">🛡️</div>
-                        <div class="award-title">Top Safety Pick+</div>
-                        <div class="award-year">IIHS Multiple Models</div>
-                    </div>
-                    <div class="award-badge">
-                        <div class="award-icon">♻️</div>
-                        <div class="award-title">Green Car Awards</div>
-                        <div class="award-year">Environmental Excellence</div>
-                    </div>
-                    <div class="award-badge">
-                        <div class="award-icon">💎</div>
-                        <div class="award-title">Best Resale Value</div>
-                        <div class="award-year">ALG Awards</div>
-                    </div>
-                    <div class="award-badge">
-                        <div class="award-icon">⭐</div>
-                        <div class="award-title">5-Star Safety</div>
-                        <div class="award-year">NHTSA Ratings</div>
-                    </div>
-                </div>
-            </section>
-
+                        <div class="award-year">Consumer Reports 2024
         </div>
-    </main>    <!-- Footer -->
+    </div>
+
+    <!-- Footer -->
     <footer class="car-type-footer">
         <p>&copy; 2025 Engine Starters. All rights reserved.</p>
     </footer>
+
+    
+    <script>
+    function openTab(tabName) {
+        // Hide all tab contents
+        var tabContents = document.getElementsByClassName("tab-content");
+        for (var i = 0; i < tabContents.length; i++) {
+            tabContents[i].classList.remove("active");
+        }
+        
+        // Remove active class from all buttons
+        var tabButtons = document.getElementsByClassName("tab-button");
+        for (var i = 0; i < tabButtons.length; i++) {
+            tabButtons[i].classList.remove("active");
+        }
+        
+        // Show selected tab and activate button
+        document.getElementById(tabName).classList.add("active");
+        
+        // Find the button that called this function and add active class
+        var buttons = document.getElementsByTagName("button");
+        for (var i = 0; i < buttons.length; i++) {
+            if (buttons[i].getAttribute("onclick").includes("'" + tabName + "'")) {
+                buttons[i].classList.add("active");
+            }
+        }
+    }
+    </script>
+
     <script src="../../js/mobile-menu.js"></script>
 </body>
 </html>

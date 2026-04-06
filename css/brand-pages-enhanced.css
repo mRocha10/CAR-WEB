@@ -1,5 +1,184 @@
 /* Enhanced Brand Pages Styling - Modern, Professional, SEO-Optimized */
 
+/* --- Variables (Imported from Modern Styles) --- */
+:root {
+    /* Colors */
+    --primary-color: #0D1B2A;
+    --secondary-color: #415A77;
+    --accent-color: #E07A5F;
+    --highlight-color: #3a7bd5;
+    --text-color: #333333;
+    --light-text: #666666;
+    --background-color: #F0F4F8;
+    --card-background: #FFFFFF;
+    --white: #FFFFFF;
+    
+    /* Spacing */
+    --spacing-sm: 0.5rem;
+    --spacing-md: 1rem;
+    --spacing-lg: 2rem;
+    --spacing-xl: 4rem;
+    
+    /* Typography */
+    --font-primary: 'Montserrat', sans-serif;
+    --font-secondary: 'Open Sans', sans-serif;
+    
+    /* Shadows & Transitions */
+    --shadow-sm: 0 2px 4px rgba(0,0,0,0.1);
+    --shadow-md: 0 4px 6px rgba(13, 27, 42, 0.1);
+    --shadow-lg: 0 10px 15px rgba(0,0,0,0.1);
+    --transition: all 0.3s ease;
+    
+    /* Layout */
+    --container-width: 1200px;
+    --header-height: 80px;
+}
+
+/* --- Header Styles (Imported from Modern Styles) --- */
+header {
+    background-color: var(--card-background);
+    box-shadow: var(--shadow-md);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.logo {
+    display: flex;
+    flex-direction: column;
+}
+
+.logo h1 {
+    font-size: 1.8rem;
+    margin-bottom: 0;
+    color: var(--primary-color);
+    text-shadow: none;
+    font-family: var(--font-primary);
+}
+
+.logo h2 {
+    font-size: 0.9rem;
+    color: var(--light-text);
+    font-weight: 500;
+    margin-bottom: 0;
+    display: block;
+    font-family: var(--font-secondary);
+}
+
+/* Nav */
+nav ul {
+    display: flex;
+    gap: 1.5rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav a {
+    font-weight: 600;
+    color: var(--primary-color);
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: var(--transition);
+    font-family: var(--font-secondary);
+}
+
+nav a:hover, nav a.active {
+    background-color: var(--primary-color);
+    color: var(--white);
+}
+
+/* Mobile Menu Toggle */
+.mobile-toggle {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+    z-index: 1001;
+}
+
+.hamburger {
+    width: 24px;
+    height: 2px;
+    background: var(--primary-color);
+    position: relative;
+    transition: var(--transition);
+}
+
+.hamburger::before, .hamburger::after {
+    content: '';
+    position: absolute;
+    width: 24px;
+    height: 2px;
+    background: var(--primary-color);
+    left: 0;
+    transition: var(--transition);
+}
+
+.hamburger::before { top: -8px; }
+.hamburger::after { top: 8px; }
+
+.mobile-toggle.active .hamburger { background: transparent; }
+.mobile-toggle.active .hamburger::before { top: 0; transform: rotate(45deg); }
+.mobile-toggle.active .hamburger::after { top: 0; transform: rotate(-45deg); }
+
+/* Header Responsive */
+@media (max-width: 768px) {
+    :root {
+        --header-height: 60px;
+    }
+    
+    header {
+        padding: 0.5rem 1rem;
+    }
+
+    .mobile-toggle {
+        display: block;
+    }
+
+    nav {
+        position: fixed;
+        top: var(--header-height);
+        left: 0;
+        right: 0;
+        background: var(--white);
+        box-shadow: var(--shadow-lg);
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease-in-out;
+        flex-direction: column;
+        display: block;
+    }
+
+    nav.active {
+        max-height: 100vh;
+    }
+
+    nav ul {
+        flex-direction: column;
+        padding: 1rem;
+        gap: 0;
+    }
+
+    nav a {
+        display: block;
+        padding: 1rem;
+        border-bottom: 1px solid #eee;
+        width: 100%;
+    }
+
+    .logo h2 { display: none; }
+}
+
+/* --- Brand Pages Specific Styling --- */
+
 /* Brand Hero Section */
 .brand-hero-wrapper {
     position: relative;
@@ -48,6 +227,7 @@
     color: white;
     text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
     animation: fadeInUp 0.8s ease-out;
+    font-family: var(--font-primary);
 }
 
 .brand-tagline {
@@ -56,12 +236,14 @@
     margin-bottom: 2rem;
     color: #E0E0E0;
     animation: fadeInUp 0.8s ease-out 0.2s both;
+    font-family: var(--font-secondary);
 }
 
 .brand-founded {
     font-size: 1rem;
     color: #B0B0B0;
     animation: fadeInUp 0.8s ease-out 0.4s both;
+    font-family: var(--font-secondary);
 }
 
 /* Breadcrumb Navigation */
@@ -162,6 +344,7 @@
     padding-bottom: 1rem;
     border-bottom: 3px solid #3a7bd5;
     position: relative;
+    font-family: var(--font-primary);
 }
 
 .brand-section h2::after {
@@ -178,6 +361,7 @@
     font-size: 1.6rem;
     color: #1B2838;
     margin: 2rem 0 1rem 0;
+    font-family: var(--font-primary);
 }
 
 .brand-section p {
@@ -219,6 +403,7 @@
     font-size: 1.3rem;
     color: #0D1B2A;
     margin-bottom: 0.8rem;
+    font-family: var(--font-primary);
 }
 
 .value-card p {
@@ -256,6 +441,7 @@
     margin: 0 0 1.5rem 0;
     padding-bottom: 1rem;
     border-bottom: 2px solid #3a7bd5;
+    font-family: var(--font-primary);
 }
 
 .model-category-card ul {
@@ -316,6 +502,7 @@
     font-size: 1.2rem;
     color: #0D1B2A;
     margin-bottom: 0.8rem;
+    font-family: var(--font-primary);
 }
 
 .tech-item p {

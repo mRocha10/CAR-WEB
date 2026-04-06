@@ -41,7 +41,6 @@
     </script>
 </head>
 <body>
-    <!-- Header -->
     <header>
         <a href="../../index.html" style="text-decoration: none; color: inherit;">
             <div class="logo">
@@ -61,7 +60,17 @@
         </nav>
     </header>
 
-    <!-- Breadcrumb Navigation -->
+    <!-- Hero Section -->
+    <div class="brand-hero-wrapper">
+        <section class="brand-hero" style="background-image: url('../../images/brands/bmw-hero.jpg');">
+                <div class="brand-hero-content">
+                    <h1>BMW</h1>
+                    <p class="brand-tagline">The Ultimate Driving Machine</p>
+                    <p class="brand-founded">Founded 1916 | Headquarters: Munich, Germany</p>
+                </div>
+            </section>
+    </div>
+
     <nav class="breadcrumb-nav">
         <a href="../../index.html">Home</a>
         <span>»</span>
@@ -70,21 +79,19 @@
         <span>BMW</span>
     </nav>
 
-    <!-- Main Content -->
-    <main>
-        <!-- Hero Section -->
-        <div class="brand-hero-wrapper">
-            <section class="brand-hero" style="background-image: url('../../images/brands/bmw-hero.jpg');">
-                <div class="brand-hero-content">
-                    <h1>BMW</h1>
-                    <p class="brand-tagline">The Ultimate Driving Machine</p>
-                    <p class="brand-founded">Founded 1916 | Headquarters: Munich, Germany</p>
-                </div>
-            </section>
-        </div>
+    <!-- Tab Navigation -->
+    <div class="tab-navigation">
+        <button class="tab-button active" onclick="openTab('overview')">Overview</button>
+        <button class="tab-button" onclick="openTab('history')">History</button>
+        <button class="tab-button" onclick="openTab('models')">Models</button>
+        <button class="tab-button" onclick="openTab('technology')">Innovation</button>
+        <button class="tab-button" onclick="openTab('awards')">Awards</button>
+    </div>
 
-        <!-- Quick Stats -->
-        <section class="brand-quick-stats">
+    <!-- Tab Contents -->
+    <div id="overview" class="tab-content active">
+        <div class="brand-content-wrapper">
+            <section class="brand-quick-stats">
             <div class="stats-container">
                 <div class="stat-box">
                     <span class="stat-number">#1</span>
@@ -101,14 +108,11 @@
                 <div class="stat-box">
                     <span class="stat-number">15+</span>
                     <span class="stat-label">Electric Models</span>
-                </div>
-            </div>
-        </section>
+        </div>
+    </div>
 
-        <!-- Main Content Wrapper -->
+    <div id="history" class="tab-content">
         <div class="brand-content-wrapper">
-
-            <!-- Brand History Section -->
             <section class="brand-section">
                 <h2>🏛️ Brand History & Legacy</h2>
                 <p>Founded in <strong>1916</strong> as <strong>Bayerische Motoren Werke (BMW)</strong>, the company began as an aircraft engine manufacturer before transitioning to motorcycles in 1923 and automobiles in 1928. The iconic BMW roundel logo represents a spinning aircraft propeller, paying homage to the company's aviation heritage.</p>
@@ -120,107 +124,62 @@
 
                 <p>Today, BMW stands at the forefront of electrification with its <strong>BMW i</strong> and <strong>iX</strong> series, combining sustainable mobility with the brand's signature driving dynamics. The company's vision of "<strong>Freude am Fahren</strong>" (The Joy of Driving) continues to define every vehicle it creates.</p>
             </section>
+        </div>
+    </div>
 
-            <!-- Brand Values & Philosophy -->
-            <section class="brand-section">
-                <h2>💎 Core Values & Philosophy</h2>
-                <p>BMW's success is built on fundamental principles that define the brand:</p>
-                
-                <div class="brand-values-grid">
-                    <div class="value-card">
-                        <span class="value-icon">🏎️</span>
-                        <h4>Dynamic Performance</h4>
-                        <p>Delivering exceptional driving dynamics through perfect weight distribution, responsive handling, and powerful engines.</p>
-                    </div>
-                    <div class="value-card">
-                        <span class="value-icon">💎</span>
-                        <h4>Premium Craftsmanship</h4>
-                        <p>Uncompromising attention to detail, using finest materials and advanced manufacturing techniques.</p>
-                    </div>
-                    <div class="value-card">
-                        <span class="value-icon">🔬</span>
-                        <h4>Innovation Leadership</h4>
-                        <p>Pioneering new technologies from carbon fiber construction to autonomous driving and electrification.</p>
-                    </div>
-                    <div class="value-card">
-                        <span class="value-icon">⚡</span>
-                        <h4>Sustainable Mobility</h4>
-                        <p>Leading the transition to electric mobility while maintaining BMW's core driving characteristics.</p>
-                    </div>
-                    <div class="value-card">
-                        <span class="value-icon">🎯</span>
-                        <h4>Driver-Centric Design</h4>
-                        <p>Every element designed to enhance the connection between driver and machine.</p>
-                    </div>
-                    <div class="value-card">
-                        <span class="value-icon">🏁</span>
-                        <h4>Motorsport DNA</h4>
-                        <p>Racing technologies and learnings integrated into every production vehicle.</p>
-                    </div>
-                </div>
-            </section>
+    <div id="models" class="tab-content">
+        <div class="brand-content-wrapper">
+            
+    <section class="brand-section">
+        <h2>🚗 Complete Model Lineup 2024-2025</h2>
+        <p>BMW offers "The Ultimate Driving Machine" across every segment.</p>
+        <div class="models-grid">
+            <div class="model-category-card">
+                <h3>Sedans & Coupes</h3>
+                <ul>
+                    <li>2 Series - Compact coupe/gran coupe</li>
+                    <li>3 Series - The benchmark sports sedan</li>
+                    <li>4 Series - Coupe, convertible & gran coupe</li>
+                    <li>5 Series - Executive sedan</li>
+                    <li>7 Series - Flagship luxury sedan</li>
+                    <li>8 Series - Luxury sports car</li>
+                </ul>
+            </div>
+            <div class="model-category-card">
+                <h3>X Series (SUVs)</h3>
+                <ul>
+                    <li>X1 / X2 - Compact SAVs</li>
+                    <li>X3 / X4 - Mid-size SAVs</li>
+                    <li>X5 / X6 - Executive SAVs</li>
+                    <li>X7 - 7-seater luxury SAV</li>
+                    <li>XM - High-performance hybrid SUV</li>
+                </ul>
+            </div>
+            <div class="model-category-card">
+                <h3>BMW i (Electric)</h3>
+                <ul>
+                    <li>i4 - Electric gran coupe</li>
+                    <li>i5 - Electric executive sedan</li>
+                    <li>i7 - Electric luxury flagship</li>
+                    <li>iX - Flagship electric SUV</li>
+                </ul>
+            </div>
+            <div class="model-category-card">
+                <h3>M Power</h3>
+                <ul>
+                    <li>M2, M3, M4 - High-performance icons</li>
+                    <li>M5 - Super sedan</li>
+                    <li>X3 M, X5 M, X6 M - Performance SUVs</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    
+        </div>
+    </div>
 
-            <!-- Current Model Lineup -->
-            <section class="brand-section">
-                <h2>🚗 Complete Model Lineup 2024-2025</h2>
-                <p>BMW offers an extensive range of vehicles from sporty sedans to luxurious SUVs and cutting-edge electric vehicles.</p>
-                
-                <div class="models-grid">
-                    <div class="model-category-card">
-                        <h3>Sedans & Coupes</h3>
-                        <ul>
-                            <li>2 Series - Compact sports sedan/coupe</li>
-                            <li>3 Series - Executive sports sedan</li>
-                            <li>4 Series - Premium coupe & convertible</li>
-                            <li>5 Series - Luxury business sedan</li>
-                            <li>7 Series - Flagship luxury sedan</li>
-                            <li>8 Series - Grand touring coupe</li>
-                        </ul>
-                    </div>
-
-                    <div class="model-category-card">
-                        <h3>SUVs & SAVs</h3>
-                        <ul>
-                            <li>X1 - Compact luxury SAV</li>
-                            <li>X2 - Sporty compact SUV</li>
-                            <li>X3 - Mid-size luxury SAV</li>
-                            <li>X4 - Sports activity coupe</li>
-                            <li>X5 - Iconic luxury SUV</li>
-                            <li>X6 - Performance SAV</li>
-                            <li>X7 - Full-size luxury SAV</li>
-                            <li>XM - M Performance hybrid</li>
-                        </ul>
-                    </div>
-
-                    <div class="model-category-card">
-                        <h3>M Performance</h3>
-                        <ul>
-                            <li>M2 - Compact performance car</li>
-                            <li>M3 - Legendary sports sedan</li>
-                            <li>M4 - High-performance coupe</li>
-                            <li>M5 - Super sedan</li>
-                            <li>M8 - Ultimate performance GT</li>
-                            <li>X3 M / X4 M - Performance SAVs</li>
-                            <li>X5 M / X6 M - M Performance SUVs</li>
-                        </ul>
-                    </div>
-
-                    <div class="model-category-card">
-                        <h3>Electric & Hybrid</h3>
-                        <ul>
-                            <li>i4 - Electric gran coupe</li>
-                            <li>i5 - Electric luxury sedan</li>
-                            <li>i7 - Electric flagship</li>
-                            <li>iX - Electric luxury SAV</li>
-                            <li>iX1 - Compact electric SAV</li>
-                            <li>iX3 - Electric mid-size SAV</li>
-                            <li>Multiple PHEV options across lineup</li>
-                        </ul>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Technology & Innovation -->
+    <div id="technology" class="tab-content">
+        <div class="brand-content-wrapper">
             <section class="brand-section">
                 <h2>🔬 Technology & Innovation</h2>
                 <p>BMW continues to pioneer automotive technology:</p>
@@ -249,52 +208,54 @@
                     <div class="tech-item">
                         <h4>📱 BMW Connected Drive</h4>
                         <p>Comprehensive connected services including remote functions, concierge service, and real-time traffic.</p>
-                    </div>
-                </div>
-            </section>
+        </div>
+    </div>
 
-            <!-- Awards & Recognition -->
+    <div id="awards" class="tab-content">
+        <div class="brand-content-wrapper">
             <section class="brand-section">
                 <h2>🏆 Awards & Recognition</h2>
                 <div class="awards-grid">
                     <div class="award-badge">
                         <div class="award-icon">🥇</div>
                         <div class="award-title">World Car Awards</div>
-                        <div class="award-year">Multiple Winners 2024</div>
-                    </div>
-                    <div class="award-badge">
-                        <div class="award-icon">🌟</div>
-                        <div class="award-title">Best Luxury Brand</div>
-                        <div class="award-year">J.D. Power 2024</div>
-                    </div>
-                    <div class="award-badge">
-                        <div class="award-icon">🛡️</div>
-                        <div class="award-title">Top Safety Pick+</div>
-                        <div class="award-year">IIHS Multiple Models</div>
-                    </div>
-                    <div class="award-badge">
-                        <div class="award-icon">⚡</div>
-                        <div class="award-title">Best Electric SUV</div>
-                        <div class="award-year">iX Winner 2024</div>
-                    </div>
-                    <div class="award-badge">
-                        <div class="award-icon">💎</div>
-                        <div class="award-title">Best Interior Design</div>
-                        <div class="award-year">Ward's AutoWorld</div>
-                    </div>
-                    <div class="award-badge">
-                        <div class="award-icon">🏁</div>
-                        <div class="award-title">Performance Leader</div>
-                        <div class="award-year">M Division Excellence</div>
-                    </div>
-                </div>
-            </section>
-
+                        <div class="award-year">Multiple Winners 2024
         </div>
-    </main>    <!-- Footer -->
+    </div>
+
+    <!-- Footer -->
     <footer class="car-type-footer">
         <p>&copy; 2025 Engine Starters. All rights reserved.</p>
     </footer>
+
+    
+    <script>
+    function openTab(tabName) {
+        // Hide all tab contents
+        var tabContents = document.getElementsByClassName("tab-content");
+        for (var i = 0; i < tabContents.length; i++) {
+            tabContents[i].classList.remove("active");
+        }
+        
+        // Remove active class from all buttons
+        var tabButtons = document.getElementsByClassName("tab-button");
+        for (var i = 0; i < tabButtons.length; i++) {
+            tabButtons[i].classList.remove("active");
+        }
+        
+        // Show selected tab and activate button
+        document.getElementById(tabName).classList.add("active");
+        
+        // Find the button that called this function and add active class
+        var buttons = document.getElementsByTagName("button");
+        for (var i = 0; i < buttons.length; i++) {
+            if (buttons[i].getAttribute("onclick").includes("'" + tabName + "'")) {
+                buttons[i].classList.add("active");
+            }
+        }
+    }
+    </script>
+
     <script src="../../js/mobile-menu.js"></script>
 </body>
 </html>

@@ -56,6 +56,17 @@
         </nav>
     </header>
 
+    <!-- Hero Section -->
+    <div class="brand-hero-wrapper">
+        <section class="brand-hero" style="background-image: url('../../images/brands/ford-hero.jpg');">
+                <div class="brand-hero-content">
+                    <h1>Ford</h1>
+                    <p class="brand-tagline">Built Ford Tough</p>
+                    <p class="brand-founded">Founded 1903 | Headquarters: Dearborn, Michigan, USA</p>
+                </div>
+            </section>
+    </div>
+
     <nav class="breadcrumb-nav">
         <a href="../../index.html">Home</a>
         <span>»</span>
@@ -64,18 +75,19 @@
         <span>Ford</span>
     </nav>
 
-    <main>
-        <div class="brand-hero-wrapper">
-            <section class="brand-hero" style="background-image: url('../../images/brands/ford-hero.jpg');">
-                <div class="brand-hero-content">
-                    <h1>Ford</h1>
-                    <p class="brand-tagline">Built Ford Tough</p>
-                    <p class="brand-founded">Founded 1903 | Headquarters: Dearborn, Michigan, USA</p>
-                </div>
-            </section>
-        </div>
+    <!-- Tab Navigation -->
+    <div class="tab-navigation">
+        <button class="tab-button active" onclick="openTab('overview')">Overview</button>
+        <button class="tab-button" onclick="openTab('history')">History</button>
+        <button class="tab-button" onclick="openTab('models')">Models</button>
+        <button class="tab-button" onclick="openTab('technology')">Innovation</button>
+        <button class="tab-button" onclick="openTab('awards')">Awards</button>
+    </div>
 
-        <section class="brand-quick-stats">
+    <!-- Tab Contents -->
+    <div id="overview" class="tab-content active">
+        <div class="brand-content-wrapper">
+            <section class="brand-quick-stats">
             <div class="stats-container">
                 <div class="stat-box">
                     <span class="stat-number">#1</span>
@@ -92,10 +104,10 @@
                 <div class="stat-box">
                     <span class="stat-number">4M+</span>
                     <span class="stat-label">Vehicles Sold Annually</span>
-                </div>
-            </div>
-        </section>
+        </div>
+    </div>
 
+    <div id="history" class="tab-content">
         <div class="brand-content-wrapper">
             <section class="brand-section">
                 <h2>🏛️ Brand History & Legacy</h2>
@@ -108,87 +120,54 @@
 
                 <p>From inventing mass production to leading the electric revolution, Ford continues to shape the automotive industry while maintaining its core values of durability, capability, and American ingenuity.</p>
             </section>
+        </div>
+    </div>
 
-            <section class="brand-section">
-                <h2>💎 Core Values & Philosophy</h2>
-                <p>Ford's enduring success is built on these principles:</p>
-                
-                <div class="brand-values-grid">
-                    <div class="value-card">
-                        <span class="value-icon">💪</span>
-                        <h4>Built Tough</h4>
-                        <p>Engineering vehicles that withstand the toughest conditions and deliver unmatched durability.</p>
-                    </div>
-                    <div class="value-card">
-                        <span class="value-icon">🇺🇸</span>
-                        <h4>American Heritage</h4>
-                        <p>Proud American brand that has powered the nation for over 120 years.</p>
-                    </div>
-                    <div class="value-card">
-                        <span class="value-icon">🔧</span>
-                        <h4>Innovation Leadership</h4>
-                        <p>From the assembly line to electric trucks, continuously pioneering automotive technology.</p>
-                    </div>
-                    <div class="value-card">
-                        <span class="value-icon">🚜</span>
-                        <h4>Work-Ready Capability</h4>
-                        <p>Building trucks and commercial vehicles that professionals trust for their livelihood.</p>
-                    </div>
-                    <div class="value-card">
-                        <span class="value-icon">⚡</span>
-                        <h4>Electric Future</h4>
-                        <p>Leading the transition to electric vehicles with F-150 Lightning and Mach-E.</p>
-                    </div>
-                    <div class="value-card">
-                        <span class="value-icon">🏁</span>
-                        <h4>Performance Heritage</h4>
-                        <p>From Mustang to GT, delivering thrilling performance and racing excellence.</p>
-                    </div>
-                </div>
-            </section>
+    <div id="models" class="tab-content">
+        <div class="brand-content-wrapper">
+            
+    <section class="brand-section">
+        <h2>🚗 Complete Model Lineup 2024-2025</h2>
+        <p>Ford builds America's best-selling trucks and iconic performance vehicles.</p>
+        <div class="models-grid">
+            <div class="model-category-card">
+                <h3>Trucks & Vans</h3>
+                <ul>
+                    <li>F-150 - America's best-selling truck</li>
+                    <li>Super Duty - Heavy duty capability</li>
+                    <li>Ranger - Mid-size adventure truck</li>
+                    <li>Maverick - Compact hybrid truck</li>
+                    <li>Transit - Versatile cargo van</li>
+                </ul>
+            </div>
+            <div class="model-category-card">
+                <h3>SUVs</h3>
+                <ul>
+                    <li>Bronco - Off-road legend</li>
+                    <li>Bronco Sport - Adventure ready</li>
+                    <li>Explorer - Family SUV icon</li>
+                    <li>Expedition - Full-size luxury</li>
+                    <li>Escape - Compact versatility</li>
+                    <li>Edge - Mid-size comfort</li>
+                </ul>
+            </div>
+            <div class="model-category-card">
+                <h3>Electric & Performance</h3>
+                <ul>
+                    <li>Mustang - The world's favorite sports car</li>
+                    <li>Mustang Dark Horse - Track capability</li>
+                    <li>Mustang Mach-E - Electric performance SUV</li>
+                    <li>F-150 Lightning - Electric truck</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    
+        </div>
+    </div>
 
-            <section class="brand-section">
-                <h2>🚗 Complete Model Lineup 2024-2025</h2>
-                <p>Ford offers America's most trusted lineup of trucks, SUVs, and performance vehicles.</p>
-                
-                <div class="models-grid">
-                    <div class="model-category-card">
-                        <h3>Trucks</h3>
-                        <ul>
-                            <li>F-150 - America's best-selling truck</li>
-                            <li>F-150 Lightning - Electric powerhouse</li>
-                            <li>F-150 Raptor - Off-road beast</li>
-                            <li>Super Duty F-250/F-350 - Heavy-duty champion</li>
-                            <li>Ranger - Mid-size adventure truck</li>
-                            <li>Maverick - Compact hybrid truck</li>
-                        </ul>
-                    </div>
-
-                    <div class="model-category-card">
-                        <h3>SUVs & Crossovers</h3>
-                        <ul>
-                            <li>Bronco - Legendary 4x4 off-roader</li>
-                            <li>Bronco Sport - Compact adventure SUV</li>
-                            <li>Explorer - 3-row family SUV</li>
-                            <li>Expedition - Full-size luxury SUV</li>
-                            <li>Edge - Mid-size crossover</li>
-                            <li>Escape - Compact hybrid SUV</li>
-                        </ul>
-                    </div>
-
-                    <div class="model-category-card">
-                        <h3>Performance & Electric</h3>
-                        <ul>
-                            <li>Mustang - Iconic pony car</li>
-                            <li>Mustang GT - V8 performance</li>
-                            <li>Mustang Dark Horse - Track-focused</li>
-                            <li>Mustang Mach-E - Electric SUV</li>
-                            <li>Mustang Mach-E GT - Performance EV</li>
-                        </ul>
-                    </div>
-                </div>
-            </section>
-
+    <div id="technology" class="tab-content">
+        <div class="brand-content-wrapper">
             <section class="brand-section">
                 <h2>🔬 Technology & Innovation</h2>
                 <p>Ford leads with innovative technology:</p>
@@ -217,51 +196,54 @@
                     <div class="tech-item">
                         <h4>📱 FordPass App</h4>
                         <p>Remote start, vehicle locate, charging status, and integrated navigation services.</p>
-                    </div>
-                </div>
-            </section>
+        </div>
+    </div>
 
+    <div id="awards" class="tab-content">
+        <div class="brand-content-wrapper">
             <section class="brand-section">
                 <h2>🏆 Awards & Recognition</h2>
                 <div class="awards-grid">
                     <div class="award-badge">
                         <div class="award-icon">🥇</div>
                         <div class="award-title">Best-Selling Truck</div>
-                        <div class="award-year">F-150 - 46 Years</div>
-                    </div>
-                    <div class="award-badge">
-                        <div class="award-icon">🌟</div>
-                        <div class="award-title">Truck of the Year</div>
-                        <div class="award-year">F-150 Lightning 2023</div>
-                    </div>
-                    <div class="award-badge">
-                        <div class="award-icon">🛡️</div>
-                        <div class="award-title">Top Safety Pick</div>
-                        <div class="award-year">IIHS Multiple Models</div>
-                    </div>
-                    <div class="award-badge">
-                        <div class="award-icon">⚡</div>
-                        <div class="award-title">Best Electric Truck</div>
-                        <div class="award-year">Lightning Awards 2024</div>
-                    </div>
-                    <div class="award-badge">
-                        <div class="award-icon">💎</div>
-                        <div class="award-title">Best Value Brand</div>
-                        <div class="award-year">Kelley Blue Book</div>
-                    </div>
-                    <div class="award-badge">
-                        <div class="award-icon">🏁</div>
-                        <div class="award-title">Performance Leader</div>
-                        <div class="award-year">Mustang Excellence</div>
-                    </div>
-                </div>
-            </section>
-
+                        <div class="award-year">F-150 - 46 Years
         </div>
-    </main>    <!-- Footer -->
+    </div>
+
+    <!-- Footer -->
     <footer class="car-type-footer">
         <p>&copy; 2025 Engine Starters. All rights reserved.</p>
     </footer>
+
+    
+    <script>
+    function openTab(tabName) {
+        // Hide all tab contents
+        var tabContents = document.getElementsByClassName("tab-content");
+        for (var i = 0; i < tabContents.length; i++) {
+            tabContents[i].classList.remove("active");
+        }
+        
+        // Remove active class from all buttons
+        var tabButtons = document.getElementsByClassName("tab-button");
+        for (var i = 0; i < tabButtons.length; i++) {
+            tabButtons[i].classList.remove("active");
+        }
+        
+        // Show selected tab and activate button
+        document.getElementById(tabName).classList.add("active");
+        
+        // Find the button that called this function and add active class
+        var buttons = document.getElementsByTagName("button");
+        for (var i = 0; i < buttons.length; i++) {
+            if (buttons[i].getAttribute("onclick").includes("'" + tabName + "'")) {
+                buttons[i].classList.add("active");
+            }
+        }
+    }
+    </script>
+
     <script src="../../js/mobile-menu.js"></script>
 </body>
 </html>
