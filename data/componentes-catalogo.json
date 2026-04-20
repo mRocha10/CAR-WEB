@@ -1,0 +1,208 @@
+{
+  "taxonomy": [
+    {
+      "id": "mecanica-motor",
+      "nombre": "Engine Mechanics",
+      "justificacion": "Groups components responsible for power generation and thermal efficiency.",
+      "subgrupos": ["Filters", "Ignition", "Cooling", "Timing"]
+    },
+    {
+      "id": "frenos",
+      "nombre": "Braking System",
+      "justificacion": "Critical active safety system focused on stopping distance and control.",
+      "subgrupos": ["Brake Pads", "Brake Discs", "Brake Fluid", "ABS Sensors"]
+    },
+    {
+      "id": "carroceria-chasis",
+      "nombre": "Body & Chassis",
+      "justificacion": "Vehicle structure and dynamic stability under driving conditions.",
+      "subgrupos": ["Suspension", "Steering", "Body Panels", "Lighting"]
+    },
+    {
+      "id": "electrico-electronica",
+      "nombre": "Electrical & Electronics",
+      "justificacion": "Power supply, starting, control, and sensor-related vehicle components.",
+      "subgrupos": ["Battery", "Alternator", "Starter", "Sensors & Modules"]
+    },
+    {
+      "id": "transmision-embrague",
+      "nombre": "Transmission & Clutch",
+      "justificacion": "Transfers and adapts engine torque to the wheels.",
+      "subgrupos": ["Clutch Kit", "Dual Mass Flywheel", "CV Joints", "Gearbox Oil"]
+    }
+  ],
+  "vehicles": [
+    {
+      "marca": "Volkswagen",
+      "modelos": [
+        { "nombre": "Golf VII", "anios": [2014, 2015, 2016, 2017, 2018, 2019] },
+        { "nombre": "Passat B8", "anios": [2015, 2016, 2017, 2018, 2019, 2020] }
+      ]
+    },
+    {
+      "marca": "Toyota",
+      "modelos": [
+        { "nombre": "Corolla", "anios": [2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019] },
+        { "nombre": "RAV4", "anios": [2016, 2017, 2018, 2019, 2020, 2021] }
+      ]
+    },
+    {
+      "marca": "Ford",
+      "modelos": [
+        { "nombre": "Focus", "anios": [2013, 2014, 2015, 2016, 2017, 2018] },
+        { "nombre": "Kuga", "anios": [2015, 2016, 2017, 2018, 2019, 2020] }
+      ]
+    }
+  ],
+  "products": [
+    {
+      "id": "pb-452r",
+      "sku": "PB-452R",
+      "nombre": "ProBrake Ceramic Rear Brake Pads",
+      "categoriaId": "frenos",
+      "subgrupo": "Brake Pads",
+      "precio": 69.9,
+      "moneda": "EUR",
+      "stock": 28,
+      "descripcionCorta": "Low-dust ceramic pads with stable braking performance in city and highway use.",
+      "descripcionLarga": "Homologated rear brake pad set designed as equivalent replacement, focused on low noise and even wear.",
+      "especificaciones": {
+        "material": "Semi-metallic ceramic",
+        "dimensiones": "123 x 52 x 16.2 mm",
+        "norma": "ECE R90",
+        "peso": "1.32 kg",
+        "sensorDesgaste": "Yes"
+      },
+      "compatibilidades": [
+        "Volkswagen Golf VII 1.6 TDI (2014-2019)",
+        "Audi A3 8V 1.8 TFSI (2013-2018)",
+        "Seat León III 2.0 TDI (2013-2020)"
+      ],
+      "imagenes": [
+        "../images/types/sedan.webp",
+        "../images/types/suv.webp",
+        "../images/types/sports-car.webp"
+      ],
+      "diagrama": "../images/types/compact.webp",
+      "precioAnterior": 79.9,
+      "pdfs": [
+        { "titulo": "Technical Data Sheet", "url": "#" },
+        { "titulo": "ECE R90 Certificate", "url": "#" }
+      ],
+      "videos": [
+        { "titulo": "Basic Brake Pad Installation", "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ" }
+      ],
+      "resenas": [
+        { "autor": "M. Ortega", "rating": 5, "comentario": "Simple installation and confident pedal feel." },
+        { "autor": "R. Suarez", "rating": 4, "comentario": "Great balance between price and performance." }
+      ],
+      "relacionados": ["disco-bd-340", "liq-dot4-01"]
+    },
+    {
+      "id": "of-210",
+      "sku": "OF-210",
+      "nombre": "M-Filter OF-210 Oil Filter",
+      "categoriaId": "mecanica-motor",
+      "subgrupo": "Filters",
+      "precio": 14.5,
+      "moneda": "EUR",
+      "stock": 120,
+      "descripcionCorta": "High-retention spin-on filter designed for extended service intervals.",
+      "descripcionLarga": "Efficient particle filtration with anti-drain valve and stable cold-start behavior.",
+      "especificaciones": {
+        "material": "Synthetic cellulose media",
+        "dimensiones": "76 x 86 mm",
+        "norma": "ISO 4548",
+        "peso": "0.28 kg",
+        "rosca": "M20x1.5"
+      },
+      "compatibilidades": [
+        "Toyota Corolla 1.8 (2012-2019)",
+        "Lexus CT200h (2011-2020)",
+        "Toyota RAV4 2.0 (2016-2021)"
+      ],
+      "imagenes": [
+        "../images/types/luxury.webp",
+        "../images/types/compact.webp"
+      ],
+      "diagrama": "../images/types/hatchback.webp",
+      "precioAnterior": 18.9,
+      "pdfs": [
+        { "titulo": "Technical Sheet", "url": "#" }
+      ],
+      "videos": [],
+      "resenas": [
+        { "autor": "J. Pardo", "rating": 5, "comentario": "Excellent for preventive maintenance." }
+      ],
+      "relacionados": ["aceite-5w30-xl", "ar-3002"]
+    },
+    {
+      "id": "alt-140a-v2",
+      "sku": "ALT-140A-V2",
+      "nombre": "VoltEdge 140A Alternator",
+      "categoriaId": "electrico-electronica",
+      "subgrupo": "Alternator",
+      "precio": 219.0,
+      "moneda": "EUR",
+      "stock": 9,
+      "descripcionCorta": "140A alternator with integrated regulator for 12V platforms.",
+      "descripcionLarga": "Engineered for stable charging under high electrical demand in vehicles with multiple consumers.",
+      "especificaciones": {
+        "material": "Aluminum and copper",
+        "dimensiones": "185 x 170 x 145 mm",
+        "norma": "ISO 16750",
+        "peso": "5.4 kg",
+        "voltaje": "12V"
+      },
+      "compatibilidades": [
+        "Ford Focus 1.5 TDCi (2015-2018)",
+        "Ford Kuga 2.0 TDCi (2016-2020)"
+      ],
+      "imagenes": [
+        "../images/types/crossover.webp",
+        "../images/types/electric.webp"
+      ],
+      "diagrama": "../images/types/pickup.webp",
+      "precioAnterior": 249.0,
+      "pdfs": [
+        { "titulo": "Installation Manual", "url": "#" }
+      ],
+      "videos": [],
+      "resenas": [],
+      "relacionados": ["bat-agm-70", "arr-18k-v1"]
+    },
+    {
+      "id": "disco-bd-340",
+      "sku": "BD-340",
+      "nombre": "BD-340 Vented Brake Disc",
+      "categoriaId": "frenos",
+      "subgrupo": "Brake Discs",
+      "precio": 89.0,
+      "moneda": "EUR",
+      "stock": 34,
+      "descripcionCorta": "High-carbon vented disc for superior heat dissipation.",
+      "descripcionLarga": "Optimized geometry for repeated braking events and thermal control in urban and intercity driving.",
+      "especificaciones": {
+        "material": "High-carbon iron",
+        "dimensiones": "Ø 340 mm",
+        "norma": "ECE R90",
+        "peso": "7.1 kg",
+        "espesor": "30 mm"
+      },
+      "compatibilidades": [
+        "Volkswagen Passat B8 2.0 TDI (2015-2020)",
+        "Audi A4 B9 2.0 TFSI (2016-2020)"
+      ],
+      "imagenes": [
+        "../images/types/sports-car.webp",
+        "../images/types/sedan.webp"
+      ],
+      "diagrama": "../images/types/muscle.webp",
+      "precioAnterior": 99.0,
+      "pdfs": [],
+      "videos": [],
+      "resenas": [],
+      "relacionados": ["pb-452r", "liq-dot4-01"]
+    }
+  ]
+}

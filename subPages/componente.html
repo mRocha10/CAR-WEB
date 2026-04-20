@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <title>Component Product Page | Engine Starters</title>
+    <meta name="description" content="Complete automotive component product page with technical specs, compatibility, price, documents, videos, and reviews.">
+    <link rel="stylesheet" href="../css/site-unified.css">
+</head>
+<body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+    <header>
+        <a href="../index.html" class="logo-link">
+            <div class="logo">
+                <p class="site-title">Engine Starters</p>
+                <h2>Your technical guide to brands, car types, and components</h2>
+            </div>
+        </a>
+        <nav>
+            <ul>
+                <li><a href="about.html">About</a></li>
+                <li><a href="../index.html">Car Types</a></li>
+                <li><a href="brands.html">Brands</a></li>
+                <li><a href="components.html">Components</a></li>
+                <li><a href="car-comparison.html">Compare Cars</a></li>
+                <li><a href="comments.html">Comments</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main-content">
+        <section class="section component-template">
+            <nav class="breadcrumb components-breadcrumb" aria-label="Breadcrumb">
+                <a href="../index.html">Home</a>
+                <span>/</span>
+                <a href="components.html">Components</a>
+                <span>/</span>
+                <span id="prod-breadcrumb-group">Group</span>
+            </nav>
+
+            <div class="product-hero">
+                <div>
+                    <h1 id="prod-title">Component Name</h1>
+                    <p id="prod-subtitle" class="product-subtitle"></p>
+                    <p id="prod-price" class="product-price"></p>
+                    <p id="prod-stock" class="product-stock"></p>
+                </div>
+                <div class="product-hero-meta">
+                    <p><strong>Category:</strong> <span id="prod-category"></span></p>
+                    <p><strong>Subgroup:</strong> <span id="prod-subgroup"></span></p>
+                    <button class="btn">Check Compatibility</button>
+                </div>
+            </div>
+
+            <div class="product-layout">
+                <section>
+                    <h2>Description</h2>
+                    <p id="prod-desc"></p>
+
+                    <h2>Technical Specifications</h2>
+                    <ul id="prod-specs" class="product-list"></ul>
+
+                    <h2>Compatibility</h2>
+                    <ul id="prod-compat" class="product-list"></ul>
+
+                    <h2>Related Parts</h2>
+                    <div id="prod-related" class="related-grid"></div>
+                </section>
+
+                <aside>
+                    <h2>Gallery</h2>
+                    <div id="prod-gallery" class="product-gallery"></div>
+
+                    <h2>Technical Diagram</h2>
+                    <img id="prod-diagram" class="product-diagram" src="" alt="">
+
+                    <h2>PDF Downloads</h2>
+                    <ul id="prod-pdfs" class="product-list compact"></ul>
+
+                    <h2>Videos</h2>
+                    <ul id="prod-videos" class="product-list compact"></ul>
+                </aside>
+            </div>
+
+            <section>
+                <h2>Reviews</h2>
+                <div id="prod-reviews"></div>
+            </section>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Engine Starters. All rights reserved.</p>
+        <p class="legal-links"><a href="/subPages/privacy-policy.html">Privacy Policy</a> | <a href="/subPages/terms-and-conditions.html">Terms & Conditions</a> | <a href="/subPages/editorial-policy.html">Editorial Policy</a> | <a href="/subPages/contact.html">Contact</a></p>
+    </footer>
+    <script src="../js/main.js" defer></script>
+    <script src="../js/components-catalog.js" defer></script>
+</body>
+</html>
