@@ -3,7 +3,7 @@ const path = require("path");
 
 const ROOT = path.resolve(__dirname, "..");
 const BASE_URL = "https://www.engine-starters.com";
-const TODAY = "2026-04-06";
+const TODAY = new Date().toISOString().slice(0, 10);
 const EXCLUDE = new Set(["TEST-MOBILE.html"]);
 
 function walk(dir, acc = []) {

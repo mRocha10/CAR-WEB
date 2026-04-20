@@ -29,8 +29,14 @@ document.addEventListener("DOMContentLoaded", async () => {
     setMeta("description", `${group.justificacion} Browse compatible products, specs, and technical references.`);
     setMeta("property", "og:title", `${group.nombre} Components | Engine Starters`);
     setMeta("property", "og:description", group.justificacion);
+    setMeta("property", "og:url", window.location.href);
     setMeta("name", "twitter:title", `${group.nombre} Components | Engine Starters`);
     setMeta("name", "twitter:description", group.justificacion);
+
+    const canonical = document.querySelector('link[rel="canonical"]');
+    if (canonical) {
+      canonical.href = window.location.href;
+    }
 
     taxonomyTitle.textContent = group.nombre;
     if (taxonomyBreadcrumb) taxonomyBreadcrumb.textContent = group.nombre;
@@ -38,7 +44,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     subgroupList.innerHTML = group.subgrupos.map((subgroup) => `<li>${escapeHtml(subgroup)}</li>`).join("");
 
     if (!products.length) {
-      productsGrid.innerHTML = "<p>No products available in this group yet.</p>";
+      productsGrid.innerHTML = "<p>No products are available in this group yet.</p>";
       return;
     }
 

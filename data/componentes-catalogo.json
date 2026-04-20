@@ -2,55 +2,197 @@
   "taxonomy": [
     {
       "id": "mecanica-motor",
-      "nombre": "Engine Mechanics",
-      "justificacion": "Groups components responsible for power generation and thermal efficiency.",
-      "subgrupos": ["Filters", "Ignition", "Cooling", "Timing"]
+      "nombre": "Mechanical Systems",
+      "justificacion": "Core mechanical components for engine performance, cooling, and drivetrain reliability.",
+      "subgrupos": [
+        "Filters",
+        "Ignition",
+        "Cooling",
+        "Timing"
+      ]
     },
     {
       "id": "frenos",
       "nombre": "Braking System",
-      "justificacion": "Critical active safety system focused on stopping distance and control.",
-      "subgrupos": ["Brake Pads", "Brake Discs", "Brake Fluid", "ABS Sensors"]
-    },
-    {
-      "id": "carroceria-chasis",
-      "nombre": "Body & Chassis",
-      "justificacion": "Vehicle structure and dynamic stability under driving conditions.",
-      "subgrupos": ["Suspension", "Steering", "Body Panels", "Lighting"]
+      "justificacion": "Critical active-safety components for stopping performance and thermal stability.",
+      "subgrupos": [
+        "Brake Pads",
+        "Brake Discs",
+        "Brake Fluid",
+        "ABS Sensors"
+      ]
     },
     {
       "id": "electrico-electronica",
       "nombre": "Electrical & Electronics",
-      "justificacion": "Power supply, starting, control, and sensor-related vehicle components.",
-      "subgrupos": ["Battery", "Alternator", "Starter", "Sensors & Modules"]
+      "justificacion": "Power supply, charging, starters, sensors, and control modules for modern vehicles.",
+      "subgrupos": [
+        "Battery",
+        "Alternator",
+        "Starter",
+        "Sensors & Modules"
+      ]
     },
     {
-      "id": "transmision-embrague",
-      "nombre": "Transmission & Clutch",
-      "justificacion": "Transfers and adapts engine torque to the wheels.",
-      "subgrupos": ["Clutch Kit", "Dual Mass Flywheel", "CV Joints", "Gearbox Oil"]
+      "id": "carroceria-chasis",
+      "nombre": "Body & Chassis",
+      "justificacion": "Structural, handling, and exterior hardware for durability and driving stability.",
+      "subgrupos": [
+        "Suspension",
+        "Steering",
+        "Body Panels",
+        "Lighting"
+      ]
+    },
+    {
+      "id": "interior-confort",
+      "nombre": "Interior & Comfort",
+      "justificacion": "Cabin components that improve ergonomics, climate comfort, and driver interaction.",
+      "subgrupos": [
+        "HVAC",
+        "Seats & Trim",
+        "Switches & Controls",
+        "Infotainment Parts"
+      ]
+    },
+    {
+      "id": "seguridad-adas",
+      "nombre": "Safety Systems",
+      "justificacion": "Passive and active safety components that support occupant protection and control.",
+      "subgrupos": [
+        "Airbag Components",
+        "Brake Sensors",
+        "Camera & Radar Hardware",
+        "Stability Control Parts"
+      ]
+    },
+    {
+      "id": "mantenimiento",
+      "nombre": "Maintenance",
+      "justificacion": "Routine service components designed for preventive maintenance and long-term reliability.",
+      "subgrupos": [
+        "Engine Oil",
+        "Filters",
+        "Belts",
+        "Fluids"
+      ]
+    },
+    {
+      "id": "accesorios",
+      "nombre": "Accessories",
+      "justificacion": "Functional accessories for convenience, cargo management, and daily usability.",
+      "subgrupos": [
+        "Cargo Solutions",
+        "Interior Protection",
+        "Power Accessories",
+        "Travel Gear"
+      ]
+    },
+    {
+      "id": "herramientas",
+      "nombre": "Tools",
+      "justificacion": "Workshop-grade tools for diagnostics, installation, and maintenance procedures.",
+      "subgrupos": [
+        "Hand Tools",
+        "Torque Tools",
+        "Lifting Equipment",
+        "Service Kits"
+      ]
+    },
+    {
+      "id": "software-diagnostico",
+      "nombre": "Software & Diagnostics",
+      "justificacion": "Diagnostic software and interfaces for OBD scanning, calibration, and service workflows.",
+      "subgrupos": [
+        "OBD Interfaces",
+        "Diagnostic Software",
+        "Service Licenses",
+        "ECU Utilities"
+      ]
     }
   ],
   "vehicles": [
     {
       "marca": "Volkswagen",
       "modelos": [
-        { "nombre": "Golf VII", "anios": [2014, 2015, 2016, 2017, 2018, 2019] },
-        { "nombre": "Passat B8", "anios": [2015, 2016, 2017, 2018, 2019, 2020] }
+        {
+          "nombre": "Golf VII",
+          "anios": [
+            2014,
+            2015,
+            2016,
+            2017,
+            2018,
+            2019
+          ]
+        },
+        {
+          "nombre": "Passat B8",
+          "anios": [
+            2015,
+            2016,
+            2017,
+            2018,
+            2019,
+            2020
+          ]
+        }
       ]
     },
     {
       "marca": "Toyota",
       "modelos": [
-        { "nombre": "Corolla", "anios": [2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019] },
-        { "nombre": "RAV4", "anios": [2016, 2017, 2018, 2019, 2020, 2021] }
+        {
+          "nombre": "Corolla",
+          "anios": [
+            2012,
+            2013,
+            2014,
+            2015,
+            2016,
+            2017,
+            2018,
+            2019
+          ]
+        },
+        {
+          "nombre": "RAV4",
+          "anios": [
+            2016,
+            2017,
+            2018,
+            2019,
+            2020,
+            2021
+          ]
+        }
       ]
     },
     {
       "marca": "Ford",
       "modelos": [
-        { "nombre": "Focus", "anios": [2013, 2014, 2015, 2016, 2017, 2018] },
-        { "nombre": "Kuga", "anios": [2015, 2016, 2017, 2018, 2019, 2020] }
+        {
+          "nombre": "Focus",
+          "anios": [
+            2013,
+            2014,
+            2015,
+            2016,
+            2017,
+            2018
+          ]
+        },
+        {
+          "nombre": "Kuga",
+          "anios": [
+            2015,
+            2016,
+            2017,
+            2018,
+            2019,
+            2020
+          ]
+        }
       ]
     }
   ],
@@ -86,17 +228,37 @@
       "diagrama": "../images/types/compact.webp",
       "precioAnterior": 79.9,
       "pdfs": [
-        { "titulo": "Technical Data Sheet", "url": "#" },
-        { "titulo": "ECE R90 Certificate", "url": "#" }
+        {
+          "titulo": "Technical Data Sheet",
+          "url": "#"
+        },
+        {
+          "titulo": "ECE R90 Certificate",
+          "url": "#"
+        }
       ],
       "videos": [
-        { "titulo": "Basic Brake Pad Installation", "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ" }
+        {
+          "titulo": "Basic Brake Pad Installation",
+          "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+        }
       ],
       "resenas": [
-        { "autor": "M. Ortega", "rating": 5, "comentario": "Simple installation and confident pedal feel." },
-        { "autor": "R. Suarez", "rating": 4, "comentario": "Great balance between price and performance." }
+        {
+          "autor": "M. Ortega",
+          "rating": 5,
+          "comentario": "Simple installation and confident pedal feel."
+        },
+        {
+          "autor": "R. Suarez",
+          "rating": 4,
+          "comentario": "Great balance between price and performance."
+        }
       ],
-      "relacionados": ["disco-bd-340", "liq-dot4-01"]
+      "relacionados": [
+        "disco-bd-340",
+        "liq-dot4-01"
+      ]
     },
     {
       "id": "of-210",
@@ -128,13 +290,23 @@
       "diagrama": "../images/types/hatchback.webp",
       "precioAnterior": 18.9,
       "pdfs": [
-        { "titulo": "Technical Sheet", "url": "#" }
+        {
+          "titulo": "Technical Sheet",
+          "url": "#"
+        }
       ],
       "videos": [],
       "resenas": [
-        { "autor": "J. Pardo", "rating": 5, "comentario": "Excellent for preventive maintenance." }
+        {
+          "autor": "J. Pardo",
+          "rating": 5,
+          "comentario": "Excellent for preventive maintenance."
+        }
       ],
-      "relacionados": ["aceite-5w30-xl", "ar-3002"]
+      "relacionados": [
+        "aceite-5w30-xl",
+        "ar-3002"
+      ]
     },
     {
       "id": "alt-140a-v2",
@@ -142,7 +314,7 @@
       "nombre": "VoltEdge 140A Alternator",
       "categoriaId": "electrico-electronica",
       "subgrupo": "Alternator",
-      "precio": 219.0,
+      "precio": 219,
       "moneda": "EUR",
       "stock": 9,
       "descripcionCorta": "140A alternator with integrated regulator for 12V platforms.",
@@ -163,13 +335,19 @@
         "../images/types/electric.webp"
       ],
       "diagrama": "../images/types/pickup.webp",
-      "precioAnterior": 249.0,
+      "precioAnterior": 249,
       "pdfs": [
-        { "titulo": "Installation Manual", "url": "#" }
+        {
+          "titulo": "Installation Manual",
+          "url": "#"
+        }
       ],
       "videos": [],
       "resenas": [],
-      "relacionados": ["bat-agm-70", "arr-18k-v1"]
+      "relacionados": [
+        "bat-agm-70",
+        "arr-18k-v1"
+      ]
     },
     {
       "id": "disco-bd-340",
@@ -177,7 +355,7 @@
       "nombre": "BD-340 Vented Brake Disc",
       "categoriaId": "frenos",
       "subgrupo": "Brake Discs",
-      "precio": 89.0,
+      "precio": 89,
       "moneda": "EUR",
       "stock": 34,
       "descripcionCorta": "High-carbon vented disc for superior heat dissipation.",
@@ -198,11 +376,261 @@
         "../images/types/sedan.webp"
       ],
       "diagrama": "../images/types/muscle.webp",
-      "precioAnterior": 99.0,
+      "precioAnterior": 99,
       "pdfs": [],
       "videos": [],
       "resenas": [],
-      "relacionados": ["pb-452r", "liq-dot4-01"]
+      "relacionados": [
+        "pb-452r",
+        "liq-dot4-01"
+      ]
+    },
+    {
+      "id": "int-hvac-220",
+      "sku": "INT-HVAC-220",
+      "nombre": "Cabin HVAC Blower Module",
+      "categoriaId": "interior-confort",
+      "subgrupo": "HVAC",
+      "precio": 129,
+      "moneda": "EUR",
+      "stock": 17,
+      "descripcionCorta": "Cabin blower module with stable airflow control for all-season comfort.",
+      "descripcionLarga": "Direct-fit HVAC blower module designed for low noise operation and dependable cabin airflow regulation.",
+      "especificaciones": {
+        "material": "Composite housing",
+        "dimensiones": "210 x 180 x 170 mm",
+        "norma": "ISO 9001",
+        "peso": "1.8 kg",
+        "voltaje": "12V"
+      },
+      "compatibilidades": [
+        "Toyota Corolla 1.8 Hybrid (2018-2023)",
+        "Volkswagen Golf VII 1.5 TSI (2017-2020)"
+      ],
+      "imagenes": [
+        "../images/types/sedan.webp"
+      ],
+      "diagrama": "../images/types/hatchback.webp",
+      "precioAnterior": 149,
+      "pdfs": [
+        {
+          "titulo": "Installation Guide",
+          "url": "#"
+        }
+      ],
+      "videos": [],
+      "resenas": [
+        {
+          "autor": "P. Dawson",
+          "rating": 5,
+          "comentario": "Quiet operation and easy replacement."
+        }
+      ],
+      "relacionados": [
+        "of-210"
+      ]
+    },
+    {
+      "id": "safe-abs-101",
+      "sku": "SAFE-ABS-101",
+      "nombre": "ABS Wheel Speed Sensor Front",
+      "categoriaId": "seguridad-adas",
+      "subgrupo": "Brake Sensors",
+      "precio": 39.9,
+      "moneda": "EUR",
+      "stock": 63,
+      "descripcionCorta": "Front axle wheel speed sensor for ABS and traction control systems.",
+      "descripcionLarga": "Reliable wheel speed sensor engineered for accurate signal output in wet and dry conditions.",
+      "especificaciones": {
+        "material": "ABS polymer and steel",
+        "dimensiones": "85 x 42 x 30 mm",
+        "norma": "ECE R13",
+        "peso": "0.12 kg",
+        "sensorDesgaste": "No"
+      },
+      "compatibilidades": [
+        "Ford Focus 1.5 TDCi (2015-2018)",
+        "Volkswagen Passat B8 2.0 TDI (2015-2020)"
+      ],
+      "imagenes": [
+        "../images/types/compact.webp"
+      ],
+      "diagrama": "../images/types/crossover.webp",
+      "precioAnterior": 45,
+      "pdfs": [
+        {
+          "titulo": "Wiring Diagram",
+          "url": "#"
+        }
+      ],
+      "videos": [],
+      "resenas": [],
+      "relacionados": [
+        "disco-bd-340"
+      ]
+    },
+    {
+      "id": "mnt-5w30-xl",
+      "sku": "MNT-5W30-XL",
+      "nombre": "Synthetic Engine Oil 5W-30 5L",
+      "categoriaId": "mantenimiento",
+      "subgrupo": "Engine Oil",
+      "precio": 44.5,
+      "moneda": "EUR",
+      "stock": 140,
+      "descripcionCorta": "Low-ash full synthetic engine oil for extended drain intervals.",
+      "descripcionLarga": "High-performance lubricant designed for modern gasoline and diesel engines requiring 5W-30 viscosity.",
+      "especificaciones": {
+        "material": "Synthetic oil blend",
+        "dimensiones": "5 L container",
+        "norma": "ACEA C3",
+        "peso": "4.6 kg"
+      },
+      "compatibilidades": [
+        "Toyota RAV4 2.0 (2016-2021)",
+        "Ford Kuga 2.0 TDCi (2016-2020)"
+      ],
+      "imagenes": [
+        "../images/types/suv.webp"
+      ],
+      "diagrama": "../images/types/pickup.webp",
+      "precioAnterior": 52,
+      "pdfs": [
+        {
+          "titulo": "Product Data Sheet",
+          "url": "#"
+        }
+      ],
+      "videos": [],
+      "resenas": [
+        {
+          "autor": "E. Turner",
+          "rating": 5,
+          "comentario": "Great cold-start behavior."
+        }
+      ],
+      "relacionados": [
+        "of-210"
+      ]
+    },
+    {
+      "id": "acc-cargo-320",
+      "sku": "ACC-CARGO-320",
+      "nombre": "Roof Cargo Crossbar Kit",
+      "categoriaId": "accesorios",
+      "subgrupo": "Cargo Solutions",
+      "precio": 189,
+      "moneda": "EUR",
+      "stock": 21,
+      "descripcionCorta": "Aluminum crossbar kit for roof cargo systems and travel accessories.",
+      "descripcionLarga": "Corrosion-resistant roof crossbar set compatible with selected SUV roof rails.",
+      "especificaciones": {
+        "material": "Anodized aluminum",
+        "dimensiones": "1200 mm bar length",
+        "norma": "TUV Certified",
+        "peso": "4.9 kg"
+      },
+      "compatibilidades": [
+        "Toyota RAV4 2.0 (2016-2021)",
+        "Subaru Forester 2.0 (2014-2019)"
+      ],
+      "imagenes": [
+        "../images/types/suv.webp"
+      ],
+      "diagrama": "../images/types/luxury.webp",
+      "precioAnterior": 209,
+      "pdfs": [
+        {
+          "titulo": "Assembly Manual",
+          "url": "#"
+        }
+      ],
+      "videos": [],
+      "resenas": [],
+      "relacionados": [
+        "int-hvac-220"
+      ]
+    },
+    {
+      "id": "tool-tq-150",
+      "sku": "TOOL-TQ-150",
+      "nombre": "1/2 Inch Torque Wrench 40-210 Nm",
+      "categoriaId": "herramientas",
+      "subgrupo": "Torque Tools",
+      "precio": 99,
+      "moneda": "EUR",
+      "stock": 38,
+      "descripcionCorta": "Workshop torque wrench for precise tightening during service operations.",
+      "descripcionLarga": "Calibrated click-type torque wrench with durable steel body and secure locking adjustment.",
+      "especificaciones": {
+        "material": "Chrome vanadium steel",
+        "dimensiones": "1/2 inch drive",
+        "norma": "DIN EN ISO 6789",
+        "peso": "1.4 kg"
+      },
+      "compatibilidades": [
+        "Universal workshop tool"
+      ],
+      "imagenes": [
+        "../images/types/muscle.webp"
+      ],
+      "diagrama": "../images/types/compact.webp",
+      "precioAnterior": 119,
+      "pdfs": [
+        {
+          "titulo": "Calibration Certificate",
+          "url": "#"
+        }
+      ],
+      "videos": [],
+      "resenas": [
+        {
+          "autor": "L. Martin",
+          "rating": 4,
+          "comentario": "Solid and accurate for routine jobs."
+        }
+      ],
+      "relacionados": [
+        "mnt-5w30-xl"
+      ]
+    },
+    {
+      "id": "diag-obd-pro",
+      "sku": "DIAG-OBD-PRO",
+      "nombre": "OBD-II Pro Diagnostic Interface",
+      "categoriaId": "software-diagnostico",
+      "subgrupo": "OBD Interfaces",
+      "precio": 149,
+      "moneda": "EUR",
+      "stock": 26,
+      "descripcionCorta": "Professional OBD-II interface for live data, fault codes, and readiness tests.",
+      "descripcionLarga": "USB/Bluetooth diagnostic interface compatible with major OBD-II protocols and workshop workflows.",
+      "especificaciones": {
+        "material": "ABS housing",
+        "dimensiones": "95 x 45 x 24 mm",
+        "norma": "SAE J1979",
+        "peso": "0.09 kg",
+        "voltaje": "5V USB"
+      },
+      "compatibilidades": [
+        "OBD-II vehicles (2001+ gasoline, 2004+ diesel EU)"
+      ],
+      "imagenes": [
+        "../images/types/electric.webp"
+      ],
+      "diagrama": "../images/types/sedan.webp",
+      "precioAnterior": 169,
+      "pdfs": [
+        {
+          "titulo": "Quick Start Guide",
+          "url": "#"
+        }
+      ],
+      "videos": [],
+      "resenas": [],
+      "relacionados": [
+        "tool-tq-150"
+      ]
     }
   ]
 }

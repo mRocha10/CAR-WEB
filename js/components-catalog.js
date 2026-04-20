@@ -41,6 +41,7 @@ function initCatalogPage(data) {
     const filtered = filterProducts(data.products, getFilters());
     renderProducts(filtered, data, catalogGrid);
     summary.textContent = `${filtered.length} result${filtered.length === 1 ? "" : "s"}`;
+    updateCatalogQueryState();
   };
 
   applyBtn?.addEventListener("click", run);
@@ -147,6 +148,16 @@ function filterProducts(products, filters) {
 
 function renderProducts(products, data, mount) {
   mount.innerHTML = "";
+  if (!products.length) {
+    mount.innerHTML = `
+      <article class="components-showcase-card">
+        <h3>No matching products found</h3>
+        <p>Try changing make, model, year, category, or max price filters.</p>
+      </article>
+    `;
+    return;
+  }
+
   products.forEach((p) => {
     const category = data.taxonomy.find((t) => t.id === p.categoriaId);
     const card = document.createElement("article");
@@ -301,6 +312,7 @@ function applyCatalogQueryState(data) {
   const brand = params.get("brand");
   const model = params.get("model");
   const year = params.get("year");
+  const maxPrice = params.get("maxPrice");
 
   if (category) setValue("filtro-categoria", category);
   if (query) setValue("filtro-q", query);
@@ -310,6 +322,7 @@ function applyCatalogQueryState(data) {
   }
   if (model) setValue("filtro-modelo", model);
   if (year) setValue("filtro-anio", year);
+  if (maxPrice) setValue("filtro-precio", maxPrice);
 }
 
 function setValue(id, value) {
@@ -323,9 +336,30 @@ function getCategorySlug(categoryId) {
     "mecanica-motor": "mechanical",
     "electrico-electronica": "electrical",
     "carroceria-chasis": "body-chassis",
-    "transmision-embrague": "transmission-clutch"
+    "transmision-embrague": "transmission-clutch",
+    "interior-confort": "interior-comfort",
+    "seguridad-adas": "safety-systems",
+    "mantenimiento": "maintenance",
+    "accesorios": "accessories",
+    "herramientas": "tools",
+    "software-diagnostico": "software-diagnostics"
   };
   return map[categoryId] || "components-group";
+}
+
+function updateCatalogQueryState() {
+  const filters = getFilters();
+  const params = new URLSearchParams();
+  if (filters.q) params.set("q", filters.q);
+  if (filters.marca) params.set("brand", filters.marca);
+  if (filters.modelo) params.set("model", filters.modelo);
+  if (filters.anio) params.set("year", filters.anio);
+  if (filters.categoria) params.set("category", filters.categoria);
+  if (filters.precioMax) params.set("maxPrice", String(filters.precioMax));
+
+  const query = params.toString();
+  const next = `${window.location.pathname}${query ? `?${query}` : ""}`;
+  window.history.replaceState({}, "", next);
 }
 
 function renderCompatibilityTable(id, compatibilities) {
