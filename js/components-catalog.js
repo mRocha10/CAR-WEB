@@ -31,6 +31,7 @@ function initCatalogPage(data) {
 
   buildTaxonomy(data.taxonomy, taxonomyGrid);
   setupFilterOptions(data);
+  applyCatalogQueryState(data);
 
   const applyBtn = document.getElementById("filtro-aplicar");
   const clearBtn = document.getElementById("filtro-limpiar");
@@ -172,6 +173,7 @@ function renderProducts(products, data, mount) {
 function buildTaxonomy(taxonomy, mount) {
   mount.innerHTML = "";
   taxonomy.forEach((item) => {
+    const categorySlug = getCategorySlug(item.id);
     const el = document.createElement("article");
     el.className = "components-taxonomy-card";
     el.setAttribute("data-category-id", item.id);
@@ -179,6 +181,7 @@ function buildTaxonomy(taxonomy, mount) {
       <h3>${item.nombre}</h3>
       <p>${item.justificacion}</p>
       <p><strong>Subgroups:</strong> ${item.subgrupos.join(", ")}</p>
+      <a class="components-view-all" href="components/${categorySlug}.html?category=${encodeURIComponent(item.id)}">Open group page</a>
     `;
     mount.appendChild(el);
   });
@@ -202,11 +205,13 @@ function initProductPage(data) {
 
   fillList("prod-specs", Object.entries(p.especificaciones).map(([k, v]) => `<strong>${toLabel(k)}:</strong> ${v}`));
   fillList("prod-compat", p.compatibilidades);
+  renderCompatibilityTable("prod-compat-table", p.compatibilidades);
   fillImages("prod-gallery", p.imagenes, p.nombre);
   setImage("prod-diagram", p.diagrama, `Technical diagram of ${p.nombre}`);
   fillLinks("prod-pdfs", p.pdfs);
   fillLinks("prod-videos", p.videos);
   fillReviews("prod-reviews", p.resenas);
+  applyProductSeo(p, category?.nombre || "Component");
 
   const related = data.products.filter((x) => p.relacionados.includes(x.id));
   const mount = document.getElementById("prod-related");
@@ -287,4 +292,175 @@ function toLabel(key) {
     espesor: "Thickness",
   };
   return map[key] || key;
+}
+
+function applyCatalogQueryState(data) {
+  const params = new URLSearchParams(window.location.search);
+  const category = params.get("category");
+  const query = params.get("q");
+  const brand = params.get("brand");
+  const model = params.get("model");
+  const year = params.get("year");
+
+  if (category) setValue("filtro-categoria", category);
+  if (query) setValue("filtro-q", query);
+  if (brand) setValue("filtro-marca", brand);
+  if (brand) {
+    updateModelOptions(data);
+  }
+  if (model) setValue("filtro-modelo", model);
+  if (year) setValue("filtro-anio", year);
+}
+
+function setValue(id, value) {
+  const el = document.getElementById(id);
+  if (el) el.value = value;
+}
+
+function getCategorySlug(categoryId) {
+  const map = {
+    "frenos": "brakes",
+    "mecanica-motor": "mechanical",
+    "electrico-electronica": "electrical",
+    "carroceria-chasis": "body-chassis",
+    "transmision-embrague": "transmission-clutch"
+  };
+  return map[categoryId] || "components-group";
+}
+
+function renderCompatibilityTable(id, compatibilities) {
+  const el = document.getElementById(id);
+  if (!el) return;
+  if (!compatibilities || !compatibilities.length) {
+    el.innerHTML = "<p>No compatibility records available.</p>";
+    return;
+  }
+
+  const rows = compatibilities.map(parseCompatibilityRow);
+  const htmlRows = rows.map((row) => `
+    <tr>
+      <td>${escapeHtml(row.brand)}</td>
+      <td>${escapeHtml(row.model)}</td>
+      <td>${escapeHtml(row.engine)}</td>
+      <td>${escapeHtml(row.years)}</td>
+    </tr>
+  `).join("");
+
+  el.innerHTML = `
+    <table class="comparison-table">
+      <thead>
+        <tr class="comparison-header">
+          <th class="comparison-cell header-cell">Brand</th>
+          <th class="comparison-cell header-cell">Model</th>
+          <th class="comparison-cell header-cell">Engine</th>
+          <th class="comparison-cell header-cell">Years</th>
+        </tr>
+      </thead>
+      <tbody>${htmlRows}</tbody>
+    </table>
+  `;
+}
+
+function parseCompatibilityRow(text) {
+  const line = String(text || "");
+  const yearsMatch = line.match(/\(([^)]+)\)\s*$/);
+  const years = yearsMatch ? yearsMatch[1] : "N/A";
+  const withoutYears = line.replace(/\s*\([^)]+\)\s*$/, "").trim();
+  const parts = withoutYears.split(" ");
+
+  if (parts.length < 2) {
+    return { brand: line, model: "N/A", engine: "N/A", years };
+  }
+
+  const brand = parts[0];
+  const modelEngine = withoutYears.slice(brand.length).trim();
+  const splitIndex = modelEngine.search(/\d/);
+  if (splitIndex < 0) {
+    return { brand, model: modelEngine || "N/A", engine: "N/A", years };
+  }
+
+  const model = modelEngine.slice(0, splitIndex).trim() || "N/A";
+  const engine = modelEngine.slice(splitIndex).trim() || "N/A";
+  return { brand, model, engine, years };
+}
+
+function applyProductSeo(product, categoryName) {
+  const pageTitle = `${product.nombre} | ${categoryName} | Engine Starters`;
+  document.title = pageTitle;
+
+  setMeta("description", `${product.descripcionCorta} Check technical specs, compatibility, and documents on Engine Starters.`);
+  setMeta("property", "og:title", pageTitle);
+  setMeta("property", "og:description", product.descripcionCorta);
+  setMeta("property", "og:image", product.imagenes && product.imagenes[0] ? product.imagenes[0] : "https://www.engine-starters.com/images/brands/default.webp");
+  setMeta("property", "og:type", "product");
+  setMeta("name", "twitter:title", pageTitle);
+  setMeta("name", "twitter:description", product.descripcionCorta);
+  setMeta("name", "twitter:image", product.imagenes && product.imagenes[0] ? product.imagenes[0] : "https://www.engine-starters.com/images/brands/default.webp");
+
+  const canonical = document.querySelector('link[rel="canonical"]');
+  if (canonical) {
+    canonical.href = `https://www.engine-starters.com/subPages/componente.html?id=${encodeURIComponent(product.id)}`;
+  }
+
+  const schemaEl = document.getElementById("product-jsonld");
+  if (schemaEl) {
+    const rating = getAggregateRating(product.resenas);
+    const schema = {
+      "@context": "https://schema.org",
+      "@type": "Product",
+      "name": product.nombre,
+      "description": product.descripcionCorta,
+      "sku": product.sku,
+      "image": product.imagenes || [],
+      "brand": {
+        "@type": "Brand",
+        "name": "Engine Starters Parts"
+      },
+      "offers": {
+        "@type": "Offer",
+        "priceCurrency": product.moneda || "EUR",
+        "price": Number(product.precio || 0).toFixed(2),
+        "availability": product.stock > 0 ? "https://schema.org/InStock" : "https://schema.org/OutOfStock",
+        "itemCondition": "https://schema.org/NewCondition",
+        "url": `https://www.engine-starters.com/subPages/componente.html?id=${encodeURIComponent(product.id)}`
+      }
+    };
+
+    if (rating) {
+      schema.aggregateRating = rating;
+    }
+
+    schemaEl.textContent = JSON.stringify(schema, null, 2);
+  }
+}
+
+function getAggregateRating(reviews) {
+  if (!reviews || !reviews.length) return null;
+  const total = reviews.reduce((sum, review) => sum + Number(review.rating || 0), 0);
+  const avg = total / reviews.length;
+  return {
+    "@type": "AggregateRating",
+    "ratingValue": avg.toFixed(1),
+    "reviewCount": String(reviews.length)
+  };
+}
+
+function setMeta(kind, key, value) {
+  let selector = kind === "property" ? `meta[property="${key}"]` : `meta[name="${key}"]`;
+  let el = document.querySelector(selector);
+  if (!el) {
+    el = document.createElement("meta");
+    el.setAttribute(kind, key);
+    document.head.appendChild(el);
+  }
+  el.setAttribute("content", value);
+}
+
+function escapeHtml(value) {
+  return String(value || "")
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#39;");
 }

@@ -29,6 +29,15 @@
     <meta name="twitter:description" content="Compare different car models side by side. Find the perfect vehicle by comparing specifications, features, and pricing.">
     <meta name="twitter:image" content="https://www.engine-starters.com/images/brands/default.webp">
     <link rel="icon" type="image/jpeg" href="../images/logo/web_logo.jpeg">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "Car Comparison Tool",
+      "url": "https://www.engine-starters.com/subPages/car-comparison.html",
+      "description": "Compare car models side by side using technical specs, performance, and pricing data."
+    }
+    </script>
 
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1971438271362376"
      crossorigin="anonymous"></script>
@@ -51,15 +60,21 @@
                 <li><a href="brands.html">Brands</a></li>
                 <li><a href="components.html">Components</a></li>
                 <li><a href="car-comparison.html" class="active">Compare Cars</a></li>
-                <li><a href="comments.html">Comments</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
     </header>
 
     <main id="main-content">
         <div class="tools-container">
+            <nav class="breadcrumb components-breadcrumb" aria-label="Breadcrumb">
+                <a href="../index.html">Home</a>
+                <span>/</span>
+                <span>Compare Cars</span>
+            </nav>
             <h1 class="tools-title">Car Comparison Tool</h1>
-            <p class="intro-text">Compare different car models side by side to find the perfect vehicle for your needs. Select up to three cars to compare specifications, features, and pricing.</p>
+            <p class="intro-text">Compare different car models side by side to find the right vehicle for your needs. Select up to three cars and review specifications, performance, and pricing in one table.</p>
             
             <div class="comparison-selector">
                 <div class="selector-container">
@@ -94,7 +109,7 @@
                     </div>
                 </div>
                 
-                <button id="compare-btn" class="animated-button">
+                <button id="compare-btn" class="animated-button" type="button">
                     <span class="text">Compare Cars</span>
                     <svg viewBox="0 0 24 24" fill="none">
                         <path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
@@ -115,6 +130,22 @@
                 </div>
             </div>
             <div id="toast" class="toast" role="alert" aria-hidden="true"></div>
+
+            <section class="components-faq" aria-label="Car comparison FAQs">
+                <h2>Comparison FAQ</h2>
+                <details>
+                    <summary>How many cars should I compare at once?</summary>
+                    <p>For clarity, compare two or three models. This lets you quickly identify trade-offs in performance, efficiency, and price.</p>
+                </details>
+                <details>
+                    <summary>Which specs are most important for daily use?</summary>
+                    <p>Focus on fuel economy, warranty, cargo capacity, acceleration, and driver assistance features based on your driving needs.</p>
+                </details>
+                <details>
+                    <summary>Can I save and share my comparison?</summary>
+                    <p>Yes. After clicking Compare Cars, the page URL updates with your selected vehicles so you can bookmark or share it.</p>
+                </details>
+            </section>
         </div>
     </main>    <!-- Footer -->
     <footer class="car-type-footer">
@@ -127,6 +158,8 @@
     <script src="../js/mobile-menu.js" defer></script>
 </body>
 </html>
+
+
 
 
 

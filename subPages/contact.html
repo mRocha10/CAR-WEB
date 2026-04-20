@@ -1,4 +1,4 @@
-﻿﻿﻿﻿﻿﻿﻿<!DOCTYPE html>
+﻿﻿﻿﻿﻿﻿<!DOCTYPE html>
 <html lang="en">
 <head>
 
@@ -48,21 +48,60 @@
                 <li><a href="brands.html">Brands</a></li>
                 <li><a href="components.html">Components</a></li>
                 <li><a href="car-comparison.html">Compare Cars</a></li>
-                <li><a href="comments.html">Comments</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
     </header>
 
     <main id="main-content">
         <section class="section">
-            <h2>Contact Engine Starters</h2>
-            <p>If you need help, want to report an issue, request a correction, or discuss a collaboration, contact us directly:</p>
+            <nav class="breadcrumb components-breadcrumb" aria-label="Breadcrumb">
+                <a href="../index.html">Home</a>
+                <span>/</span>
+                <span>Contact</span>
+            </nav>
+            <h1>Contact Engine Starters</h1>
+            <p>If you need help, want to report an issue, request a correction, or discuss collaboration, use the form below or email us directly.</p>
             <p><strong>Email:</strong> <a href="mailto:contact@engine-starters.com">contact@engine-starters.com</a></p>
 
-            <h3>What To Include In Your Message</h3>
-            <p>To speed up support, please include the page URL, a short description of the issue, and any relevant screenshots or details.</p>
+            <form class="components-filter-panel" action="#" method="post" aria-label="Contact form">
+                <h2 class="components-filter-title">Send a Message</h2>
+                <div class="components-filter-grid">
+                    <label for="contact-name">Full Name
+                        <input id="contact-name" name="name" type="text" autocomplete="name" required>
+                    </label>
+                    <label for="contact-email">Email
+                        <input id="contact-email" name="email" type="email" autocomplete="email" required>
+                    </label>
+                    <label for="contact-phone">Phone
+                        <input id="contact-phone" name="phone" type="tel" autocomplete="tel">
+                    </label>
+                    <label for="contact-vehicle">Vehicle (Brand / Model / Year)
+                        <input id="contact-vehicle" name="vehicle" type="text" placeholder="e.g., Toyota Corolla 2020">
+                    </label>
+                    <label for="contact-subject">Subject
+                        <select id="contact-subject" name="subject" required>
+                            <option value="">Select</option>
+                            <option value="fitment">Fitment question</option>
+                            <option value="technical">Technical issue</option>
+                            <option value="editorial">Editorial correction</option>
+                            <option value="partnership">Partnership request</option>
+                        </select>
+                    </label>
+                    <label for="contact-message">Message
+                        <textarea id="contact-message" name="message" rows="6" required></textarea>
+                    </label>
+                </div>
+                <div class="components-filter-actions">
+                    <button class="btn" type="submit">Send Message</button>
+                </div>
+            </form>
 
-            <h3>Response Time</h3>
+            <h2>What To Include In Your Message</h2>
+            <p>For faster support, include the page URL, a short issue summary, and relevant details such as vehicle and component references.</p>
+
+            <h2>Response Time</h2>
             <p>We aim to respond within 2 to 5 business days.</p>
         </section>
     </main>
@@ -74,3 +113,5 @@
     <script src="../js/mobile-menu.js" defer></script>
 </body>
 </html>
+
+

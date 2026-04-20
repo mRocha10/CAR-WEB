@@ -5,7 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
     <title>Component Product Page | Engine Starters</title>
     <meta name="description" content="Complete automotive component product page with technical specs, compatibility, price, documents, videos, and reviews.">
+    <link rel="canonical" href="https://www.engine-starters.com/subPages/componente.html">
+    <meta property="og:title" content="Component Product Page | Engine Starters">
+    <meta property="og:description" content="Technical component pages with compatibility, specifications, documents, and reviews.">
+    <meta property="og:type" content="product">
+    <meta property="og:url" content="https://www.engine-starters.com/subPages/componente.html">
+    <meta property="og:image" content="https://www.engine-starters.com/images/brands/default.webp">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Component Product Page | Engine Starters">
+    <meta name="twitter:description" content="Technical component pages with compatibility, specifications, documents, and reviews.">
+    <meta name="twitter:image" content="https://www.engine-starters.com/images/brands/default.webp">
     <link rel="stylesheet" href="../css/site-unified.css">
+    <script type="application/ld+json" id="product-jsonld">
+    {
+      "@context": "https://schema.org",
+      "@type": "Product",
+      "name": "Component Product",
+      "brand": {
+        "@type": "Brand",
+        "name": "Engine Starters Parts"
+      }
+    }
+    </script>
 </head>
 <body>
     <a class="skip-link" href="#main-content">Skip to main content</a>
@@ -23,7 +44,8 @@
                 <li><a href="brands.html">Brands</a></li>
                 <li><a href="components.html">Components</a></li>
                 <li><a href="car-comparison.html">Compare Cars</a></li>
-                <li><a href="comments.html">Comments</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
     </header>
@@ -48,7 +70,7 @@
                 <div class="product-hero-meta">
                     <p><strong>Category:</strong> <span id="prod-category"></span></p>
                     <p><strong>Subgroup:</strong> <span id="prod-subgroup"></span></p>
-                    <button class="btn">Check Compatibility</button>
+                    <button class="btn" type="button">Check Compatibility</button>
                 </div>
             </div>
 
@@ -62,6 +84,10 @@
 
                     <h2>Compatibility</h2>
                     <ul id="prod-compat" class="product-list"></ul>
+                    <div class="comparison-container">
+                        <h3>Compatibility Table</h3>
+                        <div id="prod-compat-table"></div>
+                    </div>
 
                     <h2>Related Parts</h2>
                     <div id="prod-related" class="related-grid"></div>
@@ -97,3 +123,5 @@
     <script src="../js/components-catalog.js" defer></script>
 </body>
 </html>
+
+
