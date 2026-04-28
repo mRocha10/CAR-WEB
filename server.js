@@ -17,8 +17,13 @@ const httpsOptions = {
 };
 
 app.use(express.json());
-app.use(express.static(path.join(__dirname)));
 app.use(helmet());
+
+app.get('/subPages/about.html', (req, res) => {
+  res.redirect(301, '/about/');
+});
+
+app.use(express.static(path.join(__dirname)));
 
 // WebSocket server for real-time updates
 // const server = app.listen(3001, () => {

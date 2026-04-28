@@ -4052,3 +4052,23 @@ main li {
         grid-template-columns: 1fr;
     }
 }
+
+.about-sticky-header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: rgba(224, 234, 247, 0.92);
+    backdrop-filter: blur(8px);
+}
+
+.about-sticky-breadcrumb {
+    position: sticky;
+    top: 92px;
+    z-index: 900;
+}
+
+@media (max-width: 767px) {
+    .about-sticky-breadcrumb {
+        top: 66px;
+    }
+}

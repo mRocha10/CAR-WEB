@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
+Allow: /about/
 
-Sitemap: https://www.engine-starters.com/sitemap.xml
+Sitemap: https://enginestarters.org/sitemap.xml
