@@ -7,18 +7,6 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://enginestarters.org/componentes/</loc>
-    <lastmod>2026-04-28</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://enginestarters.org/components/</loc>
-    <lastmod>2026-04-28</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
     <loc>https://enginestarters.org/</loc>
     <lastmod>2026-04-28</lastmod>
     <changefreq>weekly</changefreq>
@@ -31,7 +19,43 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://enginestarters.org/subPages/blog/brake-fluid-dot3-dot4-dot5-differences.html</loc>
+    <lastmod>2026-04-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://enginestarters.org/subPages/blog/brake-pads-ceramic-vs-semi-metallic.html</loc>
+    <lastmod>2026-04-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://enginestarters.org/subPages/blog/engine-oil-grades-explained-5w30-vs-0w20.html</loc>
+    <lastmod>2026-04-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://enginestarters.org/subPages/blog/ev-home-charging-costs-level1-vs-level2.html</loc>
+    <lastmod>2026-04-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://enginestarters.org/subPages/blog/suv-vs-crossover-real-world-cost-comparison.html</loc>
+    <lastmod>2026-04-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://enginestarters.org/subPages/blog/timing-belt-vs-timing-chain-maintenance-guide.html</loc>
+    <lastmod>2026-04-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://enginestarters.org/subPages/blog/used-car-prepurchase-inspection-checklist.html</loc>
     <lastmod>2026-04-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>

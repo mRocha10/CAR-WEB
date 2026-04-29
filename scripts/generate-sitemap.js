@@ -4,7 +4,12 @@ const path = require("path");
 const ROOT = path.resolve(__dirname, "..");
 const BASE_URL = "https://enginestarters.org";
 const TODAY = new Date().toISOString().slice(0, 10);
-const EXCLUDE = new Set(["TEST-MOBILE.html", "subPages/about.html"]);
+const EXCLUDE = new Set([
+  "TEST-MOBILE.html",
+  "subPages/about.html",
+  "componentes/index.html",
+  "components/index.html"
+]);
 
 function walk(dir, acc = []) {
   const entries = fs.readdirSync(dir, { withFileTypes: true });

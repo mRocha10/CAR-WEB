@@ -425,15 +425,15 @@ function applyProductSeo(product, categoryName) {
   setMeta("description", `${product.descripcionCorta} Check technical specs, compatibility, and documents on Engine Starters.`);
   setMeta("property", "og:title", pageTitle);
   setMeta("property", "og:description", product.descripcionCorta);
-  setMeta("property", "og:image", product.imagenes && product.imagenes[0] ? product.imagenes[0] : "https://www.engine-starters.com/images/brands/default.webp");
+  setMeta("property", "og:image", product.imagenes && product.imagenes[0] ? product.imagenes[0] : "https://enginestarters.org/images/brands/default.webp");
   setMeta("property", "og:type", "product");
   setMeta("name", "twitter:title", pageTitle);
   setMeta("name", "twitter:description", product.descripcionCorta);
-  setMeta("name", "twitter:image", product.imagenes && product.imagenes[0] ? product.imagenes[0] : "https://www.engine-starters.com/images/brands/default.webp");
+  setMeta("name", "twitter:image", product.imagenes && product.imagenes[0] ? product.imagenes[0] : "https://enginestarters.org/images/brands/default.webp");
 
   const canonical = document.querySelector('link[rel="canonical"]');
   if (canonical) {
-    canonical.href = `https://www.engine-starters.com/subPages/componente.html?id=${encodeURIComponent(product.id)}`;
+    canonical.href = `https://enginestarters.org/subPages/componente.html?id=${encodeURIComponent(product.id)}`;
   }
 
   const schemaEl = document.getElementById("product-jsonld");
@@ -456,7 +456,7 @@ function applyProductSeo(product, categoryName) {
         "price": Number(product.precio || 0).toFixed(2),
         "availability": product.stock > 0 ? "https://schema.org/InStock" : "https://schema.org/OutOfStock",
         "itemCondition": "https://schema.org/NewCondition",
-        "url": `https://www.engine-starters.com/subPages/componente.html?id=${encodeURIComponent(product.id)}`
+        "url": `https://enginestarters.org/subPages/componente.html?id=${encodeURIComponent(product.id)}`
       }
     };
 
@@ -498,3 +498,4 @@ function escapeHtml(value) {
     .replace(/"/g, "&quot;")
     .replace(/'/g, "&#39;");
 }
+

@@ -2,7 +2,7 @@ const fs = require("fs");
 const path = require("path");
 
 const ROOT = path.resolve(__dirname, "..");
-const BASE_URL = "https://www.engine-starters.com";
+const BASE_URL = "https://enginestarters.org";
 
 function walkHtmlFiles(dir, acc = []) {
   const entries = fs.readdirSync(dir, { withFileTypes: true });
@@ -206,3 +206,4 @@ const files = walkHtmlFiles(ROOT);
 for (const file of files) processFile(file);
 
 console.log(`Processed ${files.length} HTML files`);
+

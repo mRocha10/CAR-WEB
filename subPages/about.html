@@ -5,12 +5,24 @@
     <meta http-equiv="refresh" content="0; url=/about/">
     <meta name="robots" content="noindex,follow">
     <link rel="canonical" href="https://enginestarters.org/about/">
-    <title>Redirecting | Engine Starters</title>
+    <title>About Redirect | Engine Starters</title>
     <script>
       window.location.replace("/about/");
     </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://enginestarters.org/"},
+        {"@type": "ListItem", "position": 2, "name": "About Redirect", "item": "https://enginestarters.org/subPages/about.html"}
+      ]
+    }
+    </script>
 </head>
 <body>
+    <h1 style="position:absolute;left:-9999px;">About Redirect</h1>
     <p>Redirecting to <a href="/about/">/about/</a>...</p>
 </body>
 </html>
