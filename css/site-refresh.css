@@ -364,6 +364,26 @@ img {
     text-decoration: none;
 }
 
+.site-card p a,
+.site-note p a,
+.site-highlight p a,
+.site-prose p a,
+.site-prose li a {
+    color: var(--site-primary);
+    font-weight: 700;
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 0.16em;
+}
+
+.site-card p a:hover,
+.site-note p a:hover,
+.site-highlight p a:hover,
+.site-prose p a:hover,
+.site-prose li a:hover {
+    color: var(--site-primary-dark);
+}
+
 .site-link-list {
     list-style: none;
     margin: 0;
@@ -512,6 +532,10 @@ img {
     color: #77451a;
     border: 1px solid #f3d1aa;
     font-size: 0.95rem;
+}
+
+.site-hero__panel .site-advisory {
+    color: #5f3410;
 }
 
 .site-table-wrap {
