@@ -76,8 +76,9 @@
 </head>
 <body>
     <a class="skip-link" href="#main-content">Skip to main content</a>
+        <!-- Header -->
     <header>
-        <a class="logo-link" href="../../index.html">
+        <a href="/" class="logo-link">
             <div class="logo">
             <p class="site-title">Engine Starters</p>
                 <h2>Your ultimate guide to car brands and types</h2>
@@ -86,12 +87,12 @@
         <nav>
             <ul>
                 <li><a href="/about/">About</a></li>
-                <li><a href="../car-types.html">Car Types</a></li>
-                <li><a href="../brands.html">Brands</a></li>
-                <li><a href="../components.html">Components</a></li>
-                <li><a href="../car-comparison.html">Compare Cars</a></li>
-                <li><a href="../blog.html">Blog</a></li>
-                <li><a href="../contact.html">Contact</a></li>
+                <li><a href="/subPages/car-types.html">Car Types</a></li>
+                <li><a href="/subPages/brands.html">Brands</a></li>
+                <li><a href="/subPages/components.html">Components</a></li>
+                <li><a href="/subPages/car-comparison.html">Compare Cars</a></li>
+                <li><a href="/subPages/blog.html">Blog</a></li>
+                <li><a href="/subPages/contact.html">Contact</a></li>
             </ul>
         </nav>
     </header>
@@ -100,7 +101,15 @@
 
     <!-- Hero Section -->
     <div class="brand-hero-wrapper">
-        <section class="brand-decision-summary section"><h2>Buyer Fit Summary</h2><p>Mercedes-Benz is best evaluated through ownership goals, maintenance profile, and long-term value retention rather than badge appeal alone.</p><ul class="product-list"><li>Best for: drivers prioritizing Mercedes-Benz design and ecosystem strengths.</li><li>Watch-outs: service cost variance by model and drivetrain complexity.</li><li>Decision rule: compare total 24-month ownership cost before final choice.</li></ul></section><section class="brand-hero" data-bg="../../images/brands/mercedes-hero.jpg">
+        <section class="brand-decision-summary section">
+            <nav class="breadcrumb components-breadcrumb">
+        <a href="../../index.html">Home</a>
+        <span>»</span>
+        <a href="../brands.html">Brands</a>
+        <span>»</span>
+        <span>Mercedes-Benz</span>
+    </nav>
+<h2>Buyer Fit Summary</h2><p>Mercedes is best for buyers prioritizing premium materials, comfort, and brand ecosystem support, while accepting higher running costs.</p><ul class="product-list"><li>Best for: drivers who want refined cabins, strong highway comfort, and premium brand features.</li><li>Watch-outs: option-package inflation and maintenance cost growth in high-spec variants.</li><li>Decision rule: buy the trim that matches real usage and avoid paying for low-use cosmetic packages.</li></ul></section><section class="brand-hero" data-bg="../../images/brands/mercedes-hero.jpg">
                 <div class="brand-hero-content">
                     <h1>Mercedes-Benz</h1>
                     <p class="brand-tagline">The Best or Nothing</p>
@@ -108,16 +117,7 @@
                 </div>
             </section>
     </div>
-
-    <nav class="breadcrumb-nav">
-        <a href="../../index.html">Home</a>
-        <span>»</span>
-        <a href="../brands.html">Brands</a>
-        <span>»</span>
-        <span>Mercedes-Benz</span>
-    </nav>
-
-    <!-- Tab Navigation -->
+<!-- Tab Navigation -->
     <div class="tab-navigation">
         <button class="tab-button active" onclick="openTab('overview')">Overview</button>
         <button class="tab-button" onclick="openTab('history')">History</button>
@@ -153,7 +153,7 @@
         <div class="brand-content-wrapper">
             <section class="brand-section">
                 <h2>🏛️ Brand History &amp; Legacy</h2>
-                <p>Founded in <strong>1926</strong> through the merger of Daimler-Motoren-Gesellschaft and Benz &amp; Cie, Mercedes-Benz carries the legacy of <strong>Karl Benz</strong>, who invented the first gasoline-powered automobile in 1886. The three-pointed star symbolizes the company's ambition to motorize land, sea, and air.</p>
+                <p>Mercedes The brand developed its reputation through premium engineering, design consistency, and continuous expansion across luxury segments.</p>
                 <p>Mercedes-Benz has pioneered countless automotive innovations including the <strong>safety cell</strong>, <strong>crumple zones</strong>, <strong>ABS brakes</strong>, and <strong>airbags</strong>. The brand's commitment to safety and engineering excellence has made it the benchmark for luxury automobiles worldwide.</p>
                 <h3>Luxury &amp; Performance Excellence</h3>
                 <p>The <strong>S-Class</strong> has been the flagship of luxury for decades, introducing technologies that eventually trickle down to all vehicles. <strong>AMG</strong>, Mercedes' performance division, creates some of the world's most powerful and desirable performance cars, from the GT to the Project ONE hypercar.</p>
@@ -167,7 +167,7 @@
             
     <section class="brand-section">
         <h2>🚗 Complete Model Lineup 2024-2025</h2>
-        <p>Mercedes-Benz offers the world's most diverse luxury portfolio.</p>
+        <p>Mercedes Lineup coverage includes core luxury sedans/SUVs plus performance sub-trims with clearly different ownership economics.</p>
         <div class="models-grid">
             <div class="model-category-card">
                 <h3>Sedans &amp; Wagons</h3>
@@ -244,20 +244,53 @@
     <div class="tab-content" id="awards">
         <div class="brand-content-wrapper">
             <section class="brand-section">
-                <h2>🏆 Awards &amp; Recognition</h2>
+                <h2>Awards &amp; Recognition</h2>
+                <p>Mercedes: Premium recognition usually comes from comfort quality, technology execution, and brand-level ownership experience.</p>
                 <div class="awards-grid">
                     <div class="award-badge">
-                        <div class="award-icon">🥇</div>
-                        <div class="award-title">World Luxury Car</div>
-                        <div class="award-year">EQS 2022
+                        <div class="award-icon">P1</div>
+                        <div class="award-title">Cabin Quality</div>
+                        <div class="award-year">Premium fit and finish</div>
+                    </div>
+                    <div class="award-badge">
+                        <div class="award-icon">P2</div>
+                        <div class="award-title">Tech Integration</div>
+                        <div class="award-year">Driver-assist and digital cockpit</div>
+                    </div>
+                    <div class="award-badge">
+                        <div class="award-icon">P3</div>
+                        <div class="award-title">Road Comfort</div>
+                        <div class="award-year">Highway refinement and stability</div>
+                    </div>
+                    <div class="award-badge">
+                        <div class="award-icon">P4</div>
+                        <div class="award-title">Brand Prestige</div>
+                        <div class="award-year">Global premium positioning</div>
+                    </div>
+                    <div class="award-badge">
+                        <div class="award-icon">P5</div>
+                        <div class="award-title">Safety Coverage</div>
+                        <div class="award-year">Comprehensive safety packages</div>
+                    </div>
+                    <div class="award-badge">
+                        <div class="award-icon">P6</div>
+                        <div class="award-title">Residual Performance</div>
+                        <div class="award-year">Luxury resale competitiveness</div>
+                    </div>
+                </div>
+            </section>
         </div>
     </div>
+
+
+
+
 
     
             <section aria-label="Next steps" class="next-steps-panel">
             <h2>Next Steps</h2>
             <p>Compare alternatives, review component options, and continue with practical buying guidance.</p>
-            <div class="next-steps-grid"><a class="next-step-card" href="mitsubishi.html">Compare with Mitsubishi</a><a class="next-step-card" href="saic.html">Compare with Saic</a><a class="next-step-card" href="../car-comparison.html">Run Side-by-Side Comparison</a><a class="next-step-card" href="../components.html">Check Compatible Components</a></div>
+            <div class="next-steps-grid"><a class="next-step-card" href="mitsubishi.html">Compare with Mitsubishi</a><a class="next-step-card" href="saic.html">Compare with SAIC</a><a class="next-step-card" href="../car-comparison.html">Run Side-by-Side Comparison</a><a class="next-step-card" href="../components.html">Check Compatible Components</a></div>
         </section>
 
         </div></section></div></div></section></div></div></section></div></div></main>

@@ -9,11 +9,62 @@
     
     // Wait for DOM to be fully loaded
     if (document.readyState === 'loading') {
-        document.addEventListener('DOMContentLoaded', initMobileMenu);
+        document.addEventListener('DOMContentLoaded', initAll);
     } else {
+        initAll();
+    }
+
+    function normalizePathname(pathname) {
+        if (!pathname) return '/';
+        const clean = pathname.toLowerCase().replace(/\/index\.html$/, '/');
+        return clean.endsWith('/') ? clean : `${clean}/`;
+    }
+
+    function markActiveNavLink(nav) {
+        if (!nav) return;
+        const current = normalizePathname(window.location.pathname);
+        const links = nav.querySelectorAll('a[href]');
+        links.forEach(function(link) {
+            const href = link.getAttribute('href');
+            if (!href || href.startsWith('#') || /^https?:/i.test(href)) return;
+            const target = normalizePathname(new URL(href, window.location.origin).pathname);
+            const isActive = current === target;
+            link.classList.toggle('active', isActive);
+            if (isActive) link.setAttribute('aria-current', 'page');
+            else link.removeAttribute('aria-current');
+        });
+    }
+
+    function initAll() {
+        enforceStandardHeader();
         initMobileMenu();
     }
-    
+
+    function enforceStandardHeader() {
+        const header = document.querySelector('header');
+        if (!header) return;
+
+        header.innerHTML = `
+            <a href="/" class="logo-link">
+                <div class="logo">
+                <p class="site-title">Engine Starters</p>
+                    <h2>Your ultimate guide to car brands and types</h2>
+                </div>
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="/about/">About</a></li>
+                    <li><a href="/subPages/car-types.html">Car Types</a></li>
+                    <li><a href="/subPages/brands.html">Brands</a></li>
+                    <li><a href="/subPages/components.html">Components</a></li>
+                    <li><a href="/subPages/car-comparison.html">Compare Cars</a></li>
+                    <li><a href="/subPages/blog.html">Blog</a></li>
+                    <li><a href="/subPages/contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        `.trim();
+    }
+
     function initMobileMenu() {
         // Create hamburger menu button if it doesn't exist
         const header = document.querySelector('header');
@@ -22,7 +73,8 @@
         if (!header || !nav) return;
         
         // Check if mobile menu toggle already exists
-        let menuToggle = header.querySelector('.mobile-menu-toggle');
+        let menuToggle = header.querySelector('.mobile-menu-toggle') || header.querySelector('.mobile-toggle');
+        markActiveNavLink(nav);
         
         if (!menuToggle) {
             // Create the hamburger button
@@ -40,9 +92,12 @@
             menuToggle.appendChild(hamburger);
             
             // Insert button before navigation
-            nav.setAttribute('id', 'main-navigation');
+            if (!nav.id) nav.setAttribute('id', 'main-navigation');
             header.insertBefore(menuToggle, nav);
         }
+        menuToggle.setAttribute('aria-expanded', 'false');
+        if (!nav.id) nav.setAttribute('id', 'main-navigation');
+        menuToggle.setAttribute('aria-controls', nav.id);
         
         // Toggle menu on click
         menuToggle.addEventListener('click', function(e) {

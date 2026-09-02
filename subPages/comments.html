@@ -56,26 +56,34 @@
 </head>
 <body>
     <a class="skip-link" href="#main-content">Skip to main content</a>
+        <!-- Header -->
     <header>
-        <a href="../index.html" style="text-decoration: none; color: inherit;">
+        <a href="/" class="logo-link">
             <div class="logo">
-                <p class="site-title">Engine Starters</p>
+            <p class="site-title">Engine Starters</p>
                 <h2>Your ultimate guide to car brands and types</h2>
             </div>
         </a>
         <nav>
             <ul>
                 <li><a href="/about/">About</a></li>
-                <li><a href="car-types.html">Car Types</a></li>
-                <li><a href="brands.html">Brands</a></li>
-                <li><a href="components.html">Components</a></li>
-                <li><a href="car-comparison.html">Compare Cars</a></li>
-                <li><a href="comments.html" class="active">Comments</a></li>
+                <li><a href="/subPages/car-types.html">Car Types</a></li>
+                <li><a href="/subPages/brands.html">Brands</a></li>
+                <li><a href="/subPages/components.html">Components</a></li>
+                <li><a href="/subPages/car-comparison.html">Compare Cars</a></li>
+                <li><a href="/subPages/blog.html">Blog</a></li>
+                <li><a href="/subPages/contact.html">Contact</a></li>
             </ul>
         </nav>
     </header>
 
     <main id="main-content">
+        <section class="section">
+            <nav class="breadcrumb components-breadcrumb" aria-label="Breadcrumb">
+                <a href="../index.html">Home</a>
+                <span>/</span>
+                <span>Community Comments</span>
+            </nav>
         <div class="tools-container">
             <h1 class="tools-title">Community Comments</h1>
             <p class="intro-text">Share your thoughts, experiences, and insights about cars with our community. Your comments help others make informed decisions.</p>
@@ -103,6 +111,7 @@
                 <div id="comments-container"></div>
             </div>
         </div>
+        </section>
     </main>
 
     <footer class="car-type-footer">

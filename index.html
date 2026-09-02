@@ -73,102 +73,145 @@
     <a class="skip-link" href="#main-content">Skip to main content</a>
     <!-- Header -->
     <header>
-        <a href="index.html" class="logo-link">
-        <div class="logo">
+        <a href="/" class="logo-link">
+            <div class="logo">
             <p class="site-title">Engine Starters</p>
-            <h2>Your ultimate guide to car brands and types</h2>
-        </div>
-    </a>
+                <h2>Your ultimate guide to car brands and types</h2>
+            </div>
+        </a>
         <nav>
             <ul>
                 <li><a href="/about/">About</a></li>
-                <li><a href="subPages/car-types.html">Car Types</a></li>
-                <li><a href="subPages/brands.html">Brands</a></li>
-                <li><a href="subPages/components.html">Components</a></li>
-                <li><a href="subPages/car-comparison.html">Compare Cars</a></li>
-                <li><a href="subPages/blog.html">Blog</a></li>
-                <li><a href="subPages/contact.html">Contact</a></li>
+                <li><a href="/subPages/car-types.html">Car Types</a></li>
+                <li><a href="/subPages/brands.html">Brands</a></li>
+                <li><a href="/subPages/components.html">Components</a></li>
+                <li><a href="/subPages/car-comparison.html">Compare Cars</a></li>
+                <li><a href="/subPages/blog.html">Blog</a></li>
+                <li><a href="/subPages/contact.html">Contact</a></li>
             </ul>
         </nav>
     </header>
-
-    <!-- Main Section -->   
+<!-- Main Section -->   
     <main id="main-content">
         <div id="content">
+            <section class="section home-hero">
+            <nav class="breadcrumb components-breadcrumb" aria-label="Breadcrumb">
+        <a href="index.html">Home</a> <span>/</span> <span>Find the right car faster with clear guides, brand insights, and comparison tools</span>
+    </nav>
+
+                <p class="home-hero-eyebrow">Automotive research made practical</p>
+                <h1>Find the right car faster with clear guides, brand insights, and comparison tools</h1>
+                <p class="home-hero-lead">Use Engine Starters to explore car types, compare models side by side, and understand components before making your next decision.</p>
+                <div class="home-hero-actions">
+                    <a class="btn" href="subPages/car-comparison.html">Start Comparing Cars</a>
+                    <a class="learn-more-btn" href="subPages/components.html">Explore Components</a>
+                </div>
+            </section>
             <section id="subPages/car-types" class="section">
-                <h1>Car Types</h1>
+                <h2>Car Types</h2>
+                <div class="home-quick-filters" aria-label="Quick filters for car types">
+                    <label>
+                        Body style
+                        <select id="home-filter-body">
+                            <option value="">All body styles</option>
+                            <option value="practical">Practical</option>
+                            <option value="utility">Utility</option>
+                            <option value="performance">Performance</option>
+                            <option value="premium">Premium</option>
+                        </select>
+                    </label>
+                    <label>
+                        Budget
+                        <select id="home-filter-budget">
+                            <option value="">All budgets</option>
+                            <option value="entry">Entry level</option>
+                            <option value="mid">Mid range</option>
+                            <option value="premium">Premium</option>
+                        </select>
+                    </label>
+                    <label>
+                        Fuel preference
+                        <select id="home-filter-fuel">
+                            <option value="">All fuel types</option>
+                            <option value="ev">Electric</option>
+                            <option value="ice">Gas / Hybrid</option>
+                        </select>
+                    </label>
+                    <button type="button" class="components-btn-secondary" id="home-filter-reset">Reset filters</button>
+                    <p class="home-filter-result" id="home-filter-result">Showing all categories</p>
+                </div>
                 <div class="car-cards">
-                    <div class="card">
+                    <div class="card" data-body="utility" data-budget="mid" data-fuel="ice">
                         <h3>SUV</h3>
                         <img src="images/types/suv.webp" alt="SUV" loading="lazy" width="5000" height="5000">
                         <p>Sport Utility Vehicles offer higher ground clearance and spacious interiors perfect for families and outdoor adventures.</p>
-                        <a class="learn-more-btn" href="subPages/types/suv.html">Learn More</a>
+                        <a class="learn-more-btn" href="subPages/types/suv.html">View SUV Guide</a>
                     </div>
-                    <div class="card">
+                    <div class="card" data-body="practical" data-budget="entry" data-fuel="ice">
                         <h3>Sedan</h3>
                         <img src="images/types/sedan.webp" alt="Sedan" loading="lazy" width="4000" height="4000">
                         <p>Sedans provide excellent fuel efficiency and comfortable ride quality for daily commuting.</p>
-                        <a class="learn-more-btn" href="subPages/types/sedan.html">Learn More</a>
+                        <a class="learn-more-btn" href="subPages/types/sedan.html">View Sedan Guide</a>
                     </div>
-                    <div class="card">
+                    <div class="card" data-body="performance" data-budget="premium" data-fuel="ice">
                         <h3>Sports Cars</h3>
                         <img src="images/types/sports-car.webp" alt="Sports Car" loading="lazy" width="4032" height="2304">
                         <p>High-performance vehicles with advanced aerodynamics and premium handling for driving enthusiasts.</p>
-                        <a class="learn-more-btn" href="subPages/types/sports.html">Learn More</a>
+                        <a class="learn-more-btn" href="subPages/types/sports.html">View Sports Car Guide</a>
                     </div>
-                    <div class="card">
+                    <div class="card" data-body="practical" data-budget="mid" data-fuel="ev">
                         <h3>Electric Cars</h3>
                         <img src="images/types/electric.webp" alt="Electric Car" loading="lazy" width="4725" height="4726">
                         <p>Zero-emission vehicles with instant torque and advanced technology for eco-conscious drivers.</p>
-                        <a class="learn-more-btn" href="subPages/types/electric.html">Learn More</a>
+                        <a class="learn-more-btn" href="subPages/types/electric.html">View EV Guide</a>
                     </div>
-                    <div class="card">
+                    <div class="card" data-body="performance" data-budget="mid" data-fuel="ice">
                         <h3>Muscle Cars</h3>
                         <img src="images/types/muscle.webp" alt="Muscle Car" loading="lazy" width="4687" height="4687">
                         <p>Powerful American-made performance cars with high-displacement engines and aggressive styling, built for straight-line speed.</p>
                         <a class="learn-more-btn" href="subPages/types/muscle.html">Learn More</a>
                     </div>
-                    <div class="card">
+                    <div class="card" data-body="utility" data-budget="mid" data-fuel="ice">
                         <h3>Pickup Trucks</h3>
                         <img src="images/types/pickup.webp" alt="Pickup Truck" loading="lazy" width="4000" height="2828">
                         <p>Versatile vehicles with high towing capacity and rugged construction for heavy-duty tasks.</p>
                         <a class="learn-more-btn" href="subPages/types/pickup.html">Learn More</a>
                     </div>
-                    <div class="card">
+                    <div class="card" data-body="utility" data-budget="mid" data-fuel="ice">
                         <h3>Minivans</h3>
                         <img src="images/types/minivan.webp" alt="Minivan" loading="lazy" width="4096" height="4096">
                         <p>Spacious family vehicles with flexible seating and convenient sliding doors.</p>
                         <a class="learn-more-btn" href="subPages/types/minivan.html">Learn More</a>
                     </div>
-                    <div class="card">
+                    <div class="card" data-body="performance" data-budget="premium" data-fuel="ice">
                         <h3>Convertibles</h3>
                         <img src="images/types/convertible.webp" alt="Convertible" loading="lazy" width="3000" height="3000">
                         <p>Stylish vehicles with retractable roofs for an enhanced open-air driving experience.</p>
                         <a class="learn-more-btn" href="subPages/types/convertible.html">Learn More</a>
                     </div>
-                    <div class="card">
+                    <div class="card" data-body="practical" data-budget="entry" data-fuel="ice">
                         <h3>Hatchbacks</h3>
                         <img src="images/types/hatchback.webp" alt="Hatchback" loading="lazy" width="5250" height="3500">
                         <p>Practical vehicles with versatile cargo space and excellent fuel efficiency.</p>
                         <a class="learn-more-btn" href="subPages/types/hatchback.html">Learn More</a>
                     </div>
-                    <div class="card">
+                    <div class="card" data-body="utility" data-budget="mid" data-fuel="ice">
                         <h3>Crossovers</h3>
                         <img src="images/types/crossover.webp" alt="Crossover" loading="lazy" width="5000" height="5000">
                         <p>Combines SUV benefits with car-like handling and better fuel efficiency.</p>
                         <a class="learn-more-btn" href="subPages/types/crossover.html">Learn More</a>
                     </div>
-                    <div class="card">
+                    <div class="card" data-body="premium" data-budget="premium" data-fuel="ice">
                         <h3>Luxury Cars</h3>
                         <img src="images/types/luxury.webp" alt="Luxury Car" loading="lazy" width="5000" height="5000">
                         <p>Premium vehicles featuring high-end materials and advanced comfort features.</p>
                         <a class="learn-more-btn" href="subPages/types/luxury.html">Learn More</a>
                     </div>
-                    <div class="card">
+                    <div class="card" data-body="practical" data-budget="entry" data-fuel="ice">
                         <h3>Compact Cars</h3>
                         <img src="images/types/compact.webp" alt="Compact Car" loading="lazy" width="4000" height="4000">
                         <p>Efficient, easy-to-maneuver vehicles perfect for urban environments.</p>
-                        <a class="learn-more-btn" href="subPages/types/compact.html">Learn More</a>
+                        <a class="learn-more-btn" href="subPages/types/compact.html">View Compact Guide</a>
                     </div>
                 
                 </div>
@@ -187,6 +230,12 @@
                         <p class="components-card-kicker">Comparison Guides</p>
                         <p>Use performance, efficiency, warranty, and ownership cost data to shortlist better.</p>
                         <a class="components-view-all" href="subPages/car-comparison.html">Open comparison tool</a>
+                    </article>
+                    <article class="components-showcase-card">
+                        <h3>Browse More Automotive Guides</h3>
+                        <p class="components-card-kicker">Blog Hub</p>
+                        <p>Read practical maintenance, ownership, and buying guides tailored to daily drivers.</p>
+                        <a class="components-view-all" href="subPages/blog.html">View all articles</a>
                     </article>
                 </div>
             </section>
