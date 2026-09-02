@@ -37,7 +37,7 @@ fs.writeFileSync(minCssFile, output.styles);
 console.log(`Created minified global CSS: ${minCssFile}`);
 
 // Minificar JS
-const jsToMinify = ['car-comparison.js', 'comments.js', 'script.js'];
+const jsToMinify = ['ad-slots.js', 'ads.js', 'car-comparison.js', 'comments.js', 'script.js', 'site.js'];
 jsToMinify.forEach(file => {
   const filePath = path.join(jsDir, file);
   if (fs.existsSync(filePath)) {

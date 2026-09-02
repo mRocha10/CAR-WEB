@@ -1,275 +1,342 @@
-document.addEventListener('DOMContentLoaded', function() {
-    // Elements
-    const car1Brand = document.getElementById('car1-brand');
-    const car2Brand = document.getElementById('car2-brand');
-    const car3Brand = document.getElementById('car3-brand');
-    const car1Model = document.getElementById('car1-model');
-    const car2Model = document.getElementById('car2-model');
-    const car3Model = document.getElementById('car3-model');
-    const compareBtn = document.getElementById('compare-btn');
-    const resultsContainer = document.getElementById('comparison-results');
-    
-    // Car data
+document.addEventListener("DOMContentLoaded", () => {
+    const brandSelectors = [
+        document.getElementById("car1-brand"),
+        document.getElementById("car2-brand"),
+        document.getElementById("car3-brand")
+    ];
+    const modelSelectors = [
+        document.getElementById("car1-model"),
+        document.getElementById("car2-model"),
+        document.getElementById("car3-model")
+    ];
+    const compareForm = document.getElementById("comparison-form");
+    const compareButton = document.getElementById("compare-btn");
+    const resultsContainer = document.getElementById("comparison-results");
+    const statusElement = document.getElementById("comparison-status");
+    const dataUrl = "../data/car-data.json";
+    const specsList = [
+        { key: "engine", label: "Engine" },
+        { key: "horsepower", label: "Horsepower", compare: "higher" },
+        { key: "torque", label: "Torque", compare: "higher" },
+        { key: "transmission", label: "Transmission" },
+        { key: "mpg", label: "Fuel Economy", compare: "higher" },
+        { key: "price", label: "Starting Price", compare: "lower" },
+        { key: "acceleration", label: "0-60 mph", compare: "lower" },
+        { key: "topSpeed", label: "Top Speed", compare: "higher" },
+        { key: "dimensions", label: "Dimensions" },
+        { key: "weight", label: "Weight", compare: "lower" },
+        { key: "cargoCapacity", label: "Cargo Capacity", compare: "higher" },
+        { key: "fuelTank", label: "Fuel Tank", compare: "higher" },
+        { key: "driverAssist", label: "Driver Assistance" },
+        { key: "warranty", label: "Warranty" }
+    ];
+
     let carData = {};
-    
-    // Fetch car data from JSON file
-    fetch('../data/car-data.json')
-        .then(response => {
+
+    function setStatus(message) {
+        if (statusElement) {
+            statusElement.textContent = message;
+        }
+    }
+
+    function escapeHtml(value) {
+        const div = document.createElement("div");
+        div.textContent = value;
+        return div.innerHTML;
+    }
+
+    function populateModels(brandSelect, modelSelect, selectedModel = "") {
+        const selectedBrand = brandSelect.value;
+        modelSelect.innerHTML = '<option value="">Select model</option>';
+
+        if (!selectedBrand || !carData[selectedBrand] || !Array.isArray(carData[selectedBrand].models)) {
+            modelSelect.disabled = true;
+            return;
+        }
+
+        carData[selectedBrand].models.forEach((model) => {
+            const option = document.createElement("option");
+            option.value = model.id;
+            option.textContent = model.name;
+            modelSelect.appendChild(option);
+        });
+
+        modelSelect.disabled = false;
+
+        if (selectedModel) {
+            modelSelect.value = selectedModel;
+        }
+    }
+
+    function getSelectedCar(index) {
+        const brandSelect = brandSelectors[index];
+        const modelSelect = modelSelectors[index];
+        const brand = brandSelect.value;
+        const model = modelSelect.value;
+
+        if (!brand || !model || !carData[brand] || !carData[brand].specs || !carData[brand].specs[model]) {
+            return null;
+        }
+
+        return {
+            brand,
+            model,
+            brandName: brandSelect.options[brandSelect.selectedIndex].text,
+            modelName: modelSelect.options[modelSelect.selectedIndex].text,
+            specs: carData[brand].specs[model]
+        };
+    }
+
+    function extractNumericValue(key, rawValue) {
+        if (typeof rawValue !== "string") {
+            return null;
+        }
+
+        if (key === "price") {
+            const numeric = rawValue.replace(/[^0-9.]/g, "");
+            return numeric ? parseFloat(numeric) : null;
+        }
+
+        if (key === "mpg") {
+            const values = rawValue.match(/\d+(\.\d+)?/g);
+            if (!values || values.length === 0) {
+                return null;
+            }
+            const numbers = values.map(Number);
+            return numbers.reduce((sum, value) => sum + value, 0) / numbers.length;
+        }
+
+        const match = rawValue.match(/\d+(\.\d+)?/);
+        return match ? parseFloat(match[0]) : null;
+    }
+
+    function buildSummary(cars) {
+        const summaryMetrics = [
+            { key: "horsepower", label: "Highest horsepower", compare: "higher" },
+            { key: "mpg", label: "Best efficiency", compare: "higher" },
+            { key: "price", label: "Lowest starting price", compare: "lower" },
+            { key: "acceleration", label: "Quickest 0-60 mph", compare: "lower" }
+        ];
+
+        return summaryMetrics
+            .map((metric) => {
+                const candidates = cars
+                    .map((car) => ({
+                        car,
+                        numeric: extractNumericValue(metric.key, car.specs[metric.key]),
+                        display: car.specs[metric.key] || "N/A"
+                    }))
+                    .filter((entry) => entry.numeric !== null);
+
+                if (candidates.length === 0) {
+                    return "";
+                }
+
+                const sorted = candidates.sort((left, right) =>
+                    metric.compare === "higher" ? right.numeric - left.numeric : left.numeric - right.numeric
+                );
+                const winner = sorted[0];
+
+                return `
+                    <article class="site-card">
+                        <h3>${metric.label}</h3>
+                        <p><strong>${escapeHtml(winner.car.brandName)} ${escapeHtml(winner.car.modelName)}</strong></p>
+                        <p>${escapeHtml(winner.display)}</p>
+                    </article>
+                `;
+            })
+            .join("");
+    }
+
+    function buildComparisonTable(cars) {
+        const headerCells = cars
+            .map((car) => `<th scope="col">${escapeHtml(`${car.brandName} ${car.modelName}`)}</th>`)
+            .join("");
+
+        const rows = specsList
+            .map((spec) => {
+                const values = cars.map((car) => ({
+                    raw: car.specs[spec.key] || "N/A",
+                    numeric: extractNumericValue(spec.key, car.specs[spec.key])
+                }));
+
+                let bestValue = null;
+                let watchValue = null;
+
+                const numericValues = values.map((entry) => entry.numeric).filter((value) => value !== null);
+                if (numericValues.length > 1 && spec.compare) {
+                    bestValue = spec.compare === "higher" ? Math.max(...numericValues) : Math.min(...numericValues);
+                    watchValue = spec.compare === "higher" ? Math.min(...numericValues) : Math.max(...numericValues);
+                }
+
+                const cells = values
+                    .map((entry) => {
+                        let className = "";
+
+                        if (entry.numeric !== null && bestValue !== null && entry.numeric === bestValue && bestValue !== watchValue) {
+                            className = "site-table__best";
+                        } else if (entry.numeric !== null && watchValue !== null && entry.numeric === watchValue && bestValue !== watchValue) {
+                            className = "site-table__watch";
+                        }
+
+                        return `<td class="${className}">${escapeHtml(entry.raw)}</td>`;
+                    })
+                    .join("");
+
+                return `
+                    <tr>
+                        <th scope="row">${spec.label}</th>
+                        ${cells}
+                    </tr>
+                `;
+            })
+            .join("");
+
+        const imageRow = cars
+            .map(
+                (car) => `
+                    <td>
+                        <img
+                            src="${escapeHtml(car.specs.image)}"
+                            alt="${escapeHtml(`${car.brandName} ${car.modelName}`)}"
+                            class="comparison-image"
+                            loading="lazy"
+                            width="240"
+                            height="140"
+                        >
+                    </td>
+                `
+            )
+            .join("");
+
+        return `
+            <div class="site-table-wrap">
+                <table class="site-table">
+                    <thead>
+                        <tr>
+                            <th scope="col">Specification</th>
+                            ${headerCells}
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">Vehicle image</th>
+                            ${imageRow}
+                        </tr>
+                        ${rows}
+                    </tbody>
+                </table>
+            </div>
+        `;
+    }
+
+    function syncUrl() {
+        const params = new URLSearchParams();
+
+        brandSelectors.forEach((brandSelect, index) => {
+            const modelSelect = modelSelectors[index];
+            if (brandSelect.value) {
+                params.set(`c${index + 1}b`, brandSelect.value);
+            }
+            if (modelSelect.value) {
+                params.set(`c${index + 1}m`, modelSelect.value);
+            }
+        });
+
+        const nextUrl = `${window.location.pathname}${params.toString() ? `?${params.toString()}` : ""}`;
+        window.history.replaceState({}, "", nextUrl);
+    }
+
+    function renderComparison() {
+        const cars = [0, 1, 2].map(getSelectedCar).filter(Boolean);
+
+        if (cars.length === 0) {
+            resultsContainer.innerHTML = `
+                <div class="site-note">
+                    <h2>Choose vehicles to begin</h2>
+                    <p>Select at least one brand and model to see specifications, cost, efficiency, and key differences side by side.</p>
+                </div>
+            `;
+            setStatus("Ready to compare. Choose up to three vehicles.");
+            syncUrl();
+            return;
+        }
+
+        resultsContainer.innerHTML = `
+            <div class="site-grid site-grid--four">
+                ${buildSummary(cars)}
+            </div>
+            ${buildComparisonTable(cars)}
+        `;
+
+        setStatus(`Showing ${cars.length} vehicle ${cars.length === 1 ? "profile" : "comparisons"} with highlighted strengths and trade-offs.`);
+        syncUrl();
+    }
+
+    function applyQueryParams() {
+        const params = new URLSearchParams(window.location.search);
+
+        brandSelectors.forEach((brandSelect, index) => {
+            const brand = params.get(`c${index + 1}b`) || "";
+            const model = params.get(`c${index + 1}m`) || "";
+
+            if (brand) {
+                brandSelect.value = brand;
+                populateModels(brandSelect, modelSelectors[index], model);
+            }
+        });
+
+        if ([0, 1, 2].some((index) => getSelectedCar(index))) {
+            renderComparison();
+        }
+    }
+
+    function initialize() {
+        brandSelectors.forEach((brandSelect, index) => {
+            const modelSelect = modelSelectors[index];
+
+            brandSelect.addEventListener("change", () => {
+                populateModels(brandSelect, modelSelect);
+                syncUrl();
+            });
+
+            modelSelect.addEventListener("change", syncUrl);
+        });
+
+        if (compareButton) {
+            compareButton.addEventListener("click", renderComparison);
+        }
+
+        if (compareForm) {
+            compareForm.addEventListener("submit", (event) => {
+                event.preventDefault();
+                renderComparison();
+            });
+        }
+
+        applyQueryParams();
+    }
+
+    fetch(dataUrl)
+        .then((response) => {
             if (!response.ok) {
-                throw new Error('Network response was not ok');
+                throw new Error("Unable to load vehicle data.");
             }
             return response.json();
         })
-        .then(data => {
+        .then((data) => {
             carData = data;
-            console.log('Car data loaded successfully');
-            
-            // Initialize event listeners after data is loaded
-            initializeEventListeners();
+            initialize();
+            setStatus("Vehicle data loaded. Compare efficiency, performance, and ownership signals.");
         })
-        .catch(error => {
-            console.error('Error loading car data:', error);
-            resultsContainer.innerHTML = `<div class="error-message">Error loading car data. Please try again later.</div>`;
+        .catch((error) => {
+            console.error(error);
+            resultsContainer.innerHTML = `
+                <div class="site-note">
+                    <h2>Vehicle data is unavailable</h2>
+                    <p>We could not load the comparison dataset right now. Please try again later.</p>
+                </div>
+            `;
+            setStatus("We could not load the comparison dataset.");
         });
-    
-    function initializeEventListeners() {
-        // Brand selection event listeners
-        car1Brand.addEventListener('change', () => populateModels(car1Brand, car1Model));
-        car2Brand.addEventListener('change', () => populateModels(car2Brand, car2Model));
-        car3Brand.addEventListener('change', () => populateModels(car3Brand, car3Model));
-        
-        // Compare button event listener
-        compareBtn.addEventListener('click', compareCars);
-    }
-    
-    function populateModels(brandSelect, modelSelect) {
-        const selectedBrand = brandSelect.value;
-        
-        // Reset model dropdown
-        modelSelect.innerHTML = '<option value="">Select Model</option>';
-        
-        // Disable model dropdown if no brand selected
-        if (!selectedBrand) {
-            modelSelect.disabled = true;
-            return;
-        }
-        
-        // Check if brand exists in data
-        if (carData[selectedBrand] && carData[selectedBrand].models) {
-            // Enable model dropdown
-            modelSelect.disabled = false;
-            
-            // Add models to dropdown
-            carData[selectedBrand].models.forEach(model => {
-                const option = document.createElement('option');
-                option.value = model.id;
-                option.textContent = model.name;
-                modelSelect.appendChild(option);
-            });
-        } else {
-            console.error(`No models found for brand: ${selectedBrand}`);
-            modelSelect.disabled = true;
-        }
-    }
-    
-    function compareCars() {
-        // Get selected cars
-        const car1 = getSelectedCar(car1Brand, car1Model);
-        const car2 = getSelectedCar(car2Brand, car2Model);
-        const car3 = getSelectedCar(car3Brand, car3Model);
-        
-        // Check if at least two cars are selected
-        if (!car1 && !car2 && !car3) {
-            resultsContainer.innerHTML = `<div class="comparison-placeholder">
-                <p>Please select at least one car to compare</p>
-            </div>`;
-            return;
-        }
-        
-        // Generate comparison HTML
-        const comparisonHTML = generateComparisonHTML(car1, car2, car3);
-        
-        // Update results container
-        resultsContainer.innerHTML = comparisonHTML;
-    }
-    
-    function getSelectedCar(brandSelect, modelSelect) {
-        const brand = brandSelect.value;
-        const model = modelSelect.value;
-        
-        if (!brand || !model) {
-            return null;
-        }
-        
-        if (carData[brand] && carData[brand].specs && carData[brand].specs[model]) {
-            return {
-                brand: brand,
-                brandName: brandSelect.options[brandSelect.selectedIndex].text,
-                model: model,
-                modelName: modelSelect.options[modelSelect.selectedIndex].text,
-                specs: carData[brand].specs[model]
-            };
-        }
-        
-        return null;
-    }
-    
-    function generateComparisonHTML(car1, car2, car3) {
-        // Create array of valid cars
-        const cars = [car1, car2, car3].filter(car => car !== null);
-        
-        if (cars.length === 0) {
-            return `<div class="comparison-placeholder">
-                <p>Please select at least one car to compare</p>
-            </div>`;
-        }
-        
-        // Start building HTML
-        let html = `<div class="comparison-table">
-            <div class="comparison-header">`;
-        
-        // Add car headers
-        html += `<div class="comparison-cell header-cell">Specifications</div>`;
-        cars.forEach(car => {
-            html += `<div class="comparison-cell header-cell">${car.brandName} ${car.modelName}</div>`;
-        });
-        html += `</div>`;
-        
-        // Add car images
-        html += `<div class="comparison-row">
-            <div class="comparison-cell">Image</div>`;
-        cars.forEach(car => {
-            html += `<div class="comparison-cell"><img src="${car.specs.image}" alt="${car.brandName} ${car.modelName}" class="comparison-image"></div>`;
-        });
-        html += `</div>`;
-        
-        // Add specs rows
-        const specsList = [
-            { key: 'engine', label: 'Engine' },
-            { key: 'horsepower', label: 'Horsepower' },
-            { key: 'torque', label: 'Torque' },
-            { key: 'transmission', label: 'Transmission' },
-            { key: 'mpg', label: 'Fuel Economy' },
-            { key: 'price', label: 'Starting Price' },
-            { key: 'acceleration', label: 'Acceleration' },
-            { key: 'topSpeed', label: 'Top Speed' },
-            { key: 'dimensions', label: 'Dimensions' },
-            { key: 'weight', label: 'Weight' },
-            { key: 'cargoCapacity', label: 'Cargo Capacity' },
-            { key: 'fuelTank', label: 'Fuel Tank' },
-            { key: 'driverAssist', label: 'Driver Assistance' },
-            { key: 'warranty', label: 'Warranty' }
-        ];
-        
-        // Helper function to determine if a higher value is better for a spec
-        function isHigherBetter(specKey) {
-            return ['horsepower', 'torque', 'cargoCapacity', 'fuelTank', 'topSpeed'].includes(specKey);
-        }
-
-        // Helper function to determine if a lower value is better for a spec
-        function isLowerBetter(specKey) {
-            return ['price','mpg','acceleration','weight'].includes(specKey);
-        }
-
-        // Helper function to extract numeric value from spec string
-        function extractNumericValue(value) {
-            if (typeof value !== 'string') return null;
-            
-            // Special handling for acceleration (0-60 mph) format
-            if (value.toLowerCase().includes('0-60') || value.toLowerCase().includes('0 to 60')) {
-                const match = value.match(/\d+(\.\d+)?(?=\s*(?:sec|seconds|s))/i);
-                return match ? parseFloat(match[0]) : null;
-            }
-            
-            // Default numeric value extraction
-            const match = value.match(/\d+(\.\d+)?/);
-            return match ? parseFloat(match[0]) : null;
-        }
-
-        specsList.forEach(spec => {
-            html += `<div class="comparison-row">
-                <div class="comparison-cell">${spec.label}</div>`;
-            
-            // Get all numeric values for comparison
-            const numericValues = cars.map(car => {
-                const value = car.specs[spec.key];
-                return extractNumericValue(value);
-            });
-
-            // Only compare if we have numeric values and the spec is comparable
-            const isComparable = (isHigherBetter(spec.key) || isLowerBetter(spec.key)) &&
-                                numericValues.some(v => v !== null);
-
-            cars.forEach((car, index) => {
-                const value = car.specs[spec.key] || 'N/A';
-                let className = '';
-
-                if (isComparable && numericValues[index] !== null) {
-                    const currentValue = numericValues[index];
-                    const otherValues = numericValues.filter((v, i) => i !== index && v !== null);
-
-                    if (otherValues.length > 0) {
-                        if (isHigherBetter(spec.key)) {
-                            className = currentValue > Math.max(...otherValues) ? 'better-spec' : 'worse-spec';
-                        } else if (isLowerBetter(spec.key)) {
-                            className = currentValue < Math.min(...otherValues) ? 'better-spec' : 'worse-spec';
-                        }
-                    }
-                }
-
-                html += `<div class="comparison-cell ${className}">${value}</div>`;
-            });
-            
-            html += `</div>`;
-        });
-
-        // Add CSS styles for comparison highlighting
-        const styleElement = document.createElement('style');
-        styleElement.textContent = `
-            .comparison-header {
-                background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-                border-bottom: 2px solid #dee2e6;
-                box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-            }
-            .header-cell {
-                padding: 1.25rem;
-                font-weight: 700;
-                font-size: 1.2rem;
-                color: #343a40;
-                text-transform: uppercase;
-                letter-spacing: 1px;
-                transition: all 0.3s ease;
-                text-align: center;
-                font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-            }
-            .header-cell:not(:first-child) {
-                border-left: 1px solid rgba(222, 226, 230, 0.5);
-            }
-            .header-cell:hover {
-                background-color: rgba(233, 236, 239, 0.5);
-            }
-            .better-spec {
-                background-color: #e6ffe6;
-                color: #006600;
-            }
-            .worse-spec {
-                background-color: #ffe6e6;
-                color: #cc0000;
-            }
-            .comparison-table {
-                box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-                border-radius: 8px;
-                overflow: hidden;
-            }
-            .comparison-cell {
-                padding: 0.75rem 1rem;
-                border: 1px solid #dee2e6;
-            }
-        `;
-        document.head.appendChild(styleElement);
-        
-        html += `</div>`;
-        
-        return html;
-    }
 });

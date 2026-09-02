@@ -8,9 +8,9 @@ const { body, validationResult } = require('express-validator');
 const https = require('https');
 const selfsigned = require('selfsigned');
 
-// Generar certificado self-signed
+// Generate a stronger self-signed certificate for local preview on modern Node versions.
 const attrs = [{ name: 'commonName', value: 'localhost' }];
-const pems = selfsigned.generate(attrs, { days: 365 });
+const pems = selfsigned.generate(attrs, { days: 365, keySize: 2048 });
 const httpsOptions = {
   key: pems.private,
   cert: pems.cert
@@ -25,7 +25,7 @@ app.use(helmet());
 //     console.log('Server running on port 3000');
 // });
 const server = https.createServer(httpsOptions, app).listen(3001, () => {
-    console.log('HTTPS Server running on port 3000');
+    console.log('HTTPS server running on port 3001');
 });
 
 const wss = new WebSocket.Server({ server });
