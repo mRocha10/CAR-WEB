@@ -2123,10 +2123,6 @@ ${data.contentHtml}
                             ${linkList(data.sidebarLinks)}
                         </ul>
                     </article>
-                    <article class="site-note">
-                        <h2>Editorial position</h2>
-                        <p>Engine Starters uses these detail pages to connect buyer education, ownership context, and comparison-ready research instead of publishing thin duplicate summaries.</p>
-                    </article>
                 </aside>
             </div>
         </section>
