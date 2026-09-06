@@ -19,14 +19,14 @@ const pageGroups = [
         dir: path.join(ROOT, "subPages", "types"),
         parentLabel: "Car Types",
         parentHref: "../car-types.html",
-        eyebrow: "Body style guide"
+        eyebrow: "Vehicle type"
     },
     {
         kind: "component",
         dir: path.join(ROOT, "subPages", "components"),
         parentLabel: "Components",
         parentHref: "../components.html",
-        eyebrow: "Component guide"
+        eyebrow: "Car systems"
     }
 ];
 
@@ -140,7 +140,7 @@ const brandProfiles = {
             { kicker: "Current focus", title: "Where the brand is strongest", text: "BMW is strongest when buyers want a premium brand that still feels engaged to drive across sedan, SUV, and EV segments." },
             { kicker: "Lineup shape", title: "Where to search first", text: "Start with the 3 Series, 5 Series, X3, X5, and i4/iX style products before drifting into halo trims that may not fit daily use." }
         ],
-        useText: "Use this BMW profile to decide whether you actually want driving involvement, premium image, or simply a well-rounded daily car before the badge starts doing the thinking for you.",
+        useText: "Decide whether you actually want driving involvement, premium image, or simply a well-rounded daily car before the badge starts doing the thinking for you.",
         summaryItems: [
             { title: "Separate badge from use", text: "Decide first whether your real need is a sedan, SUV, EV, or performance car rather than assuming BMW itself is the answer." },
             { title: "Judge the daily compromise", text: "Ride comfort, tyre cost, rear-seat space, and trim choice matter as much as steering feel." },
@@ -149,7 +149,7 @@ const brandProfiles = {
         heroInsights: [
             { kicker: "Best fit", title: "BMW makes sense when", text: "You want a premium car that still feels deliberately driver-led instead of purely comfort-led." },
             { kicker: "Main caution", title: "Where buyers drift wrong", text: "M badges, big wheels, and image can push the shortlist away from the smartest daily-use trim." },
-            { kicker: "Research next", title: "What to test-drive after this", text: "Compare a realistic BMW trim against an Audi, Mercedes-Benz, or Lexus alternative before paying the premium." }
+            { kicker: "Next check", title: "What to test-drive next", text: "Compare a realistic BMW trim against an Audi, Mercedes-Benz, or Lexus alternative before paying the premium." }
         ],
         editorialLead: "BMW is strongest when buyers genuinely want a premium car that still puts handling, steering feel, and driver involvement near the top of the brief.",
         contextLead: "The history matters because BMW's identity still comes from engineering prestige and driver appeal, not from trying to be the softest or cheapest premium option.",
@@ -168,7 +168,7 @@ const brandProfiles = {
             }
         ],
         focusLead: "BMW makes the most sense when you translate the badge into real segment choices, because the useful shortlist is usually a 3 Series, 5 Series, X3, or X5 question rather than a general brand question.",
-        compareLead: "The smartest BMW research path is to compare segment-for-segment rather than paying for the badge before deciding whether the daily-use brief is actually sedan, SUV, or performance-led.",
+        compareLead: "The smartest BMW move is to compare segment-for-segment rather than paying for the badge before deciding whether the daily-use brief is actually sedan, SUV, or performance-led.",
         realityLead: "BMW can look stronger than it really is when buyers focus only on prestige or M-badge theatre, and weaker than it really is when they ignore how coherent the everyday driver-focused trims can be.",
         referenceSections: [
             {
@@ -309,7 +309,7 @@ const brandProfiles = {
             { kicker: "Current focus", title: "Where the brand is strongest", text: "Ford is strongest where use case matters more than prestige, especially pickups, larger SUVs, and work-to-family overlap vehicles." },
             { kicker: "Lineup shape", title: "Where to search first", text: "Start with the exact job first: F-Series for work, Explorer or Escape for family space, Mustang only if performance is the genuine brief." }
         ],
-        useText: "Use this Ford profile to decide whether your brief is really truck utility, family-SUV space, or enthusiast image, because Ford's answer changes a lot by job.",
+        useText: "Decide whether your brief is really truck utility, family-SUV space, or enthusiast image, because Ford's answer changes a lot by job.",
         summaryItems: [
             { title: "Start with the task", text: "Ask whether you need towing, cargo, family seating, or performance character before picking a Ford badge." },
             { title: "Watch model spread", text: "Ford varies more by nameplate than some buyers expect, so one strong product does not validate the whole range." },
@@ -318,7 +318,7 @@ const brandProfiles = {
         heroInsights: [
             { kicker: "Best fit", title: "Ford makes sense when", text: "You need one brand that genuinely covers trucks, utility vehicles, family SUVs, and a few enthusiast choices." },
             { kicker: "Main caution", title: "Where buyers drift wrong", text: "Many buyers choose Ford on broad familiarity before deciding whether the job is really pickup, SUV, crossover, or performance car." },
-            { kicker: "Research next", title: "What to compare after this", text: "Move quickly into pickup, SUV, or Mustang-style rivals rather than staying at general brand level." }
+            { kicker: "Next check", title: "What to compare next", text: "Move quickly into pickup, SUV, or Mustang-style rivals rather than staying at general brand level." }
         ],
         editorialLead: "Ford is most convincing when the buyer has a clear use case, because the brand's strengths sit in trucks, family utility, and a few enthusiast niches rather than in one uniform brand experience.",
         contextLead: "The history matters because Ford's scale and mass-market role explain both its lineup breadth and the fact that some nameplates matter far more than the badge alone.",
@@ -440,7 +440,7 @@ const brandProfiles = {
             { kicker: "Current focus", title: "Where the brand is strongest", text: "Honda is strongest in practical daily-use cars and family crossovers where ownership balance matters more than luxury theatre." },
             { kicker: "Lineup shape", title: "Where to search first", text: "Start with Civic, Accord, CR-V, and HR-V style products, then check whether your market's hybrid and trim mix is truly competitive." }
         ],
-        useText: "Use this Honda profile to judge whether you want rational daily ownership, efficient packaging, and low drama, not just another mainstream badge with a good reputation.",
+        useText: "Judge whether you want rational daily ownership, efficient packaging, and low drama, not just another mainstream badge with a good reputation.",
         summaryItems: [
             { title: "Start with balance", text: "Honda is strongest when you want a daily car that feels well engineered without becoming expensive or flashy." },
             { title: "Check market specifics", text: "Hybrid availability, cabin quality, and trim value vary by region more than the badge reputation suggests." },
@@ -449,7 +449,7 @@ const brandProfiles = {
         heroInsights: [
             { kicker: "Best fit", title: "Honda makes sense when", text: "You want efficient, sensible ownership with a little more engineering sharpness than the blandest mainstream options offer." },
             { kicker: "Main caution", title: "Where buyers drift wrong", text: "Assuming every Honda is the best-value answer can hide real differences in noise, infotainment, and trim pricing." },
-            { kicker: "Research next", title: "What to compare after this", text: "Put Civic or CR-V style use cases directly against Toyota and Mazda before deciding the brand is settled." }
+            { kicker: "Next check", title: "What to compare next", text: "Put Civic or CR-V style use cases directly against Toyota and Mazda before deciding the brand is settled." }
         ],
         editorialLead: "Honda is strongest when buyers want rational daily ownership with a little more engineering sharpness and packaging intelligence than generic mainstream transport usually offers.",
         contextLead: "The history matters because Honda's reputation comes from engineering discipline and efficient packaging, which still shapes how buyers should read the current range.",
@@ -894,7 +894,7 @@ const brandProfiles = {
             { kicker: "Current focus", title: "Where the brand is strongest", text: "Tesla is strongest when buyers want a simplified EV ownership experience and are happy to make the car part of a wider charging-and-software system." },
             { kicker: "Lineup shape", title: "Where to search first", text: "Start with Model 3 or Model Y unless your brief clearly demands a larger luxury EV or a more premium interior than Tesla usually prioritises." }
         ],
-        useText: "Use this Tesla profile to decide whether you want the EV ecosystem, charging logic, and software behaviour, not just the acceleration headline or brand visibility.",
+        useText: "Decide whether you want the EV ecosystem, charging logic, and software behaviour, not just the acceleration headline or brand visibility.",
         summaryItems: [
             { title: "Start with charging reality", text: "Tesla only makes full sense when your weekly charging routine is genuinely easy and predictable." },
             { title: "Judge the cabin honestly", text: "Interior expectations, comfort, and service culture should be compared directly against premium and mainstream EV rivals." },
@@ -903,7 +903,7 @@ const brandProfiles = {
         heroInsights: [
             { kicker: "Best fit", title: "Tesla makes sense when", text: "You want software-led EV ownership and are ready to live inside the charging ecosystem, not just admire it." },
             { kicker: "Main caution", title: "Where buyers drift wrong", text: "Performance headlines and minimalist styling can distract from ride comfort, interior expectations, and charging fit." },
-            { kicker: "Research next", title: "What to compare after this", text: "Test Tesla against a BYD, Hyundai, Kia, or premium EV rival with the same family-use brief." }
+            { kicker: "Next check", title: "What to compare next", text: "Test Tesla against a BYD, Hyundai, Kia, or premium EV rival with the same family-use brief." }
         ],
         editorialLead: "Tesla is strongest when the buyer wants the wider EV system, including charging logic, route planning, software behaviour, and efficiency, not just the car in isolation.",
         contextLead: "The history matters because Tesla changed the EV conversation by tying vehicle appeal to charging, software, and ecosystem confidence rather than only to hardware specs.",
@@ -987,7 +987,7 @@ const brandProfiles = {
             { kicker: "Current focus", title: "Where the brand is strongest", text: "Toyota is strongest in mainstream hybrids, sensible family transport, and practical SUVs where trust matters more than showroom flash." },
             { kicker: "Lineup shape", title: "Where to search first", text: "Start with Corolla, Camry, Prius, RAV4, Highlander, Tacoma, or Land Cruiser depending on the job you actually need the vehicle to do." }
         ],
-        useText: "Use this Toyota profile to test whether your shortlist is really about predictable ownership, hybrid logic, and resale confidence rather than just buying the safest reputation in the room.",
+        useText: "Test whether your shortlist is really about predictable ownership, hybrid logic, and resale confidence rather than just buying the safest reputation in the room.",
         summaryItems: [
             { title: "Start with the ownership goal", text: "Toyota is strongest when low drama, long-term confidence, and sensible hybrid use are the real priorities." },
             { title: "Check category before brand loyalty", text: "Sedan, crossover, SUV, and truck needs should be separated before you let the brand reputation flatten the decision." },
@@ -996,7 +996,7 @@ const brandProfiles = {
         heroInsights: [
             { kicker: "Best fit", title: "Toyota makes sense when", text: "You want fewer ownership surprises and a car that quietly does the daily job well for a long time." },
             { kicker: "Main caution", title: "Where buyers drift wrong", text: "A strong reliability reputation can hide cabin compromises, weaker infotainment, or a better-fit rival in the same class." },
-            { kicker: "Research next", title: "What to compare after this", text: "Move straight from Toyota trust to real sedan, SUV, hybrid, or truck comparisons with rivals." }
+            { kicker: "Next check", title: "What to compare next", text: "Move straight from Toyota trust to real sedan, SUV, hybrid, or truck comparisons with rivals." }
         ],
         editorialLead: "Toyota is strongest when the buyer genuinely values long-term predictability, strong hybrid logic, and low-drama ownership more than showroom excitement or image-led differentiation.",
         contextLead: "The history matters because Toyota's manufacturing reputation and hybrid leadership still shape the way buyers interpret the brand today, but they should not replace model-level comparison.",
@@ -1117,7 +1117,7 @@ const typeProfiles = {
         metrics: ["Rear-seat access and boot shape.", "Fuel economy versus a hatchback alternative.", "Parking ease and overall footprint."],
         categoryLabel: "a crossover",
         decisionLabel: "a crossover",
-        useText: "Use this crossover guide to decide whether you need the extra height and family access, or whether a hatchback or smaller SUV would solve the same problem better.",
+        useText: "Decide whether you need the extra height and family access, or whether a hatchback or smaller SUV would solve the same problem better.",
         summaryItems: [
             { title: "Start with real access needs", text: "Crossovers are usually about easier entry, cargo flexibility, and urban-family convenience rather than rugged capability." },
             { title: "Watch the hidden price creep", text: "Ride height, larger wheels, and styling often increase cost without adding much useful space." },
@@ -1126,7 +1126,7 @@ const typeProfiles = {
         heroInsights: [
             { kicker: "Best fit", title: "Crossovers make sense when", text: "You want everyday access and family flexibility without committing to full SUV bulk or cost." },
             { kicker: "Main caution", title: "Where buyers drift wrong", text: "Many crossovers sell SUV image more convincingly than they deliver meaningful extra practicality." },
-            { kicker: "Compare next", title: "What decides the shortlist", text: "Rear-seat access, boot shape, parking ease, and tyre cost usually matter more than rugged styling cues." }
+            { kicker: "Key check", title: "What decides the shortlist", text: "Rear-seat access, boot shape, parking ease, and tyre cost usually matter more than rugged styling cues." }
         ],
         editorialLead: "Crossovers are strongest when buyers want easier access and flexible daily family use, but many only become the right answer after being tested against a hatchback below and an SUV above.",
         faqItems: [
@@ -1192,7 +1192,7 @@ const typeProfiles = {
         metrics: ["Charging routine and public network dependence.", "Real-world range for your route profile.", "Warranty, battery confidence, and cabin practicality."],
         categoryLabel: "an electric vehicle",
         decisionLabel: "an EV",
-        useText: "Use this EV guide to decide whether your charging routine, route profile, and ownership expectations genuinely suit electric driving before range numbers take over the conversation.",
+        useText: "Decide whether your charging routine, route profile, and ownership expectations genuinely suit electric driving before range numbers take over the conversation.",
         summaryItems: [
             { title: "Start with charging reality", text: "Home, workplace, and dependable public charging matter more than brochure excitement." },
             { title: "Watch real-world range conditions", text: "Motorway speed, weather, tyres, and family load can all reshape whether an EV still feels effortless." },
@@ -1201,7 +1201,7 @@ const typeProfiles = {
         heroInsights: [
             { kicker: "Best fit", title: "EVs make sense when", text: "Your weekly charging routine is simple enough that electric driving will feel normal rather than strategic." },
             { kicker: "Main caution", title: "Where buyers drift wrong", text: "Range headlines and acceleration can distract from winter use, charging friction, and total ownership cost." },
-            { kicker: "Compare next", title: "What decides the shortlist", text: "Charging speed, real route range, cabin usability, and warranty matter more than the loudest EV marketing claim." }
+            { kicker: "Key check", title: "What decides the shortlist", text: "Charging speed, real route range, cabin usability, and warranty matter more than the loudest EV marketing claim." }
         ],
         editorialLead: "EVs are strongest when charging routine, mileage pattern, and ownership expectations all line up; when they do not, the category can feel impressive on paper but inconvenient in practice.",
         faqItems: [
@@ -1322,7 +1322,7 @@ const typeProfiles = {
         metrics: ["Rear-seat space and child-seat fit.", "Boot size and opening practicality.", "Ride, handling, and fuel economy versus crossover rivals."],
         categoryLabel: "a sedan",
         decisionLabel: "a sedan",
-        useText: "Use this sedan guide to decide whether your real need is efficient road comfort and calmer handling, not just whether the market currently prefers taller vehicles.",
+        useText: "Decide whether your real need is efficient road comfort and calmer handling, not just whether the market currently prefers taller vehicles.",
         summaryItems: [
             { title: "Start with road use", text: "Sedans often shine when motorway comfort, efficiency, and cleaner handling matter more than height or image." },
             { title: "Watch the cargo compromise", text: "The trunk format can become the deciding weakness if family loading and bulky gear matter often." },
@@ -1331,7 +1331,7 @@ const typeProfiles = {
         heroInsights: [
             { kicker: "Best fit", title: "Sedans make sense when", text: "You want calmer road behaviour and lower running costs without paying for height you do not need." },
             { kicker: "Main caution", title: "Where buyers drift wrong", text: "Some buyers underestimate trunk-opening limits and rear-headroom differences until daily family use exposes them." },
-            { kicker: "Compare next", title: "What decides the shortlist", text: "Rear-seat fit, motorway refinement, boot practicality, and fuel economy usually settle the argument." }
+            { kicker: "Key check", title: "What decides the shortlist", text: "Rear-seat fit, motorway refinement, boot practicality, and fuel economy usually settle the argument." }
         ],
         editorialLead: "Sedans remain one of the smartest choices when buyers genuinely value efficient road comfort and cleaner handling more than height, image, or cargo-opening flexibility.",
         faqItems: [
@@ -1408,7 +1408,7 @@ const typeProfiles = {
         metrics: ["Rear-seat room and cargo shape.", "Fuel economy and tyre cost.", "Parking footprint and turning ease in daily use."],
         categoryLabel: "an SUV",
         decisionLabel: "an SUV",
-        useText: "Use this SUV guide to decide whether you truly need the extra height, family access, or rougher-road confidence, because those benefits come with real cost and size penalties.",
+        useText: "Decide whether you truly need the extra height, family access, or rougher-road confidence, because those benefits come with real cost and size penalties.",
         summaryItems: [
             { title: "Start with the physical need", text: "SUVs earn their place when entry height, child-seat loading, road conditions, or towing genuinely matter." },
             { title: "Watch the cost of size", text: "Fuel use, tyres, parking footprint, and unnecessary bulk can quietly outweigh the versatility story." },
@@ -1417,7 +1417,7 @@ const typeProfiles = {
         heroInsights: [
             { kicker: "Best fit", title: "SUVs make sense when", text: "You need easier access, family space, or rough-road confidence often enough to justify the bigger footprint." },
             { kicker: "Main caution", title: "Where buyers drift wrong", text: "Many buyers pay SUV running costs for image even when a crossover or sedan would solve normal life more cleanly." },
-            { kicker: "Compare next", title: "What decides the shortlist", text: "Cargo shape, second-row comfort, parking ease, tyre cost, and powertrain fit usually matter most." }
+            { kicker: "Key check", title: "What decides the shortlist", text: "Cargo shape, second-row comfort, parking ease, tyre cost, and powertrain fit usually matter most." }
         ],
         editorialLead: "SUVs are strongest when the extra height, access, and family flexibility solve a real daily problem, because the category becomes expensive clutter when buyers choose it mostly for image.",
         faqItems: [
@@ -1483,7 +1483,7 @@ const componentProfiles = {
         summary: "Engine knowledge is most valuable when it helps buyers judge durability, power delivery, maintenance risk, and fit for their actual driving.",
         shortName: "engine",
         systemLabel: "engine systems",
-        useText: "Use this engine guide to judge whether a powertrain is likely to feel strong, stay durable, and remain affordable to maintain in the kind of driving you actually do.",
+        useText: "Judge whether a powertrain is likely to feel strong, stay durable, and remain affordable to maintain in the kind of driving you actually do.",
         summaryItems: [
             { title: "Start with usage", text: "Engine choice should follow short trips, motorway miles, towing, hills, and family load, not only brochure output." },
             { title: "Watch maintenance sensitivity", text: "Oil quality, cooling discipline, timing components, and turbo complexity often decide whether an engine stays easy to own." },
@@ -1492,7 +1492,7 @@ const componentProfiles = {
         heroInsights: [
             { kicker: "Why it matters", title: "Engine choice changes ownership", text: "The engine often decides whether the car feels easy, stressed, cheap to run, or risky as mileage rises." },
             { kicker: "Main warning", title: "Where buyers drift wrong", text: "Big power numbers can hide poor fit for short trips, weak service discipline, or expensive long-term wear." },
-            { kicker: "Use it for", title: "Best next application", text: "Apply engine knowledge when comparing trims, used examples, towing needs, and fuel-economy claims." }
+            { kicker: "Best use", title: "Where it pays off", text: "Apply engine knowledge when comparing trims, used examples, towing needs, and fuel-economy claims." }
         ],
         editorialLead: "Engine knowledge matters most when it changes how buyers judge durability, servicing discipline, real-world performance, and whether a powertrain actually suits the job ahead.",
         faqItems: [
@@ -1572,7 +1572,7 @@ const componentProfiles = {
         summary: "Interior technology and materials matter most when they improve comfort, usability, storage, and long-term satisfaction rather than showroom impact alone.",
         shortName: "interior",
         systemLabel: "interior systems",
-        useText: "Use this interior guide to judge whether the cabin will still feel comfortable, easy to use, and durable after months of daily life instead of just the first showroom impression.",
+        useText: "Judge whether the cabin will still feel comfortable, easy to use, and durable after months of daily life instead of just the first showroom impression.",
         summaryItems: [
             { title: "Start with daily touchpoints", text: "Seats, visibility, storage, switch layout, rear access, and climate controls decide cabin quality more than ambient lighting or screen size." },
             { title: "Watch long-term wear", text: "Materials, touch-heavy controls, and infotainment reliability often separate a good cabin from a frustrating one." },
@@ -1581,7 +1581,7 @@ const componentProfiles = {
         heroInsights: [
             { kicker: "Why it matters", title: "The cabin changes daily life", text: "Interior quality affects comfort, distraction, storage, and whether the car still feels good after years instead of minutes." },
             { kicker: "Main warning", title: "Where buyers drift wrong", text: "Showroom theatre can hide awkward controls, weak materials, or poor rear-seat usability." },
-            { kicker: "Use it for", title: "Best next application", text: "Use this knowledge when comparing family practicality, infotainment logic, seat comfort, and used-car wear." }
+            { kicker: "Best use", title: "Where it pays off", text: "Use this knowledge when comparing family practicality, infotainment logic, seat comfort, and used-car wear." }
         ],
         editorialLead: "Interior knowledge matters when it helps buyers judge the cabin they will actually live with, not the one that looks impressive for five minutes in a showroom.",
         faqItems: [
@@ -1992,7 +1992,7 @@ function buildHeader(activeSection) {
         <div class="site-header__inner">
             <a class="site-brand" href="../../index.html">
                 <p class="site-brand__title">Engine Starters</p>
-                <p class="site-brand__tagline">Research cars with clearer comparisons, stronger context, and practical buying guidance.</p>
+                <p class="site-brand__tagline">Clear car buying help, ownership advice, and side-by-side comparisons.</p>
             </a>
             <nav class="site-nav" aria-label="Primary" data-site-nav data-open="false">
                 <button class="site-nav__toggle" type="button" aria-expanded="false" aria-controls="site-nav-list" data-nav-toggle>Menu</button>
@@ -2011,7 +2011,7 @@ function buildFooter() {
             <div class="site-footer__grid">
                 <section>
                     <h2>Engine Starters</h2>
-                    <p>Practical automotive research for buyers and enthusiasts.</p>
+                    <p>Clear car buying help for everyday drivers, used-car shoppers, and enthusiasts.</p>
                 </section>
                 <section>
                     <h3>Explore</h3>
@@ -2088,7 +2088,7 @@ ${buildHeader(data.activeSection)}
             <div class="site-grid site-grid--two">
                 <article class="site-note site-note--success">
                     <p class="site-detail-kicker">${escapeHtml(data.kicker)}</p>
-                    <h2>How to use this page</h2>
+                    <h2>${escapeHtml(data.useHeading || "What matters first")}</h2>
                     <p>${escapeHtml(data.useText)}</p>
                     <ul class="site-summary-list">
                         ${sectionList(data.summaryItems)}
@@ -2107,9 +2107,9 @@ ${data.generatedGuideHtml || ""}
 ${data.contentHtml ? `
                     <section class="site-reference-block">
                         <div class="site-reference-block__header">
-                            <p class="site-detail-kicker">${escapeHtml(data.referenceKicker || "Reference context")}</p>
-                            <h2>${escapeHtml(data.referenceHeading || "Supporting detail")}</h2>
-                            <p>${escapeHtml(data.referenceIntro || "Use the material below as supporting context for the buyer guidance above.")}</p>
+                            <p class="site-detail-kicker">${escapeHtml(data.referenceKicker || "Deeper context")}</p>
+                            <h2>${escapeHtml(data.referenceHeading || "Details worth knowing")}</h2>
+                            <p>${escapeHtml(data.referenceIntro || "These notes add useful background once you start comparing real options more closely.")}</p>
                         </div>
 ${data.contentHtml}
                     </section>` : ""}
@@ -2142,7 +2142,7 @@ function getBrandData(filePath, html, group) {
     const focusSection = sectionHtml(contentHtml, "brand-focus-section");
     const modelSection = sectionHtml(contentHtml, "model-lineup-section");
     const title = stripTags(extractFirst(heroHtml, /<h1[^>]*>([\s\S]*?)<\/h1>/i)) || stripTags(extractFirst(html, /<h1[^>]*class="site-title"[^>]*>([\s\S]*?)<\/h1>/i)) || fallbackNameFromFile(filePath);
-    const tagline = stripTags(extractFirst(heroHtml, /<p[^>]*>([\s\S]*?)<\/p>/i)) || `${title} brand guide`;
+    const tagline = stripTags(extractFirst(heroHtml, /<p[^>]*>([\s\S]*?)<\/p>/i)) || `${title} overview`;
     const heroImage = extractFirst(heroHtml, /background-image:\s*url\(['"]?([^'")]+)['"]?\)/i);
     const slug = path.basename(filePath, ".html");
     const profile = brandProfiles[slug];
@@ -2166,32 +2166,32 @@ function getBrandData(filePath, html, group) {
     ];
     const brandSignals = profile?.marketSignals || [
         {
-            kicker: "Market role",
+            kicker: "Brand identity",
             title: "What the badge usually promises",
             text: profile?.summary || `${title} is best used as a market filter, not as a complete buying answer.`
         },
         {
-            kicker: "Current focus",
+            kicker: "Current strengths",
             title: "What the brand is pushing now",
             text: focusItems[0] || `${title} should be judged by the exact areas where its current lineup is strongest.`
         },
         {
-            kicker: "Lineup shape",
+            kicker: "Good place to start",
             title: "Where to search first",
             text: modelCategories.length ? `${title} is most worth checking in ${modelCategories.slice(0, 2).map((item) => item.title.toLowerCase()).join(" and ")}.` : `Start with the vehicle category where ${title} has the clearest fit for your needs.`
         }
     ];
     const editorialHtml = `
                     <section class="site-highlight">
-                        <h2>Editorial take on ${escapeHtml(title)}</h2>
+                        <h2>What matters most about ${escapeHtml(title)}</h2>
                         <p>${escapeHtml(profile?.editorialLead || profile?.summary || `${title} is most useful to shortlist when its brand identity clearly matches the way you actually drive and own a car.`)}</p>
                         ${historyParagraphs[0] ? `<p>${escapeHtml(`${profile?.contextLead || "Context still matters because the brand's history usually explains why buyers still read it the way they do today."} ${historyParagraphs[0]}`)}</p>` : ""}
                     </section>
                     <section class="site-detail-feature site-detail-feature--soft">
                         <div class="site-detail-feature__header">
-                            <p class="site-detail-kicker">Shortlist filter</p>
+                            <p class="site-detail-kicker">Shortlist advice</p>
                             <h2>When ${escapeHtml(title)} is a smart shortlist, and when it needs more caution</h2>
-                            <p>Use the badge as a directional signal only after matching it to the kind of ownership experience you actually want.</p>
+                            <p>Let the badge narrow the field, but let daily use, running cost, and the right model finish the decision.</p>
                         </div>
                         <div class="site-grid site-grid--two">
                         <article class="site-note site-note--success">
@@ -2218,9 +2218,9 @@ function getBrandData(filePath, html, group) {
                     </section>
                     <section class="site-detail-feature">
                         <div class="site-detail-feature__header">
-                            <p class="site-detail-kicker">Market reading</p>
+                            <p class="site-detail-kicker">Brand snapshot</p>
                             <h2>What ${escapeHtml(title)} actually signals in the market</h2>
-                            <p>These quick signals matter more than a generic brand reputation when you are trying to turn research into a real shortlist.</p>
+                            <p>These signals say more about the real ownership story than a vague badge reputation ever will.</p>
                         </div>
                         ${buildTopicGrid(brandSignals)}
                     </section>
@@ -2233,13 +2233,13 @@ function getBrandData(filePath, html, group) {
                         </ul>` : ""}
                     </section>` : ""}
                     <section class="site-note">
-                        <h2>Best next comparisons</h2>
+                        <h2>Good comparisons to make next</h2>
                         <p>${escapeHtml(profile?.compareLead || `Once ${title} looks plausible on paper, compare exact vehicles rather than letting brand perception do all the work.`)}</p>
                         <ul class="site-link-list">
                             ${linkList(profile?.compareLinks || [
                                 { href: "../car-comparison.html", label: "Compare vehicles now", text: "Use real specs, price, MPG, and warranty signals." },
                                 { href: "../car-types.html", label: "Recheck body-style fit", text: "Confirm the category is right before refining the shortlist." },
-                                { href: "../blog.html", label: "Read supporting guides", text: "Use buying and maintenance articles to strengthen the decision." }
+                                { href: "../blog.html", label: "Read buying guides", text: "Use buying and maintenance articles to strengthen the decision." }
                             ])}
                         </ul>
                     </section>
@@ -2247,8 +2247,8 @@ ${buildFaqHtml(faqItems)}`;
     const generatedGuideHtml = `
                     <section class="site-detail-feature">
                         <div class="site-detail-feature__header">
-                            <p class="site-detail-kicker">Shortlist logic</p>
-                            <h2>How to research ${escapeHtml(title)} without stopping at the badge</h2>
+                            <p class="site-detail-kicker">Shortlist steps</p>
+                            <h2>How to judge ${escapeHtml(title)} without stopping at the badge</h2>
                         </div>
                         <ol class="site-checklist">
                             ${numberedListFromStrings([
@@ -2261,7 +2261,7 @@ ${buildFaqHtml(faqItems)}`;
                     <section class="site-detail-feature site-detail-feature--soft">
                         <div class="site-detail-feature__header">
                             <p class="site-detail-kicker">Reality check</p>
-                            <h2>Where buyers overestimate or underestimate ${escapeHtml(title)}</h2>
+                            <h2>Where ${escapeHtml(title)} looks stronger or weaker than it really is</h2>
                         </div>
                         <p>${escapeHtml(profile?.realityLead || `${title} can look stronger or weaker than it really is if you compare only reputation. The better approach is to use the brand as a filter, then judge the exact vehicle on price, packaging, running cost, and fit for your route and passenger needs.`)}</p>
                         <ul class="site-summary-list">
@@ -2286,16 +2286,17 @@ ${buildFaqHtml(faqItems)}`;
         canonical: relativeUrlToPage(filePath),
         ogImage: toAbsoluteUrl(heroImage, filePath),
         kicker: tagline,
-        useText: profile?.useText || `Use this profile to understand ${title}'s history, current priorities, and lineup structure before you compare specific vehicles.`,
+        useHeading: profile?.useHeading || "What matters first",
+        useText: profile?.useText || `${title}'s badge only becomes useful once you connect its reputation, lineup strengths, and ownership story to the kind of car you actually need.`,
         summaryItems: profile?.summaryItems || [
-            { title: "Start with history", text: "Check how the brand built its reputation before judging newer models." },
-            { title: "Read the current focus", text: "See where electrification, luxury, performance, or value fit into the brand strategy." },
-            { title: "Move to comparison", text: "After the brand fits your shortlist, compare actual vehicles by price, efficiency, and usability." }
+            { title: "Check reputation honestly", text: "See what the badge genuinely does well before assuming every model shares the same strengths." },
+            { title: "Look at the current lineup", text: "Focus on the vehicles and segments where the brand is strongest right now." },
+            { title: "Then compare real cars", text: "Price, economy, comfort, and warranty still matter more than badge mythology." }
         ],
         heroInsights: profile?.heroInsights || [
             { kicker: "Best fit", title: `${title} suits`, text: (profile?.bestFor && profile.bestFor[0]) || `Buyers whose priorities line up with ${title}'s strongest reputation areas.` },
             { kicker: "Watch for", title: "Check carefully", text: (profile?.watchFor && profile.watchFor[0]) || "Trim, powertrain, and ownership cost deserve close checking before you commit." },
-            { kicker: "Next step", title: "Do after this page", text: "Move from badge interest to real model comparison as soon as the brand looks plausible." }
+            { kicker: "Next step", title: "Real shortlist", text: "Move into real model comparison as soon as the brand looks plausible." }
         ],
         mediaHtml: heroImage
             ? `<div class="site-detail-media" style="background-image: url('${escapeAttribute(heroImage)}');"><div class="site-detail-media__overlay"><p>${escapeHtml(tagline)}</p></div></div>`
@@ -2305,13 +2306,13 @@ ${buildFaqHtml(faqItems)}`;
         contentHtml: profile?.referenceSections ? buildReferenceSections(profile.referenceSections) : contentHtml,
         referenceKicker: "Background and lineup",
         referenceHeading: `${title} history, current focus, and model context`,
-        referenceIntro: `Use the supporting background below to understand how ${title} built its reputation and where the current lineup fits after you have already framed the buyer decision.`,
-        sidebarHeading: "Research next",
-        sidebarText: "A brand page is only useful if it pushes you toward the next comparison instead of trapping you at badge level.",
+        referenceIntro: `${title}'s background and lineup notes matter most once you already know what kind of vehicle and ownership experience you are trying to buy.`,
+        sidebarHeading: "Where to go next",
+        sidebarText: "Keep the brand in context by checking the body style, rivals, and ownership questions that matter most to your shortlist.",
         sidebarLinks: profile?.sidebarLinks || [
             { href: "../car-comparison.html", label: "Compare specific cars", text: "Move from brand interest to decision-ready specs and ownership trade-offs." },
             { href: "../car-types.html", label: "Review body styles", text: "Check whether the right fit is an SUV, sedan, EV, truck, or hatchback first." },
-            { href: "../blog.html", label: "Read ownership guides", text: "Use maintenance and buying articles to strengthen the shortlist." }
+            { href: "../blog.html", label: "Read buying and ownership tips", text: "Use maintenance and buying articles to spot costs and risks earlier." }
         ],
         faqItems
     };
@@ -2365,7 +2366,7 @@ function getTypeData(filePath, html, group) {
     ];
     const editorialHtml = `
                     <section class="site-highlight">
-                        <h2>Buyer-focused summary</h2>
+                        <h2>What matters most</h2>
                         <p>${escapeHtml(profile?.editorialLead || profile?.summary || `${title} should be judged by how well the body style fits your daily use, not just how popular it is.`)}</p>
                     </section>
                     <div class="site-grid site-grid--two">
@@ -2392,9 +2393,9 @@ function getTypeData(filePath, html, group) {
                     </div>
                     <section class="site-detail-feature">
                         <div class="site-detail-feature__header">
-                            <p class="site-detail-kicker">Daily-life test</p>
+                            <p class="site-detail-kicker">Daily reality</p>
                             <h2>What this body style changes once you live with it</h2>
-                            <p>The right category becomes obvious when you pressure-test cost, practicality, and long-term ease, not just styling.</p>
+                            <p>The right category becomes obvious when you test cost, practicality, and long-term ease instead of just following trends.</p>
                         </div>
                         ${buildTopicGrid(typeRealityCards)}
                     </section>
@@ -2406,13 +2407,13 @@ function getTypeData(filePath, html, group) {
                         </ul>
                     </section>
                     <section class="site-highlight">
-                        <h2>Move from body style to shortlist</h2>
+                        <h2>Where to narrow the shortlist</h2>
                         ${profile?.shortlistLead ? `<p>${escapeHtml(profile.shortlistLead)}</p>` : ""}
                         <ul class="site-link-list">
                             ${linkList(profile?.relatedLinks || [
                                 { href: "../brands.html", label: "Browse matching brands", text: "See which manufacturers are strongest in this category." },
                                 { href: "../car-comparison.html", label: "Compare real vehicles", text: "Use price, MPG, warranty, and cargo data to refine the shortlist." },
-                                { href: "../blog.html", label: "Read supporting guides", text: "Use buying and ownership articles to avoid common mistakes." }
+                                { href: "../blog.html", label: "Read buying guides", text: "Use buying and ownership articles to avoid common mistakes." }
                             ])}
                         </ul>
                     </section>
@@ -2420,7 +2421,7 @@ ${buildFaqHtml(faqItems)}`;
     const generatedGuideHtml = `
                     <section class="site-detail-feature">
                         <div class="site-detail-feature__header">
-                            <p class="site-detail-kicker">Decision guide</p>
+                            <p class="site-detail-kicker">Decision steps</p>
                             <h2>${escapeHtml(decisionHeading)}</h2>
                         </div>
                         <ol class="site-checklist">
@@ -2461,7 +2462,8 @@ ${buildFaqHtml(faqItems)}`;
         canonical: relativeUrlToPage(filePath),
         ogImage: toAbsoluteUrl(imageSrc, filePath),
         kicker: "Ownership fit first",
-        useText: profile?.useText || "Read this guide to understand where this category fits best, which trade-offs matter most, and when to move into brand or model comparison.",
+        useHeading: profile?.useHeading || "What matters first",
+        useText: profile?.useText || `${title} only makes sense if it suits your passengers, roads, cargo needs, parking reality, and running-cost expectations better than the closest alternative.`,
         summaryItems: profile?.summaryItems || [
             { title: "Match your use case", text: "Passenger needs, cargo, roads, and parking matter more than trend-driven styling." },
             { title: "Watch the trade-offs", text: "Comfort, efficiency, price, and versatility rarely peak at the same time." },
@@ -2470,7 +2472,7 @@ ${buildFaqHtml(faqItems)}`;
         heroInsights: profile?.heroInsights || [
             { kicker: "Best fit", title: "Strong fit", text: (profile?.bestFor && profile.bestFor[0]) || "Best for buyers whose daily routine clearly matches the category." },
             { kicker: "Main risk", title: "Easy mistake", text: (profile?.watchFor && profile.watchFor[0]) || "The biggest mistake is choosing the category for image instead of use." },
-            { kicker: "Compare next", title: "Key metric", text: (profile?.metrics && profile.metrics[0]) || "Compare cost, space, and daily usability before anything else." }
+            { kicker: "Key check", title: "Key metric", text: (profile?.metrics && profile.metrics[0]) || "Compare cost, space, and daily usability before anything else." }
         ],
         mediaHtml: imageSrc
             ? `<div class="site-detail-media"><img src="${escapeAttribute(imageSrc)}" alt="${escapeAttribute(title)}" loading="eager"></div>`
@@ -2479,14 +2481,14 @@ ${buildFaqHtml(faqItems)}`;
         generatedGuideHtml,
         contentHtml: profile?.referenceSections ? buildReferenceSections(profile.referenceSections) : contentHtml,
         referenceKicker: "Detailed category notes",
-        referenceHeading: `${title} overview and supporting detail`,
-        referenceIntro: `Treat the material below as deeper context after the buyer-focused decision guide above. It helps once you already know the category is worth shortlisting.`,
-        sidebarHeading: "Best next steps",
-        sidebarText: "The best type page should quickly push you toward rival body styles, then into real vehicle shortlists.",
+        referenceHeading: `${title} overview and deeper context`,
+        referenceIntro: `These notes help once you already know the category is genuinely worth shortlisting and want more context before comparing specific cars.`,
+        sidebarHeading: "Where to compare next",
+        sidebarText: "Once the category looks right, the smartest move is to pressure-test it against rival body styles and real vehicles.",
         sidebarLinks: profile?.sidebarLinks || [
             { href: "../brands.html", label: "Browse matching brands", text: "Find brands that are strongest in this body style or market segment." },
             { href: "../car-comparison.html", label: "Compare vehicles", text: "Line up specific cars once the category is clear." },
-            { href: "../components.html", label: "Understand key systems", text: "Read engine, chassis, or interior guides before choosing trims or features." }
+            { href: "../components.html", label: "Understand key systems", text: "Read engine, chassis, or interior explainers before choosing trims or features." }
         ],
         faqItems
     };
@@ -2504,7 +2506,7 @@ function getComponentData(filePath, html, group) {
         .replace(/<h2[^>]*>[\s\S]*?<\/h2>/i, "")
         .replace(/<h3[^>]*>[\s\S]*?<\/h3>/i, "")
         .trim();
-    const subtitle = "Read the system first, then judge the specification.";
+    const subtitle = "Know what this system changes before you judge the spec sheet.";
     const componentHeadings = extractAll(cleanedContentHtml, /<h4[^>]*>([\s\S]*?)<\/h4>/gi).map(stripTags).filter(Boolean);
     const faqItems = profile?.faqItems || [
         {
@@ -2539,15 +2541,15 @@ function getComponentData(filePath, html, group) {
     ];
     const editorialHtml = `
                     <section class="site-highlight">
-                        <h2>Why this system matters in ownership</h2>
+                        <h2>Why this matters in real ownership</h2>
                         <p>${escapeHtml(profile?.editorialLead || profile?.summary || `${title} should be understood in terms of ownership impact, not only technical description.`)}</p>
-                        ${componentHeadings.length ? `<p>${escapeHtml(`This page is most useful when you connect these system areas to real buying decisions: ${componentHeadings.slice(0, 5).join(", ")}.`)}</p>` : ""}
+                        ${componentHeadings.length ? `<p>${escapeHtml(`Pay closest attention to these areas when they affect reliability, servicing, used-car checks, or the way the car feels on the road: ${componentHeadings.slice(0, 5).join(", ")}.`)}</p>` : ""}
                     </section>
                     <section class="site-detail-feature site-detail-feature--soft">
                         <div class="site-detail-feature__header">
-                            <p class="site-detail-kicker">Ownership impact</p>
+                            <p class="site-detail-kicker">Ownership effect</p>
                             <h2>What this system changes in the real ownership experience</h2>
-                            <p>Technical literacy only becomes useful when it changes what you inspect, what you budget for, and which specifications you trust.</p>
+                            <p>Mechanical knowledge matters only when it changes what you inspect, what you budget for, and which risks you are willing to own.</p>
                         </div>
                         ${buildTopicGrid(componentImpactCards)}
                     </section>
@@ -2574,7 +2576,7 @@ function getComponentData(filePath, html, group) {
                         </article>
                     </div>
                     <section class="site-highlight">
-                        <h2>Use this knowledge next</h2>
+                        <h2>Where this helps most</h2>
                         ${profile?.useKnowledgeLead ? `<p>${escapeHtml(profile.useKnowledgeLead)}</p>` : ""}
                         <ul class="site-link-list">
                             ${linkList(profile?.compareLinks || [
@@ -2588,8 +2590,8 @@ ${buildFaqHtml(faqItems)}`;
     const generatedGuideHtml = `
                     <section class="site-detail-feature">
                         <div class="site-detail-feature__header">
-                            <p class="site-detail-kicker">Ownership filter</p>
-                            <h2>How this system should change the way you compare cars</h2>
+                            <p class="site-detail-kicker">Buying lens</p>
+                            <h2>How this should change the way you compare cars</h2>
                         </div>
                         <ol class="site-checklist">
                             ${numberedListFromStrings([
@@ -2601,7 +2603,7 @@ ${buildFaqHtml(faqItems)}`;
                     </section>
                     <section class="site-detail-feature site-detail-feature--soft">
                         <div class="site-detail-feature__header">
-                            <p class="site-detail-kicker">Used-car angle</p>
+                            <p class="site-detail-kicker">Used-car reality</p>
                             <h2>Where this system often becomes a real ownership problem</h2>
                         </div>
                         <p>${escapeHtml(profile?.usedCarLead || `${title} matter most when a vehicle leaves the showroom and starts ageing. That is why buyers should connect the engineering description to inspection discipline, service records, and the way the vehicle will actually be used.`)}</p>
@@ -2627,7 +2629,8 @@ ${buildFaqHtml(faqItems)}`;
         canonical: relativeUrlToPage(filePath),
         ogImage: DEFAULT_OG_IMAGE,
         kicker: subtitle,
-        useText: profile?.useText || `Use this guide to understand what ${systemLabelHuman} do, how the technology has evolved, and why it matters before you compare vehicles or buy used.`,
+        useHeading: profile?.useHeading || "What matters first",
+        useText: profile?.useText || `${title} only become useful knowledge when they help you judge durability, maintenance, drivability, and used-car risk with more confidence.`,
         summaryItems: profile?.summaryItems || [
             { title: "Learn the function", text: "Know what the part or system actually does before relying on marketing copy." },
             { title: "Connect it to ownership", text: "Maintenance, reliability, and performance implications matter as much as the part name." },
@@ -2636,17 +2639,17 @@ ${buildFaqHtml(faqItems)}`;
         heroInsights: profile?.heroInsights || [
             { kicker: "Why it matters", title: "Ownership impact", text: profile?.summary || "This system affects maintenance, reliability, and daily ownership quality." },
             { kicker: "Main warning", title: "Check first", text: (profile?.watchFor && profile.watchFor[0]) || "Service history and wear signs matter more than marketing language." },
-            { kicker: "Use it for", title: "Best comparison use", text: "Apply the system knowledge when judging trims, engines, and used examples." }
+            { kicker: "Best use", title: "Comparison value", text: "Apply the system knowledge when judging trims, engines, and used examples." }
         ],
-        mediaHtml: `<article class="site-panel site-hero__panel"><p class="site-detail-kicker">System context</p><h2>${escapeHtml(title)}</h2><p>${escapeHtml(subtitle)}</p><ul class="site-chip-list"><li>Performance context</li><li>Maintenance literacy</li><li>Buyer education</li></ul></article>`,
+        mediaHtml: `<article class="site-panel site-hero__panel"><p class="site-detail-kicker">Why it matters</p><h2>${escapeHtml(title)}</h2><p>${escapeHtml(subtitle)}</p><ul class="site-chip-list"><li>Performance insight</li><li>Maintenance know-how</li><li>Buyer confidence</li></ul></article>`,
         editorialHtml,
         generatedGuideHtml,
         contentHtml: profile?.referenceSections ? buildReferenceSections(profile.referenceSections) : cleanedContentHtml,
-        referenceKicker: "System breakdown",
+        referenceKicker: "Technical detail",
         referenceHeading: `${title} technical background`,
-        referenceIntro: "Use the deeper system notes below as supporting knowledge once you already know what ownership questions you need this component to answer.",
-        sidebarHeading: "Next research steps",
-        sidebarText: "Component literacy works best when it immediately changes how you compare, inspect, and maintain real vehicles.",
+        referenceIntro: "These deeper notes matter most once you already know which ownership questions, warning signs, or maintenance risks this component needs to answer.",
+        sidebarHeading: "Good next steps",
+        sidebarText: "Use this knowledge to compare cars more clearly, inspect used examples more carefully, and spot costly weak points earlier.",
         sidebarLinks: profile?.sidebarLinks || [
             { href: "../car-comparison.html", label: "Compare cars with context", text: "Apply what you learned to efficiency, power, warranty, and daily use." },
             { href: "../blog.html", label: "Read maintenance guides", text: "Go deeper on service intervals, wear items, and used-car checks." },
