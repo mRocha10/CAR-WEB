@@ -151,6 +151,22 @@ const brandProfiles = {
             { kicker: "Main caution", title: "Where buyers drift wrong", text: "M badges, big wheels, and image can push the shortlist away from the smartest daily-use trim." },
             { kicker: "Research next", title: "What to test-drive after this", text: "Compare a realistic BMW trim against an Audi, Mercedes-Benz, or Lexus alternative before paying the premium." }
         ],
+        editorialLead: "BMW is strongest when buyers genuinely want a premium car that still puts handling, steering feel, and driver involvement near the top of the brief.",
+        contextLead: "The history matters because BMW's identity still comes from engineering prestige and driver appeal, not from trying to be the softest or cheapest premium option.",
+        faqItems: [
+            {
+                question: "What kind of buyer does BMW usually suit best?",
+                answer: "BMW usually suits buyers who want a premium car with a stronger sense of driving involvement than many comfort-led luxury rivals."
+            },
+            {
+                question: "What should you compare carefully before choosing BMW?",
+                answer: "Compare tyre cost, ride comfort, rear-seat space, trim pricing, and whether you actually need the sportiest version or just the best-balanced one."
+            },
+            {
+                question: "When should you move from brand research to model comparison?",
+                answer: "As soon as BMW looks plausible, compare a realistic 3 Series, 5 Series, X3, or X5 style alternative directly against Audi, Mercedes-Benz, Lexus, or a strong mainstream rival."
+            }
+        ],
         sidebarLinks: [
             { href: "../types/sedan.html", label: "Check sedan fit first", text: "Useful if a 3 Series or 5 Series style shortlist is really about road manners and motorway use." },
             { href: "../types/suv.html", label: "Check SUV fit too", text: "Helpful if an X3 or X5 is tempting because of access, family use, or road conditions." },
@@ -277,6 +293,22 @@ const brandProfiles = {
             { kicker: "Main caution", title: "Where buyers drift wrong", text: "Many buyers choose Ford on broad familiarity before deciding whether the job is really pickup, SUV, crossover, or performance car." },
             { kicker: "Research next", title: "What to compare after this", text: "Move quickly into pickup, SUV, or Mustang-style rivals rather than staying at general brand level." }
         ],
+        editorialLead: "Ford is most convincing when the buyer has a clear use case, because the brand's strengths sit in trucks, family utility, and a few enthusiast niches rather than in one uniform brand experience.",
+        contextLead: "The history matters because Ford's scale and mass-market role explain both its lineup breadth and the fact that some nameplates matter far more than the badge alone.",
+        faqItems: [
+            {
+                question: "What kind of buyer does Ford usually suit best?",
+                answer: "Ford usually suits buyers who need trucks, family SUVs, or utility-led mainstream vehicles more than buyers chasing premium polish."
+            },
+            {
+                question: "What should you compare carefully before choosing Ford?",
+                answer: "Separate the exact job first: towing, payload, family seating, fuel use, parking ease, and trim quality all matter more than broad brand familiarity."
+            },
+            {
+                question: "When should you move from brand research to model comparison?",
+                answer: "Move to real model comparison as soon as you know whether the answer is a pickup, SUV, crossover, van, or performance car, because Ford varies heavily by nameplate."
+            }
+        ],
         sidebarLinks: [
             { href: "../types/pickup.html", label: "Decide if you need a pickup", text: "Useful when Ford interest is really about towing, bed utility, or work use." },
             { href: "../types/suv.html", label: "Check SUV fit first", text: "Helpful if Explorer, Edge, or Escape style family use is the actual question." },
@@ -364,6 +396,22 @@ const brandProfiles = {
             { kicker: "Best fit", title: "Honda makes sense when", text: "You want efficient, sensible ownership with a little more engineering sharpness than the blandest mainstream options offer." },
             { kicker: "Main caution", title: "Where buyers drift wrong", text: "Assuming every Honda is the best-value answer can hide real differences in noise, infotainment, and trim pricing." },
             { kicker: "Research next", title: "What to compare after this", text: "Put Civic or CR-V style use cases directly against Toyota and Mazda before deciding the brand is settled." }
+        ],
+        editorialLead: "Honda is strongest when buyers want rational daily ownership with a little more engineering sharpness and packaging intelligence than generic mainstream transport usually offers.",
+        contextLead: "The history matters because Honda's reputation comes from engineering discipline and efficient packaging, which still shapes how buyers should read the current range.",
+        faqItems: [
+            {
+                question: "What kind of buyer does Honda usually suit best?",
+                answer: "Honda usually suits buyers who want dependable, efficient, low-drama daily ownership without stepping into a softer or more anonymous mainstream experience."
+            },
+            {
+                question: "What should you compare carefully before choosing Honda?",
+                answer: "Compare hybrid availability, cabin quality, noise levels, infotainment, and trim pricing against Toyota, Mazda, Hyundai, and Kia rather than assuming Honda wins automatically."
+            },
+            {
+                question: "When should you move from brand research to model comparison?",
+                answer: "Move to model comparison as soon as the real question becomes Civic vs Corolla, Accord vs Camry, or CR-V vs RAV4, because the segment matters more than the badge."
+            }
         ],
         sidebarLinks: [
             { href: "../types/sedan.html", label: "Check sedan priorities", text: "Useful if Civic or Accord style value is what pulled you toward Honda in the first place." },
@@ -776,6 +824,22 @@ const brandProfiles = {
             { kicker: "Main caution", title: "Where buyers drift wrong", text: "Performance headlines and minimalist styling can distract from ride comfort, interior expectations, and charging fit." },
             { kicker: "Research next", title: "What to compare after this", text: "Test Tesla against a BYD, Hyundai, Kia, or premium EV rival with the same family-use brief." }
         ],
+        editorialLead: "Tesla is strongest when the buyer wants the wider EV system, including charging logic, route planning, software behaviour, and efficiency, not just the car in isolation.",
+        contextLead: "The history matters because Tesla changed the EV conversation by tying vehicle appeal to charging, software, and ecosystem confidence rather than only to hardware specs.",
+        faqItems: [
+            {
+                question: "What kind of buyer does Tesla usually suit best?",
+                answer: "Tesla usually suits buyers who are ready for full EV ownership and value the charging ecosystem, software flow, and efficiency as much as the vehicle itself."
+            },
+            {
+                question: "What should you compare carefully before choosing Tesla?",
+                answer: "Compare charging fit, ride comfort, cabin expectations, cargo needs, warranty detail, and whether a rival EV serves the same use case with fewer compromises."
+            },
+            {
+                question: "When should you move from brand research to model comparison?",
+                answer: "Move to direct EV comparison as soon as the shortlist is real, because Model 3 or Model Y decisions should be judged against BYD, Hyundai, Kia, and premium EV alternatives on total fit."
+            }
+        ],
         sidebarLinks: [
             { href: "../types/electric.html", label: "Validate EV ownership fit", text: "Useful if charging routine, winter range, and motorway use are still unresolved." },
             { href: "../types/crossover.html", label: "Check crossover practicality", text: "Helpful if Model Y style family use matters as much as software or range." },
@@ -825,6 +889,22 @@ const brandProfiles = {
             { kicker: "Best fit", title: "Toyota makes sense when", text: "You want fewer ownership surprises and a car that quietly does the daily job well for a long time." },
             { kicker: "Main caution", title: "Where buyers drift wrong", text: "A strong reliability reputation can hide cabin compromises, weaker infotainment, or a better-fit rival in the same class." },
             { kicker: "Research next", title: "What to compare after this", text: "Move straight from Toyota trust to real sedan, SUV, hybrid, or truck comparisons with rivals." }
+        ],
+        editorialLead: "Toyota is strongest when the buyer genuinely values long-term predictability, strong hybrid logic, and low-drama ownership more than showroom excitement or image-led differentiation.",
+        contextLead: "The history matters because Toyota's manufacturing reputation and hybrid leadership still shape the way buyers interpret the brand today, but they should not replace model-level comparison.",
+        faqItems: [
+            {
+                question: "What kind of buyer does Toyota usually suit best?",
+                answer: "Toyota usually suits buyers who prioritise reliability, hybrid efficiency, resale confidence, and fewer ownership surprises over flashier styling or sharper dynamics."
+            },
+            {
+                question: "What should you compare carefully before choosing Toyota?",
+                answer: "Compare cabin feel, infotainment, packaging, exact hybrid or SUV fit, and whether Honda, Mazda, Ford, Hyundai, or Kia offers a better answer in the same class."
+            },
+            {
+                question: "When should you move from brand research to model comparison?",
+                answer: "Move from Toyota trust to direct model comparison as soon as the real question becomes Corolla vs Civic, RAV4 vs CR-V, or Tacoma vs rival pickups."
+            }
         ],
         sidebarLinks: [
             { href: "../types/sedan.html", label: "Check sedan use first", text: "Useful if your Toyota interest is really about Corolla, Camry, or Prius-style daily driving." },
@@ -913,6 +993,21 @@ const typeProfiles = {
             { kicker: "Main caution", title: "Where buyers drift wrong", text: "Many crossovers sell SUV image more convincingly than they deliver meaningful extra practicality." },
             { kicker: "Compare next", title: "What decides the shortlist", text: "Rear-seat access, boot shape, parking ease, and tyre cost usually matter more than rugged styling cues." }
         ],
+        editorialLead: "Crossovers are strongest when buyers want easier access and flexible daily family use, but many only become the right answer after being tested against a hatchback below and an SUV above.",
+        faqItems: [
+            {
+                question: "Who is Crossover usually best for?",
+                answer: "Crossovers usually suit buyers who want easier entry, family flexibility, and a slightly taller seating position without committing to a large SUV."
+            },
+            {
+                question: "What do buyers most often overlook with Crossover?",
+                answer: "Many buyers overlook how often a crossover costs more than a hatchback without delivering much more useful space or capability."
+            },
+            {
+                question: "What should you compare after choosing the body style?",
+                answer: "Compare the crossover directly against a hatchback and an SUV on access, boot shape, tyre cost, parking ease, and real family use before assuming the middle ground is automatically best."
+            }
+        ],
         realityCards: [
             { kicker: "Money lens", title: "What this changes in cost", text: "Crossovers often cost more than equivalent hatchbacks, so check whether the height gain is worth the extra payment, tyre bill, and fuel use." },
             { kicker: "Practical lens", title: "What this changes in daily use", text: "The main win is easier access and a more flexible family shape, not serious off-road ability or massive extra room." },
@@ -946,6 +1041,21 @@ const typeProfiles = {
             { kicker: "Best fit", title: "EVs make sense when", text: "Your weekly charging routine is simple enough that electric driving will feel normal rather than strategic." },
             { kicker: "Main caution", title: "Where buyers drift wrong", text: "Range headlines and acceleration can distract from winter use, charging friction, and total ownership cost." },
             { kicker: "Compare next", title: "What decides the shortlist", text: "Charging speed, real route range, cabin usability, and warranty matter more than the loudest EV marketing claim." }
+        ],
+        editorialLead: "EVs are strongest when charging routine, mileage pattern, and ownership expectations all line up; when they do not, the category can feel impressive on paper but inconvenient in practice.",
+        faqItems: [
+            {
+                question: "Who is Electric Vehicles (EVs) usually best for?",
+                answer: "EVs usually suit buyers with easy charging, predictable daily mileage, and enough flexibility to treat charging routine as part of normal life rather than as a constant planning problem."
+            },
+            {
+                question: "What do buyers most often overlook with Electric Vehicles (EVs)?",
+                answer: "Buyers often overlook how much charging access, winter weather, motorway speed, insurance, and depreciation shape the real EV ownership story."
+            },
+            {
+                question: "What should you compare after choosing the body style?",
+                answer: "Compare charging speed, real-route range, cabin usability, warranty, and total ownership cost across real EV alternatives rather than assuming every EV solves the same problem equally well."
+            }
         ],
         realityCards: [
             { kicker: "Money lens", title: "What this changes in cost", text: "The real cost story depends on home charging price, incentives, insurance, and depreciation, not just the fuel saving headline." },
@@ -1036,6 +1146,21 @@ const typeProfiles = {
             { kicker: "Main caution", title: "Where buyers drift wrong", text: "Some buyers underestimate trunk-opening limits and rear-headroom differences until daily family use exposes them." },
             { kicker: "Compare next", title: "What decides the shortlist", text: "Rear-seat fit, motorway refinement, boot practicality, and fuel economy usually settle the argument." }
         ],
+        editorialLead: "Sedans remain one of the smartest choices when buyers genuinely value efficient road comfort and cleaner handling more than height, image, or cargo-opening flexibility.",
+        faqItems: [
+            {
+                question: "Who is Sedans usually best for?",
+                answer: "Sedans usually suit buyers who spend real time on the road, value efficiency and refinement, and do not need SUV ride height or hatchback-style loading access."
+            },
+            {
+                question: "What do buyers most often overlook with Sedans?",
+                answer: "Buyers often overlook how much trunk-opening limitations, rear headroom, and bulky-family loading needs can weaken the case for a sedan."
+            },
+            {
+                question: "What should you compare after choosing the body style?",
+                answer: "Compare sedans directly against hatchbacks and crossovers on motorway comfort, rear-seat fit, boot practicality, fuel economy, and daily parking logic."
+            }
+        ],
         realityCards: [
             { kicker: "Money lens", title: "What this changes in cost", text: "Sedans often deliver better efficiency and lower tyre bills than similar SUVs, but only if the trunk format still fits your life." },
             { kicker: "Practical lens", title: "What this changes in daily use", text: "The biggest win is cleaner road manners and easier motorway comfort, while the main compromise is cargo-opening flexibility versus hatchbacks and crossovers." },
@@ -1081,6 +1206,21 @@ const typeProfiles = {
             { kicker: "Main caution", title: "Where buyers drift wrong", text: "Many buyers pay SUV running costs for image even when a crossover or sedan would solve normal life more cleanly." },
             { kicker: "Compare next", title: "What decides the shortlist", text: "Cargo shape, second-row comfort, parking ease, tyre cost, and powertrain fit usually matter most." }
         ],
+        editorialLead: "SUVs are strongest when the extra height, access, and family flexibility solve a real daily problem, because the category becomes expensive clutter when buyers choose it mostly for image.",
+        faqItems: [
+            {
+                question: "Who is Sport Utility Vehicles (SUVs) usually best for?",
+                answer: "SUVs usually suit families and drivers who genuinely benefit from easier entry, higher seating, rougher-road confidence, or more upright cargo flexibility."
+            },
+            {
+                question: "What do buyers most often overlook with Sport Utility Vehicles (SUVs)?",
+                answer: "Buyers often overlook how quickly fuel use, tyre cost, parking difficulty, and unnecessary bulk can outweigh the benefits of SUV height."
+            },
+            {
+                question: "What should you compare after choosing the body style?",
+                answer: "Compare SUVs against crossovers and minivans on family access, cargo shape, second-row comfort, running cost, and parking ease before locking in the category."
+            }
+        ],
         realityCards: [
             { kicker: "Money lens", title: "What this changes in cost", text: "SUV ownership usually means paying more for tyres, fuel, and size, so the extra height needs to solve a real problem." },
             { kicker: "Practical lens", title: "What this changes in daily use", text: "SUVs help when you need easier entry, child-seat height, rough-road confidence, or a more upright seating position." },
@@ -1114,6 +1254,21 @@ const componentProfiles = {
             { kicker: "Why it matters", title: "Engine choice changes ownership", text: "The engine often decides whether the car feels easy, stressed, cheap to run, or risky as mileage rises." },
             { kicker: "Main warning", title: "Where buyers drift wrong", text: "Big power numbers can hide poor fit for short trips, weak service discipline, or expensive long-term wear." },
             { kicker: "Use it for", title: "Best next application", text: "Apply engine knowledge when comparing trims, used examples, towing needs, and fuel-economy claims." }
+        ],
+        editorialLead: "Engine knowledge matters most when it changes how buyers judge durability, servicing discipline, real-world performance, and whether a powertrain actually suits the job ahead.",
+        faqItems: [
+            {
+                question: "Why do engine components matter when comparing cars?",
+                answer: "Engine systems matter because they shape durability, drivability, fuel use, maintenance risk, towing confidence, and how well the vehicle matches real-world usage."
+            },
+            {
+                question: "What should buyers check carefully on this system?",
+                answer: "Check cold starts, smoke, idle quality, service history, oil discipline, cooling condition, and whether the engine complexity suits your maintenance tolerance."
+            },
+            {
+                question: "When should this knowledge influence the shortlist?",
+                answer: "Use engine knowledge as soon as you compare trims, towing needs, used examples, or long-term running costs, because the powertrain often changes the ownership answer completely."
+            }
         ],
         ownershipQuestions: ["Is the engine simple and proven, or complex and highly stressed?", "Does the powertrain suit short trips, long motorway use, towing, or mixed family driving?", "What maintenance items become expensive as mileage rises?"],
         watchFor: ["Cold-start noise, smoke, vibration, or uneven idle.", "Turbo, cooling, or timing-related service history gaps.", "Mismatch between advertised performance and the owner's real use case."],
@@ -1157,6 +1312,21 @@ const componentProfiles = {
             { kicker: "Why it matters", title: "The cabin changes daily life", text: "Interior quality affects comfort, distraction, storage, and whether the car still feels good after years instead of minutes." },
             { kicker: "Main warning", title: "Where buyers drift wrong", text: "Showroom theatre can hide awkward controls, weak materials, or poor rear-seat usability." },
             { kicker: "Use it for", title: "Best next application", text: "Use this knowledge when comparing family practicality, infotainment logic, seat comfort, and used-car wear." }
+        ],
+        editorialLead: "Interior knowledge matters when it helps buyers judge the cabin they will actually live with, not the one that looks impressive for five minutes in a showroom.",
+        faqItems: [
+            {
+                question: "Why do interior components matter when comparing cars?",
+                answer: "Interior systems matter because comfort, visibility, storage, infotainment logic, climate controls, and material durability affect daily satisfaction more than many headline features do."
+            },
+            {
+                question: "What should buyers check carefully on this system?",
+                answer: "Check seat comfort, control layout, touch-screen dependence, rear-seat access, material wear, and whether the cabin still works well in real family use."
+            },
+            {
+                question: "When should this knowledge influence the shortlist?",
+                answer: "Use interior knowledge early, especially when choosing family cars, commuter cars, or used vehicles where comfort, storage, and wear will shape everyday satisfaction."
+            }
         ],
         ownershipQuestions: ["Will the seats, storage, and infotainment still feel right after long daily use?", "Is the cabin easy to keep clean and wear-resistant?", "Do the controls reduce distraction or add it?"],
         watchFor: ["Touch-heavy controls that are awkward while driving.", "Tight rear-seat access or poor child-seat usability.", "Materials that look premium but wear badly over time."],
@@ -1665,7 +1835,7 @@ function getBrandData(filePath, html, group) {
     const focusItems = extractListItemsFromHtml(focusSection);
     const modelCategories = extractModelCategories(modelSection);
     const description = profile?.metaDescription || decodeEntities(extractFirst(html, /<meta name="description" content="([^"]*)"/i)) || firstParagraph(contentHtml);
-    const faqItems = [
+    const faqItems = profile?.faqItems || [
         {
             question: `What kind of buyer does ${title} usually suit best?`,
             answer: profile?.summary || `${title} should be judged by how well its real-world strengths match your usage, not only by badge reputation.`
@@ -1699,8 +1869,8 @@ function getBrandData(filePath, html, group) {
     const editorialHtml = `
                     <section class="site-highlight">
                         <h2>Editorial take on ${escapeHtml(title)}</h2>
-                        <p>${escapeHtml(profile?.summary || `${title} is most useful to shortlist when its brand identity clearly matches the way you actually drive and own a car.`)}</p>
-                        ${historyParagraphs[0] ? `<p>${escapeHtml(`Context still matters: ${historyParagraphs[0]}`)}</p>` : ""}
+                        <p>${escapeHtml(profile?.editorialLead || profile?.summary || `${title} is most useful to shortlist when its brand identity clearly matches the way you actually drive and own a car.`)}</p>
+                        ${historyParagraphs[0] ? `<p>${escapeHtml(`${profile?.contextLead || "Context still matters because the brand's history usually explains why buyers still read it the way they do today."} ${historyParagraphs[0]}`)}</p>` : ""}
                     </section>
                     <section class="site-detail-feature site-detail-feature--soft">
                         <div class="site-detail-feature__header">
@@ -1847,7 +2017,7 @@ function getTypeData(filePath, html, group) {
         ? `How to decide whether ${profile.decisionLabel} is actually right for you`
         : "How to decide whether this body style is actually right for you";
     const description = profile?.summary || decodeEntities(extractFirst(html, /<meta name="description" content="([^"]*)"/i)) || firstParagraph(contentHtml);
-    const faqItems = [
+    const faqItems = profile?.faqItems || [
         {
             question: `Who is ${title} usually best for?`,
             answer: profile?.summary || `${title} are worth shortlisting when their strengths genuinely match your routine, passenger needs, and budget.`
@@ -1881,7 +2051,7 @@ function getTypeData(filePath, html, group) {
     const editorialHtml = `
                     <section class="site-highlight">
                         <h2>Buyer-focused summary</h2>
-                        <p>${escapeHtml(profile?.summary || `${title} should be judged by how well the body style fits your daily use, not just how popular it is.`)}</p>
+                        <p>${escapeHtml(profile?.editorialLead || profile?.summary || `${title} should be judged by how well the body style fits your daily use, not just how popular it is.`)}</p>
                     </section>
                     <div class="site-grid site-grid--two">
                         <article class="site-note">
@@ -2020,7 +2190,7 @@ function getComponentData(filePath, html, group) {
         .trim();
     const subtitle = "Read the system first, then judge the specification.";
     const componentHeadings = extractAll(cleanedContentHtml, /<h4[^>]*>([\s\S]*?)<\/h4>/gi).map(stripTags).filter(Boolean);
-    const faqItems = [
+    const faqItems = profile?.faqItems || [
         {
             question: `Why do ${title.toLowerCase()} matter when comparing cars?`,
             answer: profile?.summary || `${title} matter because they influence performance, maintenance, reliability, and long-term ownership cost.`
@@ -2054,7 +2224,7 @@ function getComponentData(filePath, html, group) {
     const editorialHtml = `
                     <section class="site-highlight">
                         <h2>Why this system matters in ownership</h2>
-                        <p>${escapeHtml(profile?.summary || `${title} should be understood in terms of ownership impact, not only technical description.`)}</p>
+                        <p>${escapeHtml(profile?.editorialLead || profile?.summary || `${title} should be understood in terms of ownership impact, not only technical description.`)}</p>
                         ${componentHeadings.length ? `<p>${escapeHtml(`This page is most useful when you connect these system areas to real buying decisions: ${componentHeadings.slice(0, 5).join(", ")}.`)}</p>` : ""}
                     </section>
                     <section class="site-detail-feature site-detail-feature--soft">
