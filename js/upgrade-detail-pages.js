@@ -885,6 +885,57 @@ const componentProfiles = {
     }
 };
 
+const typeAlternativeLinks = {
+    compact: [
+        { href: "hatchback.html", label: "Check hatchbacks too", text: "Useful if you want similar footprint with more cargo flexibility." },
+        { href: "crossover.html", label: "Compare compact vs crossover", text: "Helpful when ride height is tempting but efficiency still matters." }
+    ],
+    convertible: [
+        { href: "sports.html", label: "Check sports cars too", text: "Useful if driving feel matters more than open-top theatre." },
+        { href: "luxury.html", label: "Compare with luxury cars", text: "Helpful when comfort and premium feel matter more than roof-down use." }
+    ],
+    crossover: [
+        { href: "hatchback.html", label: "Check hatchbacks too", text: "Useful if you want easier parking and lower running costs." },
+        { href: "suv.html", label: "Compare crossover vs SUV", text: "Helpful when you are unsure whether you need the extra size." }
+    ],
+    electric: [
+        { href: "sedan.html", label: "Check EV sedans", text: "Useful if efficiency and motorway manners matter more than height." },
+        { href: "crossover.html", label: "Check EV crossovers", text: "Helpful when family practicality matters as much as charging logic." }
+    ],
+    hatchback: [
+        { href: "compact.html", label: "Compare with compact cars", text: "Useful if value and footprint are the first priorities." },
+        { href: "crossover.html", label: "Check crossover alternatives", text: "Helpful if you want easier entry or a taller seating position." }
+    ],
+    luxury: [
+        { href: "sedan.html", label: "Check luxury sedans", text: "Useful when refinement matters more than SUV image." },
+        { href: "suv.html", label: "Check luxury SUVs", text: "Helpful if family height and access are part of the brief." }
+    ],
+    minivan: [
+        { href: "suv.html", label: "Compare with SUVs", text: "Useful if image is pulling you away from the most practical answer." },
+        { href: "crossover.html", label: "Check large crossovers", text: "Helpful when you want family usability with a smaller footprint." }
+    ],
+    muscle: [
+        { href: "sports.html", label: "Compare with sports cars", text: "Useful if handling matters as much as engine drama." },
+        { href: "sedan.html", label: "Check performance sedans", text: "Helpful when you still need four-door usability." }
+    ],
+    pickup: [
+        { href: "suv.html", label: "Check SUVs too", text: "Useful if you want utility but may not truly need an open bed." },
+        { href: "crossover.html", label: "Compare with crossovers", text: "Helpful when daily comfort may matter more than truck capability." }
+    ],
+    sedan: [
+        { href: "hatchback.html", label: "Check hatchbacks too", text: "Useful if cargo opening flexibility matters more than trunk separation." },
+        { href: "suv.html", label: "Compare with SUVs", text: "Helpful when family practicality and easier access are the main question." }
+    ],
+    sports: [
+        { href: "convertible.html", label: "Check convertibles too", text: "Useful if occasion value matters as much as handling purity." },
+        { href: "muscle.html", label: "Compare with muscle cars", text: "Helpful when straight-line drama competes with lighter driver focus." }
+    ],
+    suv: [
+        { href: "crossover.html", label: "Check crossovers too", text: "Useful if you want SUV feel without full SUV bulk." },
+        { href: "minivan.html", label: "Compare with minivans", text: "Helpful when family practicality matters more than image." }
+    ]
+};
+
 function readHtmlFiles(directory) {
     return fs.readdirSync(directory)
         .filter((fileName) => fileName.endsWith(".html"))
@@ -1022,6 +1073,34 @@ function linkList(items) {
 
 function summaryListFromStrings(items) {
     return items.map((item) => `<li><span>${escapeHtml(item)}</span></li>`).join("\n");
+}
+
+function numberedListFromStrings(items) {
+    return items.map((item) => `<li>${escapeHtml(item)}</li>`).join("\n");
+}
+
+function buildInsightGrid(items) {
+    return `
+                    <div class="site-insight-grid">
+                        ${items.map((item) => `
+                        <article class="site-insight-card">
+                            <p class="site-detail-kicker">${escapeHtml(item.kicker)}</p>
+                            <h2>${escapeHtml(item.title)}</h2>
+                            <p>${escapeHtml(item.text)}</p>
+                        </article>`).join("\n")}
+                    </div>`;
+}
+
+function buildTopicGrid(items) {
+    return `
+                    <div class="site-topic-grid">
+                        ${items.map((item) => `
+                        <article class="site-topic-card">
+                            <p class="site-detail-kicker">${escapeHtml(item.kicker)}</p>
+                            <h3>${escapeHtml(item.title)}</h3>
+                            <p>${escapeHtml(item.text)}</p>
+                        </article>`).join("\n")}
+                    </div>`;
 }
 
 function buildFaqJson(title, items) {
@@ -1235,13 +1314,23 @@ ${buildHeader(data.activeSection)}
                 </article>
                 ${data.mediaHtml}
             </div>
+${data.heroInsights ? buildInsightGrid(data.heroInsights) : ""}
         </section>
         <section class="site-section">
             <div class="site-detail-shell">
                 <div class="site-detail-content">
                     <div class="site-detail-rich">
 ${data.editorialHtml}
+${data.generatedGuideHtml || ""}
+${data.contentHtml ? `
+                    <section class="site-reference-block">
+                        <div class="site-reference-block__header">
+                            <p class="site-detail-kicker">${escapeHtml(data.referenceKicker || "Reference context")}</p>
+                            <h2>${escapeHtml(data.referenceHeading || "Supporting detail")}</h2>
+                            <p>${escapeHtml(data.referenceIntro || "Use the material below as supporting context for the buyer guidance above.")}</p>
+                        </div>
 ${data.contentHtml}
+                    </section>` : ""}
                     </div>
                 </div>
                 <aside class="site-detail-sidebar">
@@ -1297,15 +1386,38 @@ function getBrandData(filePath, html, group) {
             answer: `As soon as ${title} looks plausible for your budget and body-style needs, compare real vehicles on price, efficiency, performance, warranty, and space instead of relying on brand image alone.`
         }
     ];
+    const brandSignals = [
+        {
+            kicker: "Market role",
+            title: "What the badge usually promises",
+            text: profile?.summary || `${title} is best used as a market filter, not as a complete buying answer.`
+        },
+        {
+            kicker: "Current focus",
+            title: "What the brand is pushing now",
+            text: focusItems[0] || `${title} should be judged by the exact areas where its current lineup is strongest.`
+        },
+        {
+            kicker: "Lineup shape",
+            title: "Where to search first",
+            text: modelCategories.length ? `${title} is most worth checking in ${modelCategories.slice(0, 2).map((item) => item.title.toLowerCase()).join(" and ")}.` : `Start with the vehicle category where ${title} has the clearest fit for your needs.`
+        }
+    ];
     const editorialHtml = `
                     <section class="site-highlight">
                         <h2>Editorial take on ${escapeHtml(title)}</h2>
                         <p>${escapeHtml(profile?.summary || `${title} is most useful to shortlist when its brand identity clearly matches the way you actually drive and own a car.`)}</p>
                         ${historyParagraphs[0] ? `<p>${escapeHtml(`Context still matters: ${historyParagraphs[0]}`)}</p>` : ""}
                     </section>
-                    <div class="site-grid site-grid--two">
-                        <article class="site-note">
-                            <h2>Who ${escapeHtml(title)} tends to suit best</h2>
+                    <section class="site-detail-feature site-detail-feature--soft">
+                        <div class="site-detail-feature__header">
+                            <p class="site-detail-kicker">Shortlist filter</p>
+                            <h2>When ${escapeHtml(title)} is a smart shortlist, and when it needs more caution</h2>
+                            <p>Use the badge as a directional signal only after matching it to the kind of ownership experience you actually want.</p>
+                        </div>
+                        <div class="site-grid site-grid--two">
+                        <article class="site-note site-note--success">
+                            <h2>Shortlist ${escapeHtml(title)} if...</h2>
                             <ul class="site-summary-list">
                                 ${summaryListFromStrings(profile?.bestFor || [
                                     `Buyers whose priorities line up with ${title}'s strongest reputation areas.`,
@@ -1315,7 +1427,7 @@ function getBrandData(filePath, html, group) {
                             </ul>
                         </article>
                         <article class="site-note site-note--warning">
-                            <h2>What buyers should check carefully</h2>
+                            <h2>Pause before committing if...</h2>
                             <ul class="site-summary-list">
                                 ${summaryListFromStrings(profile?.watchFor || [
                                     "Trim and powertrain choice can matter more than brand image suggests.",
@@ -1324,7 +1436,16 @@ function getBrandData(filePath, html, group) {
                                 ])}
                             </ul>
                         </article>
-                    </div>
+                        </div>
+                    </section>
+                    <section class="site-detail-feature">
+                        <div class="site-detail-feature__header">
+                            <p class="site-detail-kicker">Market reading</p>
+                            <h2>What ${escapeHtml(title)} actually signals in the market</h2>
+                            <p>These quick signals matter more than a generic brand reputation when you are trying to turn research into a real shortlist.</p>
+                        </div>
+                        ${buildTopicGrid(brandSignals)}
+                    </section>
                     ${(focusItems.length || modelCategories.length) ? `
                     <section class="site-highlight">
                         <h2>Current focus and lineup signals</h2>
@@ -1345,6 +1466,34 @@ function getBrandData(filePath, html, group) {
                         </ul>
                     </section>
 ${buildFaqHtml(faqItems)}`;
+    const generatedGuideHtml = `
+                    <section class="site-detail-feature">
+                        <div class="site-detail-feature__header">
+                            <p class="site-detail-kicker">Shortlist logic</p>
+                            <h2>How to research ${escapeHtml(title)} without stopping at the badge</h2>
+                        </div>
+                        <ol class="site-checklist">
+                            ${numberedListFromStrings([
+                                `Start with the vehicle category where ${title} is most relevant to your real life, whether that is a sedan, SUV, EV, truck, or performance car.`,
+                                `Pressure-test the ownership story by checking running costs, service access, tyre and wheel choices, warranty, and resale confidence.`,
+                                `Move to specific models quickly so the final decision is based on usable data, not brand mythology.`
+                            ])}
+                        </ol>
+                    </section>
+                    <section class="site-detail-feature site-detail-feature--soft">
+                        <div class="site-detail-feature__header">
+                            <p class="site-detail-kicker">Reality check</p>
+                            <h2>Where buyers overestimate or underestimate ${escapeHtml(title)}</h2>
+                        </div>
+                        <p>${escapeHtml(`${title} can look stronger or weaker than it really is if you compare only reputation. The better approach is to use the brand as a filter, then judge the exact vehicle on price, packaging, running cost, and fit for your route and passenger needs.`)}</p>
+                        <ul class="site-summary-list">
+                            ${summaryListFromStrings(profile?.watchFor || [
+                                `Do not assume every ${title} model shares the same strengths.`,
+                                "Ownership logic should matter as much as styling, prestige, or performance image.",
+                                "The best result usually comes from comparing two or three realistic finalists, not from choosing a brand in isolation."
+                            ])}
+                        </ul>
+                    </section>`;
 
     return {
         title,
@@ -1365,14 +1514,23 @@ ${buildFaqHtml(faqItems)}`;
             { title: "Read the current focus", text: "See where electrification, luxury, performance, or value fit into the brand strategy." },
             { title: "Move to comparison", text: "After the brand fits your shortlist, compare actual vehicles by price, efficiency, and usability." }
         ],
+        heroInsights: [
+            { kicker: "Best fit", title: `${title} suits`, text: (profile?.bestFor && profile.bestFor[0]) || `Buyers whose priorities line up with ${title}'s strongest reputation areas.` },
+            { kicker: "Watch for", title: "Check carefully", text: (profile?.watchFor && profile.watchFor[0]) || "Trim, powertrain, and ownership cost deserve close checking before you commit." },
+            { kicker: "Next step", title: "Do after this page", text: "Move from badge interest to real model comparison as soon as the brand looks plausible." }
+        ],
         mediaHtml: heroImage
             ? `<div class="site-detail-media" style="background-image: url('${escapeAttribute(heroImage)}');"><div class="site-detail-media__overlay"><p>${escapeHtml(tagline)}</p></div></div>`
             : `<article class="site-panel site-hero__panel"><h2>${escapeHtml(title)}</h2><p>${escapeHtml(tagline)}</p></article>`,
         editorialHtml,
+        generatedGuideHtml,
         contentHtml,
+        referenceKicker: "Background and lineup",
+        referenceHeading: `${title} history, current focus, and model context`,
+        referenceIntro: `Use the supporting background below to understand how ${title} built its reputation and where the current lineup fits after you have already framed the buyer decision.`,
         sidebarHeading: "Research next",
-        sidebarText: "The best next click depends on whether you are still exploring the market or already comparing a shortlist.",
-        sidebarLinks: [
+        sidebarText: "A brand page is only useful if it pushes you toward the next comparison instead of trapping you at badge level.",
+        sidebarLinks: profile?.compareLinks || [
             { href: "../car-comparison.html", label: "Compare specific cars", text: "Move from brand interest to decision-ready specs and ownership trade-offs." },
             { href: "../car-types.html", label: "Review body styles", text: "Check whether the right fit is an SUV, sedan, EV, truck, or hatchback first." },
             { href: "../blog.html", label: "Read ownership guides", text: "Use maintenance and buying articles to strengthen the shortlist." }
@@ -1387,6 +1545,10 @@ function getTypeData(filePath, html, group) {
     const imageSrc = extractFirst(contentHtml, /<img[^>]+src="([^"]+)"[^>]*class="car-type-image"/i) || extractFirst(contentHtml, /<img[^>]+class="car-type-image"[^>]+src="([^"]+)"/i);
     const slug = path.basename(filePath, ".html");
     const profile = typeProfiles[slug];
+    const alternativeLinks = typeAlternativeLinks[slug] || [
+        { href: "suv.html", label: "Compare with SUVs", text: "Useful if height, family use, or rougher roads are part of the question." },
+        { href: "sedan.html", label: "Compare with sedans", text: "Helpful when efficiency and road manners matter more than image." }
+    ];
     const description = profile?.summary || decodeEntities(extractFirst(html, /<meta name="description" content="([^"]*)"/i)) || firstParagraph(contentHtml);
     const faqItems = [
         {
@@ -1400,6 +1562,23 @@ function getTypeData(filePath, html, group) {
         {
             question: `What should you compare after choosing the body style?`,
             answer: `Once the body style is right, compare real models on price, efficiency, cargo space, warranty, and daily usability instead of assuming every ${title.toLowerCase()} suits the same buyer.`
+        }
+    ];
+    const typeRealityCards = [
+        {
+            kicker: "Money lens",
+            title: "What this changes in cost",
+            text: (profile?.metrics && profile.metrics[0]) || "Start with purchase price and monthly running cost."
+        },
+        {
+            kicker: "Practical lens",
+            title: "What this changes in daily use",
+            text: (profile?.metrics && profile.metrics[1]) || "Check whether space and flexibility really improve your routine."
+        },
+        {
+            kicker: "Ownership lens",
+            title: "What this changes after you buy",
+            text: (profile?.metrics && profile.metrics[2]) || "Compare efficiency, comfort, and warranty as lived realities."
         }
     ];
     const editorialHtml = `
@@ -1429,14 +1608,19 @@ function getTypeData(filePath, html, group) {
                             </ul>
                         </article>
                     </div>
+                    <section class="site-detail-feature">
+                        <div class="site-detail-feature__header">
+                            <p class="site-detail-kicker">Daily-life test</p>
+                            <h2>What this body style changes once you live with it</h2>
+                            <p>The right category becomes obvious when you pressure-test cost, practicality, and long-term ease, not just styling.</p>
+                        </div>
+                        ${buildTopicGrid(typeRealityCards)}
+                    </section>
                     <section class="site-note">
-                        <h2>What to compare next</h2>
-                        <ul class="site-summary-list">
-                            ${summaryListFromStrings(profile?.metrics || [
-                                "Price and monthly running cost.",
-                                "Passenger space and cargo flexibility.",
-                                "Fuel economy, performance, and warranty."
-                            ])}
+                        <h2>Closest alternatives worth test-driving too</h2>
+                        <p>Many buyers only realise the better category after comparing the nearest alternative, not after reading a spec sheet in isolation.</p>
+                        <ul class="site-link-list">
+                            ${linkList(alternativeLinks)}
                         </ul>
                     </section>
                     <section class="site-highlight">
@@ -1450,6 +1634,34 @@ function getTypeData(filePath, html, group) {
                         </ul>
                     </section>
 ${buildFaqHtml(faqItems)}`;
+    const generatedGuideHtml = `
+                    <section class="site-detail-feature">
+                        <div class="site-detail-feature__header">
+                            <p class="site-detail-kicker">Decision guide</p>
+                            <h2>How to decide whether ${escapeHtml(title)} is actually right for you</h2>
+                        </div>
+                        <ol class="site-checklist">
+                            ${numberedListFromStrings([
+                                "Start with your real passengers, luggage, parking environment, and road conditions rather than with category trends.",
+                                `Check whether ${title.toLowerCase()} solve a daily problem better than the closest alternative body style.`,
+                                "Once the category still makes sense, compare specific models on space, efficiency, comfort, and total running cost."
+                            ])}
+                        </ol>
+                    </section>
+                    <section class="site-detail-feature site-detail-feature--soft">
+                        <div class="site-detail-feature__header">
+                            <p class="site-detail-kicker">What buyers miss</p>
+                            <h2>Where this category wins, and where it quietly disappoints</h2>
+                        </div>
+                        <p>${escapeHtml(`${title} can be an excellent fit when the body style solves the right problem, but it becomes expensive clutter when buyers choose it for image instead of use.`)}</p>
+                        <ul class="site-summary-list">
+                            ${summaryListFromStrings(profile?.watchFor || [
+                                "Trend and image can hide real compromises in cost, size, or daily ease.",
+                                "The right body style should make normal life easier, not just look more desirable in theory.",
+                                "A smaller or simpler category is often the smarter buy when the use case is honest."
+                            ])}
+                        </ul>
+                    </section>`;
 
     return {
         title,
@@ -1470,14 +1682,23 @@ ${buildFaqHtml(faqItems)}`;
             { title: "Watch the trade-offs", text: "Comfort, efficiency, price, and versatility rarely peak at the same time." },
             { title: "Then shortlist brands", text: "Once the body style is right, comparing brands and models becomes much easier." }
         ],
+        heroInsights: [
+            { kicker: "Best fit", title: "Strong fit", text: (profile?.bestFor && profile.bestFor[0]) || "Best for buyers whose daily routine clearly matches the category." },
+            { kicker: "Main risk", title: "Easy mistake", text: (profile?.watchFor && profile.watchFor[0]) || "The biggest mistake is choosing the category for image instead of use." },
+            { kicker: "Compare next", title: "Key metric", text: (profile?.metrics && profile.metrics[0]) || "Compare cost, space, and daily usability before anything else." }
+        ],
         mediaHtml: imageSrc
             ? `<div class="site-detail-media"><img src="${escapeAttribute(imageSrc)}" alt="${escapeAttribute(title)}" loading="eager"></div>`
             : `<article class="site-panel site-hero__panel"><h2>${escapeHtml(title)}</h2><p>${escapeHtml(description)}</p></article>`,
         editorialHtml,
+        generatedGuideHtml,
         contentHtml,
+        referenceKicker: "Detailed category notes",
+        referenceHeading: `${title} overview and supporting detail`,
+        referenceIntro: `Treat the material below as deeper context after the buyer-focused decision guide above. It helps once you already know the category is worth shortlisting.`,
         sidebarHeading: "Best next steps",
-        sidebarText: "Use the type guide to narrow the field, then move into the most relevant brands and live vehicle comparisons.",
-        sidebarLinks: [
+        sidebarText: "The best type page should quickly push you toward rival body styles, then into real vehicle shortlists.",
+        sidebarLinks: profile?.relatedLinks || [
             { href: "../brands.html", label: "Browse matching brands", text: "Find brands that are strongest in this body style or market segment." },
             { href: "../car-comparison.html", label: "Compare vehicles", text: "Line up specific cars once the category is clear." },
             { href: "../components.html", label: "Understand key systems", text: "Read engine, chassis, or interior guides before choosing trims or features." }
@@ -1512,11 +1733,36 @@ function getComponentData(filePath, html, group) {
             answer: `Use this knowledge when comparing trims, engines, and used examples so you choose a vehicle that fits your real usage and maintenance tolerance.`
         }
     ];
+    const componentImpactCards = [
+        {
+            kicker: "Daily use",
+            title: "What it changes behind the wheel",
+            text: profile?.summary || `${title} affect how the car feels, responds, and ages in normal use.`
+        },
+        {
+            kicker: "Maintenance",
+            title: "What it changes in servicing",
+            text: (profile?.ownershipQuestions && profile.ownershipQuestions[0]) || "Use the system knowledge to judge likely maintenance complexity."
+        },
+        {
+            kicker: "Used-car check",
+            title: "What it changes during inspection",
+            text: (profile?.watchFor && profile.watchFor[0]) || "Look for visible signs that the system has been neglected or mismatched to use."
+        }
+    ];
     const editorialHtml = `
                     <section class="site-highlight">
                         <h2>Why this system matters in ownership</h2>
                         <p>${escapeHtml(profile?.summary || `${title} should be understood in terms of ownership impact, not only technical description.`)}</p>
                         ${componentHeadings.length ? `<p>${escapeHtml(`This page is most useful when you connect these system areas to real buying decisions: ${componentHeadings.slice(0, 5).join(", ")}.`)}</p>` : ""}
+                    </section>
+                    <section class="site-detail-feature site-detail-feature--soft">
+                        <div class="site-detail-feature__header">
+                            <p class="site-detail-kicker">Ownership impact</p>
+                            <h2>What this system changes in the real ownership experience</h2>
+                            <p>Technical literacy only becomes useful when it changes what you inspect, what you budget for, and which specifications you trust.</p>
+                        </div>
+                        ${buildTopicGrid(componentImpactCards)}
                     </section>
                     <div class="site-grid site-grid--two">
                         <article class="site-note">
@@ -1551,6 +1797,34 @@ function getComponentData(filePath, html, group) {
                         </ul>
                     </section>
 ${buildFaqHtml(faqItems)}`;
+    const generatedGuideHtml = `
+                    <section class="site-detail-feature">
+                        <div class="site-detail-feature__header">
+                            <p class="site-detail-kicker">Ownership filter</p>
+                            <h2>How this system should change the way you compare cars</h2>
+                        </div>
+                        <ol class="site-checklist">
+                            ${numberedListFromStrings([
+                                `Use ${title.toLowerCase()} knowledge to judge whether a specification is likely to be easy, expensive, simple, or risky to live with.`,
+                                "Pay extra attention to service history, wear patterns, and whether the engineering suits the driving job you actually have.",
+                                "Let the technical context influence trim choice and used-car inspection, not just your interest in the brochure language."
+                            ])}
+                        </ol>
+                    </section>
+                    <section class="site-detail-feature site-detail-feature--soft">
+                        <div class="site-detail-feature__header">
+                            <p class="site-detail-kicker">Used-car angle</p>
+                            <h2>Where this system often becomes a real ownership problem</h2>
+                        </div>
+                        <p>${escapeHtml(`${title} matter most when a vehicle leaves the showroom and starts ageing. That is why buyers should connect the engineering description to inspection discipline, service records, and the way the vehicle will actually be used.`)}</p>
+                        <ul class="site-summary-list">
+                            ${summaryListFromStrings(profile?.watchFor || [
+                                "Neglect usually shows up first in service history and subtle warning signs.",
+                                "A technically impressive system can still be the wrong fit if maintenance tolerance is low.",
+                                "The best comparison choice is the one that matches both usage and upkeep discipline."
+                            ])}
+                        </ul>
+                    </section>`;
 
     return {
         title,
@@ -1571,12 +1845,21 @@ ${buildFaqHtml(faqItems)}`;
             { title: "Connect it to ownership", text: "Maintenance, reliability, and performance implications matter as much as the part name." },
             { title: "Apply it in comparison", text: "This context helps when reviewing spec sheets, trims, and used-car risks." }
         ],
+        heroInsights: [
+            { kicker: "Why it matters", title: "Ownership impact", text: profile?.summary || "This system affects maintenance, reliability, and daily ownership quality." },
+            { kicker: "Main warning", title: "Check first", text: (profile?.watchFor && profile.watchFor[0]) || "Service history and wear signs matter more than marketing language." },
+            { kicker: "Use it for", title: "Best comparison use", text: "Apply the system knowledge when judging trims, engines, and used examples." }
+        ],
         mediaHtml: `<article class="site-panel site-hero__panel"><p class="site-detail-kicker">System context</p><h2>${escapeHtml(title)}</h2><p>${escapeHtml(subtitle)}</p><ul class="site-chip-list"><li>Performance context</li><li>Maintenance literacy</li><li>Buyer education</li></ul></article>`,
         editorialHtml,
+        generatedGuideHtml,
         contentHtml: cleanedContentHtml,
+        referenceKicker: "System breakdown",
+        referenceHeading: `${title} technical background`,
+        referenceIntro: "Use the deeper system notes below as supporting knowledge once you already know what ownership questions you need this component to answer.",
         sidebarHeading: "Use this knowledge next",
-        sidebarText: "Component literacy works best when it feeds directly into model comparison and ownership research.",
-        sidebarLinks: [
+        sidebarText: "Component literacy works best when it immediately changes how you compare, inspect, and maintain real vehicles.",
+        sidebarLinks: profile?.compareLinks || [
             { href: "../car-comparison.html", label: "Compare cars with context", text: "Apply what you learned to efficiency, power, warranty, and daily use." },
             { href: "../blog.html", label: "Read maintenance guides", text: "Go deeper on service intervals, wear items, and used-car checks." },
             { href: "../brands.html", label: "See brand positioning", text: "Match the technology story to manufacturers and price bands." }
