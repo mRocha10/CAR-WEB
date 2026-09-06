@@ -167,6 +167,9 @@ const brandProfiles = {
                 answer: "As soon as BMW looks plausible, compare a realistic 3 Series, 5 Series, X3, or X5 style alternative directly against Audi, Mercedes-Benz, Lexus, or a strong mainstream rival."
             }
         ],
+        focusLead: "BMW makes the most sense when you translate the badge into real segment choices, because the useful shortlist is usually a 3 Series, 5 Series, X3, or X5 question rather than a general brand question.",
+        compareLead: "The smartest BMW research path is to compare segment-for-segment rather than paying for the badge before deciding whether the daily-use brief is actually sedan, SUV, or performance-led.",
+        realityLead: "BMW can look stronger than it really is when buyers focus only on prestige or M-badge theatre, and weaker than it really is when they ignore how coherent the everyday driver-focused trims can be.",
         sidebarLinks: [
             { href: "../types/sedan.html", label: "Check sedan fit first", text: "Useful if a 3 Series or 5 Series style shortlist is really about road manners and motorway use." },
             { href: "../types/suv.html", label: "Check SUV fit too", text: "Helpful if an X3 or X5 is tempting because of access, family use, or road conditions." },
@@ -309,6 +312,9 @@ const brandProfiles = {
                 answer: "Move to real model comparison as soon as you know whether the answer is a pickup, SUV, crossover, van, or performance car, because Ford varies heavily by nameplate."
             }
         ],
+        focusLead: "Ford becomes clearer once you separate the lineup by job, because truck, family-SUV, and enthusiast products tell you far more than the broad badge ever will.",
+        compareLead: "The best Ford comparison is almost always use-case led, with towing, payload, seating, fuel use, or performance character deciding what deserves shortlist space.",
+        realityLead: "Ford often gets over-credited for sheer familiarity and under-credited when buyers ignore how much the right nameplate can outperform the wrong one for a specific job.",
         sidebarLinks: [
             { href: "../types/pickup.html", label: "Decide if you need a pickup", text: "Useful when Ford interest is really about towing, bed utility, or work use." },
             { href: "../types/suv.html", label: "Check SUV fit first", text: "Helpful if Explorer, Edge, or Escape style family use is the actual question." },
@@ -413,6 +419,9 @@ const brandProfiles = {
                 answer: "Move to model comparison as soon as the real question becomes Civic vs Corolla, Accord vs Camry, or CR-V vs RAV4, because the segment matters more than the badge."
             }
         ],
+        focusLead: "Honda is easiest to understand when you look at how the brand balances efficiency, packaging, and driver confidence in the mainstream segments where most buyers actually live.",
+        compareLead: "Once Honda looks plausible, the right next move is not broader brand admiration but tighter Civic, Accord, CR-V, and HR-V comparisons against their direct rivals.",
+        realityLead: "Honda is often overrated by buyers who assume the badge solves value automatically and underrated by buyers who miss how much everyday engineering balance it still offers.",
         sidebarLinks: [
             { href: "../types/sedan.html", label: "Check sedan priorities", text: "Useful if Civic or Accord style value is what pulled you toward Honda in the first place." },
             { href: "../types/crossover.html", label: "Check crossover priorities", text: "Helpful if your shortlist is really about CR-V, HR-V, and family flexibility." },
@@ -840,6 +849,9 @@ const brandProfiles = {
                 answer: "Move to direct EV comparison as soon as the shortlist is real, because Model 3 or Model Y decisions should be judged against BYD, Hyundai, Kia, and premium EV alternatives on total fit."
             }
         ],
+        focusLead: "Tesla becomes easier to read once you treat it as an EV ecosystem decision, because the useful comparison is as much about charging and software confidence as about the car itself.",
+        compareLead: "The right Tesla comparison is rarely just range versus range; it is usually software, charging routine, cabin fit, and family practicality against rival EVs solving the same job.",
+        realityLead: "Tesla is often overestimated by buyers who chase performance headlines and underestimated by buyers who fail to account for how much the ecosystem can simplify EV ownership when it fits.",
         sidebarLinks: [
             { href: "../types/electric.html", label: "Validate EV ownership fit", text: "Useful if charging routine, winter range, and motorway use are still unresolved." },
             { href: "../types/crossover.html", label: "Check crossover practicality", text: "Helpful if Model Y style family use matters as much as software or range." },
@@ -906,6 +918,9 @@ const brandProfiles = {
                 answer: "Move from Toyota trust to direct model comparison as soon as the real question becomes Corolla vs Civic, RAV4 vs CR-V, or Tacoma vs rival pickups."
             }
         ],
+        focusLead: "Toyota is most useful to shortlist when you translate the badge into mainstream sedan, hybrid, family-SUV, or truck roles instead of letting general reputation answer the whole decision.",
+        compareLead: "Toyota research becomes genuinely useful only when it moves quickly into direct model-level tests against Honda, Mazda, Ford, Hyundai, Kia, and the strongest segment rivals.",
+        realityLead: "Toyota gets overestimated when buyers assume reliability ends the conversation and underestimated when they ignore how effective the right hybrid or family-use model can still be.",
         sidebarLinks: [
             { href: "../types/sedan.html", label: "Check sedan use first", text: "Useful if your Toyota interest is really about Corolla, Camry, or Prius-style daily driving." },
             { href: "../types/suv.html", label: "Check SUV use first", text: "Helpful if RAV4, Highlander, or Land Cruiser practicality is the actual brief." },
@@ -1008,6 +1023,8 @@ const typeProfiles = {
                 answer: "Compare the crossover directly against a hatchback and an SUV on access, boot shape, tyre cost, parking ease, and real family use before assuming the middle ground is automatically best."
             }
         ],
+        shortlistLead: "Crossovers become truly useful only when they beat both the hatchback below and the SUV above on the real things your week demands, not on image alone.",
+        realityLead: "Crossovers often win because they are convenient, but they disappoint when buyers expect the practicality of a large SUV without accepting that many are only slightly taller hatchbacks.",
         realityCards: [
             { kicker: "Money lens", title: "What this changes in cost", text: "Crossovers often cost more than equivalent hatchbacks, so check whether the height gain is worth the extra payment, tyre bill, and fuel use." },
             { kicker: "Practical lens", title: "What this changes in daily use", text: "The main win is easier access and a more flexible family shape, not serious off-road ability or massive extra room." },
@@ -1057,6 +1074,8 @@ const typeProfiles = {
                 answer: "Compare charging speed, real-route range, cabin usability, warranty, and total ownership cost across real EV alternatives rather than assuming every EV solves the same problem equally well."
             }
         ],
+        shortlistLead: "EVs become a strong shortlist only when charging routine, route profile, and ownership expectations all support the switch together rather than one at a time.",
+        realityLead: "EVs can feel transformational when the daily routine fits and frustrating when the buyer is solving for charging problems that should have been settled before the test drive.",
         realityCards: [
             { kicker: "Money lens", title: "What this changes in cost", text: "The real cost story depends on home charging price, incentives, insurance, and depreciation, not just the fuel saving headline." },
             { kicker: "Practical lens", title: "What this changes in daily use", text: "Range matters, but routine matters more: school runs, motorway speed, winter weather, and charging access decide whether EV ownership feels effortless." },
@@ -1161,6 +1180,8 @@ const typeProfiles = {
                 answer: "Compare sedans directly against hatchbacks and crossovers on motorway comfort, rear-seat fit, boot practicality, fuel economy, and daily parking logic."
             }
         ],
+        shortlistLead: "Sedans earn their place when they clearly beat taller alternatives on road manners, efficiency, and everyday calm instead of simply defending tradition.",
+        realityLead: "Sedans are easy to underrate in an SUV-heavy market, but they also punish buyers who underestimate trunk limitations or overestimate how rarely they need flexible cargo access.",
         realityCards: [
             { kicker: "Money lens", title: "What this changes in cost", text: "Sedans often deliver better efficiency and lower tyre bills than similar SUVs, but only if the trunk format still fits your life." },
             { kicker: "Practical lens", title: "What this changes in daily use", text: "The biggest win is cleaner road manners and easier motorway comfort, while the main compromise is cargo-opening flexibility versus hatchbacks and crossovers." },
@@ -1221,6 +1242,8 @@ const typeProfiles = {
                 answer: "Compare SUVs against crossovers and minivans on family access, cargo shape, second-row comfort, running cost, and parking ease before locking in the category."
             }
         ],
+        shortlistLead: "SUVs deserve shortlist space when the extra height and versatility solve a real daily problem often enough to repay the extra running cost and footprint.",
+        realityLead: "SUVs can be brilliant family tools when the use case is honest, but they become expensive clutter when buyers mainly want the image of versatility instead of the discipline of comparison.",
         realityCards: [
             { kicker: "Money lens", title: "What this changes in cost", text: "SUV ownership usually means paying more for tyres, fuel, and size, so the extra height needs to solve a real problem." },
             { kicker: "Practical lens", title: "What this changes in daily use", text: "SUVs help when you need easier entry, child-seat height, rough-road confidence, or a more upright seating position." },
@@ -1270,6 +1293,8 @@ const componentProfiles = {
                 answer: "Use engine knowledge as soon as you compare trims, towing needs, used examples, or long-term running costs, because the powertrain often changes the ownership answer completely."
             }
         ],
+        useKnowledgeLead: "Engine knowledge only becomes valuable when it changes which trims you trust, which used examples you reject, and which maintenance risks you are actually willing to own.",
+        usedCarLead: "Engines create the biggest ownership gap between a well-bought car and an expensive mistake, especially once mileage, service history, and real-world use start to matter more than brochure claims.",
         ownershipQuestions: ["Is the engine simple and proven, or complex and highly stressed?", "Does the powertrain suit short trips, long motorway use, towing, or mixed family driving?", "What maintenance items become expensive as mileage rises?"],
         watchFor: ["Cold-start noise, smoke, vibration, or uneven idle.", "Turbo, cooling, or timing-related service history gaps.", "Mismatch between advertised performance and the owner's real use case."],
         impactCards: [
@@ -1328,6 +1353,8 @@ const componentProfiles = {
                 answer: "Use interior knowledge early, especially when choosing family cars, commuter cars, or used vehicles where comfort, storage, and wear will shape everyday satisfaction."
             }
         ],
+        useKnowledgeLead: "Interior knowledge becomes useful when it changes how you judge comfort, control layout, storage, family access, and long-term cabin durability instead of just how premium the dashboard looks.",
+        usedCarLead: "Cabins age in public: worn seats, awkward controls, infotainment glitches, and cramped rear access usually reveal the truth about daily ownership faster than the spec sheet ever will.",
         ownershipQuestions: ["Will the seats, storage, and infotainment still feel right after long daily use?", "Is the cabin easy to keep clean and wear-resistant?", "Do the controls reduce distraction or add it?"],
         watchFor: ["Touch-heavy controls that are awkward while driving.", "Tight rear-seat access or poor child-seat usability.", "Materials that look premium but wear badly over time."],
         impactCards: [
@@ -1912,14 +1939,14 @@ function getBrandData(filePath, html, group) {
                     ${(focusItems.length || modelCategories.length) ? `
                     <section class="site-highlight">
                         <h2>Current focus and lineup signals</h2>
-                        ${focusItems.length ? `<p>${escapeHtml(`${title}'s current strategy is easiest to understand through these themes: ${focusItems.join("; ")}.`)}</p>` : ""}
+                        ${focusItems.length ? `<p>${escapeHtml(profile?.focusLead || `${title}'s current strategy is easiest to understand through these themes: ${focusItems.join("; ")}.`)}</p>` : ""}
                         ${modelCategories.length ? `<ul class="site-summary-list">
                             ${sectionList(modelCategories.slice(0, 4))}
                         </ul>` : ""}
                     </section>` : ""}
                     <section class="site-note">
                         <h2>Best next comparisons</h2>
-                        <p>Once ${escapeHtml(title)} looks plausible on paper, compare exact vehicles rather than letting brand perception do all the work.</p>
+                        <p>${escapeHtml(profile?.compareLead || `Once ${title} looks plausible on paper, compare exact vehicles rather than letting brand perception do all the work.`)}</p>
                         <ul class="site-link-list">
                             ${linkList(profile?.compareLinks || [
                                 { href: "../car-comparison.html", label: "Compare vehicles now", text: "Use real specs, price, MPG, and warranty signals." },
@@ -1948,7 +1975,7 @@ ${buildFaqHtml(faqItems)}`;
                             <p class="site-detail-kicker">Reality check</p>
                             <h2>Where buyers overestimate or underestimate ${escapeHtml(title)}</h2>
                         </div>
-                        <p>${escapeHtml(`${title} can look stronger or weaker than it really is if you compare only reputation. The better approach is to use the brand as a filter, then judge the exact vehicle on price, packaging, running cost, and fit for your route and passenger needs.`)}</p>
+                        <p>${escapeHtml(profile?.realityLead || `${title} can look stronger or weaker than it really is if you compare only reputation. The better approach is to use the brand as a filter, then judge the exact vehicle on price, packaging, running cost, and fit for your route and passenger needs.`)}</p>
                         <ul class="site-summary-list">
                             ${summaryListFromStrings(profile?.watchFor || [
                                 `Do not assume every ${title} model shares the same strengths.`,
@@ -2092,6 +2119,7 @@ function getTypeData(filePath, html, group) {
                     </section>
                     <section class="site-highlight">
                         <h2>Move from body style to shortlist</h2>
+                        ${profile?.shortlistLead ? `<p>${escapeHtml(profile.shortlistLead)}</p>` : ""}
                         <ul class="site-link-list">
                             ${linkList(profile?.relatedLinks || [
                                 { href: "../brands.html", label: "Browse matching brands", text: "See which manufacturers are strongest in this category." },
@@ -2122,7 +2150,7 @@ ${buildFaqHtml(faqItems)}`;
                             <p class="site-detail-kicker">What buyers miss</p>
                             <h2>Where this category wins, and where it quietly disappoints</h2>
                         </div>
-                        <p>${escapeHtml(`${title} can be an excellent fit when the body style solves the right problem, but it becomes expensive clutter when buyers choose it for image instead of use.`)}</p>
+                        <p>${escapeHtml(profile?.realityLead || `${title} can be an excellent fit when the body style solves the right problem, but it becomes expensive clutter when buyers choose it for image instead of use.`)}</p>
                         <ul class="site-summary-list">
                             ${summaryListFromStrings(profile?.watchFor || [
                                 "Trend and image can hide real compromises in cost, size, or daily ease.",
@@ -2259,6 +2287,7 @@ function getComponentData(filePath, html, group) {
                     </div>
                     <section class="site-highlight">
                         <h2>Use this knowledge next</h2>
+                        ${profile?.useKnowledgeLead ? `<p>${escapeHtml(profile.useKnowledgeLead)}</p>` : ""}
                         <ul class="site-link-list">
                             ${linkList(profile?.compareLinks || [
                                 { href: "../car-comparison.html", label: "Compare vehicles with context", text: "Apply this knowledge to price, MPG, power, and warranty data." },
@@ -2287,7 +2316,7 @@ ${buildFaqHtml(faqItems)}`;
                             <p class="site-detail-kicker">Used-car angle</p>
                             <h2>Where this system often becomes a real ownership problem</h2>
                         </div>
-                        <p>${escapeHtml(`${title} matter most when a vehicle leaves the showroom and starts ageing. That is why buyers should connect the engineering description to inspection discipline, service records, and the way the vehicle will actually be used.`)}</p>
+                        <p>${escapeHtml(profile?.usedCarLead || `${title} matter most when a vehicle leaves the showroom and starts ageing. That is why buyers should connect the engineering description to inspection discipline, service records, and the way the vehicle will actually be used.`)}</p>
                         <ul class="site-summary-list">
                             ${summaryListFromStrings(profile?.watchFor || [
                                 "Neglect usually shows up first in service history and subtle warning signs.",
