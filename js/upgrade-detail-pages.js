@@ -30,6 +30,861 @@ const pageGroups = [
     }
 ];
 
+const brandProfiles = {
+    "alfa-romeo": {
+        summary: "Alfa Romeo appeals most to buyers who want Italian styling and sharper road feel than the average premium crossover or sedan.",
+        metaDescription: "Learn where Alfa Romeo fits best, what the brand does well, and what buyers should check before shortlisting an Alfa.",
+        bestFor: [
+            "Drivers who care more about character, steering feel, and design than pure resale logic.",
+            "Shoppers cross-checking German premium brands but wanting something less common.",
+            "Buyers willing to trade some practicality for a more emotional ownership experience."
+        ],
+        watchFor: [
+            "Dealer access and parts support can matter more than the brochure suggests.",
+            "Trim, engine, and electronics history deserve more scrutiny on used examples.",
+            "Compare running costs against BMW, Audi, and Lexus before committing."
+        ],
+        compareLinks: [
+            { href: "bmw.html", label: "Compare Alfa Romeo vs BMW", text: "See where Italian character differs from German performance polish." },
+            { href: "audi.html", label: "Compare Alfa Romeo vs Audi", text: "Useful when styling and tech are competing priorities." },
+            { href: "../car-comparison.html", label: "Move to vehicle comparison", text: "Check actual price, MPG, warranty, and cargo trade-offs." }
+        ]
+    },
+    "aston-martin": {
+        summary: "Aston Martin is primarily a grand-touring luxury-performance brand, best suited to buyers chasing exclusivity, design, and occasion value.",
+        metaDescription: "Explore Aston Martin's luxury GT positioning, typical buyer fit, and the real trade-offs before comparing models.",
+        bestFor: [
+            "Buyers prioritising exclusivity, theatre, and high-end design over everyday practicality.",
+            "Drivers who want GT comfort with strong performance rather than track-first extremity.",
+            "Shoppers comparing Ferrari, Bentley, McLaren, or top-tier Mercedes-AMG products."
+        ],
+        watchFor: [
+            "Servicing, insurance, and depreciation can outweigh the purchase decision quickly.",
+            "Dealer support is thinner than mainstream premium brands in many markets.",
+            "Used examples need specialist inspection rather than ordinary pre-purchase checks."
+        ],
+        compareLinks: [
+            { href: "bentley.html", label: "Compare Aston Martin vs Bentley", text: "Check GT luxury against more comfort-led ultra-luxury positioning." },
+            { href: "mclaren.html", label: "Compare Aston Martin vs McLaren", text: "Useful when deciding between GT balance and harder-edged supercar focus." },
+            { href: "../car-comparison.html", label: "Compare specific models", text: "Move from badge preference to real-world price and usability differences." }
+        ]
+    },
+    audi: {
+        summary: "Audi typically suits buyers who want a modern premium cabin, strong in-car tech, and understated luxury with broad all-weather appeal.",
+        metaDescription: "See where Audi fits in the premium market, what it does best, and what buyers should compare before choosing one.",
+        bestFor: [
+            "Shoppers who value cabin design, infotainment, and a quieter premium feel.",
+            "Drivers in mixed-weather markets who care about quattro and everyday confidence.",
+            "Buyers comparing BMW and Mercedes but preferring a more understated image."
+        ],
+        watchFor: [
+            "Options can push prices quickly, so trim-level comparison matters.",
+            "Large wheels, complex tech, and premium servicing can raise ownership cost.",
+            "Not every Audi prioritises steering feel, so road test the exact model."
+        ],
+        compareLinks: [
+            { href: "bmw.html", label: "Compare Audi vs BMW", text: "Check tech-led premium appeal against more driver-focused tuning." },
+            { href: "mercedes.html", label: "Compare Audi vs Mercedes-Benz", text: "Useful when comfort, cabin design, and brand feel are close calls." },
+            { href: "../types/suv.html", label: "Review SUV buying priorities", text: "Helpful if your shortlist is mostly premium crossovers and SUVs." }
+        ]
+    },
+    bentley: {
+        summary: "Bentley is an ultra-luxury brand for buyers who want craftsmanship, long-distance comfort, and prestige before outright sports-car sharpness.",
+        metaDescription: "Understand Bentley's ultra-luxury positioning, strongest buyer fit, and the main ownership cautions before shortlisting one.",
+        bestFor: [
+            "Buyers shopping at the top of the luxury market rather than the ordinary premium segment.",
+            "Drivers or owners who value craftsmanship, ride comfort, and prestige over agility.",
+            "Shoppers choosing between chauffeur appeal and personal grand-touring use."
+        ],
+        watchFor: [
+            "Depreciation and maintenance costs are major parts of the ownership picture.",
+            "The badge does not remove the need to compare real size, luggage space, and practicality.",
+            "Specialist history matters heavily on used Bentleys."
+        ],
+        compareLinks: [
+            { href: "rolls-royce.html", label: "Compare Bentley vs Rolls-Royce", text: "See driver-led luxury against more chauffeur-oriented ultra-luxury." },
+            { href: "aston-martin.html", label: "Compare Bentley vs Aston Martin", text: "Useful when deciding between comfort-first GT luxury and sportier theatre." },
+            { href: "../car-comparison.html", label: "Compare flagship models", text: "Use the tool once you have narrowed the shortlist." }
+        ]
+    },
+    bmw: {
+        summary: "BMW usually fits buyers who want sharper handling and a more driver-led feel than the average premium brand offers.",
+        metaDescription: "Learn how BMW compares on driving feel, lineup breadth, and ownership trade-offs before choosing one.",
+        bestFor: [
+            "Drivers who care about handling balance and steering confidence.",
+            "Premium buyers shopping sedans, coupes, SUVs, and EVs from one brand family.",
+            "Shoppers who want strong performance options without jumping straight to exotic brands."
+        ],
+        watchFor: [
+            "Performance trims, large wheels, and premium tyres can raise total ownership cost.",
+            "The best BMW for daily use is not always the fastest or most expensive one.",
+            "Compare rear-seat space, warranty, and infotainment usability across trims."
+        ],
+        compareLinks: [
+            { href: "audi.html", label: "Compare BMW vs Audi", text: "Useful when choosing between driver focus and tech-led refinement." },
+            { href: "mercedes.html", label: "Compare BMW vs Mercedes-Benz", text: "Check dynamics against comfort and luxury positioning." },
+            { href: "../car-comparison.html", label: "Compare BMW shortlist models", text: "Use real specs and price differences instead of badge assumptions." }
+        ]
+    },
+    byd: {
+        summary: "BYD is strongest for buyers focused on EV and plug-in hybrid value, battery expertise, and fast-moving electrification strategy.",
+        metaDescription: "See why BYD matters in EV and plug-in hybrid shopping, plus the trade-offs buyers should still compare carefully.",
+        bestFor: [
+            "Buyers prioritising electrified value and strong battery credentials.",
+            "Shoppers comparing Tesla, MG, Xpeng, and mainstream hybrids on price.",
+            "Drivers open to newer brand perception if the specification is compelling."
+        ],
+        watchFor: [
+            "Dealer network, parts support, and software maturity vary by market.",
+            "Brand familiarity and resale confidence may lag behind Toyota or Volkswagen.",
+            "Compare charging, warranty, and cabin execution, not only headline range."
+        ],
+        compareLinks: [
+            { href: "tesla.html", label: "Compare BYD vs Tesla", text: "Useful when value and range compete with software and charging reputation." },
+            { href: "xpeng.html", label: "Compare BYD vs Xpeng", text: "Check pragmatic EV value against more tech-forward positioning." },
+            { href: "../types/electric.html", label: "Review EV buying trade-offs", text: "Use the EV guide before deciding which brand approach suits you." }
+        ]
+    },
+    cadillac: {
+        summary: "Cadillac tends to suit buyers who want premium American SUVs, larger cabins, and a blend of luxury comfort with bold styling.",
+        metaDescription: "Understand Cadillac's premium American positioning, buyer fit, and the practical trade-offs to compare before choosing one.",
+        bestFor: [
+            "Shoppers who want size, presence, and feature content in premium SUVs.",
+            "Buyers preferring American luxury flavour over German premium norms.",
+            "Drivers comparing family comfort with occasional performance variants."
+        ],
+        watchFor: [
+            "Fuel economy and size-related usability may matter more than badge appeal.",
+            "Resale, interior quality, and perceived luxury can vary by model.",
+            "Cross-shop Escalade-style priorities against truly daily-use needs."
+        ],
+        compareLinks: [
+            { href: "mercedes.html", label: "Compare Cadillac vs Mercedes-Benz", text: "Check American size and presence against European premium polish." },
+            { href: "jeep.html", label: "Compare Cadillac vs Jeep", text: "Useful when SUVs overlap but luxury priorities differ." },
+            { href: "../types/suv.html", label: "Review SUV fit first", text: "Confirm the body style still matches your parking, cargo, and passenger needs." }
+        ]
+    },
+    chevrolet: {
+        summary: "Chevrolet is a broad mainstream brand that works best when buyers need practical trucks, family SUVs, or accessible performance options.",
+        metaDescription: "See where Chevrolet fits best across trucks, SUVs, and performance models before making it part of your shortlist.",
+        bestFor: [
+            "Buyers needing breadth, from compact commuters to trucks and SUVs.",
+            "Shoppers balancing value and availability rather than chasing luxury branding.",
+            "Drivers interested in mainstream performance icons alongside utility models."
+        ],
+        watchFor: [
+            "Ownership value changes a lot between small cars, SUVs, and trucks.",
+            "Do not let lineup breadth hide the need to compare exact trims carefully.",
+            "Interior quality and tech execution vary widely across the range."
+        ],
+        compareLinks: [
+            { href: "ford.html", label: "Compare Chevrolet vs Ford", text: "Useful when trucks, SUVs, and value-focused family models overlap." },
+            { href: "dodge.html", label: "Compare Chevrolet vs Dodge", text: "Check mainstream performance and utility against muscle-car emphasis." },
+            { href: "../car-comparison.html", label: "Compare exact vehicles", text: "Use real specs, cargo room, MPG, and price instead of brand averages." }
+        ]
+    },
+    dodge: {
+        summary: "Dodge is mostly about straightforward muscle-car character and bold performance image rather than all-round mainstream polish.",
+        metaDescription: "Understand Dodge's muscle-car and performance-led identity, plus the trade-offs buyers should compare before choosing one.",
+        bestFor: [
+            "Buyers who want straight-line performance and a louder personality.",
+            "Drivers who value image and engine character over subtlety.",
+            "Shoppers looking at American performance before considering sports-car brands."
+        ],
+        watchFor: [
+            "Daily comfort, efficiency, and refinement are not always the brand's main strengths.",
+            "Insurance and tyre costs can rise quickly on higher-output trims.",
+            "Compare safety tech and cabin quality against newer rivals."
+        ],
+        compareLinks: [
+            { href: "ford.html", label: "Compare Dodge vs Ford", text: "Useful when performance image overlaps but usage needs differ." },
+            { href: "chevrolet.html", label: "Compare Dodge vs Chevrolet", text: "Check muscle-car appeal against broader mainstream depth." },
+            { href: "../types/muscle.html", label: "Review muscle-car trade-offs", text: "Confirm the body style still fits your real-world priorities." }
+        ]
+    },
+    ford: {
+        summary: "Ford is usually strongest for buyers needing trucks, SUVs, or mainstream vehicles with broad market availability and a few strong performance options.",
+        metaDescription: "Explore where Ford fits best across trucks, SUVs, and mainstream models, plus the trade-offs worth comparing carefully.",
+        bestFor: [
+            "Truck and SUV shoppers who need broad usability and easy market access.",
+            "Buyers wanting one brand that spans work, family, and performance niches.",
+            "Drivers comparing mainstream value with strong enthusiast sub-brands."
+        ],
+        watchFor: [
+            "Some Ford nameplates are much stronger than others, so model-level comparison matters.",
+            "Towing, cargo, and efficiency should be checked against actual use rather than image.",
+            "Interior quality and refinement depend heavily on segment and trim."
+        ],
+        compareLinks: [
+            { href: "chevrolet.html", label: "Compare Ford vs Chevrolet", text: "Useful when truck or SUV shopping overlaps heavily." },
+            { href: "toyota.html", label: "Compare Ford vs Toyota", text: "Check durability reputation against lineup breadth and truck strength." },
+            { href: "../types/pickup.html", label: "Review pickup priorities", text: "Helpful if your shortlist is led by trucks and work-focused utility." }
+        ]
+    },
+    geely: {
+        summary: "Geely is relevant when buyers want value-led mobility, modern packaging, and an understanding of how Chinese auto groups are moving upmarket.",
+        metaDescription: "Learn where Geely fits in value-focused and technology-aware car shopping, plus what buyers should still compare closely.",
+        bestFor: [
+            "Buyers open to newer global brand stories if the value proposition is strong.",
+            "Shoppers watching how Chinese manufacturers are improving packaging and tech.",
+            "Drivers comparing price and equipment levels against older mainstream rivals."
+        ],
+        watchFor: [
+            "Market support, dealer reach, and residual values differ by country.",
+            "Do not assume parent-company scale means every model is equally polished.",
+            "Compare safety, efficiency, and long-term ownership support carefully."
+        ],
+        compareLinks: [
+            { href: "saic.html", label: "Compare Geely vs SAIC", text: "Useful when looking at Chinese volume strategies and value positioning." },
+            { href: "byd.html", label: "Compare Geely vs BYD", text: "Check broader mainstream value against stronger EV identity." },
+            { href: "../car-comparison.html", label: "Compare exact vehicles", text: "Use real ownership metrics instead of relying on brand reputation alone." }
+        ]
+    },
+    "great-wall": {
+        summary: "Great Wall tends to fit buyers focused on value-oriented pickups and SUVs, especially where utility matters more than badge prestige.",
+        metaDescription: "See where Great Wall fits best for pickup and SUV buyers, and what trade-offs still need close comparison.",
+        bestFor: [
+            "Buyers shopping practical SUVs and pickups with value high on the priority list.",
+            "Drivers who need utility and rugged image without premium-brand pricing.",
+            "Shoppers comparing newer Chinese utility brands against older mainstream names."
+        ],
+        watchFor: [
+            "Dealer support and brand familiarity are still market-specific issues.",
+            "Refinement and software polish may trail more established global rivals.",
+            "Check towing, payload, and safety equipment carefully on exact trims."
+        ],
+        compareLinks: [
+            { href: "ford.html", label: "Compare Great Wall vs Ford", text: "Useful when value-led utility overlaps with stronger legacy truck reputations." },
+            { href: "saic.html", label: "Compare Great Wall vs SAIC", text: "See two different Chinese volume approaches in practical segments." },
+            { href: "../types/pickup.html", label: "Review pickup buying needs", text: "Confirm payload, towing, and cabin needs before brand loyalty takes over." }
+        ]
+    },
+    honda: {
+        summary: "Honda is usually strongest for buyers who want dependable everyday engineering, efficient drivetrains, and balanced long-term ownership.",
+        metaDescription: "Understand Honda's reliability and efficiency strengths, plus the areas buyers should still compare before choosing one.",
+        bestFor: [
+            "Daily drivers prioritising reliability, efficiency, and easy ownership.",
+            "Buyers who want sensible engineering without giving up refinement entirely.",
+            "Shoppers comparing Toyota, Mazda, and Hyundai-style mainstream value."
+        ],
+        watchFor: [
+            "The best Honda choice depends on body style, not just brand reputation.",
+            "Cargo space, cabin tech, and hybrid availability vary by market and trim.",
+            "Compare warranty, noise levels, and pricing against Toyota and Mazda."
+        ],
+        compareLinks: [
+            { href: "toyota.html", label: "Compare Honda vs Toyota", text: "Useful when reliability, hybrid logic, and resale all matter." },
+            { href: "mazda.html", label: "Compare Honda vs Mazda", text: "Check practical efficiency against a more premium-feeling mainstream alternative." },
+            { href: "../types/sedan.html", label: "Review sedan fit", text: "Helpful if your shortlist is centred on practical family sedans." }
+        ]
+    },
+    jaguar: {
+        summary: "Jaguar tends to appeal to buyers who want stylish British premium cars with more flair and less sameness than mainstream German rivals.",
+        metaDescription: "Explore Jaguar's design-led premium positioning, who it suits best, and what buyers should inspect before choosing one.",
+        bestFor: [
+            "Buyers who value design and a distinct premium identity.",
+            "Drivers cross-shopping German luxury brands but wanting something less common.",
+            "Shoppers comfortable trading some practicality for style and character."
+        ],
+        watchFor: [
+            "Dealer support, depreciation, and reliability history deserve close attention.",
+            "Not every Jaguar makes sense as a pure value decision, especially used.",
+            "Compare powertrain and electronics history on the exact model."
+        ],
+        compareLinks: [
+            { href: "audi.html", label: "Compare Jaguar vs Audi", text: "See British style-led premium against German tech-led execution." },
+            { href: "lexus.html", label: "Compare Jaguar vs Lexus", text: "Useful when design and reliability are pulling in opposite directions." },
+            { href: "../car-comparison.html", label: "Compare exact models", text: "Move from image to usable price, efficiency, and warranty signals." }
+        ]
+    },
+    jeep: {
+        summary: "Jeep is mainly about SUV identity, off-road credibility, and lifestyle appeal, which makes it a brand to assess against actual usage honestly.",
+        metaDescription: "Learn where Jeep's off-road SUV identity makes sense and what buyers should compare before choosing one.",
+        bestFor: [
+            "Drivers who genuinely need rough-road or trail-friendly capability.",
+            "Buyers who want upright SUV character and a strong adventure image.",
+            "Shoppers comparing Bronco-style or Land Rover-style use cases at different budgets."
+        ],
+        watchFor: [
+            "Many buyers overestimate how much off-road capability they will actually use.",
+            "Fuel economy, ride comfort, and packaging may matter more day to day.",
+            "Trim and drivetrain choice strongly affect both capability and cost."
+        ],
+        compareLinks: [
+            { href: "land-rover.html", label: "Compare Jeep vs Land Rover", text: "Useful when capability overlaps but premium expectations differ." },
+            { href: "ford.html", label: "Compare Jeep vs Ford", text: "Check SUV image and off-road appeal against broader mainstream depth." },
+            { href: "../types/suv.html", label: "Review SUV fit", text: "Make sure an SUV still beats a crossover or pickup for your use case." }
+        ]
+    },
+    "land-rover": {
+        summary: "Land Rover is best for buyers wanting premium SUVs with strong off-road identity, but it needs careful cost and reliability comparison.",
+        metaDescription: "Understand Land Rover's luxury-off-road positioning, who it suits best, and the ownership cautions to compare seriously.",
+        bestFor: [
+            "Buyers who want premium SUV comfort without losing genuine rough-road capability.",
+            "Shoppers drawn to design, image, and commanding high-riding packaging.",
+            "Drivers comparing Jeep, Lexus SUV, and German premium SUV alternatives."
+        ],
+        watchFor: [
+            "Running costs and reliability concerns can dominate the decision.",
+            "Some buyers pay for capability they never actually use.",
+            "Compare warranty, service network, and depreciation carefully."
+        ],
+        compareLinks: [
+            { href: "jeep.html", label: "Compare Land Rover vs Jeep", text: "Check premium off-road appeal against more rugged mainstream positioning." },
+            { href: "lexus.html", label: "Compare Land Rover vs Lexus", text: "Useful when luxury SUV wants collide with reliability priorities." },
+            { href: "../car-comparison.html", label: "Compare actual SUVs", text: "Use the comparison tool once you know the body style is right." }
+        ]
+    },
+    lexus: {
+        summary: "Lexus works best for buyers who want premium comfort and strong reliability confidence instead of the sharpest dynamic feel in the segment.",
+        metaDescription: "See why Lexus is so often shortlisted for premium reliability, and what buyers should still compare before deciding.",
+        bestFor: [
+            "Luxury buyers putting reliability and calm ownership first.",
+            "Drivers wanting premium comfort without the highest maintenance anxiety.",
+            "Shoppers comparing German premium brands with more conservative ownership logic."
+        ],
+        watchFor: [
+            "Some models prioritise comfort and refinement over handling excitement.",
+            "Cabin design and infotainment feel can vary versus the newest German rivals.",
+            "Compare hybrid efficiency, rear-seat space, and cargo room carefully."
+        ],
+        compareLinks: [
+            { href: "bmw.html", label: "Compare Lexus vs BMW", text: "Check reliability-first premium against stronger driver focus." },
+            { href: "mercedes.html", label: "Compare Lexus vs Mercedes-Benz", text: "Useful when comfort and luxury are close but risk tolerance differs." },
+            { href: "../types/luxury.html", label: "Review luxury-car priorities", text: "Helpful before deciding whether premium comfort is your real priority." }
+        ]
+    },
+    lotus: {
+        summary: "Lotus is aimed at buyers who care deeply about lightness, handling purity, and focused driving experience rather than broad daily usability.",
+        metaDescription: "Explore Lotus's lightweight performance identity, ideal buyer fit, and the real trade-offs before shortlisting one.",
+        bestFor: [
+            "Enthusiasts chasing steering feel and low-mass agility.",
+            "Drivers who treat driving involvement as the main purchase reason.",
+            "Shoppers comparing niche sports-car brands rather than mainstream performance trims."
+        ],
+        watchFor: [
+            "Practicality, ride comfort, and market support are often secondary concerns.",
+            "Daily usability can be much weaker than the badge romance suggests.",
+            "A used inspection matters heavily because buyers often drive these cars hard."
+        ],
+        compareLinks: [
+            { href: "mclaren.html", label: "Compare Lotus vs McLaren", text: "Useful when deciding between lightweight purity and supercar ambition." },
+            { href: "alfa-romeo.html", label: "Compare Lotus vs Alfa Romeo", text: "Check niche enthusiast appeal against broader road-car usability." },
+            { href: "../types/sports.html", label: "Review sports-car trade-offs", text: "Confirm that a sports-car body style still fits your lifestyle." }
+        ]
+    },
+    mazda: {
+        summary: "Mazda usually suits buyers who want mainstream pricing with more design polish and a slightly more premium driving feel.",
+        metaDescription: "Learn where Mazda stands out in mainstream car shopping and what buyers should compare before choosing one.",
+        bestFor: [
+            "Buyers wanting mainstream value with a more refined design-led feel.",
+            "Drivers who care about cabin quality and road manners without entering luxury pricing.",
+            "Shoppers cross-shopping Honda, Toyota, and Volkswagen alternatives."
+        ],
+        watchFor: [
+            "Rear-seat and cargo packaging can trail the class leaders in some models.",
+            "The nicest-feeling cabin does not always mean the biggest interior.",
+            "Compare fuel economy and powertrain choice model by model."
+        ],
+        compareLinks: [
+            { href: "honda.html", label: "Compare Mazda vs Honda", text: "Check premium-leaning mainstream appeal against pragmatic efficiency." },
+            { href: "toyota.html", label: "Compare Mazda vs Toyota", text: "Useful when design feel and hybrid logic matter differently." },
+            { href: "../types/hatchback.html", label: "Review hatchback priorities", text: "Helpful if your shortlist is a practical compact with personality." }
+        ]
+    },
+    mclaren: {
+        summary: "McLaren is a supercar-first brand best suited to buyers prioritising speed, lightweight engineering, and advanced performance hardware.",
+        metaDescription: "Understand McLaren's supercar positioning, typical buyer fit, and the main ownership cautions before shortlisting one.",
+        bestFor: [
+            "Drivers shopping genuine supercars rather than ordinary high-performance coupes.",
+            "Buyers who value engineering theatre and lightweight performance credentials.",
+            "Shoppers comparing Ferrari, Lamborghini, Aston Martin, or Lotus at the top end."
+        ],
+        watchFor: [
+            "Running costs, depreciation, and specialist servicing are central to ownership.",
+            "Practicality is very limited, so buying on image alone is risky.",
+            "Used examples require specialist inspection and strong history."
+        ],
+        compareLinks: [
+            { href: "aston-martin.html", label: "Compare McLaren vs Aston Martin", text: "Check supercar focus against grand-touring luxury." },
+            { href: "lotus.html", label: "Compare McLaren vs Lotus", text: "Useful when engineering purity and price sensitivity matter." },
+            { href: "../car-comparison.html", label: "Compare flagship models", text: "Use specs and packaging differences once your shortlist is real." }
+        ]
+    },
+    mercedes: {
+        summary: "Mercedes-Benz generally suits buyers prioritising comfort, premium cabin ambience, and luxury identity across a very broad lineup.",
+        metaDescription: "See how Mercedes-Benz fits luxury buyers, what it does best, and what trade-offs still deserve close comparison.",
+        bestFor: [
+            "Buyers who put comfort, image, and refinement at the top of the list.",
+            "Drivers wanting access to everything from compact premium cars to large luxury SUVs.",
+            "Shoppers comparing BMW and Audi but leaning more comfort-led than sport-led."
+        ],
+        watchFor: [
+            "Options, wheel sizes, and tech packs can change both price and ride quality quickly.",
+            "The broad lineup means model-level differences are bigger than badge-level assumptions.",
+            "Compare warranty, infotainment usability, and long-term service cost carefully."
+        ],
+        compareLinks: [
+            { href: "bmw.html", label: "Compare Mercedes-Benz vs BMW", text: "Check comfort-led premium appeal against stronger driver focus." },
+            { href: "audi.html", label: "Compare Mercedes-Benz vs Audi", text: "Useful when cabin feel, image, and tech all overlap." },
+            { href: "../types/luxury.html", label: "Review luxury-car priorities", text: "Helpful if comfort and premium image are your real starting point." }
+        ]
+    },
+    mini: {
+        summary: "MINI fits buyers who want compact dimensions, playful design, and more personality than an ordinary small hatchback or crossover.",
+        metaDescription: "Learn where MINI makes sense for compact-car buyers and what trade-offs to compare before choosing one.",
+        bestFor: [
+            "Urban drivers who value small footprints and easy parking.",
+            "Buyers wanting design personality and a fun driving character.",
+            "Shoppers comparing compact premium-feeling options without wanting a full luxury brand."
+        ],
+        watchFor: [
+            "Rear-seat and cargo space can be tighter than rivals.",
+            "Style appeal should not distract from ride quality or usability compromises.",
+            "Performance trims may raise running cost more than expected."
+        ],
+        compareLinks: [
+            { href: "mazda.html", label: "Compare MINI vs Mazda", text: "Useful when driving fun competes with practicality and value." },
+            { href: "bmw.html", label: "Compare MINI vs BMW", text: "Check small premium personality against broader premium lineup depth." },
+            { href: "../types/compact.html", label: "Review compact-car fit", text: "Confirm a compact still matches your passenger and cargo needs." }
+        ]
+    },
+    mitsubishi: {
+        summary: "Mitsubishi tends to suit budget-conscious buyers looking for practical crossovers, simple ownership, or plug-in hybrid value in specific models.",
+        metaDescription: "See where Mitsubishi still makes sense for pragmatic buyers and what trade-offs deserve closer comparison.",
+        bestFor: [
+            "Buyers prioritising value and straightforward utility over premium polish.",
+            "Drivers who want crossover practicality without luxury-brand pricing.",
+            "Shoppers comparing lower-cost mainstream alternatives in specific segments."
+        ],
+        watchFor: [
+            "Lineup breadth and market momentum may be weaker than larger rivals.",
+            "Interior finish and brand pull are usually not the main selling points.",
+            "Compare warranty, efficiency, and safety equipment trim by trim."
+        ],
+        compareLinks: [
+            { href: "subaru.html", label: "Compare Mitsubishi vs Subaru", text: "Useful when value-led crossovers overlap with AWD-oriented alternatives." },
+            { href: "nissan.html", label: "Compare Mitsubishi vs Nissan", text: "Check pragmatic budget positioning against a broader mainstream lineup." },
+            { href: "../types/crossover.html", label: "Review crossover priorities", text: "Make sure the category still suits your usage better than an SUV or hatchback." }
+        ]
+    },
+    nio: {
+        summary: "NIO is aimed at buyers seeking premium EV presentation, strong in-car tech, and a newer Chinese interpretation of luxury mobility.",
+        metaDescription: "Explore NIO's premium EV positioning and the questions buyers should still answer before shortlisting the brand.",
+        bestFor: [
+            "Buyers who want a premium-feeling EV rather than a simple value play.",
+            "Shoppers drawn to tech-rich cabins and newer mobility ideas.",
+            "Drivers comparing Tesla, BYD, Mercedes EQ, and Xpeng-style alternatives."
+        ],
+        watchFor: [
+            "Brand familiarity, service reach, and resale confidence remain market-dependent.",
+            "Premium EV appeal still needs to be checked against charging and warranty realities.",
+            "Compare software experience, range honesty, and cabin quality carefully."
+        ],
+        compareLinks: [
+            { href: "tesla.html", label: "Compare NIO vs Tesla", text: "Check premium-cabin EV appeal against software and charging ecosystem strength." },
+            { href: "xpeng.html", label: "Compare NIO vs Xpeng", text: "Useful when premium feel and tech-forward value are close competitors." },
+            { href: "../types/electric.html", label: "Review EV buying questions", text: "Confirm range, charging, and ownership fit before brand preference leads." }
+        ]
+    },
+    nissan: {
+        summary: "Nissan is a mainstream brand that can make sense for practical buyers, especially when pricing and availability are stronger than prestige concerns.",
+        metaDescription: "Understand where Nissan fits in mainstream car shopping and what trade-offs buyers should compare carefully.",
+        bestFor: [
+            "Buyers needing mainstream transport with familiar market presence.",
+            "Drivers comparing practical hatchbacks, sedans, and crossovers on price.",
+            "Shoppers who want a wide lineup without paying premium-brand money."
+        ],
+        watchFor: [
+            "The exact powertrain and generation matter a lot to ownership quality.",
+            "Do not assume every Nissan matches Toyota or Honda on long-term reputation.",
+            "Compare cabin quality, safety tech, and efficiency model by model."
+        ],
+        compareLinks: [
+            { href: "toyota.html", label: "Compare Nissan vs Toyota", text: "Useful when value, reliability, and resale are key concerns." },
+            { href: "honda.html", label: "Compare Nissan vs Honda", text: "Check mainstream practicality against stronger engineering reputation." },
+            { href: "../car-comparison.html", label: "Compare specific Nissans", text: "Use real price, warranty, and MPG differences before deciding." }
+        ]
+    },
+    peugeot: {
+        summary: "Peugeot generally appeals to buyers who want distinctive European design and efficient everyday packaging without moving to a premium badge.",
+        metaDescription: "See where Peugeot fits in European mainstream shopping and the trade-offs worth checking before shortlisting one.",
+        bestFor: [
+            "Buyers who value design flair in the mainstream market.",
+            "Drivers looking for efficient daily transport with a more distinctive cabin feel.",
+            "Shoppers comparing Renault, Volkswagen, and Skoda alternatives."
+        ],
+        watchFor: [
+            "Brand strength and resale vary by market.",
+            "Practicality and infotainment usability should be tested on the exact model.",
+            "Compare ownership support against stronger-volume rivals in your region."
+        ],
+        compareLinks: [
+            { href: "renault.html", label: "Compare Peugeot vs Renault", text: "Useful when French mainstream alternatives are close on price." },
+            { href: "volkswagen.html", label: "Compare Peugeot vs Volkswagen", text: "Check design-led value against more conservative mainstream polish." },
+            { href: "../types/hatchback.html", label: "Review hatchback buying fit", text: "Helpful if your shortlist is a practical European family hatch." }
+        ]
+    },
+    renault: {
+        summary: "Renault is usually a practical, efficiency-oriented mainstream option for buyers prioritising sensible use over prestige signalling.",
+        metaDescription: "Learn where Renault fits for pragmatic mainstream buyers and the main trade-offs to compare before deciding.",
+        bestFor: [
+            "Budget-minded drivers who want practical European everyday transport.",
+            "Shoppers comparing city cars, hatchbacks, and family crossovers on value.",
+            "Buyers who care more about sensible running than premium image."
+        ],
+        watchFor: [
+            "Market support and resale vary more than with global giants.",
+            "Interior polish and infotainment feel should be compared trim by trim.",
+            "The smartest Renault choice is often the simplest one."
+        ],
+        compareLinks: [
+            { href: "peugeot.html", label: "Compare Renault vs Peugeot", text: "Useful when value and design lead the shortlist." },
+            { href: "skoda.html", label: "Compare Renault vs Skoda", text: "Check French practicality against a value-led Czech alternative." },
+            { href: "../types/compact.html", label: "Review compact-car needs", text: "Helpful if the shortlist revolves around urban-friendly packaging." }
+        ]
+    },
+    "rolls-royce": {
+        summary: "Rolls-Royce is for buyers operating at the highest end of the market, where silence, craftsmanship, and chauffeur-worthy luxury outrank normal practicality.",
+        metaDescription: "Understand Rolls-Royce's ultra-luxury role and the buyer considerations that matter more than ordinary car-shopping logic.",
+        bestFor: [
+            "Buyers seeking the most comfort-led and prestigious ownership experience possible.",
+            "Owners shopping luxury as a bespoke statement rather than a transport tool.",
+            "Shoppers deciding between Bentley-style driver luxury and chauffeur-first refinement."
+        ],
+        watchFor: [
+            "Ownership cost, service, and depreciation are enormous parts of the decision.",
+            "Vehicle size and usage pattern matter more than most aspirational buyers expect.",
+            "Bespoke options complicate used-car comparisons and valuation."
+        ],
+        compareLinks: [
+            { href: "bentley.html", label: "Compare Rolls-Royce vs Bentley", text: "Check chauffeur-led serenity against more driver-oriented ultra-luxury." },
+            { href: "mercedes.html", label: "Compare Rolls-Royce vs Mercedes-Benz", text: "Useful when flagship luxury is compared with true ultra-luxury." },
+            { href: "../car-comparison.html", label: "Compare key ownership metrics", text: "Use actual dimensions and practicality metrics if you have a real shortlist." }
+        ]
+    },
+    saic: {
+        summary: "SAIC matters most to buyers comparing value-led Chinese market offerings and trying to understand how scale translates into real ownership value.",
+        metaDescription: "Explore SAIC's role in value-oriented car shopping and the trade-offs buyers should compare before choosing one.",
+        bestFor: [
+            "Buyers open to Chinese-market value and equipment-focused propositions.",
+            "Shoppers comparing SAIC-backed products with BYD, Geely, or established mainstream brands.",
+            "Drivers wanting maximum visible equipment for the money."
+        ],
+        watchFor: [
+            "Brand clarity, dealer support, and long-term residuals vary heavily by market.",
+            "Equipment value should still be balanced against refinement and support quality.",
+            "Compare software, safety, and warranty more carefully than the brochure suggests."
+        ],
+        compareLinks: [
+            { href: "geely.html", label: "Compare SAIC vs Geely", text: "Useful when comparing different Chinese scale players." },
+            { href: "byd.html", label: "Compare SAIC vs BYD", text: "Check general value positioning against stronger electrification identity." },
+            { href: "../car-comparison.html", label: "Compare the actual vehicles", text: "Use objective price, range, and warranty signals before deciding." }
+        ]
+    },
+    seat: {
+        summary: "SEAT tends to fit buyers wanting mainstream European practicality with a slightly sportier image than the most conservative value brands.",
+        metaDescription: "See where SEAT fits for practical European buyers and which trade-offs deserve closer comparison.",
+        bestFor: [
+            "Buyers wanting practical mainstream transport with a more youthful feel.",
+            "Drivers comparing Volkswagen Group options but prioritising price.",
+            "Shoppers who want hatchback or compact crossover usability without premium cost."
+        ],
+        watchFor: [
+            "Brand positioning and future strategy can affect confidence in some markets.",
+            "Compare rear-seat space, boot space, and trim value carefully.",
+            "The sportier image does not always mean the best chassis in the class."
+        ],
+        compareLinks: [
+            { href: "skoda.html", label: "Compare SEAT vs Skoda", text: "Useful when sporty image and pragmatic value overlap." },
+            { href: "volkswagen.html", label: "Compare SEAT vs Volkswagen", text: "Check sharper image against stronger mainstream cachet." },
+            { href: "../types/hatchback.html", label: "Review hatchback fit", text: "Helpful if the shortlist centres on practical family hatchbacks." }
+        ]
+    },
+    skoda: {
+        summary: "Skoda is usually one of the smartest choices for buyers prioritising space, practicality, and value over badge-driven prestige.",
+        metaDescription: "Learn where Skoda stands out on value and practicality, plus the trade-offs buyers should still compare carefully.",
+        bestFor: [
+            "Families who need strong cabin and cargo packaging for the money.",
+            "Buyers who value function and easy ownership more than image.",
+            "Shoppers comparing Volkswagen Group alternatives but leaning value-first."
+        ],
+        watchFor: [
+            "A stronger value story does not remove the need to compare trims carefully.",
+            "Brand prestige may matter for resale or personal preference.",
+            "Some buyers should still verify ride quality and cabin materials model by model."
+        ],
+        compareLinks: [
+            { href: "volkswagen.html", label: "Compare Skoda vs Volkswagen", text: "Check space and value against a more badge-led mainstream option." },
+            { href: "seat.html", label: "Compare Skoda vs SEAT", text: "Useful when practicality and styling are pulling in different directions." },
+            { href: "../types/sedan.html", label: "Review sedan fit", text: "Helpful if you're considering family saloons or liftbacks." }
+        ]
+    },
+    subaru: {
+        summary: "Subaru usually suits buyers who want standard AWD confidence, practical durability, and an outdoors-friendly ownership proposition.",
+        metaDescription: "Explore Subaru's AWD-oriented buyer fit and the questions to compare before choosing one.",
+        bestFor: [
+            "Drivers in poor-weather regions who truly value AWD confidence.",
+            "Buyers needing practical family transport with a rugged image.",
+            "Shoppers whose lifestyle includes mixed roads, outdoor use, or light adventure travel."
+        ],
+        watchFor: [
+            "Fuel economy and cabin polish may not lead the class.",
+            "Not every buyer who wants an SUV image actually needs Subaru's strengths.",
+            "Compare cargo space, safety kit, and road-noise comfort carefully."
+        ],
+        compareLinks: [
+            { href: "toyota.html", label: "Compare Subaru vs Toyota", text: "Useful when reliability and outdoor practicality overlap." },
+            { href: "mitsubishi.html", label: "Compare Subaru vs Mitsubishi", text: "Check AWD identity against lower-cost pragmatic crossover alternatives." },
+            { href: "../types/crossover.html", label: "Review crossover priorities", text: "Confirm whether a crossover still fits better than an SUV or wagon." }
+        ]
+    },
+    tesla: {
+        summary: "Tesla is strongest for buyers who prioritise EV software experience, charging ecosystem strength, and rapid straight-line performance.",
+        metaDescription: "See why Tesla stands out in EV shopping and what buyers should compare carefully beyond the headline range and performance.",
+        bestFor: [
+            "Drivers committing fully to EV ownership and charging planning.",
+            "Buyers who care about software, charging convenience, and efficiency.",
+            "Shoppers comparing modern EVs on ecosystem as much as on hardware."
+        ],
+        watchFor: [
+            "Build consistency, interior expectations, and service experience can vary.",
+            "Do not judge an EV only by range; charging routine and cabin fit matter too.",
+            "Compare warranty, comfort, and real cargo needs against BYD and premium EV rivals."
+        ],
+        compareLinks: [
+            { href: "byd.html", label: "Compare Tesla vs BYD", text: "Check software-led EV appeal against strong value and battery positioning." },
+            { href: "nio.html", label: "Compare Tesla vs NIO", text: "Useful when ecosystem strength competes with premium-cabin EV appeal." },
+            { href: "../types/electric.html", label: "Review EV ownership fit", text: "Confirm that your charging and mileage patterns suit an EV." }
+        ]
+    },
+    toyota: {
+        summary: "Toyota is usually one of the safest shortlist brands for buyers prioritising reliability, hybrid efficiency, and predictable ownership.",
+        metaDescription: "Understand Toyota's reliability-led appeal and the practical comparisons still worth making before choosing one.",
+        bestFor: [
+            "Buyers who want dependable daily transport and low-drama ownership.",
+            "Drivers prioritising hybrid efficiency and resale confidence.",
+            "Families needing mainstream practicality without premium-brand cost."
+        ],
+        watchFor: [
+            "The right Toyota depends on body style and powertrain, not just the badge.",
+            "Some rivals now offer more interesting cabins or sharper dynamics.",
+            "Compare cargo room, infotainment, and warranty specifics model by model."
+        ],
+        compareLinks: [
+            { href: "honda.html", label: "Compare Toyota vs Honda", text: "Useful when reliability and efficiency are both top priorities." },
+            { href: "ford.html", label: "Compare Toyota vs Ford", text: "Helpful when truck or SUV needs pull against hybrid ownership logic." },
+            { href: "../car-comparison.html", label: "Compare real shortlist cars", text: "Move from brand trust to actual size, price, and MPG differences." }
+        ]
+    },
+    volkswagen: {
+        summary: "Volkswagen usually suits buyers who want balanced mainstream execution, broad lineup depth, and conservative but familiar product positioning.",
+        metaDescription: "See where Volkswagen fits in mainstream car shopping and the buyer questions worth checking before deciding.",
+        bestFor: [
+            "Shoppers wanting a broad mainstream lineup with familiar European positioning.",
+            "Buyers who prefer understated design and balanced road manners.",
+            "Drivers cross-shopping Skoda, SEAT, Peugeot, and Toyota alternatives."
+        ],
+        watchFor: [
+            "Value is not always as strong as the more budget-oriented sister brands.",
+            "Tech, trim, and drivetrain complexity can change ownership logic quickly.",
+            "Compare cabin space and warranty against Skoda and Toyota carefully."
+        ],
+        compareLinks: [
+            { href: "skoda.html", label: "Compare Volkswagen vs Skoda", text: "Check badge strength against stronger value and space." },
+            { href: "seat.html", label: "Compare Volkswagen vs SEAT", text: "Useful when conservative balance competes with sportier positioning." },
+            { href: "../types/hatchback.html", label: "Review hatchback fit", text: "Helpful if your shortlist is built around practical family hatchbacks." }
+        ]
+    },
+    xpeng: {
+        summary: "Xpeng is aimed at buyers who want a tech-forward EV image with strong feature content and a newer software-centric ownership proposition.",
+        metaDescription: "Explore Xpeng's tech-focused EV positioning and the trade-offs buyers should compare before committing.",
+        bestFor: [
+            "EV buyers attracted to feature-rich cabins and newer software-led brands.",
+            "Shoppers comparing BYD, Tesla, and NIO from a technology angle.",
+            "Drivers comfortable with newer-brand risk if the spec and price look strong."
+        ],
+        watchFor: [
+            "Charging support, service access, and resale remain market-dependent.",
+            "Feature density should be balanced against reliability and support confidence.",
+            "Compare real-world range, comfort, and cabin quality against rivals."
+        ],
+        compareLinks: [
+            { href: "byd.html", label: "Compare Xpeng vs BYD", text: "Check tech-forward EV branding against more value-driven electrification." },
+            { href: "nio.html", label: "Compare Xpeng vs NIO", text: "Useful when premium EV feel and feature-rich value overlap." },
+            { href: "../types/electric.html", label: "Review EV buying priorities", text: "Make sure your charging routine matches the ownership plan." }
+        ]
+    }
+};
+
+const typeProfiles = {
+    compact: {
+        summary: "Compact cars work best when low running costs, easy parking, and efficient daily transport matter more than maximum passenger space.",
+        bestFor: ["Urban commuting and short-to-medium trips.", "Singles, couples, or small households prioritising value.", "Buyers who need easy parking and lower ownership cost."],
+        watchFor: ["Rear-seat space and boot capacity can become limiting quickly.", "Motorway comfort and noise levels vary more than buyers expect.", "Do not assume every compact feels cheap; compare trims carefully."],
+        metrics: ["Price and monthly running cost.", "Rear-seat and luggage flexibility.", "Fuel economy or EV range for your routine."],
+        relatedLinks: [
+            { href: "../brands/mini.html", label: "See MINI compact options", text: "Useful if you want more personality in a small footprint." },
+            { href: "../brands/honda.html", label: "See Honda compact options", text: "Helpful for efficient, sensible daily-use shortlists." },
+            { href: "../car-comparison.html", label: "Compare compact cars", text: "Use the tool once you have two or three realistic choices." }
+        ]
+    },
+    convertible: {
+        summary: "Convertibles are lifestyle-first cars, best for buyers who will genuinely use open-top driving enough to justify the compromises.",
+        bestFor: ["Drivers in climates and routines that suit roof-down use.", "Buyers prioritising style and occasion value.", "Shoppers comparing premium coupes and roadsters."],
+        watchFor: ["Boot space, rear seats, and year-round usability usually suffer.", "Insurance and structural rigidity trade-offs matter.", "Road noise and visibility can change the ownership experience."],
+        metrics: ["Roof mechanism practicality.", "Boot space with the roof open or closed.", "Ride comfort and noise at motorway speeds."],
+        relatedLinks: [
+            { href: "../brands/bmw.html", label: "See BMW options", text: "Useful for premium convertibles with broader lineup support." },
+            { href: "../brands/aston-martin.html", label: "See Aston Martin options", text: "Helpful when grand-touring luxury is part of the appeal." },
+            { href: "../car-comparison.html", label: "Compare convertibles", text: "Check real practicality before buying on emotion alone." }
+        ]
+    },
+    crossover: {
+        summary: "Crossovers usually make sense for buyers wanting hatchback-like ease with a touch more height, access, and family practicality.",
+        bestFor: ["Families who want easy entry and flexible space without a full SUV footprint.", "Drivers needing urban usability plus weekend versatility.", "Buyers who do not truly need heavy off-road capability."],
+        watchFor: ["Some crossovers give SUV image without meaningful extra space.", "Larger wheels and higher ride height can hurt efficiency.", "Do not confuse crossover convenience with towing or rough-road strength."],
+        metrics: ["Rear-seat access and boot shape.", "Fuel economy versus a hatchback alternative.", "Parking ease and overall footprint."],
+        relatedLinks: [
+            { href: "../brands/subaru.html", label: "See Subaru crossover-style options", text: "Helpful if weather confidence and outdoor use matter." },
+            { href: "../brands/toyota.html", label: "See Toyota crossover options", text: "Useful for hybrid-led mainstream crossovers." },
+            { href: "../car-comparison.html", label: "Compare crossover shortlists", text: "Check cargo, MPG, and size before choosing a badge." }
+        ]
+    },
+    electric: {
+        summary: "Electric vehicles suit buyers whose charging routine, mileage pattern, and ownership plan genuinely align with EV use rather than only with the idea of it.",
+        bestFor: ["Drivers with easy home or workplace charging.", "Buyers doing predictable daily mileage.", "Shoppers prioritising efficiency, software, and smooth performance."],
+        watchFor: ["Charging access matters more than brochure range.", "Cold weather, motorway use, and tyre choice can change real range meaningfully.", "Insurance, tyre wear, and depreciation still need normal comparison."],
+        metrics: ["Charging routine and public network dependence.", "Real-world range for your route profile.", "Warranty, battery confidence, and cabin practicality."],
+        relatedLinks: [
+            { href: "../brands/tesla.html", label: "See Tesla EV angles", text: "Useful if ecosystem and charging matter most." },
+            { href: "../brands/byd.html", label: "See BYD EV angles", text: "Helpful when value and battery story are central." },
+            { href: "../car-comparison.html", label: "Compare EVs directly", text: "Use objective range, price, and cargo numbers." }
+        ]
+    },
+    hatchback: {
+        summary: "Hatchbacks remain one of the smartest body styles for buyers who want practical daily packaging without the size or weight of an SUV.",
+        bestFor: ["Urban and suburban daily drivers.", "Small families needing flexible cargo access.", "Buyers wanting value, efficiency, and manageable size."],
+        watchFor: ["Rear-seat space differs a lot between models.", "Some stylish hatchbacks trade visibility or boot shape for design.", "A crossover may only be worth the extra money if you need the height."],
+        metrics: ["Boot opening and loading practicality.", "Rear-seat comfort for real passengers.", "Price and MPG against crossover alternatives."],
+        relatedLinks: [
+            { href: "../brands/mazda.html", label: "See Mazda hatchback-style options", text: "Useful for buyers wanting a more premium mainstream feel." },
+            { href: "../brands/volkswagen.html", label: "See Volkswagen hatchback options", text: "Helpful for balanced European family hatchbacks." },
+            { href: "../car-comparison.html", label: "Compare hatchbacks", text: "Use the tool to check price, MPG, and cargo differences." }
+        ]
+    },
+    luxury: {
+        summary: "Luxury cars suit buyers who truly prioritise comfort, cabin quality, refinement, and image over the lowest ownership cost.",
+        bestFor: ["Drivers who spend long hours in the car and value refinement.", "Buyers seeking premium cabins, quieter rides, and stronger brand signalling.", "Shoppers choosing between BMW, Mercedes-Benz, Audi, and Lexus."],
+        watchFor: ["Options and trim choice can change the car more than the badge itself.", "Luxury does not guarantee reliability or better daily practicality.", "Insurance, tyres, and maintenance should be part of the first comparison, not the last."],
+        metrics: ["Ride quality and cabin noise.", "Front and rear passenger comfort.", "Warranty and ownership cost, not just badge appeal."],
+        relatedLinks: [
+            { href: "../brands/mercedes.html", label: "See Mercedes-Benz luxury fit", text: "Helpful when comfort and premium image lead the shortlist." },
+            { href: "../brands/lexus.html", label: "See Lexus luxury fit", text: "Useful when reliability matters as much as comfort." },
+            { href: "../car-comparison.html", label: "Compare luxury cars", text: "Check real size, features, and warranty before deciding." }
+        ]
+    },
+    minivan: {
+        summary: "Minivans are usually the best choice for maximum passenger practicality, even when image-driven buyers initially think they want an SUV instead.",
+        bestFor: ["Large families and multi-passenger routines.", "Buyers needing easy child-seat access and sliding doors.", "Drivers prioritising cabin flexibility over style."],
+        watchFor: ["Many buyers avoid minivans for image reasons, not practical reasons.", "A large SUV may still deliver worse access and cargo flexibility.", "Check third-row usability instead of assuming every large vehicle is family-friendly."],
+        metrics: ["Seat access and sliding-door practicality.", "Third-row comfort and cargo room behind it.", "Family-use storage and daily loading ease."],
+        relatedLinks: [
+            { href: "../brands/honda.html", label: "See Honda family-focused options", text: "Helpful when practicality and reliability matter most." },
+            { href: "../brands/toyota.html", label: "See Toyota family-focused options", text: "Useful for efficient family-hauler shortlists." },
+            { href: "../car-comparison.html", label: "Compare family vehicles", text: "Use the tool to compare cargo and passenger trade-offs." }
+        ]
+    },
+    muscle: {
+        summary: "Muscle cars suit buyers who genuinely want engine drama, image, and straight-line performance more than low-cost daily practicality.",
+        bestFor: ["Drivers who value sound, theatre, and performance image.", "Buyers willing to accept heavier running costs for character.", "Shoppers deciding between American performance brands."],
+        watchFor: ["Fuel, tyres, and insurance can shift the ownership decision quickly.", "Rear-seat and luggage usefulness may not match the styling promise.", "Daily ride comfort and winter usability deserve honest testing."],
+        metrics: ["Insurance and tyre cost.", "Acceleration versus overall daily comfort.", "Rear-seat and boot practicality if it will be used often."],
+        relatedLinks: [
+            { href: "../brands/dodge.html", label: "See Dodge muscle-car context", text: "Helpful if drama and straight-line pace are the main draw." },
+            { href: "../brands/ford.html", label: "See Ford performance context", text: "Useful when comparing broader brand depth with muscle appeal." },
+            { href: "../car-comparison.html", label: "Compare muscle-car options", text: "Use real specs and costs instead of buying only on image." }
+        ]
+    },
+    pickup: {
+        summary: "Pickups are strongest when payload, towing, bed utility, or rough-duty use are real needs rather than occasional wants.",
+        bestFor: ["Drivers who truly need towing, payload, or open-bed utility.", "Work and mixed work-family use cases.", "Buyers who need tougher-road durability or outdoor utility."],
+        watchFor: ["Many private buyers overbuy truck size and underuse truck capability.", "Fuel economy, parking, and rear-seat comfort can become daily pain points.", "Cabin quality and ride vary widely between work-focused and lifestyle trims."],
+        metrics: ["Payload and towing for your real use.", "Rear-seat comfort if it doubles as family transport.", "Parking footprint and total running cost."],
+        relatedLinks: [
+            { href: "../brands/ford.html", label: "See Ford truck context", text: "Helpful for mainstream pickup benchmarks." },
+            { href: "../brands/great-wall.html", label: "See Great Wall utility context", text: "Useful when value-led pickup shopping is the priority." },
+            { href: "../car-comparison.html", label: "Compare pickups", text: "Line up towing, bed, and efficiency figures directly." }
+        ]
+    },
+    sedan: {
+        summary: "Sedans still suit buyers who want efficient road manners, lower centres of gravity, and cleaner motorway comfort than many crossovers offer.",
+        bestFor: ["Commuters and family buyers who do not need SUV ride height.", "Drivers prioritising efficiency and cleaner on-road manners.", "Shoppers wanting a traditional car shape with good luggage separation."],
+        watchFor: ["Rear-headroom and boot opening flexibility can trail hatchbacks and crossovers.", "The market shift to SUVs means some sedan choices are narrower than before.", "Do not pay SUV prices if your real needs suit a sedan better."],
+        metrics: ["Rear-seat space and child-seat fit.", "Boot size and opening practicality.", "Ride, handling, and fuel economy versus crossover rivals."],
+        relatedLinks: [
+            { href: "../brands/bmw.html", label: "See BMW sedan context", text: "Useful for driver-led premium saloon shortlists." },
+            { href: "../brands/toyota.html", label: "See Toyota sedan context", text: "Helpful when practical daily ownership is the goal." },
+            { href: "../car-comparison.html", label: "Compare sedans", text: "Use the tool to judge price, MPG, and warranty differences." }
+        ]
+    },
+    sports: {
+        summary: "Sports cars are best for buyers who actively prioritise driving involvement and are comfortable accepting clear comfort and practicality compromises.",
+        bestFor: ["Enthusiasts buying primarily for handling and driver engagement.", "Second-car buyers or those with limited passenger needs.", "Drivers choosing emotion and road feel over versatility."],
+        watchFor: ["Ride comfort, luggage space, and daily usability usually take a hit.", "Insurance and tyre costs can be much higher than ordinary coupes.", "Some buyers really want a fast GT or hot hatch, not a true sports car."],
+        metrics: ["Driver engagement and steering feel.", "Ride quality on roads you actually use.", "Insurance, tyres, and storage practicality."],
+        relatedLinks: [
+            { href: "../brands/lotus.html", label: "See Lotus sports-car context", text: "Helpful for lightweight purist sports-car thinking." },
+            { href: "../brands/bmw.html", label: "See BMW performance context", text: "Useful when deciding between purist sports cars and more usable performance cars." },
+            { href: "../car-comparison.html", label: "Compare sports cars", text: "Check weight, price, and day-to-day practicality directly." }
+        ]
+    },
+    suv: {
+        summary: "SUVs make the most sense when buyers genuinely need easier access, higher seating, more family flexibility, or rougher-road confidence than a hatchback or sedan provides.",
+        bestFor: ["Families wanting space, easier ingress, and flexible cargo layouts.", "Drivers needing a more commanding seating position.", "Buyers facing mixed roads, weather, or occasional towing needs."],
+        watchFor: ["Not every SUV gives better space or value than a crossover or minivan.", "Fuel use, tyre cost, and size can rise fast with large SUVs.", "Many buyers choose SUVs for image when a hatchback or sedan would work better."],
+        metrics: ["Rear-seat room and cargo shape.", "Fuel economy and tyre cost.", "Parking footprint and turning ease in daily use."],
+        relatedLinks: [
+            { href: "../brands/toyota.html", label: "See Toyota SUV options", text: "Useful for efficient family SUV shortlists." },
+            { href: "../brands/land-rover.html", label: "See Land Rover SUV context", text: "Helpful when premium SUV image and capability matter." },
+            { href: "../car-comparison.html", label: "Compare SUVs", text: "Use the tool once two or three SUV candidates are realistic." }
+        ]
+    }
+};
+
+const componentProfiles = {
+    engine: {
+        summary: "Engine knowledge is most valuable when it helps buyers judge durability, power delivery, maintenance risk, and fit for their actual driving.",
+        ownershipQuestions: ["Is the engine simple and proven, or complex and highly stressed?", "Does the powertrain suit short trips, long motorway use, towing, or mixed family driving?", "What maintenance items become expensive as mileage rises?"],
+        watchFor: ["Cold-start noise, smoke, vibration, or uneven idle.", "Turbo, cooling, or timing-related service history gaps.", "Mismatch between advertised performance and the owner's real use case."],
+        compareLinks: [
+            { href: "../car-comparison.html", label: "Compare power, MPG, and warranty", text: "Use engine knowledge to judge real ownership trade-offs." },
+            { href: "../blog/used-car-prepurchase-inspection-checklist.html", label: "Read the used-car inspection guide", text: "Helpful when checking engine condition before purchase." },
+            { href: "../blog/engine-oil-grades-explained-5w30-vs-0w20.html", label: "Read the oil guide", text: "Use oil context to understand maintenance discipline and manufacturer specs." }
+        ]
+    },
+    exterior: {
+        summary: "Exterior design matters less as styling and more as visibility, parking ease, loading convenience, and repair cost after everyday damage.",
+        ownershipQuestions: ["Do the exterior dimensions suit your parking and road environment?", "Will wheel size, tyre profile, and paint finish raise running cost?", "Does the body shape help or hurt visibility and cargo access?"],
+        watchFor: ["Poor sightlines, large wheels, or expensive lighting units.", "Low bumpers or long overhangs that do not suit local roads.", "Paint, trim, or panel fit quality on used examples."],
+        compareLinks: [
+            { href: "../car-comparison.html", label: "Compare size and practicality", text: "Use dimensions and cargo data before choosing purely on looks." },
+            { href: "../types/suv.html", label: "Review SUV practicality", text: "Helpful if styling pushes you toward larger body styles." },
+            { href: "../blog/used-car-prepurchase-inspection-checklist.html", label: "Read the inspection guide", text: "Useful for spotting body-condition issues before buying used." }
+        ]
+    },
+    interior: {
+        summary: "Interior technology and materials matter most when they improve comfort, usability, storage, and long-term satisfaction rather than showroom impact alone.",
+        ownershipQuestions: ["Will the seats, storage, and infotainment still feel right after long daily use?", "Is the cabin easy to keep clean and wear-resistant?", "Do the controls reduce distraction or add it?"],
+        watchFor: ["Touch-heavy controls that are awkward while driving.", "Tight rear-seat access or poor child-seat usability.", "Materials that look premium but wear badly over time."],
+        compareLinks: [
+            { href: "../car-comparison.html", label: "Compare cabin-related trade-offs", text: "Use cargo, seating, and ownership metrics with the comparison tool." },
+            { href: "../types/minivan.html", label: "Review family-cabin priorities", text: "Helpful when access and passenger comfort matter most." },
+            { href: "../blog/used-car-prepurchase-inspection-checklist.html", label: "Read the inspection guide", text: "Useful for checking wear and usability on used vehicles." }
+        ]
+    }
+};
+
 function readHtmlFiles(directory) {
     return fs.readdirSync(directory)
         .filter((fileName) => fileName.endsWith(".html"))
@@ -51,14 +906,14 @@ function extractLast(content, regex) {
 }
 
 function stripTags(content) {
-    return decodeEntities(
+    return normalizeBrokenText(decodeEntities(
         content
             .replace(/<script[\s\S]*?<\/script>/gi, " ")
             .replace(/<style[\s\S]*?<\/style>/gi, " ")
             .replace(/<[^>]+>/g, " ")
             .replace(/\s+/g, " ")
             .trim()
-    );
+    ));
 }
 
 function decodeEntities(content) {
@@ -76,7 +931,22 @@ function decodeEntities(content) {
             .replace(/&gt;/g, ">");
     }
 
-    return decoded;
+    return normalizeBrokenText(decoded);
+}
+
+function normalizeBrokenText(content) {
+    return content
+        .replace(/Å koda/g, "Skoda")
+        .replace(/Å koda/g, "Skoda")
+        .replace(/MladÃ¡/g, "Mlada")
+        .replace(/EspaÃ±ola/g, "Espanola")
+        .replace(/AutomÃ³viles/g, "Automoviles")
+        .replace(/gran coupÃ©/g, "gran coupe")
+        .replace(/â€œ/g, '"')
+        .replace(/â€/g, '"')
+        .replace(/â€™/g, "'")
+        .replace(/â€“/g, "-")
+        .replace(/â€”/g, "-");
 }
 
 function escapeHtml(content) {
@@ -148,6 +1018,58 @@ function sectionList(items) {
 
 function linkList(items) {
     return items.map((item) => `<li><a href="${item.href}">${escapeHtml(item.label)}<small>${escapeHtml(item.text)}</small></a></li>`).join("\n");
+}
+
+function summaryListFromStrings(items) {
+    return items.map((item) => `<li><span>${escapeHtml(item)}</span></li>`).join("\n");
+}
+
+function buildFaqJson(title, items) {
+    return JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        mainEntity: items.map((item) => ({
+            "@type": "Question",
+            name: item.question,
+            acceptedAnswer: {
+                "@type": "Answer",
+                text: item.answer
+            }
+        }))
+    }, null, 2);
+}
+
+function buildFaqHtml(items) {
+    return `
+                    <section class="site-faq">
+                        <h2>Questions buyers often ask</h2>
+                        ${items.map((item) => `
+                        <details>
+                            <summary>${escapeHtml(item.question)}</summary>
+                            <p>${escapeHtml(item.answer)}</p>
+                        </details>`).join("\n")}
+                    </section>`;
+}
+
+function sectionHtml(content, className) {
+    return extractLast(content, new RegExp(`(<section class="${className}"[\\s\\S]*?<\\/section>)`, "gi"));
+}
+
+function paragraphsFromHtml(content) {
+    return extractAll(content, /<p[^>]*>([\s\S]*?)<\/p>/gi).map(stripTags).filter(Boolean);
+}
+
+function extractListItemsFromHtml(content) {
+    return extractAll(content, /<li[^>]*>([\s\S]*?)<\/li>/gi).map(stripTags).filter(Boolean);
+}
+
+function extractModelCategories(content) {
+    return [...content.matchAll(/<div class="model-category">[\s\S]*?<h3[^>]*>([\s\S]*?)<\/h3>[\s\S]*?<ul[^>]*>([\s\S]*?)<\/ul>[\s\S]*?<\/div>/gi)]
+        .map((match) => ({
+            title: stripTags(match[1]),
+            text: extractListItemsFromHtml(match[2]).join(", ")
+        }))
+        .filter((item) => item.title && item.text);
 }
 
 function buildBreadcrumbJson(title, parentLabel, parentCanonical, canonical) {
@@ -287,6 +1209,9 @@ ${buildWebPageJson(data.metaTitle, data.description, data.canonical)}
     <script type="application/ld+json">
 ${buildBreadcrumbJson(data.title, data.parentLabel, data.parentCanonical, data.canonical)}
     </script>
+${data.faqItems && data.faqItems.length ? `    <script type="application/ld+json">
+${buildFaqJson(data.title, data.faqItems)}
+    </script>` : ""}
 </head>
 <body class="site-page">
     <a class="skip-link" href="#main-content">Skip to main content</a>
@@ -315,6 +1240,7 @@ ${buildHeader(data.activeSection)}
             <div class="site-detail-shell">
                 <div class="site-detail-content">
                     <div class="site-detail-rich">
+${data.editorialHtml}
 ${data.contentHtml}
                     </div>
                 </div>
@@ -345,10 +1271,80 @@ function getBrandData(filePath, html, group) {
     const heroHtml = extractFirst(html, /(<section class="brand-hero"[\s\S]*?<\/section>)/i);
     const brandSections = extractAll(html, /(<section class="(?:brand-info-section|brand-focus-section|model-lineup-section)"[\s\S]*?<\/section>)/gi);
     const contentHtml = brandSections.join("\n\n").trim();
+    const historySection = sectionHtml(contentHtml, "brand-info-section");
+    const focusSection = sectionHtml(contentHtml, "brand-focus-section");
+    const modelSection = sectionHtml(contentHtml, "model-lineup-section");
     const title = stripTags(extractFirst(heroHtml, /<h1[^>]*>([\s\S]*?)<\/h1>/i)) || stripTags(extractFirst(html, /<h1[^>]*class="site-title"[^>]*>([\s\S]*?)<\/h1>/i)) || fallbackNameFromFile(filePath);
     const tagline = stripTags(extractFirst(heroHtml, /<p[^>]*>([\s\S]*?)<\/p>/i)) || `${title} brand guide`;
     const heroImage = extractFirst(heroHtml, /background-image:\s*url\(['"]?([^'")]+)['"]?\)/i);
-    const description = decodeEntities(extractFirst(html, /<meta name="description" content="([^"]*)"/i)) || firstParagraph(contentHtml);
+    const slug = path.basename(filePath, ".html");
+    const profile = brandProfiles[slug];
+    const historyParagraphs = paragraphsFromHtml(historySection);
+    const focusItems = extractListItemsFromHtml(focusSection);
+    const modelCategories = extractModelCategories(modelSection);
+    const description = profile?.metaDescription || decodeEntities(extractFirst(html, /<meta name="description" content="([^"]*)"/i)) || firstParagraph(contentHtml);
+    const faqItems = [
+        {
+            question: `What kind of buyer does ${title} usually suit best?`,
+            answer: profile?.summary || `${title} should be judged by how well its real-world strengths match your usage, not only by badge reputation.`
+        },
+        {
+            question: `What should you compare carefully before choosing ${title}?`,
+            answer: profile?.watchFor?.[0] || `Compare price, ownership cost, body style fit, and exact model history before treating ${title} as an automatic yes.`
+        },
+        {
+            question: `When should you move from brand research to model comparison?`,
+            answer: `As soon as ${title} looks plausible for your budget and body-style needs, compare real vehicles on price, efficiency, performance, warranty, and space instead of relying on brand image alone.`
+        }
+    ];
+    const editorialHtml = `
+                    <section class="site-highlight">
+                        <h2>Editorial take on ${escapeHtml(title)}</h2>
+                        <p>${escapeHtml(profile?.summary || `${title} is most useful to shortlist when its brand identity clearly matches the way you actually drive and own a car.`)}</p>
+                        ${historyParagraphs[0] ? `<p>${escapeHtml(`Context still matters: ${historyParagraphs[0]}`)}</p>` : ""}
+                    </section>
+                    <div class="site-grid site-grid--two">
+                        <article class="site-note">
+                            <h2>Who ${escapeHtml(title)} tends to suit best</h2>
+                            <ul class="site-summary-list">
+                                ${summaryListFromStrings(profile?.bestFor || [
+                                    `Buyers whose priorities line up with ${title}'s strongest reputation areas.`,
+                                    "Shoppers who have already narrowed the right body style and budget.",
+                                    "Drivers prepared to compare actual trims instead of relying only on the badge."
+                                ])}
+                            </ul>
+                        </article>
+                        <article class="site-note site-note--warning">
+                            <h2>What buyers should check carefully</h2>
+                            <ul class="site-summary-list">
+                                ${summaryListFromStrings(profile?.watchFor || [
+                                    "Trim and powertrain choice can matter more than brand image suggests.",
+                                    "Ownership cost deserves equal attention with styling and features.",
+                                    "Dealer support, warranty, and used examples should be checked directly."
+                                ])}
+                            </ul>
+                        </article>
+                    </div>
+                    ${(focusItems.length || modelCategories.length) ? `
+                    <section class="site-highlight">
+                        <h2>Current focus and lineup signals</h2>
+                        ${focusItems.length ? `<p>${escapeHtml(`${title}'s current strategy is easiest to understand through these themes: ${focusItems.join("; ")}.`)}</p>` : ""}
+                        ${modelCategories.length ? `<ul class="site-summary-list">
+                            ${sectionList(modelCategories.slice(0, 4))}
+                        </ul>` : ""}
+                    </section>` : ""}
+                    <section class="site-note">
+                        <h2>Best next comparisons</h2>
+                        <p>Once ${escapeHtml(title)} looks plausible on paper, compare exact vehicles rather than letting brand perception do all the work.</p>
+                        <ul class="site-link-list">
+                            ${linkList(profile?.compareLinks || [
+                                { href: "../car-comparison.html", label: "Compare vehicles now", text: "Use real specs, price, MPG, and warranty signals." },
+                                { href: "../car-types.html", label: "Recheck body-style fit", text: "Confirm the category is right before refining the shortlist." },
+                                { href: "../blog.html", label: "Read supporting guides", text: "Use buying and maintenance articles to strengthen the decision." }
+                            ])}
+                        </ul>
+                    </section>
+${buildFaqHtml(faqItems)}`;
 
     return {
         title,
@@ -372,6 +1368,7 @@ function getBrandData(filePath, html, group) {
         mediaHtml: heroImage
             ? `<div class="site-detail-media" style="background-image: url('${escapeAttribute(heroImage)}');"><div class="site-detail-media__overlay"><p>${escapeHtml(tagline)}</p></div></div>`
             : `<article class="site-panel site-hero__panel"><h2>${escapeHtml(title)}</h2><p>${escapeHtml(tagline)}</p></article>`,
+        editorialHtml,
         contentHtml,
         sidebarHeading: "Research next",
         sidebarText: "The best next click depends on whether you are still exploring the market or already comparing a shortlist.",
@@ -379,7 +1376,8 @@ function getBrandData(filePath, html, group) {
             { href: "../car-comparison.html", label: "Compare specific cars", text: "Move from brand interest to decision-ready specs and ownership trade-offs." },
             { href: "../car-types.html", label: "Review body styles", text: "Check whether the right fit is an SUV, sedan, EV, truck, or hatchback first." },
             { href: "../blog.html", label: "Read ownership guides", text: "Use maintenance and buying articles to strengthen the shortlist." }
-        ]
+        ],
+        faqItems
     };
 }
 
@@ -387,7 +1385,71 @@ function getTypeData(filePath, html, group) {
     const contentHtml = extractLast(html, /(<article class="car-type-section"[\s\S]*?<\/article>)/gi).trim();
     const title = stripTags(extractFirst(contentHtml, /<h2[^>]*class="car-type-title"[^>]*>([\s\S]*?)<\/h2>/i)) || stripTags(extractFirst(html, /<h1[^>]*class="site-title"[^>]*>([\s\S]*?)<\/h1>/i)) || fallbackNameFromFile(filePath);
     const imageSrc = extractFirst(contentHtml, /<img[^>]+src="([^"]+)"[^>]*class="car-type-image"/i) || extractFirst(contentHtml, /<img[^>]+class="car-type-image"[^>]+src="([^"]+)"/i);
-    const description = decodeEntities(extractFirst(html, /<meta name="description" content="([^"]*)"/i)) || firstParagraph(contentHtml);
+    const slug = path.basename(filePath, ".html");
+    const profile = typeProfiles[slug];
+    const description = profile?.summary || decodeEntities(extractFirst(html, /<meta name="description" content="([^"]*)"/i)) || firstParagraph(contentHtml);
+    const faqItems = [
+        {
+            question: `Who is ${title} usually best for?`,
+            answer: profile?.summary || `${title} are worth shortlisting when their strengths genuinely match your routine, passenger needs, and budget.`
+        },
+        {
+            question: `What do buyers most often overlook with ${title}?`,
+            answer: profile?.watchFor?.[0] || `The biggest mistake is choosing ${title} for image first and practical fit second.`
+        },
+        {
+            question: `What should you compare after choosing the body style?`,
+            answer: `Once the body style is right, compare real models on price, efficiency, cargo space, warranty, and daily usability instead of assuming every ${title.toLowerCase()} suits the same buyer.`
+        }
+    ];
+    const editorialHtml = `
+                    <section class="site-highlight">
+                        <h2>Buyer-focused summary</h2>
+                        <p>${escapeHtml(profile?.summary || `${title} should be judged by how well the body style fits your daily use, not just how popular it is.`)}</p>
+                    </section>
+                    <div class="site-grid site-grid--two">
+                        <article class="site-note">
+                            <h2>Who this body style suits best</h2>
+                            <ul class="site-summary-list">
+                                ${summaryListFromStrings(profile?.bestFor || [
+                                    "Buyers whose passenger, cargo, and route needs clearly fit the category.",
+                                    "Drivers who already know the body style matters more than the badge.",
+                                    "Shoppers willing to compare trade-offs honestly."
+                                ])}
+                            </ul>
+                        </article>
+                        <article class="site-note site-note--warning">
+                            <h2>Common trade-offs to watch</h2>
+                            <ul class="site-summary-list">
+                                ${summaryListFromStrings(profile?.watchFor || [
+                                    "A popular body style is not automatically the best fit for every buyer.",
+                                    "Size, weight, and image can hide real efficiency or practicality trade-offs.",
+                                    "The best choice depends on actual use rather than trend."
+                                ])}
+                            </ul>
+                        </article>
+                    </div>
+                    <section class="site-note">
+                        <h2>What to compare next</h2>
+                        <ul class="site-summary-list">
+                            ${summaryListFromStrings(profile?.metrics || [
+                                "Price and monthly running cost.",
+                                "Passenger space and cargo flexibility.",
+                                "Fuel economy, performance, and warranty."
+                            ])}
+                        </ul>
+                    </section>
+                    <section class="site-highlight">
+                        <h2>Move from body style to shortlist</h2>
+                        <ul class="site-link-list">
+                            ${linkList(profile?.relatedLinks || [
+                                { href: "../brands.html", label: "Browse matching brands", text: "See which manufacturers are strongest in this category." },
+                                { href: "../car-comparison.html", label: "Compare real vehicles", text: "Use price, MPG, warranty, and cargo data to refine the shortlist." },
+                                { href: "../blog.html", label: "Read supporting guides", text: "Use buying and ownership articles to avoid common mistakes." }
+                            ])}
+                        </ul>
+                    </section>
+${buildFaqHtml(faqItems)}`;
 
     return {
         title,
@@ -411,6 +1473,7 @@ function getTypeData(filePath, html, group) {
         mediaHtml: imageSrc
             ? `<div class="site-detail-media"><img src="${escapeAttribute(imageSrc)}" alt="${escapeAttribute(title)}" loading="eager"></div>`
             : `<article class="site-panel site-hero__panel"><h2>${escapeHtml(title)}</h2><p>${escapeHtml(description)}</p></article>`,
+        editorialHtml,
         contentHtml,
         sidebarHeading: "Best next steps",
         sidebarText: "Use the type guide to narrow the field, then move into the most relevant brands and live vehicle comparisons.",
@@ -418,19 +1481,76 @@ function getTypeData(filePath, html, group) {
             { href: "../brands.html", label: "Browse matching brands", text: "Find brands that are strongest in this body style or market segment." },
             { href: "../car-comparison.html", label: "Compare vehicles", text: "Line up specific cars once the category is clear." },
             { href: "../components.html", label: "Understand key systems", text: "Read engine, chassis, or interior guides before choosing trims or features." }
-        ]
+        ],
+        faqItems
     };
 }
 
 function getComponentData(filePath, html, group) {
     const contentHtml = extractLast(html, /(<section class="component-detail"[\s\S]*?<\/section>)/gi).trim();
     const title = stripTags(extractFirst(contentHtml, /<h2[^>]*>([\s\S]*?)<\/h2>/i)) || stripTags(extractLast(html, /<h1[^>]*class="site-title"[^>]*>([\s\S]*?)<\/h1>/gi)) || fallbackNameFromFile(filePath);
-    const description = decodeEntities(extractFirst(html, /<meta name="description" content="([^"]*)"/i)) || firstParagraph(contentHtml);
+    const slug = path.basename(filePath, ".html");
+    const profile = componentProfiles[slug];
+    const description = profile?.summary || decodeEntities(extractFirst(html, /<meta name="description" content="([^"]*)"/i)) || firstParagraph(contentHtml);
     const cleanedContentHtml = contentHtml
         .replace(/<h2[^>]*>[\s\S]*?<\/h2>/i, "")
         .replace(/<h3[^>]*>[\s\S]*?<\/h3>/i, "")
         .trim();
     const subtitle = "Read the system first, then judge the specification.";
+    const componentHeadings = extractAll(cleanedContentHtml, /<h4[^>]*>([\s\S]*?)<\/h4>/gi).map(stripTags).filter(Boolean);
+    const faqItems = [
+        {
+            question: `Why do ${title.toLowerCase()} matter when comparing cars?`,
+            answer: profile?.summary || `${title} matter because they influence performance, maintenance, reliability, and long-term ownership cost.`
+        },
+        {
+            question: `What should buyers check carefully on this system?`,
+            answer: profile?.watchFor?.[0] || `Service history, wear signs, and whether the system suits your driving pattern deserve close attention.`
+        },
+        {
+            question: `When should this knowledge influence the shortlist?`,
+            answer: `Use this knowledge when comparing trims, engines, and used examples so you choose a vehicle that fits your real usage and maintenance tolerance.`
+        }
+    ];
+    const editorialHtml = `
+                    <section class="site-highlight">
+                        <h2>Why this system matters in ownership</h2>
+                        <p>${escapeHtml(profile?.summary || `${title} should be understood in terms of ownership impact, not only technical description.`)}</p>
+                        ${componentHeadings.length ? `<p>${escapeHtml(`This page is most useful when you connect these system areas to real buying decisions: ${componentHeadings.slice(0, 5).join(", ")}.`)}</p>` : ""}
+                    </section>
+                    <div class="site-grid site-grid--two">
+                        <article class="site-note">
+                            <h2>Questions to ask before buying</h2>
+                            <ul class="site-summary-list">
+                                ${summaryListFromStrings(profile?.ownershipQuestions || [
+                                    "How does this system affect maintenance and reliability?",
+                                    "Does it suit the way the car will actually be used?",
+                                    "What signs of neglect or wear should be checked before purchase?"
+                                ])}
+                            </ul>
+                        </article>
+                        <article class="site-note site-note--warning">
+                            <h2>Warning signs and buyer cautions</h2>
+                            <ul class="site-summary-list">
+                                ${summaryListFromStrings(profile?.watchFor || [
+                                    "Neglected servicing history.",
+                                    "Symptoms that suggest wear, leaks, or electronic issues.",
+                                    "A mismatch between the system and the owner's real usage."
+                                ])}
+                            </ul>
+                        </article>
+                    </div>
+                    <section class="site-highlight">
+                        <h2>Use this knowledge next</h2>
+                        <ul class="site-link-list">
+                            ${linkList(profile?.compareLinks || [
+                                { href: "../car-comparison.html", label: "Compare vehicles with context", text: "Apply this knowledge to price, MPG, power, and warranty data." },
+                                { href: "../blog.html", label: "Read maintenance guides", text: "Use supporting articles to understand service and wear items." },
+                                { href: "../brands.html", label: "Return to brands", text: "Match the technology story to manufacturers and price bands." }
+                            ])}
+                        </ul>
+                    </section>
+${buildFaqHtml(faqItems)}`;
 
     return {
         title,
@@ -452,6 +1572,7 @@ function getComponentData(filePath, html, group) {
             { title: "Apply it in comparison", text: "This context helps when reviewing spec sheets, trims, and used-car risks." }
         ],
         mediaHtml: `<article class="site-panel site-hero__panel"><p class="site-detail-kicker">System context</p><h2>${escapeHtml(title)}</h2><p>${escapeHtml(subtitle)}</p><ul class="site-chip-list"><li>Performance context</li><li>Maintenance literacy</li><li>Buyer education</li></ul></article>`,
+        editorialHtml,
         contentHtml: cleanedContentHtml,
         sidebarHeading: "Use this knowledge next",
         sidebarText: "Component literacy works best when it feeds directly into model comparison and ownership research.",
@@ -459,12 +1580,13 @@ function getComponentData(filePath, html, group) {
             { href: "../car-comparison.html", label: "Compare cars with context", text: "Apply what you learned to efficiency, power, warranty, and daily use." },
             { href: "../blog.html", label: "Read maintenance guides", text: "Go deeper on service intervals, wear items, and used-car checks." },
             { href: "../brands.html", label: "See brand positioning", text: "Match the technology story to manufacturers and price bands." }
-        ]
+        ],
+        faqItems
     };
 }
 
 function buildPageData(filePath, group) {
-    const html = fs.readFileSync(filePath, "utf8").replace(/^\uFEFF/, "");
+    const html = normalizeBrokenText(fs.readFileSync(filePath, "utf8").replace(/^\uFEFF/, ""));
 
     if (group.kind === "brand") {
         return getBrandData(filePath, html, group);
