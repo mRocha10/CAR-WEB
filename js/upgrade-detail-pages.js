@@ -139,6 +139,11 @@ const brandProfiles = {
             { kicker: "Market role", title: "What the badge usually promises", text: "BMW usually signals driver-led premium positioning, with handling and powertrain character carrying more weight than pure luxury softness." },
             { kicker: "Current focus", title: "Where the brand is strongest", text: "BMW is strongest when buyers want a premium brand that still feels engaged to drive across sedan, SUV, and EV segments." },
             { kicker: "Lineup shape", title: "Where to search first", text: "Start with the 3 Series, 5 Series, X3, X5, and i4/iX style products before drifting into halo trims that may not fit daily use." }
+        ],
+        sidebarLinks: [
+            { href: "../types/sedan.html", label: "Check sedan fit first", text: "Useful if a 3 Series or 5 Series style shortlist is really about road manners and motorway use." },
+            { href: "../types/suv.html", label: "Check SUV fit too", text: "Helpful if an X3 or X5 is tempting because of access, family use, or road conditions." },
+            { href: "../blog/used-car-prepurchase-inspection-checklist.html", label: "Read the used-BMW inspection guide", text: "Use a disciplined checklist before paying for performance-image ownership." }
         ]
     },
     byd: {
@@ -249,6 +254,11 @@ const brandProfiles = {
             { kicker: "Market role", title: "What the badge usually promises", text: "Ford usually signals mainstream breadth, with its strongest case built around trucks, utility vehicles, and a few enthusiast-friendly models." },
             { kicker: "Current focus", title: "Where the brand is strongest", text: "Ford is strongest where use case matters more than prestige, especially pickups, larger SUVs, and work-to-family overlap vehicles." },
             { kicker: "Lineup shape", title: "Where to search first", text: "Start with the exact job first: F-Series for work, Explorer or Escape for family space, Mustang only if performance is the genuine brief." }
+        ],
+        sidebarLinks: [
+            { href: "../types/pickup.html", label: "Decide if you need a pickup", text: "Useful when Ford interest is really about towing, bed utility, or work use." },
+            { href: "../types/suv.html", label: "Check SUV fit first", text: "Helpful if Explorer, Edge, or Escape style family use is the actual question." },
+            { href: "../car-comparison.html", label: "Compare Ford models directly", text: "Use size, MPG, towing, and warranty data instead of letting the badge do the thinking." }
         ]
     },
     geely: {
@@ -321,6 +331,11 @@ const brandProfiles = {
             { kicker: "Market role", title: "What the badge usually promises", text: "Honda usually signals rational engineering, efficient packaging, and stronger-than-average driver confidence for mainstream buyers." },
             { kicker: "Current focus", title: "Where the brand is strongest", text: "Honda is strongest in practical daily-use cars and family crossovers where ownership balance matters more than luxury theatre." },
             { kicker: "Lineup shape", title: "Where to search first", text: "Start with Civic, Accord, CR-V, and HR-V style products, then check whether your market's hybrid and trim mix is truly competitive." }
+        ],
+        sidebarLinks: [
+            { href: "../types/sedan.html", label: "Check sedan priorities", text: "Useful if Civic or Accord style value is what pulled you toward Honda in the first place." },
+            { href: "../types/crossover.html", label: "Check crossover priorities", text: "Helpful if your shortlist is really about CR-V, HR-V, and family flexibility." },
+            { href: "../blog/used-car-prepurchase-inspection-checklist.html", label: "Read the used-Honda checklist", text: "Use inspection discipline instead of assuming the badge removes all risk." }
         ]
     },
     jaguar: {
@@ -716,6 +731,11 @@ const brandProfiles = {
             { kicker: "Market role", title: "What the badge usually promises", text: "Tesla usually signals software-led EV ownership, with charging convenience and ecosystem fluency carrying more weight than old-school luxury cues." },
             { kicker: "Current focus", title: "Where the brand is strongest", text: "Tesla is strongest when buyers want a simplified EV ownership experience and are happy to make the car part of a wider charging-and-software system." },
             { kicker: "Lineup shape", title: "Where to search first", text: "Start with Model 3 or Model Y unless your brief clearly demands a larger luxury EV or a more premium interior than Tesla usually prioritises." }
+        ],
+        sidebarLinks: [
+            { href: "../types/electric.html", label: "Validate EV ownership fit", text: "Useful if charging routine, winter range, and motorway use are still unresolved." },
+            { href: "../types/crossover.html", label: "Check crossover practicality", text: "Helpful if Model Y style family use matters as much as software or range." },
+            { href: "../car-comparison.html", label: "Compare Tesla against rivals", text: "Line up range, price, cargo, and warranty before committing to the ecosystem." }
         ]
     },
     toyota: {
@@ -750,6 +770,11 @@ const brandProfiles = {
             { kicker: "Market role", title: "What the badge usually promises", text: "Toyota usually signals low-drama ownership, strong hybrid logic, and a reputation built on fewer long-term headaches than many rivals." },
             { kicker: "Current focus", title: "Where the brand is strongest", text: "Toyota is strongest in mainstream hybrids, sensible family transport, and practical SUVs where trust matters more than showroom flash." },
             { kicker: "Lineup shape", title: "Where to search first", text: "Start with Corolla, Camry, Prius, RAV4, Highlander, Tacoma, or Land Cruiser depending on the job you actually need the vehicle to do." }
+        ],
+        sidebarLinks: [
+            { href: "../types/sedan.html", label: "Check sedan use first", text: "Useful if your Toyota interest is really about Corolla, Camry, or Prius-style daily driving." },
+            { href: "../types/suv.html", label: "Check SUV use first", text: "Helpful if RAV4, Highlander, or Land Cruiser practicality is the actual brief." },
+            { href: "../blog/used-car-prepurchase-inspection-checklist.html", label: "Read the used-Toyota checklist", text: "Even strong reliability reputations deserve proper inspection discipline." }
         ]
     },
     volkswagen: {
@@ -830,6 +855,11 @@ const typeProfiles = {
             { href: "../brands/subaru.html", label: "See Subaru crossover-style options", text: "Helpful if weather confidence and outdoor use matter." },
             { href: "../brands/toyota.html", label: "See Toyota crossover options", text: "Useful for hybrid-led mainstream crossovers." },
             { href: "../car-comparison.html", label: "Compare crossover shortlists", text: "Check cargo, MPG, and size before choosing a badge." }
+        ],
+        sidebarLinks: [
+            { href: "../components/interior.html", label: "Check cabin-use priorities", text: "Useful when child seats, storage, and daily access matter more than exterior image." },
+            { href: "suv.html", label: "Decide if you need a full SUV", text: "Helpful if the crossover is drifting upward in size and cost." },
+            { href: "../blog/used-car-prepurchase-inspection-checklist.html", label: "Read the used-family-car checklist", text: "Use it to inspect cargo wear, seat condition, and daily-practicality compromises." }
         ]
     },
     electric: {
@@ -847,6 +877,11 @@ const typeProfiles = {
             { href: "../brands/tesla.html", label: "See Tesla EV angles", text: "Useful if ecosystem and charging matter most." },
             { href: "../brands/byd.html", label: "See BYD EV angles", text: "Helpful when value and battery story are central." },
             { href: "../car-comparison.html", label: "Compare EVs directly", text: "Use objective range, price, and cargo numbers." }
+        ],
+        sidebarLinks: [
+            { href: "../car-comparison.html", label: "Compare real EV running costs", text: "Line up range, warranty, cargo, and price instead of stopping at the powertrain headline." },
+            { href: "../components/interior.html", label: "Check cabin and software usability", text: "Useful when screen logic, storage, and seat comfort matter as much as the battery." },
+            { href: "../brands/tesla.html", label: "See software-led EV context", text: "Helpful if charging ecosystem and interface quality are deciding the shortlist." }
         ]
     },
     hatchback: {
@@ -919,6 +954,11 @@ const typeProfiles = {
             { href: "../brands/bmw.html", label: "See BMW sedan context", text: "Useful for driver-led premium saloon shortlists." },
             { href: "../brands/toyota.html", label: "See Toyota sedan context", text: "Helpful when practical daily ownership is the goal." },
             { href: "../car-comparison.html", label: "Compare sedans", text: "Use the tool to judge price, MPG, and warranty differences." }
+        ],
+        sidebarLinks: [
+            { href: "hatchback.html", label: "Check hatchbacks too", text: "Useful if you want better cargo-opening flexibility without moving into SUV bulk." },
+            { href: "../components/interior.html", label: "Check comfort and cabin logic", text: "Helpful when rear-seat comfort, driving position, and infotainment will decide long-term satisfaction." },
+            { href: "../blog/used-car-prepurchase-inspection-checklist.html", label: "Read the used-sedan checklist", text: "Use it to inspect wear, suspension feel, and trunk practicality honestly." }
         ]
     },
     sports: {
@@ -947,6 +987,11 @@ const typeProfiles = {
             { href: "../brands/toyota.html", label: "See Toyota SUV options", text: "Useful for efficient family SUV shortlists." },
             { href: "../brands/land-rover.html", label: "See Land Rover SUV context", text: "Helpful when premium SUV image and capability matter." },
             { href: "../car-comparison.html", label: "Compare SUVs", text: "Use the tool once two or three SUV candidates are realistic." }
+        ],
+        sidebarLinks: [
+            { href: "crossover.html", label: "Check crossovers before oversizing", text: "Useful if easier access matters but full SUV bulk may be unnecessary." },
+            { href: "../components/interior.html", label: "Check family-cabin priorities", text: "Helpful when child seats, visibility, and second-row comfort will decide the winner." },
+            { href: "../components/engine.html", label: "Understand powertrain trade-offs", text: "Use engine context before paying more for torque, towing, or hybrid claims." }
         ]
     }
 };
@@ -966,6 +1011,11 @@ const componentProfiles = {
             { href: "../car-comparison.html", label: "Compare power, MPG, and warranty", text: "Use engine knowledge to judge real ownership trade-offs." },
             { href: "../blog/used-car-prepurchase-inspection-checklist.html", label: "Read the used-car inspection guide", text: "Helpful when checking engine condition before purchase." },
             { href: "../blog/engine-oil-grades-explained-5w30-vs-0w20.html", label: "Read the oil guide", text: "Use oil context to understand maintenance discipline and manufacturer specs." }
+        ],
+        sidebarLinks: [
+            { href: "../blog/used-car-prepurchase-inspection-checklist.html", label: "Inspect engines properly", text: "Use a real checklist for cold starts, smoke, leaks, and service-history gaps." },
+            { href: "../blog/engine-oil-grades-explained-5w30-vs-0w20.html", label: "Understand oil-spec discipline", text: "Helpful when maintenance history and correct servicing may decide the purchase." },
+            { href: "../car-comparison.html", label: "Compare cars with engine context", text: "Move from technical theory to real MPG, power, warranty, and ownership trade-offs." }
         ]
     },
     exterior: {
@@ -992,6 +1042,11 @@ const componentProfiles = {
             { href: "../car-comparison.html", label: "Compare cabin-related trade-offs", text: "Use cargo, seating, and ownership metrics with the comparison tool." },
             { href: "../types/minivan.html", label: "Review family-cabin priorities", text: "Helpful when access and passenger comfort matter most." },
             { href: "../blog/used-car-prepurchase-inspection-checklist.html", label: "Read the inspection guide", text: "Useful for checking wear and usability on used vehicles." }
+        ],
+        sidebarLinks: [
+            { href: "../types/minivan.html", label: "See the family-cabin benchmark", text: "Useful when access, storage, and child-seat practicality are more important than style." },
+            { href: "../blog/used-car-prepurchase-inspection-checklist.html", label: "Inspect interior wear properly", text: "Check seat condition, switchgear, infotainment, and real rear-seat usability." },
+            { href: "../car-comparison.html", label: "Compare comfort and practicality", text: "Use dimensions, cargo, and seating data once the cabin priorities are clear." }
         ]
     }
 };
