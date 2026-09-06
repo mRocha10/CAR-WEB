@@ -140,6 +140,17 @@ const brandProfiles = {
             { kicker: "Current focus", title: "Where the brand is strongest", text: "BMW is strongest when buyers want a premium brand that still feels engaged to drive across sedan, SUV, and EV segments." },
             { kicker: "Lineup shape", title: "Where to search first", text: "Start with the 3 Series, 5 Series, X3, X5, and i4/iX style products before drifting into halo trims that may not fit daily use." }
         ],
+        useText: "Use this BMW profile to decide whether you actually want driving involvement, premium image, or simply a well-rounded daily car before the badge starts doing the thinking for you.",
+        summaryItems: [
+            { title: "Separate badge from use", text: "Decide first whether your real need is a sedan, SUV, EV, or performance car rather than assuming BMW itself is the answer." },
+            { title: "Judge the daily compromise", text: "Ride comfort, tyre cost, rear-seat space, and trim choice matter as much as steering feel." },
+            { title: "Then compare rivals directly", text: "Cross-shop Audi, Mercedes-Benz, Lexus, and realistic non-premium alternatives once the use case is clear." }
+        ],
+        heroInsights: [
+            { kicker: "Best fit", title: "BMW makes sense when", text: "You want a premium car that still feels deliberately driver-led instead of purely comfort-led." },
+            { kicker: "Main caution", title: "Where buyers drift wrong", text: "M badges, big wheels, and image can push the shortlist away from the smartest daily-use trim." },
+            { kicker: "Research next", title: "What to test-drive after this", text: "Compare a realistic BMW trim against an Audi, Mercedes-Benz, or Lexus alternative before paying the premium." }
+        ],
         sidebarLinks: [
             { href: "../types/sedan.html", label: "Check sedan fit first", text: "Useful if a 3 Series or 5 Series style shortlist is really about road manners and motorway use." },
             { href: "../types/suv.html", label: "Check SUV fit too", text: "Helpful if an X3 or X5 is tempting because of access, family use, or road conditions." },
@@ -255,6 +266,17 @@ const brandProfiles = {
             { kicker: "Current focus", title: "Where the brand is strongest", text: "Ford is strongest where use case matters more than prestige, especially pickups, larger SUVs, and work-to-family overlap vehicles." },
             { kicker: "Lineup shape", title: "Where to search first", text: "Start with the exact job first: F-Series for work, Explorer or Escape for family space, Mustang only if performance is the genuine brief." }
         ],
+        useText: "Use this Ford profile to decide whether your brief is really truck utility, family-SUV space, or enthusiast image, because Ford's answer changes a lot by job.",
+        summaryItems: [
+            { title: "Start with the task", text: "Ask whether you need towing, cargo, family seating, or performance character before picking a Ford badge." },
+            { title: "Watch model spread", text: "Ford varies more by nameplate than some buyers expect, so one strong product does not validate the whole range." },
+            { title: "Compare work and family costs", text: "Payload, fuel use, parking ease, and rear-seat comfort should all be tested against rivals." }
+        ],
+        heroInsights: [
+            { kicker: "Best fit", title: "Ford makes sense when", text: "You need one brand that genuinely covers trucks, utility vehicles, family SUVs, and a few enthusiast choices." },
+            { kicker: "Main caution", title: "Where buyers drift wrong", text: "Many buyers choose Ford on broad familiarity before deciding whether the job is really pickup, SUV, crossover, or performance car." },
+            { kicker: "Research next", title: "What to compare after this", text: "Move quickly into pickup, SUV, or Mustang-style rivals rather than staying at general brand level." }
+        ],
         sidebarLinks: [
             { href: "../types/pickup.html", label: "Decide if you need a pickup", text: "Useful when Ford interest is really about towing, bed utility, or work use." },
             { href: "../types/suv.html", label: "Check SUV fit first", text: "Helpful if Explorer, Edge, or Escape style family use is the actual question." },
@@ -331,6 +353,17 @@ const brandProfiles = {
             { kicker: "Market role", title: "What the badge usually promises", text: "Honda usually signals rational engineering, efficient packaging, and stronger-than-average driver confidence for mainstream buyers." },
             { kicker: "Current focus", title: "Where the brand is strongest", text: "Honda is strongest in practical daily-use cars and family crossovers where ownership balance matters more than luxury theatre." },
             { kicker: "Lineup shape", title: "Where to search first", text: "Start with Civic, Accord, CR-V, and HR-V style products, then check whether your market's hybrid and trim mix is truly competitive." }
+        ],
+        useText: "Use this Honda profile to judge whether you want rational daily ownership, efficient packaging, and low drama, not just another mainstream badge with a good reputation.",
+        summaryItems: [
+            { title: "Start with balance", text: "Honda is strongest when you want a daily car that feels well engineered without becoming expensive or flashy." },
+            { title: "Check market specifics", text: "Hybrid availability, cabin quality, and trim value vary by region more than the badge reputation suggests." },
+            { title: "Then compare the obvious rivals", text: "Toyota, Mazda, Hyundai, and Kia all matter once the daily-use brief is clear." }
+        ],
+        heroInsights: [
+            { kicker: "Best fit", title: "Honda makes sense when", text: "You want efficient, sensible ownership with a little more engineering sharpness than the blandest mainstream options offer." },
+            { kicker: "Main caution", title: "Where buyers drift wrong", text: "Assuming every Honda is the best-value answer can hide real differences in noise, infotainment, and trim pricing." },
+            { kicker: "Research next", title: "What to compare after this", text: "Put Civic or CR-V style use cases directly against Toyota and Mazda before deciding the brand is settled." }
         ],
         sidebarLinks: [
             { href: "../types/sedan.html", label: "Check sedan priorities", text: "Useful if Civic or Accord style value is what pulled you toward Honda in the first place." },
@@ -732,6 +765,17 @@ const brandProfiles = {
             { kicker: "Current focus", title: "Where the brand is strongest", text: "Tesla is strongest when buyers want a simplified EV ownership experience and are happy to make the car part of a wider charging-and-software system." },
             { kicker: "Lineup shape", title: "Where to search first", text: "Start with Model 3 or Model Y unless your brief clearly demands a larger luxury EV or a more premium interior than Tesla usually prioritises." }
         ],
+        useText: "Use this Tesla profile to decide whether you want the EV ecosystem, charging logic, and software behaviour, not just the acceleration headline or brand visibility.",
+        summaryItems: [
+            { title: "Start with charging reality", text: "Tesla only makes full sense when your weekly charging routine is genuinely easy and predictable." },
+            { title: "Judge the cabin honestly", text: "Interior expectations, comfort, and service culture should be compared directly against premium and mainstream EV rivals." },
+            { title: "Then compare ecosystem value", text: "Range, charging network, software, cargo, and warranty matter more than social-media brand heat." }
+        ],
+        heroInsights: [
+            { kicker: "Best fit", title: "Tesla makes sense when", text: "You want software-led EV ownership and are ready to live inside the charging ecosystem, not just admire it." },
+            { kicker: "Main caution", title: "Where buyers drift wrong", text: "Performance headlines and minimalist styling can distract from ride comfort, interior expectations, and charging fit." },
+            { kicker: "Research next", title: "What to compare after this", text: "Test Tesla against a BYD, Hyundai, Kia, or premium EV rival with the same family-use brief." }
+        ],
         sidebarLinks: [
             { href: "../types/electric.html", label: "Validate EV ownership fit", text: "Useful if charging routine, winter range, and motorway use are still unresolved." },
             { href: "../types/crossover.html", label: "Check crossover practicality", text: "Helpful if Model Y style family use matters as much as software or range." },
@@ -770,6 +814,17 @@ const brandProfiles = {
             { kicker: "Market role", title: "What the badge usually promises", text: "Toyota usually signals low-drama ownership, strong hybrid logic, and a reputation built on fewer long-term headaches than many rivals." },
             { kicker: "Current focus", title: "Where the brand is strongest", text: "Toyota is strongest in mainstream hybrids, sensible family transport, and practical SUVs where trust matters more than showroom flash." },
             { kicker: "Lineup shape", title: "Where to search first", text: "Start with Corolla, Camry, Prius, RAV4, Highlander, Tacoma, or Land Cruiser depending on the job you actually need the vehicle to do." }
+        ],
+        useText: "Use this Toyota profile to test whether your shortlist is really about predictable ownership, hybrid logic, and resale confidence rather than just buying the safest reputation in the room.",
+        summaryItems: [
+            { title: "Start with the ownership goal", text: "Toyota is strongest when low drama, long-term confidence, and sensible hybrid use are the real priorities." },
+            { title: "Check category before brand loyalty", text: "Sedan, crossover, SUV, and truck needs should be separated before you let the brand reputation flatten the decision." },
+            { title: "Then compare the exact alternatives", text: "Honda, Mazda, Ford, Hyundai, and Kia still matter once the real job and budget are clear." }
+        ],
+        heroInsights: [
+            { kicker: "Best fit", title: "Toyota makes sense when", text: "You want fewer ownership surprises and a car that quietly does the daily job well for a long time." },
+            { kicker: "Main caution", title: "Where buyers drift wrong", text: "A strong reliability reputation can hide cabin compromises, weaker infotainment, or a better-fit rival in the same class." },
+            { kicker: "Research next", title: "What to compare after this", text: "Move straight from Toyota trust to real sedan, SUV, hybrid, or truck comparisons with rivals." }
         ],
         sidebarLinks: [
             { href: "../types/sedan.html", label: "Check sedan use first", text: "Useful if your Toyota interest is really about Corolla, Camry, or Prius-style daily driving." },
@@ -845,7 +900,19 @@ const typeProfiles = {
         bestFor: ["Families who want easy entry and flexible space without a full SUV footprint.", "Drivers needing urban usability plus weekend versatility.", "Buyers who do not truly need heavy off-road capability."],
         watchFor: ["Some crossovers give SUV image without meaningful extra space.", "Larger wheels and higher ride height can hurt efficiency.", "Do not confuse crossover convenience with towing or rough-road strength."],
         metrics: ["Rear-seat access and boot shape.", "Fuel economy versus a hatchback alternative.", "Parking ease and overall footprint."],
+        categoryLabel: "a crossover",
         decisionLabel: "a crossover",
+        useText: "Use this crossover guide to decide whether you need the extra height and family access, or whether a hatchback or smaller SUV would solve the same problem better.",
+        summaryItems: [
+            { title: "Start with real access needs", text: "Crossovers are usually about easier entry, cargo flexibility, and urban-family convenience rather than rugged capability." },
+            { title: "Watch the hidden price creep", text: "Ride height, larger wheels, and styling often increase cost without adding much useful space." },
+            { title: "Then test the nearest rival shape", text: "Compare a crossover against both a hatchback and a fuller SUV before deciding the category is settled." }
+        ],
+        heroInsights: [
+            { kicker: "Best fit", title: "Crossovers make sense when", text: "You want everyday access and family flexibility without committing to full SUV bulk or cost." },
+            { kicker: "Main caution", title: "Where buyers drift wrong", text: "Many crossovers sell SUV image more convincingly than they deliver meaningful extra practicality." },
+            { kicker: "Compare next", title: "What decides the shortlist", text: "Rear-seat access, boot shape, parking ease, and tyre cost usually matter more than rugged styling cues." }
+        ],
         realityCards: [
             { kicker: "Money lens", title: "What this changes in cost", text: "Crossovers often cost more than equivalent hatchbacks, so check whether the height gain is worth the extra payment, tyre bill, and fuel use." },
             { kicker: "Practical lens", title: "What this changes in daily use", text: "The main win is easier access and a more flexible family shape, not serious off-road ability or massive extra room." },
@@ -867,7 +934,19 @@ const typeProfiles = {
         bestFor: ["Drivers with easy home or workplace charging.", "Buyers doing predictable daily mileage.", "Shoppers prioritising efficiency, software, and smooth performance."],
         watchFor: ["Charging access matters more than brochure range.", "Cold weather, motorway use, and tyre choice can change real range meaningfully.", "Insurance, tyre wear, and depreciation still need normal comparison."],
         metrics: ["Charging routine and public network dependence.", "Real-world range for your route profile.", "Warranty, battery confidence, and cabin practicality."],
+        categoryLabel: "an electric vehicle",
         decisionLabel: "an EV",
+        useText: "Use this EV guide to decide whether your charging routine, route profile, and ownership expectations genuinely suit electric driving before range numbers take over the conversation.",
+        summaryItems: [
+            { title: "Start with charging reality", text: "Home, workplace, and dependable public charging matter more than brochure excitement." },
+            { title: "Watch real-world range conditions", text: "Motorway speed, weather, tyres, and family load can all reshape whether an EV still feels effortless." },
+            { title: "Then compare total ownership", text: "Battery confidence, warranty, software, insurance, and depreciation belong in the same decision." }
+        ],
+        heroInsights: [
+            { kicker: "Best fit", title: "EVs make sense when", text: "Your weekly charging routine is simple enough that electric driving will feel normal rather than strategic." },
+            { kicker: "Main caution", title: "Where buyers drift wrong", text: "Range headlines and acceleration can distract from winter use, charging friction, and total ownership cost." },
+            { kicker: "Compare next", title: "What decides the shortlist", text: "Charging speed, real route range, cabin usability, and warranty matter more than the loudest EV marketing claim." }
+        ],
         realityCards: [
             { kicker: "Money lens", title: "What this changes in cost", text: "The real cost story depends on home charging price, incentives, insurance, and depreciation, not just the fuel saving headline." },
             { kicker: "Practical lens", title: "What this changes in daily use", text: "Range matters, but routine matters more: school runs, motorway speed, winter weather, and charging access decide whether EV ownership feels effortless." },
@@ -944,7 +1023,19 @@ const typeProfiles = {
         bestFor: ["Commuters and family buyers who do not need SUV ride height.", "Drivers prioritising efficiency and cleaner on-road manners.", "Shoppers wanting a traditional car shape with good luggage separation."],
         watchFor: ["Rear-headroom and boot opening flexibility can trail hatchbacks and crossovers.", "The market shift to SUVs means some sedan choices are narrower than before.", "Do not pay SUV prices if your real needs suit a sedan better."],
         metrics: ["Rear-seat space and child-seat fit.", "Boot size and opening practicality.", "Ride, handling, and fuel economy versus crossover rivals."],
+        categoryLabel: "a sedan",
         decisionLabel: "a sedan",
+        useText: "Use this sedan guide to decide whether your real need is efficient road comfort and calmer handling, not just whether the market currently prefers taller vehicles.",
+        summaryItems: [
+            { title: "Start with road use", text: "Sedans often shine when motorway comfort, efficiency, and cleaner handling matter more than height or image." },
+            { title: "Watch the cargo compromise", text: "The trunk format can become the deciding weakness if family loading and bulky gear matter often." },
+            { title: "Then compare against taller rivals", text: "A sedan should beat the equivalent crossover on efficiency and road manners clearly enough to justify its shape." }
+        ],
+        heroInsights: [
+            { kicker: "Best fit", title: "Sedans make sense when", text: "You want calmer road behaviour and lower running costs without paying for height you do not need." },
+            { kicker: "Main caution", title: "Where buyers drift wrong", text: "Some buyers underestimate trunk-opening limits and rear-headroom differences until daily family use exposes them." },
+            { kicker: "Compare next", title: "What decides the shortlist", text: "Rear-seat fit, motorway refinement, boot practicality, and fuel economy usually settle the argument." }
+        ],
         realityCards: [
             { kicker: "Money lens", title: "What this changes in cost", text: "Sedans often deliver better efficiency and lower tyre bills than similar SUVs, but only if the trunk format still fits your life." },
             { kicker: "Practical lens", title: "What this changes in daily use", text: "The biggest win is cleaner road manners and easier motorway comfort, while the main compromise is cargo-opening flexibility versus hatchbacks and crossovers." },
@@ -977,7 +1068,19 @@ const typeProfiles = {
         bestFor: ["Families wanting space, easier ingress, and flexible cargo layouts.", "Drivers needing a more commanding seating position.", "Buyers facing mixed roads, weather, or occasional towing needs."],
         watchFor: ["Not every SUV gives better space or value than a crossover or minivan.", "Fuel use, tyre cost, and size can rise fast with large SUVs.", "Many buyers choose SUVs for image when a hatchback or sedan would work better."],
         metrics: ["Rear-seat room and cargo shape.", "Fuel economy and tyre cost.", "Parking footprint and turning ease in daily use."],
+        categoryLabel: "an SUV",
         decisionLabel: "an SUV",
+        useText: "Use this SUV guide to decide whether you truly need the extra height, family access, or rougher-road confidence, because those benefits come with real cost and size penalties.",
+        summaryItems: [
+            { title: "Start with the physical need", text: "SUVs earn their place when entry height, child-seat loading, road conditions, or towing genuinely matter." },
+            { title: "Watch the cost of size", text: "Fuel use, tyres, parking footprint, and unnecessary bulk can quietly outweigh the versatility story." },
+            { title: "Then compare the obvious alternatives", text: "Crossovers and minivans often answer the same family brief more efficiently." }
+        ],
+        heroInsights: [
+            { kicker: "Best fit", title: "SUVs make sense when", text: "You need easier access, family space, or rough-road confidence often enough to justify the bigger footprint." },
+            { kicker: "Main caution", title: "Where buyers drift wrong", text: "Many buyers pay SUV running costs for image even when a crossover or sedan would solve normal life more cleanly." },
+            { kicker: "Compare next", title: "What decides the shortlist", text: "Cargo shape, second-row comfort, parking ease, tyre cost, and powertrain fit usually matter most." }
+        ],
         realityCards: [
             { kicker: "Money lens", title: "What this changes in cost", text: "SUV ownership usually means paying more for tyres, fuel, and size, so the extra height needs to solve a real problem." },
             { kicker: "Practical lens", title: "What this changes in daily use", text: "SUVs help when you need easier entry, child-seat height, rough-road confidence, or a more upright seating position." },
@@ -1000,6 +1103,18 @@ const componentProfiles = {
     engine: {
         summary: "Engine knowledge is most valuable when it helps buyers judge durability, power delivery, maintenance risk, and fit for their actual driving.",
         shortName: "engine",
+        systemLabel: "engine systems",
+        useText: "Use this engine guide to judge whether a powertrain is likely to feel strong, stay durable, and remain affordable to maintain in the kind of driving you actually do.",
+        summaryItems: [
+            { title: "Start with usage", text: "Engine choice should follow short trips, motorway miles, towing, hills, and family load, not only brochure output." },
+            { title: "Watch maintenance sensitivity", text: "Oil quality, cooling discipline, timing components, and turbo complexity often decide whether an engine stays easy to own." },
+            { title: "Then inspect real examples", text: "Cold starts, smoke, leaks, idle quality, and service records usually tell the truth faster than specifications do." }
+        ],
+        heroInsights: [
+            { kicker: "Why it matters", title: "Engine choice changes ownership", text: "The engine often decides whether the car feels easy, stressed, cheap to run, or risky as mileage rises." },
+            { kicker: "Main warning", title: "Where buyers drift wrong", text: "Big power numbers can hide poor fit for short trips, weak service discipline, or expensive long-term wear." },
+            { kicker: "Use it for", title: "Best next application", text: "Apply engine knowledge when comparing trims, used examples, towing needs, and fuel-economy claims." }
+        ],
         ownershipQuestions: ["Is the engine simple and proven, or complex and highly stressed?", "Does the powertrain suit short trips, long motorway use, towing, or mixed family driving?", "What maintenance items become expensive as mileage rises?"],
         watchFor: ["Cold-start noise, smoke, vibration, or uneven idle.", "Turbo, cooling, or timing-related service history gaps.", "Mismatch between advertised performance and the owner's real use case."],
         impactCards: [
@@ -1031,6 +1146,18 @@ const componentProfiles = {
     interior: {
         summary: "Interior technology and materials matter most when they improve comfort, usability, storage, and long-term satisfaction rather than showroom impact alone.",
         shortName: "interior",
+        systemLabel: "interior systems",
+        useText: "Use this interior guide to judge whether the cabin will still feel comfortable, easy to use, and durable after months of daily life instead of just the first showroom impression.",
+        summaryItems: [
+            { title: "Start with daily touchpoints", text: "Seats, visibility, storage, switch layout, rear access, and climate controls decide cabin quality more than ambient lighting or screen size." },
+            { title: "Watch long-term wear", text: "Materials, touch-heavy controls, and infotainment reliability often separate a good cabin from a frustrating one." },
+            { title: "Then inspect family reality", text: "Rear-seat access, child-seat loading, cleaning effort, and actual comfort should all be tested before you commit." }
+        ],
+        heroInsights: [
+            { kicker: "Why it matters", title: "The cabin changes daily life", text: "Interior quality affects comfort, distraction, storage, and whether the car still feels good after years instead of minutes." },
+            { kicker: "Main warning", title: "Where buyers drift wrong", text: "Showroom theatre can hide awkward controls, weak materials, or poor rear-seat usability." },
+            { kicker: "Use it for", title: "Best next application", text: "Use this knowledge when comparing family practicality, infotainment logic, seat comfort, and used-car wear." }
+        ],
         ownershipQuestions: ["Will the seats, storage, and infotainment still feel right after long daily use?", "Is the cabin easy to keep clean and wear-resistant?", "Do the controls reduce distraction or add it?"],
         watchFor: ["Touch-heavy controls that are awkward while driving.", "Tight rear-seat access or poor child-seat usability.", "Materials that look premium but wear badly over time."],
         impactCards: [
@@ -1674,13 +1801,13 @@ ${buildFaqHtml(faqItems)}`;
         canonical: relativeUrlToPage(filePath),
         ogImage: toAbsoluteUrl(heroImage, filePath),
         kicker: tagline,
-        useText: `Use this profile to understand ${title}'s history, current priorities, and lineup structure before you compare specific vehicles.`,
-        summaryItems: [
+        useText: profile?.useText || `Use this profile to understand ${title}'s history, current priorities, and lineup structure before you compare specific vehicles.`,
+        summaryItems: profile?.summaryItems || [
             { title: "Start with history", text: "Check how the brand built its reputation before judging newer models." },
             { title: "Read the current focus", text: "See where electrification, luxury, performance, or value fit into the brand strategy." },
             { title: "Move to comparison", text: "After the brand fits your shortlist, compare actual vehicles by price, efficiency, and usability." }
         ],
-        heroInsights: [
+        heroInsights: profile?.heroInsights || [
             { kicker: "Best fit", title: `${title} suits`, text: (profile?.bestFor && profile.bestFor[0]) || `Buyers whose priorities line up with ${title}'s strongest reputation areas.` },
             { kicker: "Watch for", title: "Check carefully", text: (profile?.watchFor && profile.watchFor[0]) || "Trim, powertrain, and ownership cost deserve close checking before you commit." },
             { kicker: "Next step", title: "Do after this page", text: "Move from badge interest to real model comparison as soon as the brand looks plausible." }
@@ -1715,6 +1842,7 @@ function getTypeData(filePath, html, group) {
         { href: "suv.html", label: "Compare with SUVs", text: "Useful if height, family use, or rougher roads are part of the question." },
         { href: "sedan.html", label: "Compare with sedans", text: "Helpful when efficiency and road manners matter more than image." }
     ];
+    const categoryLabel = profile?.categoryLabel || "this body style";
     const decisionHeading = profile?.decisionLabel
         ? `How to decide whether ${profile.decisionLabel} is actually right for you`
         : "How to decide whether this body style is actually right for you";
@@ -1730,7 +1858,7 @@ function getTypeData(filePath, html, group) {
         },
         {
             question: `What should you compare after choosing the body style?`,
-            answer: `Once the body style is right, compare real models on price, efficiency, cargo space, warranty, and daily usability instead of assuming every ${title.toLowerCase()} suits the same buyer.`
+            answer: `Once the body style is right, compare real models on price, efficiency, cargo space, warranty, and daily usability instead of assuming every option in ${categoryLabel} suits the same buyer.`
         }
     ];
     const typeRealityCards = profile?.realityCards || [
@@ -1847,13 +1975,13 @@ ${buildFaqHtml(faqItems)}`;
         canonical: relativeUrlToPage(filePath),
         ogImage: toAbsoluteUrl(imageSrc, filePath),
         kicker: "Ownership fit first",
-        useText: "Read this guide to understand where this category fits best, which trade-offs matter most, and when to move into brand or model comparison.",
-        summaryItems: [
+        useText: profile?.useText || "Read this guide to understand where this category fits best, which trade-offs matter most, and when to move into brand or model comparison.",
+        summaryItems: profile?.summaryItems || [
             { title: "Match your use case", text: "Passenger needs, cargo, roads, and parking matter more than trend-driven styling." },
             { title: "Watch the trade-offs", text: "Comfort, efficiency, price, and versatility rarely peak at the same time." },
             { title: "Then shortlist brands", text: "Once the body style is right, comparing brands and models becomes much easier." }
         ],
-        heroInsights: [
+        heroInsights: profile?.heroInsights || [
             { kicker: "Best fit", title: "Strong fit", text: (profile?.bestFor && profile.bestFor[0]) || "Best for buyers whose daily routine clearly matches the category." },
             { kicker: "Main risk", title: "Easy mistake", text: (profile?.watchFor && profile.watchFor[0]) || "The biggest mistake is choosing the category for image instead of use." },
             { kicker: "Compare next", title: "Key metric", text: (profile?.metrics && profile.metrics[0]) || "Compare cost, space, and daily usability before anything else." }
@@ -1884,6 +2012,7 @@ function getComponentData(filePath, html, group) {
     const slug = path.basename(filePath, ".html");
     const profile = componentProfiles[slug];
     const systemLabel = profile?.shortName || title.toLowerCase();
+    const systemLabelHuman = profile?.systemLabel || title.toLowerCase();
     const description = profile?.summary || decodeEntities(extractFirst(html, /<meta name="description" content="([^"]*)"/i)) || firstParagraph(contentHtml);
     const cleanedContentHtml = contentHtml
         .replace(/<h2[^>]*>[\s\S]*?<\/h2>/i, "")
@@ -2011,13 +2140,13 @@ ${buildFaqHtml(faqItems)}`;
         canonical: relativeUrlToPage(filePath),
         ogImage: DEFAULT_OG_IMAGE,
         kicker: subtitle,
-        useText: `Use this guide to understand what ${title} do, how the technology has evolved, and why it matters before you compare vehicles or buy used.`,
-        summaryItems: [
+        useText: profile?.useText || `Use this guide to understand what ${systemLabelHuman} do, how the technology has evolved, and why it matters before you compare vehicles or buy used.`,
+        summaryItems: profile?.summaryItems || [
             { title: "Learn the function", text: "Know what the part or system actually does before relying on marketing copy." },
             { title: "Connect it to ownership", text: "Maintenance, reliability, and performance implications matter as much as the part name." },
             { title: "Apply it in comparison", text: "This context helps when reviewing spec sheets, trims, and used-car risks." }
         ],
-        heroInsights: [
+        heroInsights: profile?.heroInsights || [
             { kicker: "Why it matters", title: "Ownership impact", text: profile?.summary || "This system affects maintenance, reliability, and daily ownership quality." },
             { kicker: "Main warning", title: "Check first", text: (profile?.watchFor && profile.watchFor[0]) || "Service history and wear signs matter more than marketing language." },
             { kicker: "Use it for", title: "Best comparison use", text: "Apply the system knowledge when judging trims, engines, and used examples." }
