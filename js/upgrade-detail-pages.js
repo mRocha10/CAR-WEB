@@ -1777,6 +1777,38 @@ function escapeAttribute(content) {
     return escapeHtml(content).replace(/\r?\n/g, " ");
 }
 
+function hasUsableAsset(assetPath, filePath) {
+    if (!assetPath) {
+        return false;
+    }
+
+    if (/^https?:\/\//i.test(assetPath)) {
+        return true;
+    }
+
+    return fs.existsSync(path.resolve(path.dirname(filePath), assetPath));
+}
+
+function createGeneratedImageUrl(prompt, imageSize = "landscape_4_3") {
+    return `https://coresg-normal.trae.ai/api/ide/v1/text_to_image?prompt=${encodeURIComponent(prompt)}&image_size=${imageSize}`;
+}
+
+function buildDetailMedia(imageUrl, altText, overlayText) {
+    return `<div class="site-detail-media"><img src="${escapeAttribute(imageUrl)}" alt="${escapeAttribute(altText)}" loading="eager">${overlayText ? `<div class="site-detail-media__overlay"><p>${escapeHtml(overlayText)}</p></div>` : ""}</div>`;
+}
+
+function buildBrandImagePrompt(title) {
+    return `professional automotive editorial photography, refined representative vehicle lineup for ${title}, realistic showroom and road setting, clean natural light, serious automotive publication style, no text, no watermark`;
+}
+
+function buildTypeImagePrompt(title) {
+    return `professional automotive editorial photography, ${title} in realistic daily driving use, clean environment, modern daylight, serious automotive publication style, no text, no watermark`;
+}
+
+function buildComponentImagePrompt(title) {
+    return `professional automotive editorial photography, detailed ${title} system shown in a modern vehicle context, realistic engineering focus, clean workshop and vehicle lighting, serious automotive publication style, no text, no watermark`;
+}
+
 function toAbsoluteUrl(relativeAssetPath, filePath) {
     if (!relativeAssetPath) {
         return DEFAULT_OG_IMAGE;
@@ -2146,6 +2178,8 @@ function getBrandData(filePath, html, group) {
     const heroImage = extractFirst(heroHtml, /background-image:\s*url\(['"]?([^'")]+)['"]?\)/i);
     const slug = path.basename(filePath, ".html");
     const profile = brandProfiles[slug];
+    const brandMediaSrc = hasUsableAsset(heroImage, filePath) ? heroImage : createGeneratedImageUrl(buildBrandImagePrompt(title));
+    const brandOgImage = hasUsableAsset(heroImage, filePath) ? toAbsoluteUrl(heroImage, filePath) : brandMediaSrc;
     const historyParagraphs = paragraphsFromHtml(historySection);
     const focusItems = extractListItemsFromHtml(focusSection);
     const modelCategories = extractModelCategories(modelSection);
@@ -2284,7 +2318,7 @@ ${buildFaqHtml(faqItems)}`;
         eyebrow: group.eyebrow,
         activeSection: "brands",
         canonical: relativeUrlToPage(filePath),
-        ogImage: toAbsoluteUrl(heroImage, filePath),
+        ogImage: brandOgImage,
         kicker: tagline,
         useHeading: profile?.useHeading || "What matters first",
         useText: profile?.useText || `${title}'s badge only becomes useful once you connect its reputation, lineup strengths, and ownership story to the kind of car you actually need.`,
@@ -2298,9 +2332,7 @@ ${buildFaqHtml(faqItems)}`;
             { kicker: "Watch for", title: "Check carefully", text: (profile?.watchFor && profile.watchFor[0]) || "Trim, powertrain, and ownership cost deserve close checking before you commit." },
             { kicker: "Next step", title: "Real shortlist", text: "Move into real model comparison as soon as the brand looks plausible." }
         ],
-        mediaHtml: heroImage
-            ? `<div class="site-detail-media" style="background-image: url('${escapeAttribute(heroImage)}');"><div class="site-detail-media__overlay"><p>${escapeHtml(tagline)}</p></div></div>`
-            : `<article class="site-panel site-hero__panel"><h2>${escapeHtml(title)}</h2><p>${escapeHtml(tagline)}</p></article>`,
+        mediaHtml: buildDetailMedia(brandMediaSrc, `${title} representative vehicle lineup`, tagline),
         editorialHtml,
         generatedGuideHtml,
         contentHtml: profile?.referenceSections ? buildReferenceSections(profile.referenceSections) : contentHtml,
@@ -2324,6 +2356,8 @@ function getTypeData(filePath, html, group) {
     const imageSrc = extractFirst(contentHtml, /<img[^>]+src="([^"]+)"[^>]*class="car-type-image"/i) || extractFirst(contentHtml, /<img[^>]+class="car-type-image"[^>]+src="([^"]+)"/i);
     const slug = path.basename(filePath, ".html");
     const profile = typeProfiles[slug];
+    const typeMediaSrc = hasUsableAsset(imageSrc, filePath) ? imageSrc : createGeneratedImageUrl(buildTypeImagePrompt(title));
+    const typeOgImage = hasUsableAsset(imageSrc, filePath) ? toAbsoluteUrl(imageSrc, filePath) : typeMediaSrc;
     const alternativeLinks = profile?.alternativeLinks || typeAlternativeLinks[slug] || [
         { href: "suv.html", label: "Compare with SUVs", text: "Useful if height, family use, or rougher roads are part of the question." },
         { href: "sedan.html", label: "Compare with sedans", text: "Helpful when efficiency and road manners matter more than image." }
@@ -2460,7 +2494,7 @@ ${buildFaqHtml(faqItems)}`;
         eyebrow: group.eyebrow,
         activeSection: "types",
         canonical: relativeUrlToPage(filePath),
-        ogImage: toAbsoluteUrl(imageSrc, filePath),
+        ogImage: typeOgImage,
         kicker: "Ownership fit first",
         useHeading: profile?.useHeading || "What matters first",
         useText: profile?.useText || `${title} only makes sense if it suits your passengers, roads, cargo needs, parking reality, and running-cost expectations better than the closest alternative.`,
@@ -2474,9 +2508,7 @@ ${buildFaqHtml(faqItems)}`;
             { kicker: "Main risk", title: "Easy mistake", text: (profile?.watchFor && profile.watchFor[0]) || "The biggest mistake is choosing the category for image instead of use." },
             { kicker: "Key check", title: "Key metric", text: (profile?.metrics && profile.metrics[0]) || "Compare cost, space, and daily usability before anything else." }
         ],
-        mediaHtml: imageSrc
-            ? `<div class="site-detail-media"><img src="${escapeAttribute(imageSrc)}" alt="${escapeAttribute(title)}" loading="eager"></div>`
-            : `<article class="site-panel site-hero__panel"><h2>${escapeHtml(title)}</h2><p>${escapeHtml(description)}</p></article>`,
+        mediaHtml: buildDetailMedia(typeMediaSrc, `${title} example`, description),
         editorialHtml,
         generatedGuideHtml,
         contentHtml: profile?.referenceSections ? buildReferenceSections(profile.referenceSections) : contentHtml,
@@ -2499,6 +2531,7 @@ function getComponentData(filePath, html, group) {
     const title = stripTags(extractFirst(contentHtml, /<h2[^>]*>([\s\S]*?)<\/h2>/i)) || stripTags(extractLast(html, /<h1[^>]*class="site-title"[^>]*>([\s\S]*?)<\/h1>/gi)) || fallbackNameFromFile(filePath);
     const slug = path.basename(filePath, ".html");
     const profile = componentProfiles[slug];
+    const componentMediaSrc = createGeneratedImageUrl(buildComponentImagePrompt(title));
     const systemLabel = profile?.shortName || title.toLowerCase();
     const systemLabelHuman = profile?.systemLabel || title.toLowerCase();
     const description = profile?.summary || decodeEntities(extractFirst(html, /<meta name="description" content="([^"]*)"/i)) || firstParagraph(contentHtml);
@@ -2627,7 +2660,7 @@ ${buildFaqHtml(faqItems)}`;
         eyebrow: group.eyebrow,
         activeSection: "components",
         canonical: relativeUrlToPage(filePath),
-        ogImage: DEFAULT_OG_IMAGE,
+        ogImage: componentMediaSrc,
         kicker: subtitle,
         useHeading: profile?.useHeading || "What matters first",
         useText: profile?.useText || `${title} only become useful knowledge when they help you judge durability, maintenance, drivability, and used-car risk with more confidence.`,
@@ -2641,7 +2674,7 @@ ${buildFaqHtml(faqItems)}`;
             { kicker: "Main warning", title: "Check first", text: (profile?.watchFor && profile.watchFor[0]) || "Service history and wear signs matter more than marketing language." },
             { kicker: "Best use", title: "Comparison value", text: "Apply the system knowledge when judging trims, engines, and used examples." }
         ],
-        mediaHtml: `<article class="site-panel site-hero__panel"><p class="site-detail-kicker">Why it matters</p><h2>${escapeHtml(title)}</h2><p>${escapeHtml(subtitle)}</p><ul class="site-chip-list"><li>Performance insight</li><li>Maintenance know-how</li><li>Buyer confidence</li></ul></article>`,
+        mediaHtml: buildDetailMedia(componentMediaSrc, `${title} system context`, subtitle),
         editorialHtml,
         generatedGuideHtml,
         contentHtml: profile?.referenceSections ? buildReferenceSections(profile.referenceSections) : cleanedContentHtml,
