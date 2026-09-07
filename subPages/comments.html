@@ -73,22 +73,14 @@
         </section>
 
         <section class="site-section">
-            <div class="site-form">
+            <div class="site-form site-status-panel">
                 <h2>Submission status</h2>
-                <form id="comment-form">
-                    <div class="site-field">
-                        <label for="name">Your name</label>
-                        <input id="name" name="name" type="text" placeholder="Example: Alex" autocomplete="name">
-                    </div>
-                    <div class="site-field">
-                        <label for="comment">Your feedback</label>
-                        <textarea id="comment" name="comment" placeholder="Share a correction, content request, or suggestion."></textarea>
-                    </div>
-                    <div class="site-form__actions">
-                        <button class="site-button" type="submit">Send feedback</button>
-                        <p class="site-status" id="comment-status">Public submissions are currently paused. Please use the contact page for corrections or suggestions.</p>
-                    </div>
-                </form>
+                <p>Direct public submissions are paused while moderation stays manual. That means corrections, topic requests, and reader notes should be sent through the contact page instead of a public form.</p>
+                <div class="site-actions">
+                    <a class="site-button" href="contact.html">Send a correction or suggestion</a>
+                    <a class="site-button--secondary site-button--secondary-light" href="editorial-policy.html">Read the editorial policy</a>
+                </div>
+                <p class="site-status" id="comment-status">Community notes shown below are reviewed before publication.</p>
             </div>
         </section>
 

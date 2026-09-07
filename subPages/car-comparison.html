@@ -75,7 +75,35 @@
         </section>
 
         <section class="site-section">
+            <div class="site-section__header">
+                <span class="site-eyebrow">Need help narrowing first?</span>
+                <h2 class="site-title">Use one of these routes before comparing specific cars</h2>
+            </div>
+            <div class="site-compare-helper">
+                <article class="site-card">
+                    <h3>Still choosing the right body style?</h3>
+                    <p>Start with car types if you are still deciding between SUV, sedan, EV, pickup, crossover, or another category.</p>
+                    <a class="site-card__link" href="car-types.html">Open car types</a>
+                </article>
+                <article class="site-card">
+                    <h3>Know the category but not the brands?</h3>
+                    <p>Use the brand directory if you need to sort out which manufacturers are strongest in the segment you want.</p>
+                    <a class="site-card__link" href="brands.html">Open brands</a>
+                </article>
+                <article class="site-card">
+                    <h3>Need technical context first?</h3>
+                    <p>Use the component guides if engines, cabin quality, or used-car risks still need to be understood before you compare trims.</p>
+                    <a class="site-card__link" href="components.html">Open components</a>
+                </article>
+            </div>
+        </section>
+
+        <section class="site-section">
             <form class="site-form site-compare-form" id="comparison-form">
+                <div class="site-compare-form__intro">
+                    <h2>Build a realistic shortlist</h2>
+                    <p>Pick cars that solve the same job, budget, and passenger needs. The clearer the shortlist, the more useful the comparison becomes.</p>
+                </div>
                 <div class="site-compare-form__grid">
                     <div class="site-select-card">
                         <h2>Vehicle 1</h2>
@@ -128,6 +156,7 @@
                 </div>
                 <div class="site-form__actions">
                     <button class="site-button" type="submit" id="compare-btn">Compare selected vehicles</button>
+                    <a class="site-button--secondary site-button--secondary-light" href="car-comparison.html">Clear comparison</a>
                     <p class="site-status" id="comparison-status">Vehicle data will load shortly.</p>
                 </div>
             </form>

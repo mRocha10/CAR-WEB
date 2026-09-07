@@ -2,6 +2,68 @@ document.addEventListener("DOMContentLoaded", () => {
     const publisherId = "ca-pub-1971438271362376";
     const slotConfig = window.ENGINE_STARTERS_AD_SLOTS || {};
     const adSlots = document.querySelectorAll("[data-ad-slot-key]");
+    const isLocalPreview = /^(localhost|127\.0\.0\.1)$/i.test(window.location.hostname);
+
+    if (isLocalPreview) {
+        adSlots.forEach((slotWrapper) => {
+            slotWrapper.hidden = true;
+        });
+        return;
+    }
+
+    const initialiseAdSlot = (slotWrapper, frame, ins) => {
+        let hasInitialised = false;
+        let resizeObserver = null;
+        let timeoutId = null;
+
+        const cleanup = () => {
+            if (resizeObserver) {
+                resizeObserver.disconnect();
+                resizeObserver = null;
+            }
+
+            if (timeoutId) {
+                window.clearTimeout(timeoutId);
+                timeoutId = null;
+            }
+        };
+
+        const tryInitialise = () => {
+            if (hasInitialised) {
+                return;
+            }
+
+            const frameWidth = Math.round(frame.getBoundingClientRect().width);
+            if (frameWidth < 120 || slotWrapper.hidden) {
+                return;
+            }
+
+            try {
+                (window.adsbygoogle = window.adsbygoogle || []).push({});
+                hasInitialised = true;
+                cleanup();
+            } catch (error) {
+                console.error("AdSense slot initialisation failed.", error);
+            }
+        };
+
+        if ("ResizeObserver" in window) {
+            resizeObserver = new ResizeObserver(() => {
+                tryInitialise();
+            });
+            resizeObserver.observe(frame);
+        }
+
+        window.requestAnimationFrame(() => {
+            window.requestAnimationFrame(() => {
+                tryInitialise();
+            });
+        });
+
+        timeoutId = window.setTimeout(() => {
+            tryInitialise();
+        }, 1200);
+    };
 
     adSlots.forEach((slotWrapper) => {
         const slotKey = slotWrapper.getAttribute("data-ad-slot-key");
@@ -29,11 +91,6 @@ document.addEventListener("DOMContentLoaded", () => {
         frame.appendChild(ins);
         slotWrapper.hidden = false;
         slotWrapper.classList.add("site-ad-slot--active");
-
-        try {
-            (window.adsbygoogle = window.adsbygoogle || []).push({});
-        } catch (error) {
-            console.error("AdSense slot initialisation failed.", error);
-        }
+        initialiseAdSlot(slotWrapper, frame, ins);
     });
 });
