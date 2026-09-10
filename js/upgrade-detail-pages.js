@@ -1793,8 +1793,19 @@ function createGeneratedImageUrl(prompt, imageSize = "landscape_4_3") {
     return `https://coresg-normal.trae.ai/api/ide/v1/text_to_image?prompt=${encodeURIComponent(prompt)}&image_size=${imageSize}`;
 }
 
-function buildDetailMedia(imageUrl, altText, overlayText) {
-    return `<div class="site-detail-media"><img src="${escapeAttribute(imageUrl)}" alt="${escapeAttribute(altText)}" loading="eager">${overlayText ? `<div class="site-detail-media__overlay"><p>${escapeHtml(overlayText)}</p></div>` : ""}</div>`;
+function buildDetailMedia(imageUrl, altText, overlayText, mediaClass = "", imageClass = "") {
+    const classes = ["site-detail-media", mediaClass].filter(Boolean).join(" ");
+    const imgClasses = imageClass ? ` class="${escapeAttribute(imageClass)}"` : "";
+    return `<div class="${classes}"><img${imgClasses} src="${escapeAttribute(imageUrl)}" alt="${escapeAttribute(altText)}" loading="eager" decoding="async">${overlayText ? `<div class="site-detail-media__overlay"><p>${escapeHtml(overlayText)}</p></div>` : ""}</div>`;
+}
+
+function resolveBrandLogoAsset(slug, filePath) {
+    const candidates = [
+        `../../images/brands/${slug}-logo.webp`,
+        `../../images/brands/${slug}-logo.png`
+    ];
+
+    return candidates.find((candidate) => hasUsableAsset(candidate, filePath)) || "";
 }
 
 function buildBrandImagePrompt(title) {
@@ -2178,8 +2189,9 @@ function getBrandData(filePath, html, group) {
     const heroImage = extractFirst(heroHtml, /background-image:\s*url\(['"]?([^'")]+)['"]?\)/i);
     const slug = path.basename(filePath, ".html");
     const profile = brandProfiles[slug];
-    const brandMediaSrc = hasUsableAsset(heroImage, filePath) ? heroImage : createGeneratedImageUrl(buildBrandImagePrompt(title));
-    const brandOgImage = hasUsableAsset(heroImage, filePath) ? toAbsoluteUrl(heroImage, filePath) : brandMediaSrc;
+    const brandLogo = resolveBrandLogoAsset(slug, filePath);
+    const brandMediaSrc = brandLogo || (hasUsableAsset(heroImage, filePath) ? heroImage : createGeneratedImageUrl(buildBrandImagePrompt(title)));
+    const brandOgImage = brandLogo ? toAbsoluteUrl(brandLogo, filePath) : (hasUsableAsset(heroImage, filePath) ? toAbsoluteUrl(heroImage, filePath) : brandMediaSrc);
     const historyParagraphs = paragraphsFromHtml(historySection);
     const focusItems = extractListItemsFromHtml(focusSection);
     const modelCategories = extractModelCategories(modelSection);
@@ -2332,7 +2344,12 @@ ${buildFaqHtml(faqItems)}`;
             { kicker: "Watch for", title: "Check carefully", text: (profile?.watchFor && profile.watchFor[0]) || "Trim, powertrain, and ownership cost deserve close checking before you commit." },
             { kicker: "Next step", title: "Real shortlist", text: "Move into real model comparison as soon as the brand looks plausible." }
         ],
-        mediaHtml: buildDetailMedia(brandMediaSrc, `${title} representative vehicle lineup`, tagline),
+        mediaHtml: buildDetailMedia(
+            brandMediaSrc,
+            brandLogo ? `${title} logo` : `${title} representative vehicle lineup`,
+            tagline,
+            brandLogo ? "site-detail-media--logo" : ""
+        ),
         editorialHtml,
         generatedGuideHtml,
         contentHtml: profile?.referenceSections ? buildReferenceSections(profile.referenceSections) : contentHtml,

@@ -992,6 +992,18 @@ img {
     object-fit: cover;
 }
 
+.site-detail-media--logo {
+    background:
+        radial-gradient(circle at top left, rgba(18, 59, 122, 0.14), transparent 34%),
+        linear-gradient(180deg, #ffffff 0%, #eef3fb 100%);
+}
+
+.site-detail-media--logo img {
+    object-fit: contain;
+    padding: 2.5rem;
+    background: transparent;
+}
+
 .site-detail-media__overlay {
     position: absolute;
     inset: 0;
