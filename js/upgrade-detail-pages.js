@@ -1818,6 +1818,15 @@ function resolveTypeImageAsset(slug, filePath) {
     return candidates.find((candidate) => hasUsableAsset(candidate, filePath)) || "";
 }
 
+function resolveComponentImageAsset(slug, filePath) {
+    const candidates = [
+        `../../images/components/${slug}.png`,
+        `../../images/components/${slug}.webp`
+    ];
+
+    return candidates.find((candidate) => hasUsableAsset(candidate, filePath)) || "";
+}
+
 function buildBrandImagePrompt(title) {
     return `professional automotive editorial photography, refined representative vehicle lineup for ${title}, realistic showroom and road setting, clean natural light, serious automotive publication style, no text, no watermark`;
 }
@@ -2564,7 +2573,8 @@ function getComponentData(filePath, html, group) {
     const title = stripTags(extractFirst(contentHtml, /<h2[^>]*>([\s\S]*?)<\/h2>/i)) || stripTags(extractLast(html, /<h1[^>]*class="site-title"[^>]*>([\s\S]*?)<\/h1>/gi)) || fallbackNameFromFile(filePath);
     const slug = path.basename(filePath, ".html");
     const profile = componentProfiles[slug];
-    const componentMediaSrc = createGeneratedImageUrl(buildComponentImagePrompt(title));
+    const localComponentImage = resolveComponentImageAsset(slug, filePath);
+    const componentMediaSrc = localComponentImage || createGeneratedImageUrl(buildComponentImagePrompt(title));
     const systemLabel = profile?.shortName || title.toLowerCase();
     const systemLabelHuman = profile?.systemLabel || title.toLowerCase();
     const description = profile?.summary || decodeEntities(extractFirst(html, /<meta name="description" content="([^"]*)"/i)) || firstParagraph(contentHtml);
@@ -2693,7 +2703,7 @@ ${buildFaqHtml(faqItems)}`;
         eyebrow: group.eyebrow,
         activeSection: "components",
         canonical: relativeUrlToPage(filePath),
-        ogImage: componentMediaSrc,
+        ogImage: localComponentImage ? toAbsoluteUrl(localComponentImage, filePath) : componentMediaSrc,
         kicker: subtitle,
         useHeading: profile?.useHeading || "What matters first",
         useText: profile?.useText || `${title} only become useful knowledge when they help you judge durability, maintenance, drivability, and used-car risk with more confidence.`,
@@ -2707,7 +2717,11 @@ ${buildFaqHtml(faqItems)}`;
             { kicker: "Main warning", title: "Check first", text: (profile?.watchFor && profile.watchFor[0]) || "Service history and wear signs matter more than marketing language." },
             { kicker: "Best use", title: "Comparison value", text: "Apply the system knowledge when judging trims, engines, and used examples." }
         ],
-        mediaHtml: buildDetailMedia(componentMediaSrc, `${title} system context`, subtitle),
+        mediaHtml: buildDetailMedia(
+            componentMediaSrc,
+            localComponentImage ? `${title} illustration` : `${title} system context`,
+            subtitle
+        ),
         editorialHtml,
         generatedGuideHtml,
         contentHtml: profile?.referenceSections ? buildReferenceSections(profile.referenceSections) : cleanedContentHtml,
