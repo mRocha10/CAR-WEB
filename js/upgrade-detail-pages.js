@@ -1808,6 +1808,16 @@ function resolveBrandLogoAsset(slug, filePath) {
     return candidates.find((candidate) => hasUsableAsset(candidate, filePath)) || "";
 }
 
+function resolveTypeImageAsset(slug, filePath) {
+    const typeAssetSlug = slug === "sports" ? "sports-car" : slug;
+    const candidates = [
+        `../../images/types/${typeAssetSlug}.webp`,
+        `../../images/types/${typeAssetSlug}.png`
+    ];
+
+    return candidates.find((candidate) => hasUsableAsset(candidate, filePath)) || "";
+}
+
 function buildBrandImagePrompt(title) {
     return `professional automotive editorial photography, refined representative vehicle lineup for ${title}, realistic showroom and road setting, clean natural light, serious automotive publication style, no text, no watermark`;
 }
@@ -2373,8 +2383,9 @@ function getTypeData(filePath, html, group) {
     const imageSrc = extractFirst(contentHtml, /<img[^>]+src="([^"]+)"[^>]*class="car-type-image"/i) || extractFirst(contentHtml, /<img[^>]+class="car-type-image"[^>]+src="([^"]+)"/i);
     const slug = path.basename(filePath, ".html");
     const profile = typeProfiles[slug];
-    const typeMediaSrc = hasUsableAsset(imageSrc, filePath) ? imageSrc : createGeneratedImageUrl(buildTypeImagePrompt(title));
-    const typeOgImage = hasUsableAsset(imageSrc, filePath) ? toAbsoluteUrl(imageSrc, filePath) : typeMediaSrc;
+    const localTypeImage = resolveTypeImageAsset(slug, filePath);
+    const typeMediaSrc = localTypeImage || (hasUsableAsset(imageSrc, filePath) ? imageSrc : createGeneratedImageUrl(buildTypeImagePrompt(title)));
+    const typeOgImage = localTypeImage ? toAbsoluteUrl(localTypeImage, filePath) : (hasUsableAsset(imageSrc, filePath) ? toAbsoluteUrl(imageSrc, filePath) : typeMediaSrc);
     const alternativeLinks = profile?.alternativeLinks || typeAlternativeLinks[slug] || [
         { href: "suv.html", label: "Compare with SUVs", text: "Useful if height, family use, or rougher roads are part of the question." },
         { href: "sedan.html", label: "Compare with sedans", text: "Helpful when efficiency and road manners matter more than image." }
@@ -2525,7 +2536,12 @@ ${buildFaqHtml(faqItems)}`;
             { kicker: "Main risk", title: "Easy mistake", text: (profile?.watchFor && profile.watchFor[0]) || "The biggest mistake is choosing the category for image instead of use." },
             { kicker: "Key check", title: "Key metric", text: (profile?.metrics && profile.metrics[0]) || "Compare cost, space, and daily usability before anything else." }
         ],
-        mediaHtml: buildDetailMedia(typeMediaSrc, `${title} example`, description),
+        mediaHtml: buildDetailMedia(
+            typeMediaSrc,
+            localTypeImage ? `${title} illustration` : `${title} example`,
+            description,
+            localTypeImage ? "site-detail-media--type" : ""
+        ),
         editorialHtml,
         generatedGuideHtml,
         contentHtml: profile?.referenceSections ? buildReferenceSections(profile.referenceSections) : contentHtml,
