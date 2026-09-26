@@ -7,20 +7,23 @@
     <title>Engine Starters | Car Types, Brands, Components, and Comparison Tools</title>
     <meta name="description" content="Research car types, compare vehicle specs, learn how key components work, and browse major brands with practical buying guides from Engine Starters.">
     <meta name="robots" content="index, follow, max-image-preview:large">
-    <meta name="theme-color" content="#0d1b2a">
+    <meta name="theme-color" content="#111311">
     <link rel="canonical" href="https://enginestarters.org/">
     <meta property="og:title" content="Engine Starters | Car Types, Brands, Components, and Comparison Tools">
     <meta property="og:description" content="Clear car buying help on body styles, brands, major car systems, and side-by-side comparisons.">
     <meta property="og:url" content="https://enginestarters.org/">
     <meta property="og:type" content="website">
-    <meta property="og:image" content="https://enginestarters.org/images/types/sedan.webp">
+    <meta property="og:image" content="https://enginestarters.org/images/types/editorial-sports.jpg">
     <meta name="twitter:card" content="summary_large_image">
     <link rel="icon" href="https://enginestarters.org/images/logo/web_logo.jpeg" type="image/jpeg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet">
+    <link rel="preload" as="image" href="images/types/editorial-sports.jpg" fetchpriority="high">
     <link rel="stylesheet" href="css/global.min.css">
     <link rel="stylesheet" href="css/site-refresh.css">
+    <link rel="stylesheet" href="css/home.css">
+    <noscript><style>@media (max-width: 1100px) {.home-header .site-nav__list {display: flex !important}.home-header .site-nav__toggle {display: none !important}}</style></noscript>
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1971438271362376" crossorigin="anonymous"></script>
     <script type="application/ld+json">
     {
@@ -69,117 +72,90 @@
     }
     </script>
 </head>
-<body class="site-page">
+<body class="site-page home-page">
     <a class="skip-link" href="#main-content">Skip to main content</a>
 
-    <header class="site-header">
+    <header class="site-header home-header">
         <div class="site-header__inner">
-            <a class="site-brand" href="index.html">
-                <p class="site-brand__title">Engine Starters</p>
-                <p class="site-brand__tagline">Clear car buying help, ownership advice, and side-by-side comparisons.</p>
+            <a class="site-brand home-brand" href="index.html">
+                <span class="home-brand__mark" aria-hidden="true">ES<span class="home-brand__mark-dot">.</span></span>
+                <span class="home-brand__name">ENGINE<br>STARTERS</span>
             </a>
             <nav class="site-nav" aria-label="Primary" data-site-nav data-open="false">
-                <button class="site-nav__toggle" type="button" aria-expanded="false" aria-controls="site-nav-list" data-nav-toggle>Menu</button>
+                <button class="site-nav__toggle" type="button" aria-expanded="false" aria-controls="site-nav-list" data-nav-toggle>Explore <span aria-hidden="true">+</span></button>
                 <ul class="site-nav__list" id="site-nav-list">
-                    <li><a class="site-nav__link--active" href="index.html">Home</a></li>
-                    <li><a href="subPages/about.html">About</a></li>
-                    <li><a href="subPages/car-types.html">Car Types</a></li>
+                    <li><a class="site-nav__link--active" href="index.html" aria-current="page">Home</a></li>
+                    <li><a href="subPages/car-types.html">Car types</a></li>
                     <li><a href="subPages/brands.html">Brands</a></li>
                     <li><a href="subPages/components.html">Components</a></li>
-                    <li><a href="subPages/car-comparison.html">Compare Cars</a></li>
-                    <li><a href="subPages/blog.html">Blog</a></li>
-                    <li><a href="subPages/contact.html">Contact</a></li>
+                    <li><a href="subPages/blog.html">Guides</a></li>
+                    <li><a class="home-nav__compare" href="subPages/car-comparison.html">Compare cars <span aria-hidden="true">↗</span></a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <main class="site-main" id="main-content">
-        <section class="site-section site-hero">
-            <div class="site-hero__grid site-section__header">
-                <div class="site-panel">
-                    <span class="site-eyebrow">Car buying help</span>
-                    <h1 class="site-title">Find the right car with clearer advice and more useful comparisons.</h1>
-                    <p class="site-lead">Engine Starters helps you move from broad browsing to a confident shortlist. Explore body styles, compare brands, learn the systems that matter, and line up real vehicles side by side.</p>
-                    <div class="site-actions">
-                        <a class="site-button" href="subPages/car-comparison.html">Compare Cars by Specs and Cost</a>
-                        <a class="site-button--secondary" href="subPages/blog.html">Read Buying and Maintenance Guides</a>
-                    </div>
-                    <ul class="site-stats">
-                        <li><strong>36+</strong><span>Brand profiles and model data groupings</span></li>
-                        <li><strong>12</strong><span>Vehicle type guides for major segments</span></li>
-                        <li><strong>1</strong><span>Comparison tool focused on practical ownership signals</span></li>
-                    </ul>
+    <main class="site-main home-main" id="main-content">
+        <section class="home-hero" aria-labelledby="home-hero-title">
+            <img class="home-hero__image" src="images/types/editorial-sports.jpg" alt="A silver sports car on a winding road at sunset." width="1024" height="768" fetchpriority="high" decoding="async">
+            <div class="home-hero__shade" aria-hidden="true"></div>
+            <div class="home-hero__inner">
+                <p class="home-kicker home-hero__kicker">A better way to find your next car</p>
+                <h1 id="home-hero-title">The drive starts <em>here.</em></h1>
+                <p class="home-hero__intro">The right car isn't just a set of numbers. Explore the details that change how it feels to live with one.</p>
+                <div class="home-hero__actions">
+                    <a class="home-button home-button--light" href="#explore">Explore the possibilities <span aria-hidden="true">↗</span></a>
+                    <a class="home-text-link" href="subPages/car-comparison.html">Compare your shortlist <span aria-hidden="true">→</span></a>
                 </div>
+            </div>
+            <a class="home-hero__scroll" href="#explore">Scroll to explore <span aria-hidden="true">↓</span></a>
+            <span class="home-hero__index" aria-hidden="true">01 / 04</span>
+        </section>
 
-                <aside class="site-hero__panel site-panel">
-                    <h2>What you can do here</h2>
-                    <ul class="site-chip-list">
-                        <li>Start with body style when you are still narrowing the kind of car you need</li>
-                        <li>Browse brand profiles once you know the market segment that fits</li>
-                        <li>Learn engines, interiors, and key systems before buying used</li>
-                        <li>Compare shortlisted cars by cost, efficiency, and everyday usability</li>
-                    </ul>
-                    <p class="site-advisory">Start wherever your decision is stuck: body style, brands, ownership questions, or direct model comparison.</p>
-                </aside>
+        <section class="home-intro home-wrap" id="explore" aria-labelledby="home-intro-title">
+            <div class="home-intro__heading" data-home-reveal>
+                <p class="home-kicker">The journey, made clearer</p>
+                <h2 id="home-intro-title">Every car has a story.<br><em>Find the one that fits yours.</em></h2>
+            </div>
+            <div class="home-intro__body" data-home-reveal>
+                <p>Maybe you need room for the whole family. Maybe efficiency matters more than acceleration. Or maybe you've already narrowed the field to two cars and need a clearer way to choose.</p>
+                <p>Start with what matters to you. We'll help you look beyond the headline specs.</p>
+                <a class="home-inline-link" href="subPages/about.html">Get to know Engine Starters <span aria-hidden="true">↗</span></a>
             </div>
         </section>
 
-        <section class="site-section">
-            <div class="site-section__header">
-                <span class="site-eyebrow">Start here</span>
-                <h2 class="site-title">Start with the part of the decision that matters most</h2>
-                <p class="site-lead">Some shoppers need to choose a body style first, others need to compare brands, and some are already ready to line up real cars.</p>
+        <section class="home-paths home-wrap" aria-labelledby="home-paths-title">
+            <div class="home-section-heading" data-home-reveal>
+                <div>
+                    <p class="home-kicker">01 / Find your direction</p>
+                    <h2 id="home-paths-title">Where would you like to begin?</h2>
+                </div>
+                <p>Four ways into the same decision. Choose the one that feels right for where you are now.</p>
             </div>
-            <div class="site-grid site-grid--four">
-                <article class="site-card">
-                    <img
-                        class="site-card__image"
-                        src="images/editorial/car-types-lineup.jpg"
-                        alt="A lineup of different car body styles including an SUV, sedan, hatchback, and crossover."
-                        loading="lazy"
-                        decoding="async"
-                    >
-                    <h3>Browse car types</h3>
-                    <p>Learn what makes an SUV, sedan, hatchback, crossover, minivan, electric car, or muscle car a better fit for your usage and budget.</p>
-                    <a class="site-card__link" href="subPages/car-types.html">Explore the car types guide</a>
-                </article>
-                <article class="site-card">
-                    <img
-                        class="site-card__image"
-                        src="images/editorial/brand-showroom.jpg"
-                        alt="Different market-positioned cars including a luxury sedan, electric car, and family SUV."
-                        loading="lazy"
-                        decoding="async"
-                    >
-                    <h3>Study brand positioning</h3>
-                    <p>Compare manufacturer identity, reliability reputation, market focus, and segment coverage across luxury, mainstream, and EV brands.</p>
-                    <a class="site-card__link" href="subPages/brands.html">Open the brand directory</a>
-                </article>
-                <article class="site-card">
-                    <img
-                        class="site-card__image"
-                        src="images/editorial/vehicle-inspection.jpg"
-                        alt="A close automotive inspection view showing a car interior and open engine bay."
-                        loading="lazy"
-                        decoding="async"
-                    >
-                    <h3>Understand components</h3>
-                    <p>Build confidence around engines, chassis systems, and interiors before deciding what features or maintenance priorities matter most.</p>
-                    <a class="site-card__link" href="subPages/components.html">Review component guides</a>
-                </article>
-                <article class="site-card">
-                    <img
-                        class="site-card__image"
-                        src="images/editorial/compare-cars.jpg"
-                        alt="Two cars parked side by side while a buyer reviews their details for comparison."
-                        loading="lazy"
-                        decoding="async"
-                    >
-                    <h3>Compare real trade-offs</h3>
-                    <p>See price, horsepower, fuel economy, acceleration, cargo capacity, and warranty details in a format designed for decision making.</p>
-                    <a class="site-card__link" href="subPages/car-comparison.html">Use the comparison tool</a>
-                </article>
+            <div class="home-path-grid">
+                <a class="home-path home-path--large" href="subPages/car-types.html" data-home-reveal>
+                    <img src="images/editorial/body-styles.jpg" alt="Different everyday vehicle body styles parked together." width="1216" height="912" loading="lazy" decoding="async">
+                    <span class="home-path__content"><span class="home-path__eyebrow">The starting point / 01</span><strong>Find your kind of car.</strong><span class="home-path__description">From nimble hatchbacks to family SUVs, find the shape that suits your life.</span><span class="home-path__arrow" aria-hidden="true">↗</span></span>
+                </a>
+                <a class="home-path" href="subPages/brands.html" data-home-reveal>
+                    <img src="images/editorial/brand-selection.jpg" alt="A selection of vehicles outside a showroom." width="1216" height="912" loading="lazy" decoding="async">
+                    <span class="home-path__content"><span class="home-path__eyebrow">Get to know / 02</span><strong>Explore the brands.</strong><span class="home-path__description">See what different makers offer and where their strengths lie.</span><span class="home-path__arrow" aria-hidden="true">↗</span></span>
+                </a>
+                <a class="home-path" href="subPages/components.html" data-home-reveal>
+                    <img src="images/editorial/engine-interior.jpg" alt="Automotive mechanical and cabin details being inspected." width="1216" height="912" loading="lazy" decoding="async">
+                    <span class="home-path__content"><span class="home-path__eyebrow">Under the surface / 03</span><strong>Know what matters.</strong><span class="home-path__description">Understand the systems behind how a car drives and wears.</span><span class="home-path__arrow" aria-hidden="true">↗</span></span>
+                </a>
+            </div>
+        </section>
+
+        <section class="home-compare" aria-labelledby="home-compare-title">
+            <img class="home-compare__image" src="images/editorial/compare-cars.jpg" alt="Two vehicles being considered side by side." width="1216" height="912" loading="lazy" decoding="async">
+            <div class="home-compare__shade" aria-hidden="true"></div>
+            <div class="home-compare__inner home-wrap" data-home-reveal>
+                <p class="home-kicker">02 / The shortlist</p>
+                <h2 id="home-compare-title">A closer look makes<br><em>the choice clearer.</em></h2>
+                <p>Put two or three cars side by side. Compare listed price, efficiency, performance, warranty and the everyday details you'll actually notice.</p>
+                <a class="home-button home-button--light" href="subPages/car-comparison.html">Compare cars <span aria-hidden="true">↗</span></a>
             </div>
         </section>
 
@@ -190,111 +166,52 @@
             </div>
         </aside>
 
-        <section class="site-section">
-            <div class="site-section__header">
-                <span class="site-eyebrow">Popular collections</span>
-                <h2 class="site-title">Popular topics to explore before choosing a vehicle</h2>
-            </div>
-            <ul class="site-link-list">
-                <li><a href="subPages/types/suv.html">SUV buying overview<small>Practical family and utility research</small></a></li>
-                <li><a href="subPages/types/electric.html">Electric vehicle basics<small>Ownership, technology, and charging context</small></a></li>
-                <li><a href="subPages/types/sports.html">Sports car characteristics<small>Performance, design, and trade-offs</small></a></li>
-                <li><a href="subPages/brands/toyota.html">Toyota brand profile<small>Mainstream reliability and ownership value</small></a></li>
-                <li><a href="subPages/brands/bmw.html">BMW brand profile<small>Luxury, dynamics, and market positioning</small></a></li>
-                <li><a href="subPages/components/engine.html">Engine components guide<small>Core parts and efficiency basics</small></a></li>
-            </ul>
-        </section>
-
-        <section class="site-section">
-            <div class="site-section__header">
-                <span class="site-eyebrow">Comparison-first</span>
-                <h2 class="site-title">Use specs, efficiency, and cost together instead of in separate tabs</h2>
-            </div>
-            <div class="site-grid site-grid--two">
-                <div class="site-highlight">
-                    <h2>What the comparison reveals quickly</h2>
-                    <ul class="site-summary-list">
-                        <li><strong>Performance</strong><span>Horsepower, torque, top speed, and acceleration.</span></li>
-                        <li><strong>Ownership signals</strong><span>Starting price, warranty coverage, fuel economy, and size-related practicality.</span></li>
-                        <li><strong>Daily usability</strong><span>Cargo capacity, fuel tank size, and driver assistance features.</span></li>
-                    </ul>
+        <section class="home-guides home-wrap" aria-labelledby="home-guides-title">
+            <div class="home-section-heading" data-home-reveal>
+                <div>
+                    <p class="home-kicker">03 / The details</p>
+                    <h2 id="home-guides-title">Good questions lead<br>to better decisions.</h2>
                 </div>
-                <div class="site-note site-note--success">
-                    <h2>Best way to compare cars here</h2>
-                    <p>It works best once you already know the kind of car you want. Narrow the field first, then compare two or three realistic options on price, MPG, warranty, and practicality.</p>
-                    <p><a href="subPages/car-comparison.html">Open the car comparison</a> when you are ready to test a real shortlist side by side.</p>
-                </div>
+                <a class="home-inline-link" href="subPages/blog.html">See all guides <span aria-hidden="true">↗</span></a>
             </div>
-        </section>
-
-        <section class="site-section">
-            <div class="site-section__header">
-                <span class="site-eyebrow">Fresh content</span>
-                <h2 class="site-title">Fresh guides for common ownership questions</h2>
-                <p class="site-lead">These articles focus on the maintenance, inspection, and buying questions that usually show up once a shopper gets serious about owning a car well.</p>
-            </div>
-            <div class="site-article-grid">
-                <article class="site-article">
-                    <img
-                        class="site-article__image"
-                        src="images/editorial/brake-service.jpg"
-                        alt="A close view of a brake disc and wheel assembly in a clean workshop."
-                        loading="lazy"
-                        decoding="async"
-                    >
-                    <p class="site-article__meta">Components guide</p>
-                    <h2>How to choose brake pads: ceramic vs semi-metallic</h2>
-                    <p>Break down noise, dust, longevity, and driving feel so it is easier to choose the pad material that suits daily traffic or heavier braking use.</p>
-                    <a class="site-article__cta" href="subPages/blog/brake-pads-ceramic-vs-semi-metallic.html">Read the brake pad guide</a>
+            <div class="home-story-grid">
+                <article class="home-story" data-home-reveal>
+                    <a class="home-story__media" href="subPages/blog/used-car-prepurchase-inspection-checklist.html"><img src="images/editorial/used-car-inspection.jpg" alt="A buyer looking under a used car's hood during an inspection." width="1216" height="912" loading="lazy" decoding="async"></a>
+                    <div class="home-story__text"><p class="home-kicker">Buying / Checklist</p><h3><a href="subPages/blog/used-car-prepurchase-inspection-checklist.html">Before you say yes to a used car.</a></h3><p>What to check, what to ask and which signs deserve a closer look before you commit.</p><a class="home-inline-link" href="subPages/blog/used-car-prepurchase-inspection-checklist.html">Read the guide <span aria-hidden="true">↗</span></a></div>
                 </article>
-                <article class="site-article">
-                    <img
-                        class="site-article__image"
-                        src="images/editorial/timing-service.jpg"
-                        alt="A technician inspecting exposed engine timing components in a workshop."
-                        loading="lazy"
-                        decoding="async"
-                    >
-                    <p class="site-article__meta">Maintenance guide</p>
-                    <h2>Timing belt vs timing chain maintenance guide</h2>
-                    <p>Clarify replacement risk, long-term ownership cost, and the warning signs that buyers or owners should watch for.</p>
-                    <a class="site-article__cta" href="subPages/blog/timing-belt-vs-timing-chain-maintenance-guide.html">Read the timing guide</a>
+                <article class="home-story" data-home-reveal>
+                    <a class="home-story__media" href="subPages/blog/brake-pads-ceramic-vs-semi-metallic.html"><img src="images/editorial/brake-service.jpg" alt="A close look at a brake disc and wheel assembly." width="1216" height="912" loading="lazy" decoding="async"></a>
+                    <div class="home-story__text"><p class="home-kicker">Maintenance / Brakes</p><h3><a href="subPages/blog/brake-pads-ceramic-vs-semi-metallic.html">Brake pads: which material suits your driving?</a></h3><p>Noise, dust, durability and feel: the differences worth knowing before replacing your pads.</p><a class="home-inline-link" href="subPages/blog/brake-pads-ceramic-vs-semi-metallic.html">Read the guide <span aria-hidden="true">↗</span></a></div>
                 </article>
-                <article class="site-article">
-                    <img
-                        class="site-article__image"
-                        src="images/editorial/oil-service.jpg"
-                        alt="Motor oil containers beside an open engine bay in a clean service setting."
-                        loading="lazy"
-                        decoding="async"
-                    >
-                    <p class="site-article__meta">Ownership guide</p>
-                    <h2>Engine oil grades explained: 5W-30 vs 0W-20</h2>
-                    <p>Show how viscosity grades connect to climate, manufacturer specs, and real-world maintenance decisions.</p>
-                    <a class="site-article__cta" href="subPages/blog/engine-oil-grades-explained-5w30-vs-0w20.html">Read the oil guide</a>
+                <article class="home-story" data-home-reveal>
+                    <a class="home-story__media" href="subPages/blog/timing-belt-vs-timing-chain-maintenance-guide.html"><img src="images/editorial/timing-service.jpg" alt="A technician inspecting exposed timing components in a workshop." width="1216" height="912" loading="lazy" decoding="async"></a>
+                    <div class="home-story__text"><p class="home-kicker">Maintenance / Engine</p><h3><a href="subPages/blog/timing-belt-vs-timing-chain-maintenance-guide.html">Timing belt or chain? Know the difference.</a></h3><p>Understand maintenance intervals and the questions to ask about a car's service history.</p><a class="home-inline-link" href="subPages/blog/timing-belt-vs-timing-chain-maintenance-guide.html">Read the guide <span aria-hidden="true">↗</span></a></div>
                 </article>
-                <article class="site-article">
-                    <img
-                        class="site-article__image"
-                        src="images/editorial/used-car-inspection.jpg"
-                        alt="A buyer inspecting a used car's bodywork and engine bay in daylight."
-                        loading="lazy"
-                        decoding="async"
-                    >
-                    <p class="site-article__meta">Buying checklist</p>
-                    <h2>Used car pre-purchase inspection checklist</h2>
-                    <p>Cover the questions, checks, and warning signs that help a buyer avoid expensive surprises before closing a deal.</p>
-                    <a class="site-article__cta" href="subPages/blog/used-car-prepurchase-inspection-checklist.html">Read the inspection checklist</a>
+                <article class="home-story" data-home-reveal>
+                    <a class="home-story__media" href="subPages/blog/engine-oil-grades-explained-5w30-vs-0w20.html"><img src="images/editorial/oil-service.jpg" alt="Motor oil containers near an open engine bay." width="1216" height="912" loading="lazy" decoding="async"></a>
+                    <div class="home-story__text"><p class="home-kicker">Ownership / Oil</p><h3><a href="subPages/blog/engine-oil-grades-explained-5w30-vs-0w20.html">What your engine oil grade really means.</a></h3><p>Make sense of viscosity grades without losing sight of your car's own specifications.</p><a class="home-inline-link" href="subPages/blog/engine-oil-grades-explained-5w30-vs-0w20.html">Read the guide <span aria-hidden="true">↗</span></a></div>
                 </article>
             </div>
         </section>
 
-        <section class="site-section">
-            <div class="site-section__header">
-                <span class="site-eyebrow">Frequently asked</span>
-                <h2 class="site-title">Common questions people ask before they compare cars</h2>
+        <section class="home-collections home-wrap" aria-labelledby="home-collections-title">
+            <div class="home-section-heading" data-home-reveal>
+                <div><p class="home-kicker">Explore further</p><h2 id="home-collections-title">Follow your curiosity.</h2></div>
+                <p>Sometimes the next useful question is just around the corner.</p>
             </div>
-            <div class="site-faq">
+            <div class="home-collections__grid">
+                <a href="subPages/types/suv.html"><span>01 / Car types</span><strong>Is an SUV right for you?</strong><span aria-hidden="true">↗</span></a>
+                <a href="subPages/types/electric.html"><span>02 / Car types</span><strong>Living with an electric car.</strong><span aria-hidden="true">↗</span></a>
+                <a href="subPages/brands/toyota.html"><span>03 / Brands</span><strong>Get to know Toyota.</strong><span aria-hidden="true">↗</span></a>
+                <a href="subPages/components/engine.html"><span>04 / Components</span><strong>What makes an engine tick?</strong><span aria-hidden="true">↗</span></a>
+            </div>
+        </section>
+
+        <section class="home-faq home-wrap" aria-labelledby="home-faq-title">
+            <div class="home-section-heading" data-home-reveal>
+                <div><p class="home-kicker">A few good questions</p><h2 id="home-faq-title">Before you decide.</h2></div>
+            </div>
+            <div class="site-faq home-faq__list">
                 <details>
                     <summary>Should I start with car types or with a brand?</summary>
                     <p>Start with vehicle type if your needs are practical and usage-driven. Start with brand if your shortlist is shaped more by reliability, design language, or ownership reputation.</p>
@@ -309,9 +226,18 @@
                 </details>
             </div>
         </section>
+
+        <section class="home-close" aria-labelledby="home-close-title">
+            <div class="home-wrap" data-home-reveal>
+                <p class="home-kicker">04 / Ready when you are</p>
+                <h2 id="home-close-title">A little clarity goes<br><em>a long way.</em></h2>
+                <p>Whether you're browsing or ready to compare, take the next step at your own pace.</p>
+                <a class="home-button home-button--light" href="subPages/car-comparison.html">Start comparing <span aria-hidden="true">↗</span></a>
+            </div>
+        </section>
     </main>
 
-    <footer class="site-footer">
+    <footer class="site-footer home-footer">
         <div class="site-footer__inner">
             <div class="site-footer__grid">
                 <section>
@@ -347,8 +273,7 @@
 
     <script src="js/ad-slots.js"></script>
     <script src="js/site.js"></script>
+    <script src="js/home.js"></script>
     <script src="js/ads.js"></script>
 </body>
 </html>
-
-
