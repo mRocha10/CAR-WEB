@@ -10,7 +10,6 @@ document.addEventListener("DOMContentLoaded", () => {
         document.getElementById("car3-model")
     ];
     const compareForm = document.getElementById("comparison-form");
-    const compareButton = document.getElementById("compare-btn");
     const resultsContainer = document.getElementById("comparison-results");
     const statusElement = document.getElementById("comparison-status");
     const dataUrl = "../data/car-data.json";
@@ -128,7 +127,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     }))
                     .filter((entry) => entry.numeric !== null);
 
-                if (candidates.length === 0) {
+                if (candidates.length < 2) {
                     return "";
                 }
 
@@ -179,7 +178,8 @@ document.addEventListener("DOMContentLoaded", () => {
                             className = "site-table__watch";
                         }
 
-                        return `<td class="${className}">${escapeHtml(entry.raw)}</td>`;
+                        const label = className === "site-table__best" ? "Best" : (className === "site-table__watch" ? "Watch" : "");
+                        return `<td class="${className}">${escapeHtml(entry.raw)}${label ? ` <span class="site-table__label">${label}</span>` : ""}</td>`;
                     })
                     .join("");
 
@@ -198,7 +198,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     <td>
                         <img
                             src="${escapeHtml(car.specs.image)}"
-                            alt="${escapeHtml(`${car.brandName} ${car.modelName}`)}"
+                            alt="${escapeHtml(`Illustrative body style for ${car.brandName} ${car.modelName}; not a model-specific photo`)}"
                             class="comparison-image"
                             loading="lazy"
                             width="240"
@@ -210,6 +210,8 @@ document.addEventListener("DOMContentLoaded", () => {
             .join("");
 
         return `
+            <p class="site-advisory">Body-style images are illustrative, not photographs of the exact model or trim. Figures vary by market, year, and equipment; check the manufacturer's current specifications before buying.</p>
+            <p class="site-table-hint">Scroll the table sideways to see every selected vehicle on a narrow screen.</p>
             <div class="site-table-wrap">
                 <table class="site-table">
                     <thead>
@@ -220,7 +222,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     </thead>
                     <tbody>
                         <tr>
-                            <th scope="row">Vehicle image</th>
+                            <th scope="row">Illustrative body style</th>
                             ${imageRow}
                         </tr>
                         ${rows}
@@ -247,7 +249,7 @@ document.addEventListener("DOMContentLoaded", () => {
         window.history.replaceState({}, "", nextUrl);
     }
 
-    function renderComparison() {
+    function renderComparison(focusResults = false) {
         const cars = [0, 1, 2].map(getSelectedCar).filter(Boolean);
 
         if (cars.length === 0) {
@@ -263,6 +265,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
 
         resultsContainer.innerHTML = `
+            <h2 tabindex="-1">Comparison results</h2>
             <div class="site-grid site-grid--four">
                 ${buildSummary(cars)}
             </div>
@@ -271,6 +274,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
         setStatus(`Showing ${cars.length} vehicle ${cars.length === 1 ? "profile" : "comparisons"} with highlighted strengths and trade-offs.`);
         syncUrl();
+        if (focusResults) {
+            resultsContainer.querySelector("h2").focus();
+        }
     }
 
     function applyQueryParams() {
@@ -303,14 +309,10 @@ document.addEventListener("DOMContentLoaded", () => {
             modelSelect.addEventListener("change", syncUrl);
         });
 
-        if (compareButton) {
-            compareButton.addEventListener("click", renderComparison);
-        }
-
         if (compareForm) {
             compareForm.addEventListener("submit", (event) => {
                 event.preventDefault();
-                renderComparison();
+                renderComparison(true);
             });
         }
 
@@ -327,7 +329,9 @@ document.addEventListener("DOMContentLoaded", () => {
         .then((data) => {
             carData = data;
             initialize();
-            setStatus("Vehicle data loaded. Compare efficiency, performance, and ownership signals.");
+            if (!resultsContainer.querySelector(".site-table")) {
+                setStatus("Vehicle data loaded. Select up to three vehicles to compare.");
+            }
         })
         .catch((error) => {
             console.error(error);

@@ -1252,10 +1252,10 @@ const typeProfiles = {
         relatedLinks: [
             { href: "../brands/tesla.html", label: "See Tesla EV angles", text: "Useful if ecosystem and charging matter most." },
             { href: "../brands/byd.html", label: "See BYD EV angles", text: "Helpful when value and battery story are central." },
-            { href: "../car-comparison.html", label: "Compare EVs directly", text: "Use objective range, price, and cargo numbers." }
+            { href: "../car-comparison.html", label: "Compare EV specs", text: "Check listed price, cargo space, and warranty; verify range separately with the manufacturer." }
         ],
         sidebarLinks: [
-            { href: "../car-comparison.html", label: "Compare real EV running costs", text: "Line up range, warranty, cargo, and price instead of stopping at the powertrain headline." },
+            { href: "../car-comparison.html", label: "Compare listed EV specifications", text: "Line up price, cargo space, and warranty; this tool does not calculate charging costs or range." },
             { href: "../components/interior.html", label: "Check cabin and software usability", text: "Useful when screen logic, storage, and seat comfort matter as much as the battery." },
             { href: "../brands/tesla.html", label: "See software-led EV context", text: "Helpful if charging ecosystem and interface quality are deciding the shortlist." }
         ]
@@ -2109,6 +2109,7 @@ function buildTemplate(data) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>document.documentElement.classList.add("js-nav");</script>
     <title>${escapeHtml(data.metaTitle)}</title>
     <meta name="description" content="${escapeAttribute(data.description)}">
     <meta name="robots" content="index, follow, max-image-preview:large">
@@ -2200,7 +2201,7 @@ ${buildFooter()}
 function getBrandData(filePath, html, group) {
     const heroHtml = extractFirst(html, /(<section class="brand-hero"[\s\S]*?<\/section>)/i);
     const brandSections = extractAll(html, /(<section class="(?:brand-info-section|brand-focus-section|model-lineup-section)"[\s\S]*?<\/section>)/gi);
-    const contentHtml = brandSections.join("\n\n").trim();
+    const contentHtml = brandSections.join("\n\n").replace(/<h2>Current Model Lineup<\/h2>/gi, "<h2>Model examples (availability varies by market and year)</h2>").trim();
     const historySection = sectionHtml(contentHtml, "brand-info-section");
     const focusSection = sectionHtml(contentHtml, "brand-focus-section");
     const modelSection = sectionHtml(contentHtml, "model-lineup-section");
@@ -2237,14 +2238,14 @@ function getBrandData(filePath, html, group) {
             text: profile?.summary || `${title} is best used as a market filter, not as a complete buying answer.`
         },
         {
-            kicker: "Current strengths",
-            title: "What the brand is pushing now",
+            kicker: "Market focus",
+            title: "Where the brand is best known",
             text: focusItems[0] || `${title} should be judged by the exact areas where its current lineup is strongest.`
         },
         {
             kicker: "Good place to start",
             title: "Where to search first",
-            text: modelCategories.length ? `${title} is most worth checking in ${modelCategories.slice(0, 2).map((item) => item.title.toLowerCase()).join(" and ")}.` : `Start with the vehicle category where ${title} has the clearest fit for your needs.`
+            text: modelCategories.length ? `Explore ${modelCategories.slice(0, 2).map((item) => item.title).join(" and ")} in the model examples below.` : `Start with the vehicle category where ${title} has the clearest fit for your needs.`
         }
     ];
     const editorialHtml = `
@@ -2292,8 +2293,9 @@ function getBrandData(filePath, html, group) {
                     </section>
                     ${(focusItems.length || modelCategories.length) ? `
                     <section class="site-highlight">
-                        <h2>Current focus and lineup signals</h2>
-                        ${focusItems.length ? `<p>${escapeHtml(profile?.focusLead || `${title}'s current strategy is easiest to understand through these themes: ${focusItems.join("; ")}.`)}</p>` : ""}
+                        <h2>Brand focus and model examples</h2>
+                        <p>Models listed here include past or market-specific vehicles; check local availability and model year before shortlisting.</p>
+                        ${focusItems.length ? `<p>${escapeHtml(profile?.focusLead || `${title}'s positioning is easier to understand through these themes: ${focusItems.join("; ")}.`)}</p>` : ""}
                         ${modelCategories.length ? `<ul class="site-summary-list">
                             ${sectionList(modelCategories.slice(0, 4))}
                         </ul>` : ""}
@@ -2374,7 +2376,7 @@ ${buildFaqHtml(faqItems)}`;
         generatedGuideHtml,
         contentHtml: profile?.referenceSections ? buildReferenceSections(profile.referenceSections) : contentHtml,
         referenceKicker: "Background and lineup",
-        referenceHeading: `${title} history, current focus, and model context`,
+        referenceHeading: `${title} history and model context`,
         referenceIntro: `${title}'s background and lineup notes matter most once you already know what kind of vehicle and ownership experience you are trying to buy.`,
         sidebarHeading: "Where to go next",
         sidebarText: "Keep the brand in context by checking the body style, rivals, and ownership questions that matter most to your shortlist.",
@@ -2386,6 +2388,36 @@ ${buildFaqHtml(faqItems)}`;
         faqItems
     };
 }
+
+const typeCostGuidance = {
+    compact: "Compare insurance, tyre sizes, and motorway fuel use; a cheap purchase is less useful if the car is strained on your regular route.",
+    convertible: "Budget for roof maintenance, insurance, and seasonal use as well as the purchase price.",
+    crossover: "Compare the price, tyres, and fuel use against a similar hatchback before paying extra for ride height.",
+    electric: "Model home and public charging prices, insurance, and depreciation alongside the upfront cost.",
+    hatchback: "Compare insurance, tyre sizes, and real-world economy; a smaller car is not automatically cheaper in every trim.",
+    luxury: "Allow for depreciation, premium tyres, insurance, and out-of-warranty repairs, not just cabin comfort.",
+    minivan: "Check fuel use, insurance, and tyre costs against an SUV with the same number of usable seats.",
+    muscle: "Budget for fuel, tyres, insurance, and performance-related maintenance before judging the sticker price.",
+    pickup: "Include fuel, commercial-use insurance, tyres, and parking costs alongside the towing or payload benefit.",
+    sedan: "Compare fuel economy and tyre bills with a similarly priced crossover, then weigh the trunk compromise.",
+    sports: "Estimate insurance, specialist tyres, servicing, and depreciation before buying for weekend driving alone.",
+    suv: "Price the tyres, fuel, insurance, and parking as well as the extra height and cargo flexibility."
+};
+
+const typeRealityIntro = {
+    compact: "Small dimensions help in town, but check whether the car still feels settled on your usual faster roads.",
+    convertible: "Try the roof, cabin storage, and motorway noise on the actual model before committing to open-air driving.",
+    crossover: "The higher seat is useful only if it makes entry, visibility, or cargo loading meaningfully easier.",
+    electric: "Charging access and real trip length matter more than an advertised range figure in isolation.",
+    hatchback: "The rear opening is the practical advantage; test your actual luggage rather than relying on volume figures.",
+    luxury: "Refinement varies widely by wheel size and trim, so test comfort on the roads you actually use.",
+    minivan: "Sliding doors and three-row access are most valuable when you use every seat routinely.",
+    muscle: "The engine character is the appeal, but visibility, traction, and fuel use shape ordinary journeys.",
+    pickup: "Measure your parking space and payload needs before paying for towing capability you may never use.",
+    sedan: "A separate trunk can be quiet and secure, but its opening may be awkward for bulky equipment.",
+    sports: "Drive the car on familiar roads and check whether the seating, visibility, and luggage space still work.",
+    suv: "Try the rear seats and cargo floor before assuming a taller body gives you more usable space."
+};
 
 function getTypeData(filePath, html, group) {
     const contentHtml = extractLast(html, /(<article class="car-type-section"[\s\S]*?<\/article>)/gi).trim();
@@ -2423,7 +2455,7 @@ function getTypeData(filePath, html, group) {
         {
             kicker: "Money lens",
             title: "What this changes in cost",
-            text: (profile?.metrics && profile.metrics[0]) || "Start with purchase price and monthly running cost."
+            text: typeCostGuidance[slug] || "Start with purchase price and monthly running cost."
         },
         {
             kicker: "Practical lens",
@@ -2467,7 +2499,7 @@ function getTypeData(filePath, html, group) {
                         <div class="site-detail-feature__header">
                             <p class="site-detail-kicker">Daily reality</p>
                             <h2>What this body style changes once you live with it</h2>
-                            <p>The right category becomes obvious when you test cost, practicality, and long-term ease instead of just following trends.</p>
+                            <p>${escapeHtml(typeRealityIntro[slug] || "Test cost, practicality, and long-term ease in your normal routine.")}</p>
                         </div>
                         ${buildTopicGrid(typeRealityCards)}
                     </section>
@@ -2535,7 +2567,7 @@ ${buildFaqHtml(faqItems)}`;
         ogImage: typeOgImage,
         kicker: "Ownership fit first",
         useHeading: profile?.useHeading || "What matters first",
-        useText: profile?.useText || `${title} only makes sense if it suits your passengers, roads, cargo needs, parking reality, and running-cost expectations better than the closest alternative.`,
+        useText: profile?.useText || `${title} are worth considering when they suit your passengers, roads, cargo needs, parking reality, and running costs better than the closest alternative.`,
         summaryItems: profile?.summaryItems || [
             { title: "Match your use case", text: "Passenger needs, cargo, roads, and parking matter more than trend-driven styling." },
             { title: "Watch the trade-offs", text: "Comfort, efficiency, price, and versatility rarely peak at the same time." },

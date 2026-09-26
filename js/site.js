@@ -4,6 +4,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const siteHeader = document.querySelector(".site-header");
 
     if (nav && toggle) {
+        document.documentElement.classList.add("js-nav");
         const setNavState = (isOpen) => {
             nav.setAttribute("data-open", String(isOpen));
             toggle.setAttribute("aria-expanded", String(isOpen));
@@ -25,6 +26,7 @@ document.addEventListener("DOMContentLoaded", () => {
         document.addEventListener("keydown", (event) => {
             if (event.key === "Escape" && nav.getAttribute("data-open") === "true") {
                 setNavState(false);
+                toggle.focus();
             }
         });
     }
@@ -43,10 +45,25 @@ document.addEventListener("DOMContentLoaded", () => {
         document.body.appendChild(backToTopButton);
 
         const scrollToHeader = () => {
+            const focusMenu = () => {
+                if (window.scrollY > 8) {
+                    return;
+                }
+                window.removeEventListener("scroll", focusMenu);
+                if (toggle && getComputedStyle(toggle).display !== "none") {
+                    nav.setAttribute("data-open", "true");
+                    toggle.setAttribute("aria-expanded", "true");
+                    toggle.focus({ preventScroll: true });
+                } else {
+                    siteHeader.querySelector(".site-nav__list a, .site-brand")?.focus({ preventScroll: true });
+                }
+            };
+            window.addEventListener("scroll", focusMenu, { passive: true });
             window.scrollTo({
                 top: 0,
-                behavior: "smooth"
+                behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "instant" : "smooth"
             });
+            focusMenu();
         };
 
         backToTopButton.addEventListener("click", scrollToHeader);

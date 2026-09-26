@@ -1,8 +1,9 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>document.documentElement.classList.add("js-nav");</script>
     <title>Compare Cars Online | Specs, Efficiency, Price, and Ownership Signals</title>
     <meta name="description" content="Compare up to three cars side by side by price, fuel economy, acceleration, horsepower, cargo space, and warranty details.">
     <meta name="robots" content="index, follow, max-image-preview:large">
@@ -161,13 +162,13 @@
                 <div class="site-form__actions">
                     <button class="site-button" type="submit" id="compare-btn">Compare selected vehicles</button>
                     <a class="site-button--secondary site-button--secondary-light" href="car-comparison.html">Clear comparison</a>
-                    <p class="site-status" id="comparison-status">Vehicle data will load shortly.</p>
+                    <p class="site-status" id="comparison-status" role="status" aria-live="polite">Vehicle data will load shortly.</p>
                 </div>
             </form>
         </section>
 
         <section class="site-section">
-            <div id="comparison-results">
+            <div id="comparison-results" aria-label="Vehicle comparison results">
                 <div class="site-note">
                     <h2>Choose vehicles to begin</h2>
                     <p>Select up to three vehicles to compare price, performance, fuel economy, cargo space, driver assistance, and warranty details.</p>
@@ -238,6 +239,5 @@
     <script src="../js/car-comparison.js"></script>
 </body>
 </html>
-
 
 

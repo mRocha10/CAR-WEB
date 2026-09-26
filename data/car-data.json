@@ -393,7 +393,7 @@
           ],
           "specs": {
             "m3": {
-              "image": "../images/types/sedan-green.jpg",
+              "image": "../images/types/editorial-sedan.jpg",
               "engine": "3.0L Twin-Turbo Inline-6",
               "horsepower": "503 hp",
               "torque": "479 lb-ft",
@@ -845,7 +845,7 @@
               "warranty": "3-year/36,000-mile limited warranty"
             },
             "ram": {
-              "image": "../images/types/pickup-gray.jpg",
+              "image": "../images/types/editorial-pickup.jpg",
               "engine": "5.7L V8",
               "horsepower": "395 hp",
               "torque": "410 lb-ft",
@@ -873,7 +873,7 @@
           ],
           "specs": {
             "mustang": {
-              "image": "../images/types/muscle-blue.jpg",
+              "image": "../images/types/editorial-muscle.jpg",
               "engine": "5.0L V8",
               "horsepower": "450 hp",
               "torque": "410 lb-ft",
@@ -1291,7 +1291,7 @@
       "warranty": "5-year/60,000-mile limited warranty"
     },
     "etype": {
-      "image": "../images/types/convertible-red.jpg",
+      "image": "../images/types/editorial-convertible.jpg",
       "engine": "4.2L Inline-6",
       "horsepower": "265 hp",
       "torque": "240 lb-ft",
@@ -3285,7 +3285,7 @@
   ],
   "specs": {
     "golf": {
-      "image": "../images/types/hatchback-gray.jpg",
+      "image": "../images/types/editorial-hatchback.jpg",
       "engine": "2.0L Turbo 4-Cylinder",
       "horsepower": "241 hp",
       "torque": "273 lb-ft",

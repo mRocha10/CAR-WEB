@@ -856,6 +856,18 @@ img {
     padding: 0.75rem;
 }
 
+.site-table-hint {
+    color: var(--site-text-muted);
+    font-size: 0.9rem;
+}
+
+.site-table__label {
+    display: inline-block;
+    margin-left: 0.4rem;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+}
+
 .site-table {
     width: 100%;
     border-collapse: collapse;
@@ -963,6 +975,11 @@ img {
     gap: 1.5rem;
     grid-template-columns: minmax(0, 2.1fr) minmax(280px, 1fr);
     align-items: start;
+}
+
+.site-detail-shell > *,
+.site-article-layout > * {
+    min-width: 0;
 }
 
 .site-detail-content,
@@ -1318,6 +1335,32 @@ img {
     display: none !important;
 }
 
+@media (max-width: 1100px) {
+    .site-header__inner {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .site-nav {
+        display: block;
+        width: 100%;
+    }
+
+    .js-nav .site-nav__toggle {
+        display: inline-flex;
+    }
+
+    .site-nav__list {
+        width: 100%;
+        margin-top: 0.8rem;
+        flex-direction: column;
+    }
+
+    .js-nav .site-nav[data-open="false"] .site-nav__list {
+        display: none;
+    }
+}
+
 @media (max-width: 992px) {
     .site-hero__grid,
     .site-grid--four,
@@ -1333,36 +1376,11 @@ img {
     .site-detail-rich .model-categories,
     .site-insight-grid,
     .site-topic-grid {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 }
 
 @media (max-width: 768px) {
-    .site-header__inner {
-        align-items: flex-start;
-        flex-direction: column;
-    }
-
-    .site-nav {
-        width: 100%;
-        display: block;
-    }
-
-    .site-nav__toggle {
-        display: inline-flex;
-    }
-
-    .site-nav__list {
-        display: none;
-        margin-top: 0.8rem;
-        flex-direction: column;
-        width: 100%;
-    }
-
-    .site-nav[data-open="true"] .site-nav__list {
-        display: flex;
-    }
-
     .site-back-to-top {
         right: max(0.85rem, env(safe-area-inset-right));
         bottom: max(0.85rem, env(safe-area-inset-bottom));

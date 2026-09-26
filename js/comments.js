@@ -1,6 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
     const commentsContainer = document.getElementById("comments-container");
-    const commentForm = document.getElementById("comment-form");
     const statusElement = document.getElementById("comment-status");
     const commentsPath = "../data/comments.json";
 
@@ -55,13 +54,6 @@ document.addEventListener("DOMContentLoaded", () => {
             setStatus("We could not load community notes right now.");
             console.error(error);
         }
-    }
-
-    if (commentForm) {
-        commentForm.addEventListener("submit", (event) => {
-            event.preventDefault();
-            setStatus("Direct public submissions are paused while moderation is being rebuilt. Please use the contact page for corrections or feedback.");
-        });
     }
 
     loadComments();
