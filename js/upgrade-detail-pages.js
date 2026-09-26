@@ -1811,6 +1811,7 @@ function resolveBrandLogoAsset(slug, filePath) {
 function resolveTypeImageAsset(slug, filePath) {
     const typeAssetSlug = slug === "sports" ? "sports-car" : slug;
     const candidates = [
+        `../../images/types/editorial-${slug}.jpg`,
         `../../images/types/${typeAssetSlug}.webp`,
         `../../images/types/${typeAssetSlug}.png`
     ];
@@ -2547,9 +2548,9 @@ ${buildFaqHtml(faqItems)}`;
         ],
         mediaHtml: buildDetailMedia(
             typeMediaSrc,
-            localTypeImage ? `${title} illustration` : `${title} example`,
+            localTypeImage?.includes("/editorial-") ? `Representative vehicle in the ${title.toLowerCase()} category` : (localTypeImage ? `${title} illustration` : `${title} example`),
             description,
-            localTypeImage ? "site-detail-media--type" : ""
+            localTypeImage?.includes("/editorial-") ? "site-detail-media--type-photo" : (localTypeImage ? "site-detail-media--type" : "")
         ),
         editorialHtml,
         generatedGuideHtml,
