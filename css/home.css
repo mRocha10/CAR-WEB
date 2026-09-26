@@ -526,6 +526,10 @@
     margin: 5rem auto;
 }
 
+.home-page .site-ad-slot__frame {
+    overflow: hidden;
+}
+
 .home-guides {
     padding-top: clamp(6rem, 10vw, 11rem);
 }
