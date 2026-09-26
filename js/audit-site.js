@@ -41,6 +41,9 @@ for (const file of pages) {
     const html = fs.readFileSync(file, "utf8");
     const headings = html.match(/<h1(?:\s|>)/gi) || [];
     const canonical = html.match(/<link\s+[^>]*rel="canonical"/gi) || [];
+    if (html.includes("/api/ide/v1/text_to_image")) {
+        report(file, "unverified remote image generation URL");
+    }
     if (headings.length !== 1) {
         report(file, `expected one h1, found ${headings.length}`);
     }
@@ -54,6 +57,30 @@ for (const file of pages) {
         if (!/\balt="/i.test(match[0])) {
             report(file, "image without alt text");
         }
+    }
+}
+
+const editorialDir = path.join(root, "images", "editorial");
+for (const name of fs.readdirSync(editorialDir)) {
+    if (!name.endsWith(".jpg")) {
+        continue;
+    }
+    const file = path.join(editorialDir, name);
+    const bytes = fs.readFileSync(file);
+    let dimensions;
+    for (let offset = 2; offset < bytes.length - 9;) {
+        if (bytes[offset] !== 0xff) {
+            break;
+        }
+        const marker = bytes[offset + 1];
+        if ([0xc0, 0xc1, 0xc2, 0xc3].includes(marker)) {
+            dimensions = [bytes.readUInt16BE(offset + 7), bytes.readUInt16BE(offset + 5)];
+            break;
+        }
+        offset += 2 + bytes.readUInt16BE(offset + 2);
+    }
+    if (!dimensions || dimensions[0] !== 1216 || dimensions[1] !== 912) {
+        report(file, "editorial image is not a verified landscape photograph");
     }
 }
 

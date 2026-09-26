@@ -1789,10 +1789,6 @@ function hasUsableAsset(assetPath, filePath) {
     return fs.existsSync(path.resolve(path.dirname(filePath), assetPath));
 }
 
-function createGeneratedImageUrl(prompt, imageSize = "landscape_4_3") {
-    return `https://coresg-normal.trae.ai/api/ide/v1/text_to_image?prompt=${encodeURIComponent(prompt)}&image_size=${imageSize}`;
-}
-
 function buildDetailMedia(imageUrl, altText, overlayText, mediaClass = "", imageClass = "") {
     const classes = ["site-detail-media", mediaClass].filter(Boolean).join(" ");
     const imgClasses = imageClass ? ` class="${escapeAttribute(imageClass)}"` : "";
@@ -1828,16 +1824,11 @@ function resolveComponentImageAsset(slug, filePath) {
     return candidates.find((candidate) => hasUsableAsset(candidate, filePath)) || "";
 }
 
-function buildBrandImagePrompt(title) {
-    return `professional automotive editorial photography, refined representative vehicle lineup for ${title}, realistic showroom and road setting, clean natural light, serious automotive publication style, no text, no watermark`;
-}
-
-function buildTypeImagePrompt(title) {
-    return `professional automotive editorial photography, ${title} in realistic daily driving use, clean environment, modern daylight, serious automotive publication style, no text, no watermark`;
-}
-
-function buildComponentImagePrompt(title) {
-    return `professional automotive editorial photography, detailed ${title} system shown in a modern vehicle context, realistic engineering focus, clean workshop and vehicle lighting, serious automotive publication style, no text, no watermark`;
+function requireLocalImage(asset, filePath) {
+    if (!asset || /^https?:\/\//i.test(asset) || !hasUsableAsset(asset, filePath)) {
+        throw new Error(`Missing local image for ${path.relative(ROOT, filePath)}`);
+    }
+    return asset;
 }
 
 function toAbsoluteUrl(relativeAssetPath, filePath) {
@@ -2207,12 +2198,11 @@ function getBrandData(filePath, html, group) {
     const modelSection = sectionHtml(contentHtml, "model-lineup-section");
     const title = stripTags(extractFirst(heroHtml, /<h1[^>]*>([\s\S]*?)<\/h1>/i)) || stripTags(extractFirst(html, /<h1[^>]*class="site-title"[^>]*>([\s\S]*?)<\/h1>/i)) || fallbackNameFromFile(filePath);
     const tagline = stripTags(extractFirst(heroHtml, /<p[^>]*>([\s\S]*?)<\/p>/i)) || `${title} overview`;
-    const heroImage = extractFirst(heroHtml, /background-image:\s*url\(['"]?([^'")]+)['"]?\)/i);
     const slug = path.basename(filePath, ".html");
     const profile = brandProfiles[slug];
     const brandLogo = resolveBrandLogoAsset(slug, filePath);
-    const brandMediaSrc = brandLogo || (hasUsableAsset(heroImage, filePath) ? heroImage : createGeneratedImageUrl(buildBrandImagePrompt(title)));
-    const brandOgImage = brandLogo ? toAbsoluteUrl(brandLogo, filePath) : (hasUsableAsset(heroImage, filePath) ? toAbsoluteUrl(heroImage, filePath) : brandMediaSrc);
+    const brandMediaSrc = requireLocalImage(brandLogo, filePath);
+    const brandOgImage = toAbsoluteUrl(brandMediaSrc, filePath);
     const historyParagraphs = paragraphsFromHtml(historySection);
     const focusItems = extractListItemsFromHtml(focusSection);
     const modelCategories = extractModelCategories(modelSection);
@@ -2422,12 +2412,11 @@ const typeRealityIntro = {
 function getTypeData(filePath, html, group) {
     const contentHtml = extractLast(html, /(<article class="car-type-section"[\s\S]*?<\/article>)/gi).trim();
     const title = stripTags(extractFirst(contentHtml, /<h2[^>]*class="car-type-title"[^>]*>([\s\S]*?)<\/h2>/i)) || stripTags(extractFirst(html, /<h1[^>]*class="site-title"[^>]*>([\s\S]*?)<\/h1>/i)) || fallbackNameFromFile(filePath);
-    const imageSrc = extractFirst(contentHtml, /<img[^>]+src="([^"]+)"[^>]*class="car-type-image"/i) || extractFirst(contentHtml, /<img[^>]+class="car-type-image"[^>]+src="([^"]+)"/i);
     const slug = path.basename(filePath, ".html");
     const profile = typeProfiles[slug];
     const localTypeImage = resolveTypeImageAsset(slug, filePath);
-    const typeMediaSrc = localTypeImage || (hasUsableAsset(imageSrc, filePath) ? imageSrc : createGeneratedImageUrl(buildTypeImagePrompt(title)));
-    const typeOgImage = localTypeImage ? toAbsoluteUrl(localTypeImage, filePath) : (hasUsableAsset(imageSrc, filePath) ? toAbsoluteUrl(imageSrc, filePath) : typeMediaSrc);
+    const typeMediaSrc = requireLocalImage(localTypeImage, filePath);
+    const typeOgImage = toAbsoluteUrl(typeMediaSrc, filePath);
     const alternativeLinks = profile?.alternativeLinks || typeAlternativeLinks[slug] || [
         { href: "suv.html", label: "Compare with SUVs", text: "Useful if height, family use, or rougher roads are part of the question." },
         { href: "sedan.html", label: "Compare with sedans", text: "Helpful when efficiency and road manners matter more than image." }
@@ -2607,7 +2596,7 @@ function getComponentData(filePath, html, group) {
     const slug = path.basename(filePath, ".html");
     const profile = componentProfiles[slug];
     const localComponentImage = resolveComponentImageAsset(slug, filePath);
-    const componentMediaSrc = localComponentImage || createGeneratedImageUrl(buildComponentImagePrompt(title));
+    const componentMediaSrc = requireLocalImage(localComponentImage, filePath);
     const systemLabel = profile?.shortName || title.toLowerCase();
     const systemLabelHuman = profile?.systemLabel || title.toLowerCase();
     const description = profile?.summary || decodeEntities(extractFirst(html, /<meta name="description" content="([^"]*)"/i)) || firstParagraph(contentHtml);
@@ -2736,7 +2725,7 @@ ${buildFaqHtml(faqItems)}`;
         eyebrow: group.eyebrow,
         activeSection: "components",
         canonical: relativeUrlToPage(filePath),
-        ogImage: localComponentImage ? toAbsoluteUrl(localComponentImage, filePath) : componentMediaSrc,
+        ogImage: toAbsoluteUrl(componentMediaSrc, filePath),
         kicker: subtitle,
         useHeading: profile?.useHeading || "What matters first",
         useText: profile?.useText || `${title} only become useful knowledge when they help you judge durability, maintenance, drivability, and used-car risk with more confidence.`,

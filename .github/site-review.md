@@ -14,12 +14,13 @@ Scope: 67 HTML pages, the detail-page generator, shared CSS and JavaScript, comp
 - Trust pages: replace site-building language with reader-facing standards, explain the actual email-draft flow and third-party requests, add primary navigation/footer links and complete Open Graph titles, descriptions and types.
 - Homepage: align FAQ structured data with the three questions and answers actually visible on the page.
 - Quality gate: add `node js/audit-site.js` to verify local links/assets, comparison images, h1 count and canonical presence across all HTML pages.
+- Editorial images: localize 24 verified finished photographs and replace all 53 remote image references across 16 pages, including 15 unfinished generation placeholders. The audit now rejects remote generation URLs and checks local editorial photo dimensions; detail-page regeneration requires a local image.
 
 ## Limits and follow-up
 
 - The comparison dataset includes figures that depend on model year, market and trim. It has not been independently checked model by model against primary manufacturer sources. Do not present it as live pricing or an authoritative current-spec database.
 - Some brand history and model text still depends on earlier editorial material. The new model-example label prevents a false blanket "current lineup" claim, but individual facts and discontinued-model context still need sourced reviews.
-- Numerous hub/article/trust images still depend on a third-party generation URL. The car-type detail photos are local, but some generated imagery contains small AI markings or imperfect badges. Replace these selectively with reviewed local assets rather than saving generation placeholders.
+- Some generated photographs still contain small AI markings or imperfect vehicle badges, and several formerly unfinished slots reuse the closest relevant finished photograph. A future art-direction pass could replace those with distinctive licensed or commissioned assets; no current page depends on a live generation URL.
 - Privacy and advertising rules depend on jurisdiction and account configuration. The site currently has no first-party consent panel; a qualified privacy review and, where required, a certified consent solution remain necessary. This review is not legal advice.
 - The contact path opens a user's email application rather than sending through the page. Inbox delivery and response time cannot be verified by code or browser testing.
 - Article bylines, dated review information and primary-source citations should be added only after a real editorial process exists; fabricated author/date metadata would reduce trust.
