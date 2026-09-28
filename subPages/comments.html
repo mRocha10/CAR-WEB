@@ -18,6 +18,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/global.min.css">
     <link rel="stylesheet" href="../css/site-refresh.css">
+    <link rel="stylesheet" href="../css/interior-editorial.css">
     <link rel="stylesheet" href="../css/comments.css">
     <meta name="twitter:card" content="summary_large_image">
     <meta property="og:image" content="https://enginestarters.org/images/logo/web_logo.jpeg">
@@ -50,10 +51,27 @@
     <main class="site-main" id="main-content">
         <section class="site-section site-section--tight">
             <div class="site-breadcrumbs"><a href="../index.html">Home</a> / Community Notes</div>
-            <div class="site-section__header">
-                <span class="site-eyebrow">Community</span>
-                <h1 class="site-title">Reader feedback is currently collected through direct contact.</h1>
-                <p class="site-lead">Public posting is paused for now. If you want to report a correction or suggest a topic, use the contact page and the note can be reviewed there.</p>
+            <div class="site-hero__grid">
+                <article class="site-hero__panel site-panel">
+                    <span class="site-eyebrow">Community</span>
+                    <h1 class="site-title">Reader feedback is currently reviewed through direct contact.</h1>
+                    <p class="site-lead">Public posting is paused while moderation remains manual. Corrections, suggestions, and reader notes are still welcome, but they are collected through the contact page so they can be checked properly before anything appears publicly.</p>
+                    <ul class="site-stats">
+                        <li><strong>Paused</strong><span>open public posting is disabled while moderation stays manual.</span></li>
+                        <li><strong>Active</strong><span>corrections and suggestions can still be sent directly for review.</span></li>
+                        <li><strong>Reviewed</strong><span>community notes shown here are editorially checked before publication.</span></li>
+                    </ul>
+                    <div class="site-actions">
+                        <a class="site-button" href="contact.html">Send a correction or suggestion</a>
+                        <a class="site-button--secondary" href="editorial-policy.html">Read the editorial policy</a>
+                    </div>
+                </article>
+                <div class="site-feature-media">
+                    <img src="../images/editorial/used-car-check.jpg" alt="A vehicle being checked under an open hood before a correction or note is sent." loading="eager" decoding="async">
+                    <div class="site-feature-media__overlay">
+                        <p>The goal is simple: make useful public notes harder to spam and easier to review with the same care as the site itself.</p>
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -126,6 +144,7 @@
     </footer>
 
     <script src="../js/site.js"></script>
+    <script src="../js/interior-editorial.js"></script>
     <script src="../js/comments.js"></script>
 </body>
 </html>
