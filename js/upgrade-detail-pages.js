@@ -2118,6 +2118,7 @@ function buildTemplate(data) {
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../../css/global.min.css">
     <link rel="stylesheet" href="../../css/site-refresh.css">
+    <link rel="stylesheet" href="../../css/interior-design.css">
     <script async src="${ADSENSE_SCRIPT}" crossorigin="anonymous"></script>
     <script type="application/ld+json">
 ${buildWebPageJson(data.metaTitle, data.description, data.canonical)}
@@ -2129,7 +2130,7 @@ ${data.faqItems && data.faqItems.length ? `    <script type="application/ld+json
 ${buildFaqJson(data.title, data.faqItems)}
     </script>` : ""}
 </head>
-<body class="site-page">
+<body class="site-page site-page--${data.activeSection} site-page--detail">
     <a class="skip-link" href="#main-content">Skip to main content</a>
 ${buildHeader(data.activeSection)}
     <main class="site-main" id="main-content">
